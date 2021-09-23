@@ -11,6 +11,7 @@ import SingleUnit from './pages-components/SingleUnit';
 import Fullpage from './FullPage';
 import LoadingPage from './pages-components/LoadingPage';
 import 'react-toastify/dist/ReactToastify.css';
+import Siteplan from './pages-components/Siteplan';
 // import Footer from './header & footer/Footer';
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
             <Route path='/login' component={Login} />
             <Route path='/forgot-password' component={ForgotPassword} />
             <Route path='/unit/:id' component={SingleUnit} />
+            <Route path='/siteplan/:type' component={Siteplan} />
           </Switch>
         </AuthProvider>
       </BrowserRouter>

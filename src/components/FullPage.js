@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
 import { hrefLinks } from '../data/Menu';
@@ -62,10 +63,10 @@ const Fullpage = () => {
       navigation={false}
       anchors={[
         'wf-home',
+        'welcomeHome',
         'intro',
         'every',
         'partners',
-        'welcomeHome',
         'siteplan',
         'units',
         'fixtures',
@@ -117,7 +118,51 @@ const Fullpage = () => {
               </div>
             </SectionWrapper>
 
-            {/* Second Section */}
+            <SectionWrapper class={'section'} idName={'sunday-welcome-home'}>
+              <div className='bg-wrapper'>
+                <Title
+                  colorClassName='white-title'
+                  firstHalfTitle='Welcome'
+                  secondHalfTitle='home.'
+                />
+                <Row className='welcome-tabs'>
+                  <Tab.Container defaultActiveKey='first'>
+                    <Col md={4}>
+                      <Nav variant='pills' className='flex-column tabs-column'>
+                        {tabContent.map((tab, index) => {
+                          return (
+                            <Nav.Item key={index}>
+                              <Nav.Link
+                                eventKey={tab.position}
+                                className='welcome-title'
+                              >
+                                {tab.title}
+                              </Nav.Link>
+                            </Nav.Item>
+                          );
+                        })}
+                      </Nav>
+                    </Col>
+                    <Col md={8}>
+                      <Tab.Content>
+                        {tabContent.map((tab) => {
+                          return (
+                            <Tab.Pane
+                              key={tab.position}
+                              eventKey={tab.position}
+                            >
+                              <p>{tab.content}</p>
+                              <Link to={`/siteplan/${tab.link}`}>View Option</Link>
+                            </Tab.Pane>
+                          );
+                        })}
+                      </Tab.Content>
+                    </Col>
+                  </Tab.Container>
+                </Row>
+              </div>
+            </SectionWrapper>
+
             <SectionWrapper class={'section'} idName={'home-modal'}>
               <div
                 id='home-modal-container'
@@ -125,7 +170,6 @@ const Fullpage = () => {
               ></div>
             </SectionWrapper>
 
-            {/* Third Section */}
             <SectionWrapper class={'section'} idName={'sunday-everyday'}>
               <Row className='sd-everyday-row'>
                 <Col lg={4} md={3} className='sunday-paragraph'>
@@ -172,50 +216,6 @@ const Fullpage = () => {
               </div>
             </SectionWrapper>
 
-            <SectionWrapper class={'section'} idName={'sunday-welcome-home'}>
-              <div className='bg-wrapper'>
-                <Title
-                  colorClassName='white-title'
-                  firstHalfTitle='Welcome'
-                  secondHalfTitle='home.'
-                />
-                <Row className='welcome-tabs'>
-                  <Tab.Container defaultActiveKey='first'>
-                    <Col md={4}>
-                      <Nav variant='pills' className='flex-column tabs-column'>
-                        {tabContent.map((tab, index) => {
-                          return (
-                            <Nav.Item key={index}>
-                              <Nav.Link
-                                eventKey={tab.position}
-                                className='welcome-title'
-                              >
-                                {tab.title}
-                              </Nav.Link>
-                            </Nav.Item>
-                          );
-                        })}
-                      </Nav>
-                    </Col>
-                    <Col md={8}>
-                      <Tab.Content>
-                        {tabContent.map((tab) => {
-                          return (
-                            <Tab.Pane
-                              key={tab.position}
-                              eventKey={tab.position}
-                            >
-                              <p>{tab.content}</p>
-                            </Tab.Pane>
-                          );
-                        })}
-                      </Tab.Content>
-                    </Col>
-                  </Tab.Container>
-                </Row>
-              </div>
-            </SectionWrapper>
-
             <SectionWrapper class={'section'} idName={'floor-plans'}>
               <div className='bg-wrapper'>
                 <Title
@@ -235,7 +235,7 @@ const Fullpage = () => {
                   secondHalfTitle=''
                 />
                 {/* <UnitDropdown /> */}
-                <SingleUnit />
+                {/* <SingleUnit /> */}
               </div>
             </SectionWrapper>
 

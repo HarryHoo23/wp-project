@@ -43,16 +43,17 @@ inner suburb of South Yarra."`,
 export const tabContent = [
   {
     position: 'first',
-    title: 'THE RESIDENCES',
+    title: 'Office Warehouse',
     content: `Private sanctuaries, these residences embody the feeling of filling up your
                                             cup on a restful Sunday, allowing you to recharge your battery at any point
                                             throughout the week. Cohesive. Authentic. Strong. In a world of disposable
                                             trends, all aspects of Sunday work cohesively to create timeless value and
                                             assert longevity throughout the marketplace and surrounding landscape.`,
+    link: 'office-warehouse',
   },
   {
     position: 'second',
-    title: 'THE INTERIOR',
+    title: 'Offices',
     content: `Although the building is integrated seamlessly within its
                                             treelined environment, Sunday remains ambitious. The interior is unique and
                                             authentic — with gentle dappling of light and an inward aperture creating a
@@ -65,10 +66,11 @@ export const tabContent = [
                                             to ground floor garden apartments with large verdant gardens, each of the
                                             generously
                                             proportioned apartments at Sunday are designed with purpose and reason.`,
+    link: 'office',
   },
   {
     position: 'third',
-    title: 'THE FINISHES',
+    title: 'Hybrid',
     content: `The overarching design of Sunday is based on iconic form and
                                             shape — such as the stepped stone island benches that have been carefully
                                             laid
@@ -81,10 +83,11 @@ export const tabContent = [
                                             veneers and laminates deliver all of the finishes you would find in a
                                             traditional
                                             home.`,
+    link: 'hybrid',
   },
   {
     position: 'forth',
-    title: 'THE OUTLOOK',
+    title: 'Roller Doors',
     content: `Sunday was designed to maximise the outlook from within each
                                             apartment to the surrounding environment. Complemented by the chamfered sill
                                             and
@@ -95,10 +98,11 @@ export const tabContent = [
                                             and
                                             out and strengthening the affinity between Sunday and the leafy streetscape
                                             below.`,
+    link: 'roller-doors',
   },
   {
     position: 'fifth',
-    title: 'THE DETAILS',
+    title: 'Roller/Office Warehouse',
     content: `Alongside the key design philosophies is clever planning. The
                                             spatial layout, proportion of form and size, finite detailing and aspect
                                             planning
@@ -110,10 +114,13 @@ export const tabContent = [
                                             share
                                             come
                                             Monday morning.`,
+    link: 'roller-office',
   },
 ];
 
-export const sitePlanData = [
+
+const officeWarehouseSitePlanData =
+  [
   {
     unit_id: 'unit-01',
     unit_number: 'Unit 01',
@@ -294,6 +301,9 @@ export const sitePlanData = [
       fourty_year_total: '$150,000 - $170,000',
     },
   },
+];
+
+const officeSitePlanData = [
   {
     unit_id: 'unit-06',
     unit_number: 'Unit 06',
@@ -474,6 +484,9 @@ export const sitePlanData = [
       fourty_year_total: '$190,000 - $210,000',
     },
   },
+];
+
+const hybridSitePlanData = [
   {
     unit_id: 'unit-11',
     unit_number: 'Unit 11',
@@ -581,7 +594,10 @@ export const sitePlanData = [
       residual: '$140,000 - $160,000',
       fourty_year_total: '$185,000 - $205,000',
     },
-  },
+  }
+];
+
+const rollerDoorsSitePlanData = [
   {
     unit_id: 'unit-14',
     unit_number: 'Unit 14',
@@ -690,6 +706,9 @@ export const sitePlanData = [
       fourty_year_total: '$190,000 - $210,000',
     },
   },
+];
+
+const rollerOrOfficePlanData = [
   {
     unit_id: 'unit-17',
     unit_number: 'Unit 17',
@@ -761,6 +780,29 @@ export const sitePlanData = [
       residual: '$140,000 - $160,000',
       fourty_year_total: '$185,000 - $205,000',
     },
+  },
+];
+
+export const sitePlanData = [
+  {
+    type: 'office-warehouse',
+    data: officeWarehouseSitePlanData,
+  },
+  {
+    type: 'office',
+    data: officeSitePlanData,
+  },
+  {
+    type: 'hybrid',
+    data: hybridSitePlanData,
+  },
+  {
+    type: 'roller-doors',
+    data: rollerDoorsSitePlanData,
+  },
+  {
+    type: 'roller-office',
+    data: rollerOrOfficePlanData,
   },
 ];
 
