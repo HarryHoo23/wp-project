@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
 import { hrefLinks } from '../data/Menu';
-import { tabContent, fixtures_type, sale_contacts } from '../data/Content';
+import { fixtures_type, sale_contacts } from '../data/Content';
 import { useState } from 'react';
-import { Row, Col, Tab, Nav } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { useGlobalContext } from '../contexts/GlobalContext';
 import Navbar from './header & footer/Navbar';
 import TopNavbar from './header & footer/TopNavbar';
@@ -17,14 +16,16 @@ import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
 import GeneralModal from './pages-components/GeneralModal';
 import Form from './pages-components/Form';
-import SingleUnit from './pages-components/SingleUnit';
-import Siteplan from './pages-components/Siteplan';
+// import SingleUnit from './pages-components/SingleUnit';
+// import Siteplan from './pages-components/Siteplan';
 import FixtureList from './pages-components/FixtureList';
 import DoorStepAccordion from './pages-components/DoorStepAccordion';
 import Sale from './pages-components/Sale';
-import ImageMapper from './ImageMapper';
+import WelcomeHome from './pages-components/WelcomeHome';
+
 
 const Fullpage = () => {
+
   const {
     individualModalContent,
     handleLogoModalClickOpen,
@@ -67,7 +68,6 @@ const Fullpage = () => {
         'intro',
         'every',
         'partners',
-        'siteplan',
         'units',
         'fixtures',
         'doorstep',
@@ -125,41 +125,7 @@ const Fullpage = () => {
                   firstHalfTitle='Welcome'
                   secondHalfTitle='home.'
                 />
-                <Row className='welcome-tabs'>
-                  <Tab.Container defaultActiveKey='first'>
-                    <Col md={4}>
-                      <Nav variant='pills' className='flex-column tabs-column'>
-                        {tabContent.map((tab, index) => {
-                          return (
-                            <Nav.Item key={index}>
-                              <Nav.Link
-                                eventKey={tab.position}
-                                className='welcome-title'
-                              >
-                                {tab.title}
-                              </Nav.Link>
-                            </Nav.Item>
-                          );
-                        })}
-                      </Nav>
-                    </Col>
-                    <Col md={8}>
-                      <Tab.Content>
-                        {tabContent.map((tab) => {
-                          return (
-                            <Tab.Pane
-                              key={tab.position}
-                              eventKey={tab.position}
-                            >
-                              <p>{tab.content}</p>
-                              <Link to={`/siteplan/${tab.link}`}>View Option</Link>
-                            </Tab.Pane>
-                          );
-                        })}
-                      </Tab.Content>
-                    </Col>
-                  </Tab.Container>
-                </Row>
+                <WelcomeHome />
               </div>
             </SectionWrapper>
 
@@ -216,7 +182,7 @@ const Fullpage = () => {
               </div>
             </SectionWrapper>
 
-            <SectionWrapper class={'section'} idName={'floor-plans'}>
+            {/* <SectionWrapper class={'section'} idName={'floor-plans'}>
               <div className='bg-wrapper'>
                 <Title
                   colorClassName='white-title'
@@ -225,7 +191,7 @@ const Fullpage = () => {
                 />
                 <Siteplan />
               </div>
-            </SectionWrapper>
+            </SectionWrapper> */}
 
             <SectionWrapper class={'section'} idName={'unit-sitemap'}>
               <div className='bg-wrapper'>
@@ -353,10 +319,6 @@ const Fullpage = () => {
                   </Col>
                 </Row>
               </div>
-            </SectionWrapper>
-
-            <SectionWrapper class={'section'} idName={'doorstep'}>
-              <ImageMapper />
             </SectionWrapper>
           </ReactFullpage.Wrapper>
         );

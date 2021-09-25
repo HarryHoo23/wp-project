@@ -35,7 +35,7 @@ const TopNavbar = (props) => {
           </div>
           <button
             type='button'
-            className='property-contact-btn btn btn-secondary'
+            className={`property-contact-btn btn btn-secondary ${props.addtionalClass}`}
             onClick={handleFormModalClickOpen}
           >
             Enquiry

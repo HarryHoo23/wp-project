@@ -44,7 +44,6 @@ const GlobalProvider = ({ children }) => {
     });
     setSingleFixtureModalContent(building_data[index])
     window.fullpage_api.setAllowScrolling(false);
-
   }
 
   const handleModalClickClose = () => {
