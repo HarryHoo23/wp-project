@@ -1,50 +1,86 @@
 import React, { useEffect, useState } from 'react';
-// import UnitDropdown from './UnitDropdown';
 import { useParams, useHistory } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
-import SitePlanImg from '../../assests/img/slider-1.jpg';
 import { sitePlanData } from '../../data/Content';
+import { unit_maps } from '../../data/Coordinates';
 import SectionWrapper from '../SectionWrapper';
+import Title from './Title';
+import UnitDropdown from './UnitDropdown';
+import ImageUnitMapper from '../ImageMapper/ImageUnitMapper';
+import useWindowDimensions from '../../contexts/useWindowsDimension';
+import { useGlobalContext } from '../../contexts/GlobalContext';
 
 const Siteplan = () => {
   const { type } = useParams();
-  const [sitePlan, setSitePlan] = useState(sitePlanData[0].data[0]);
+  const { width } = useWindowDimensions();
+  const { unitMapIndex } = useGlobalContext();
+  
+  let containerWidth;
+  const [unitMap, setUnitMap] = useState();
+  const [sitePlan, setSitePlan] = useState();
+
+  if (width > 2012) {
+    containerWidth = 1234;
+  } else {
+    containerWidth = (width - 160) * 2 / 3;
+  }
+
+  const [img, setImg] = useState();
   let history = useHistory();
+
   useEffect(() => {
     if (type) {
       const unitType = sitePlanData.find((element) => element.type === type);
-      setSitePlan(unitType.data[0]);
+      const unitMapData = unit_maps.find((element) => element.type === type);
+      setSitePlan(unitType.data);
+      setUnitMap(unitMapData.data);
+      setImg(unitType.img);
     } else {
       const unitType = sitePlanData.find(
         (element) => element.type === 'office-warehouse'
       );
-      setSitePlan(unitType.data[0]);
+      setSitePlan(unitType.data);
+      setImg(unitType.img);
+      setUnitMap(unit_maps[0].data);
     }
   }, []);
 
+  console.log(sitePlan);
+
   return (
-    <SectionWrapper class={'section'}>
-      <div className="bg-wrapper">
-        <Row className="sd-everyday-row">
-          <Col md={4}>
-            {/* <UnitDropdown type={sitePlan} /> */}
-            <div className='siteplan_Info'>
-              <p>Ground Level: {sitePlan.ground_level}</p>
-              <p>Mezzainne: {sitePlan.mezzanine_level}</p>
-              <p>Total: {sitePlan.total_area}</p>
-              <p>Allocated Car Spaces: {sitePlan.allocated_car_spaces}</p>
-            </div>
-          </Col>
-          <Col md={8}>
-            <img
-              className='siteplan-img'
-              src={SitePlanImg}
-              alt='Siteplan Image'
-            />
-          </Col>
-        </Row>
-      </div>
-    </SectionWrapper>
+    <>
+      {sitePlan && img && unitMap && (
+        <SectionWrapper class={'section'}>
+          <div className='bg-wrapper white'>
+            <Row className='sd-everyday-row'>
+              <Col md={4}>
+                <Title
+                  colorClassName=''
+                  firstHalfTitle='SitePlan'
+                  secondHalfTitle=''
+                />
+                <UnitDropdown type={sitePlan} />
+                <div className='siteplan_Info'>
+                  <h5>{sitePlan[unitMapIndex].unit_id}</h5>
+                  <p>Ground Level: {sitePlan[unitMapIndex].ground_level}</p>
+                  <p>Mezzainne: {sitePlan[unitMapIndex].mezzanine_level}</p>
+                  <p>Total: {sitePlan[unitMapIndex].total_area}</p>
+                  <p>Allocated Car Spaces: {sitePlan[unitMapIndex].allocated_car_spaces}</p>
+                </div>
+                {type && (<button className='btn btn-primary' type='button' onClick={() => history.goBack()}>Go Back</button>
+                )}
+                  
+              </Col>
+              <Col md={8}>
+                <div className="img-mapper-container">
+                  <ImageUnitMapper width={containerWidth} src={img} maps={unitMap[unitMapIndex]} />
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </SectionWrapper>
+      )}
+    </>
   );
 };
 

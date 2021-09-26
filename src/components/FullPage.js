@@ -25,7 +25,6 @@ import WelcomeHome from './pages-components/WelcomeHome';
 
 
 const Fullpage = () => {
-
   const {
     individualModalContent,
     handleLogoModalClickOpen,

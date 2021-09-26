@@ -27,8 +27,8 @@ const App = () => {
             <Route path='/signup' component={Signup} />
             <Route path='/login' component={Login} />
             <Route path='/forgot-password' component={ForgotPassword} />
-            <Route path='/unit/:id' component={SingleUnit} />
             <Route path='/siteplan/:type' component={Siteplan} />
+            <Route path='/siteplan/:type/:id' component={SingleUnit} />
           </Switch>
         </AuthProvider>
       </BrowserRouter>

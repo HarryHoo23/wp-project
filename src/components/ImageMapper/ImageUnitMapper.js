@@ -1,13 +1,12 @@
 import ImageMapper from 'react-image-mapper';
 import React, { useEffect, useState } from 'react';
-import floorplanImg from '../assests/img/floorplan/Example-1.jpg';
-
 
 const moveOnImage = (evt) => {
   const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+  // console.log(coords);
 };
 
-const ImagePropertyMapper = ({ maps, width }) => {
+const ImagePropertyMapper = ({ src, width, maps }) => {
   const [rerender, setRerender] = useState(false);
   // const clickHandler = (area, index, event) => {
   //   console.log(area);
@@ -21,10 +20,10 @@ const ImagePropertyMapper = ({ maps, width }) => {
 
   return (
     <ImageMapper
-      src={floorplanImg}
+      src={src}
       map={maps}
       width={width}
-      imgWidth={1980}
+      imgWidth={1234}
       onImageMouseMove={(event) => moveOnImage(event)}
     />
   );

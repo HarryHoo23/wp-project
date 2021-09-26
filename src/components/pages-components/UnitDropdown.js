@@ -1,25 +1,28 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { DropdownButton } from 'react-bootstrap';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { DropdownButton, Dropdown } from 'react-bootstrap';
+import { useGlobalContext } from '../../contexts/GlobalContext';
 
-// const UnitDropdown = (props) => {
-//   const sitePlanData = props.type;
-//   return (
-//     <DropdownButton id='dropdown-basic-button' title='Dropdown button'>      
-//       {sitePlanData.map((unitLink) => {
-//         return (
-//           <Link
-//             key={unitLink.unit_id}
-//             className={`${unitLink.sold ? 'dropdown-item sold' : 'dropdown-item'}`}
-//             role='button'
-//             to={`/unit/${unitLink.unit_id}`}
-//           >
-//             {unitLink.sold ? unitLink.unit_number + ' (sold)' : unitLink.unit_number }
-//           </Link>
-//         );
-//       })}
-//     </DropdownButton>
-//   );
-// }
+const UnitDropdown = (props) => {
+  const { setUnitMapIndex } = useGlobalContext();
+  const unitData = props.type;
 
-// export default UnitDropdown;
+  return (
+    <DropdownButton id='dropdown-basic-button' title='Dropdown button'>      
+      {unitData.map((unit, index) => {
+        return (
+          <Dropdown.Item
+            key={unit.unit_id}
+            className={`${unit.sold ? 'dropdown-item sold' : 'dropdown-item'}`}
+            role='button'
+            onClick={() => setUnitMapIndex(index)}
+          >
+            {unit.sold ? unit.unit_number + ' (sold)' : unit.unit_number }
+          </Dropdown.Item>
+        );
+      })}
+    </DropdownButton>
+  );
+}
+
+export default UnitDropdown;

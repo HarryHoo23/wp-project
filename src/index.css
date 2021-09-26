@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.bg-wrapper.white {
+  background: #f7f7f7;
+}
+
 #floor-plans .bg-wrapper {
   display: flex;
   flex-direction: column;
@@ -1071,7 +1075,6 @@ a.logo-link {
 .welcome-tabs .tab-content {
   background-color: #f6f7fa;
   opacity: 0.9;
-  height: 30vh;
   padding-top: 0;
   color: #656565;
   position: absolute;
@@ -2588,15 +2591,20 @@ textarea.form-control:focus {
 }
 
 /* Siteplan */
-.siteplan-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .siteplan_Info {
   margin-top: 3rem;
+}
+
+.siteplan_Info h5 {
+  margin-bottom: 1.2rem;
+}
+
+.img-mapper-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /* Unit Page */
@@ -2663,6 +2671,7 @@ textarea.form-control:focus {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
+  width: 40%;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -2682,6 +2691,7 @@ textarea.form-control:focus {
   width: 100%;
   border-radius: 0px;
   border-width: 0px;
+  width: 40%;
 }
 
 #fixtures-finishes .row {

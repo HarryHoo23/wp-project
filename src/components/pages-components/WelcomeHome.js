@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Nav, Col, Tab } from 'react-bootstrap';
 import { tabContent } from '../../data/Content';
 import { areas_maps } from '../../data/Coordinates';
-import ImagePropertyMapper from '../ImagePropertyMapper';
+import ImagePropertyMapper from '../ImageMapper/ImagePropertyMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
 
 const WelcomeHome = () => {
   const { width } = useWindowDimensions();
+
   let containerWidth = width - 160;
 
   const [map, setMap] = useState(areas_maps[0]);
@@ -15,7 +16,6 @@ const WelcomeHome = () => {
   function changeMap(index) {
     setMap(areas_maps[index]);
   }
-
 
   return (
     <>

@@ -15,6 +15,7 @@ const GlobalProvider = ({ children }) => {
     modalData[0]
   );
   const [singleFixtureModalContent, setSingleFixtureModalContent] = useState(building_data[0])
+  const [unitMapIndex, setUnitMapIndex] = useState(0);
 
   const openAndCloseNavbar = () => {
     setIsOpen(!isOpen);
@@ -83,6 +84,8 @@ const GlobalProvider = ({ children }) => {
         setIsModalShow,
         singleFixtureModalContent,
         handleFixtureModalClickOpen,
+        unitMapIndex,
+        setUnitMapIndex,
         setError,
       }}
     >

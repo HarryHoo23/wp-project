@@ -1,3 +1,4 @@
+import unitTypeB_img from '../assests/img/floorplan/unitPlan/First_Floor.png';
 export const modalData = [
   {
     bgImg: '',
@@ -787,22 +788,27 @@ export const sitePlanData = [
   {
     type: 'office-warehouse',
     data: officeWarehouseSitePlanData,
+    img: unitTypeB_img,
   },
   {
     type: 'office',
     data: officeSitePlanData,
+    img: unitTypeB_img,
   },
   {
     type: 'hybrid',
     data: hybridSitePlanData,
+    img: unitTypeB_img,
   },
   {
     type: 'roller-doors',
     data: rollerDoorsSitePlanData,
+    img: unitTypeB_img,
   },
   {
     type: 'roller-office',
     data: rollerOrOfficePlanData,
+    img: unitTypeB_img,
   },
 ];
 
