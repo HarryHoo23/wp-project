@@ -51,3 +51,18 @@
 // };
 
 // export default SingleUnit;
+
+
+import React from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+
+const SingleUnit = () => {
+  const { id } = useParams();
+  return (
+    <div>
+      test { id}
+    </div>
+  )
+}
+
+export default SingleUnit

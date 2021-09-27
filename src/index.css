@@ -2859,3 +2859,9 @@ h3.fixture-title::before,
 article {
   display: flex;
 }
+
+.view-specs {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 3rem;
+}

@@ -40,7 +40,7 @@ const WelcomeHome = () => {
                 return (
                   <Tab.Pane key={tab.position} eventKey={tab.position}>
                     <p>{tab.content}</p>
-                    <Link to={`/siteplan/${tab.link}`}>View Option</Link>
+                    <Link to={`/${tab.link}`}>View Option</Link>
                   </Tab.Pane>
                 );
               })}

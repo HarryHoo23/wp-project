@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import {
+  useParams,
+  useHistory,
+  Link,
+  useRouteMatch,
+  Route,
+} from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { unit_maps } from '../../data/Coordinates';
@@ -9,12 +15,14 @@ import UnitDropdown from './UnitDropdown';
 import ImageUnitMapper from '../ImageMapper/ImageUnitMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
 import { useGlobalContext } from '../../contexts/GlobalContext';
+import SingleUnit from './SingleUnit';
 
 const Siteplan = () => {
   const { type } = useParams();
+  let { url, path } = useRouteMatch();
   const { width } = useWindowDimensions();
   const { unitMapIndex } = useGlobalContext();
-  
+
   let containerWidth;
   const [unitMap, setUnitMap] = useState();
   const [sitePlan, setSitePlan] = useState();
@@ -22,7 +30,7 @@ const Siteplan = () => {
   if (width > 2012) {
     containerWidth = 1234;
   } else {
-    containerWidth = (width - 160) * 2 / 3;
+    containerWidth = ((width - 160) * 2) / 3;
   }
 
   const [img, setImg] = useState();
@@ -45,7 +53,7 @@ const Siteplan = () => {
     }
   }, []);
 
-  console.log(sitePlan);
+  console.log(url);
 
   return (
     <>
@@ -65,15 +73,36 @@ const Siteplan = () => {
                   <p>Ground Level: {sitePlan[unitMapIndex].ground_level}</p>
                   <p>Mezzainne: {sitePlan[unitMapIndex].mezzanine_level}</p>
                   <p>Total: {sitePlan[unitMapIndex].total_area}</p>
-                  <p>Allocated Car Spaces: {sitePlan[unitMapIndex].allocated_car_spaces}</p>
+                  <p>
+                    Allocated Car Spaces:{' '}
+                    {sitePlan[unitMapIndex].allocated_car_spaces}
+                  </p>
                 </div>
-                {type && (<button className='btn btn-primary' type='button' onClick={() => history.goBack()}>Go Back</button>
+                <Link
+                  to={`${url}/${sitePlan[unitMapIndex].unit_id}`}
+                  className='btn btn-primary view-specs'
+                >
+                  View Specs
+                </Link>
+
+                <br />
+                {type && (
+                  <button
+                    className='btn btn-primary'
+                    type='button'
+                    onClick={() => history.goBack()}
+                  >
+                    Go Back
+                  </button>
                 )}
-                  
               </Col>
               <Col md={8}>
-                <div className="img-mapper-container">
-                  <ImageUnitMapper width={containerWidth} src={img} maps={unitMap[unitMapIndex]} />
+                <div className='img-mapper-container'>
+                  <ImageUnitMapper
+                    width={containerWidth}
+                    src={img}
+                    maps={unitMap[unitMapIndex]}
+                  />
                 </div>
               </Col>
             </Row>

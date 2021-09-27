@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
 import { hrefLinks } from '../data/Menu';
 import { fixtures_type, sale_contacts } from '../data/Content';
 import { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import { useGlobalContext } from '../contexts/GlobalContext';
 import Navbar from './header & footer/Navbar';
 import TopNavbar from './header & footer/TopNavbar';
@@ -22,7 +23,7 @@ import FixtureList from './pages-components/FixtureList';
 import DoorStepAccordion from './pages-components/DoorStepAccordion';
 import Sale from './pages-components/Sale';
 import WelcomeHome from './pages-components/WelcomeHome';
-
+import { useAuth } from '../contexts/AuthContext';
 
 const Fullpage = () => {
   const {
@@ -31,8 +32,13 @@ const Fullpage = () => {
     isModalShow,
     singleFixtureModalContent,
     handleFixtureModalClickOpen,
+    setIsOpen,
   } = useGlobalContext();
- 
+
+  const history = useHistory();
+  const [error, setError] = useState('');
+  const { logout } = useAuth();
+
   const [name, setName] = useState([
     { id: 1, className: '' },
     { id: 2, className: '' },
@@ -47,13 +53,32 @@ const Fullpage = () => {
 
   function renderModalContent() {
     if (isModalShow.case === 1) {
-      return <LogoModalContent {...individualModalContent} />
+      return <LogoModalContent {...individualModalContent} />;
     } else if (isModalShow.case === 2) {
-      return <ContactForm />
+      return <ContactForm />;
     } else {
-      return <FixtureList {...singleFixtureModalContent} />
+      return <FixtureList {...singleFixtureModalContent} />;
     }
   }
+
+  useEffect(() => {
+    async function handleLogOut() {
+      setError('');
+      try {
+        await logout();
+        console.log(error);
+        setIsOpen(false);
+        history.pushState('/login');
+      } catch {
+        setError('Unable to log out.');
+      }
+    }
+    const timeout = setTimeout(() => {
+      handleLogOut();
+    }, 1000 * 60 * 60 * 24);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <ReactFullpage
@@ -69,7 +94,7 @@ const Fullpage = () => {
         'partners',
         'units',
         'fixtures',
-        'doorstep',
+        'doorsteps',
         // 'map',
         'contact-us',
         'disclaimer',
@@ -173,7 +198,7 @@ const Fullpage = () => {
                         role='button'
                         onClick={() => handleLogoModalClickOpen(index)}
                       >
-                        <LogoContainer bgImg={svgImage} alt="logo-img" />
+                        <LogoContainer bgImg={svgImage} alt='logo-img' />
                       </Col>
                     );
                   })}
