@@ -1,35 +1,26 @@
 import React from 'react';
-import InfoLogout from './InfoLogout';
 import { Col } from 'react-bootstrap';
 import { links } from '../../data/Menu';
-import { useAuth } from '../../contexts/AuthContext';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 
 export default function Header() {
-  const { currentUser } = useAuth();
   const { isOpen, openAndCloseNavbar } = useGlobalContext();
 
   return (
     <>
-      {
-        isOpen && <aside
+      {isOpen && (
+        <aside
           className={`${isOpen ? 'menubar-overlay show' : 'menubar-overlay'}`}
           onClick={openAndCloseNavbar}
         ></aside>
-      }
-      {currentUser && isOpen && (
-        <header>
+      )}
+      <header>
           <nav
-            className={`${
-              isOpen
-                ? 'sunday-navbar fixed-bottom sunday-navbar-active'
-                : 'sunday-navbar fixed-bottom'
-            }`}
+            className={`sunday-navbar fixed-bottom ${isOpen && 'sunday-navbar-active'}`}
           >
             <div className='menu-box'>
-              <Col md='7' id='mobile-nav-content'>
+              <Col md='12' id='mobile-nav-content'>
                 <p className='menu-title'>Navigation</p>
-                <InfoLogout />
                 <ul className='nav navbar-nav'>
                   {links.map((link) => {
                     const { id, href, text } = link;
@@ -45,8 +36,7 @@ export default function Header() {
               </Col>
             </div>
           </nav>
-        </header>
-      )}
+      </header>
     </>
   );
 }

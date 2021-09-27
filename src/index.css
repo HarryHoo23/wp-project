@@ -5,8 +5,8 @@ Variables
 */
 
 :root {
-  --font-primary-color: #2D2D2D;
-  --title-primary-color: #484848;
+  --font-primary-color: #484848;
+  --title-primary-color: #2D2D2D;
   --background-color-grey: #969696;
   --secondary-color-white: #ffffff;
   --animate-delay: 0.5s;
@@ -190,14 +190,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Header */
 .sunday-navbar {
   position: fixed;
-  height: 0%;
-  transition: all 800ms ease;
+  transition: height 500ms ease;
+  height: 0;
+  background-color: var(--secondary-color-white);
 }
 
-.sunday-navbar-active {
+.sunday-navbar.sunday-navbar-active {
   height: 45%;
-  background-color: var(--secondary-color-white);
-  transition: all 500ms ease;
 }
 
 .menu-box {
@@ -245,9 +244,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2px;
 }
 
-ul.nav li:last-child .nav-link {
+#mobile-nav-content ul > li:last-child .nav-link,
+#mobile-nav-content ul > li:nth-child(7) .nav-link {
   border-bottom: none;
-}
+} 
 
 .menu-title {
   color: #656565;
@@ -371,6 +371,14 @@ ul.nav li:last-child .nav-link {
   margin-right: 5rem;
   align-items: center;
   position: relative;
+}
+
+.nav-wrapper.active-nav {
+  z-index: 9999;
+}
+
+.nav-wrapper.active-nav .nav-bottom-row {
+  border-top: 1px solid #E5E5E5;
 }
 
 .btn-left-box {
@@ -2660,7 +2668,7 @@ textarea.form-control:focus {
 }
 
 .dropdown {
-  margin-top: var(--margin-top-m);
+  display: inline-block;
 }
 
 #dropdown-basic-button {
@@ -2671,7 +2679,6 @@ textarea.form-control:focus {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
-  width: 40%;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -2691,7 +2698,7 @@ textarea.form-control:focus {
   width: 100%;
   border-radius: 0px;
   border-width: 0px;
-  width: 40%;
+  width: 100%;
 }
 
 #fixtures-finishes .row {
@@ -2795,6 +2802,7 @@ h3.fixture-title::before,
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: calc(100% / 2) calc(100% / 2);
   grid-auto-columns: minmax(350px, 2fr);
+  overflow-y: hidden;
 }
 
 .fitting {

@@ -4,10 +4,14 @@ const Sale = ({ sale }) => {
   return (
     <>
       <div className='sale-img-box'>
-        <a aria-roledescription="button">
-          <img src="https://sundayhawksburn.com.au/client/assets/img/icons/video.svg" alt="expand-icon" className="expand-icon" />
+        <a aria-roledescription='button'>
+          <img
+            src='https://sundayhawksburn.com.au/client/assets/img/icons/video.svg'
+            alt='expand-icon'
+            className='expand-icon'
+          />
         </a>
-        <img src={sale.img} className='sale-img' alt='Fox-Image' />
+        <img src={sale.img} className='sale-img' alt={sale.name} />
         <div className='contact-btn-container'>
           <button className='email btn btn-outline-secondary'>Message</button>
           <button className='call btn btn-outline-secondary'>
@@ -26,7 +30,7 @@ const Sale = ({ sale }) => {
           <li>{sale.phone}</li>
           <li>{sale.email}</li>
           <li>
-            <a href={sale.insta_link} target='_blank'>
+            <a href={sale.insta_link} target='_blank' rel='noreferrer'>
               Instagram
             </a>
           </li>

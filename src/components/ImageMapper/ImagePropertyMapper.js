@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import floorplanImg from '../../assests/img/floorplan/Example-1.jpg';
 
 
-const moveOnImage = (evt) => {
-  const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
-};
+// const moveOnImage = (evt) => {
+//   const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+// };
 
 const ImagePropertyMapper = ({ maps, width }) => {
   const [rerender, setRerender] = useState(false);
@@ -25,7 +25,7 @@ const ImagePropertyMapper = ({ maps, width }) => {
       map={maps}
       width={width}
       imgWidth={1980}
-      onImageMouseMove={(event) => moveOnImage(event)}
+      // onImageMouseMove={(event) => moveOnImage(event)}
     />
   );
 };

@@ -15,7 +15,7 @@ import HomeVideo from '../video/Sunday-Hero-Video.mp4';
 import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
 import GeneralModal from './pages-components/GeneralModal';
-import Form from './pages-components/Form';
+import ContactForm from './pages-components/ContactForm/ContactForm';
 // import SingleUnit from './pages-components/SingleUnit';
 // import Siteplan from './pages-components/Siteplan';
 import FixtureList from './pages-components/FixtureList';
@@ -49,7 +49,7 @@ const Fullpage = () => {
     if (isModalShow.case === 1) {
       return <LogoModalContent {...individualModalContent} />
     } else if (isModalShow.case === 2) {
-      return <Form />
+      return <ContactForm />
     } else {
       return <FixtureList {...singleFixtureModalContent} />
     }
@@ -137,7 +137,7 @@ const Fullpage = () => {
 
             <SectionWrapper class={'section'} idName={'sunday-everyday'}>
               <Row className='sd-everyday-row'>
-                <Col lg={4} md={3} className='sunday-paragraph'>
+                <Col lg={3} md={4} className='sunday-paragraph'>
                   <Title
                     colorClassName=''
                     firstHalfTitle='Sunday,'
@@ -151,7 +151,7 @@ const Fullpage = () => {
                     striving for it to be something more.
                   </p>
                 </Col>
-                <Col lg={8} md={9} className='sunday-everyday-carousel-box'>
+                <Col lg={9} md={8} className='sunday-everyday-carousel-box'>
                   <ImageGallary />
                 </Col>
               </Row>
@@ -173,7 +173,7 @@ const Fullpage = () => {
                         role='button'
                         onClick={() => handleLogoModalClickOpen(index)}
                       >
-                        <LogoContainer bgImg={svgImage} />
+                        <LogoContainer bgImg={svgImage} alt="logo-img" />
                       </Col>
                     );
                   })}
@@ -312,6 +312,7 @@ const Fullpage = () => {
                         <img
                           className='whitefox-logo'
                           src='https://sundayhawksburn.com.au/wp-content/uploads/2021/03/logo-5.svg'
+                          alt='whitefox-logo'
                         />
                       </p>
                     </div>
