@@ -1,6 +1,6 @@
 {
   "name": "harry_app",
-  "homepage": "https://viridian-highett.com.au/access",
+  "homepage": "/access",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

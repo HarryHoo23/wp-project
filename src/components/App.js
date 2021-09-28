@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       {isLoading && <LoadingPage />}
-      <BrowserRouter>
+      <BrowserRouter basename={'/access'}>
         <AuthProvider>
           <Header />
           <Switch>

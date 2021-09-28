@@ -11,10 +11,11 @@ Variables
   --secondary-color-white: #ffffff;
   --animate-delay: 0.5s;
   --title-font-family: 'Open Sans';
-  --font-size: 16px;
+  --font-size: 15px;
   --lg-font-size: 20px;
   --xl-font-size: 28px;
-  --font-weight: 400;
+  --font-weight: 300;
+  --title-font-weight: 400;
   --transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   --margin-top-m: 3rem;
   --border-grey-color: rgba(133, 142, 136, 0.5);
@@ -23,7 +24,7 @@ Variables
 html,
 body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: var(--font-weight);
   overflow: hidden !important;
@@ -38,6 +39,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight) !important;
 }
 
 .btn {
@@ -1117,9 +1119,8 @@ a.logo-link {
 
 .wh-fp-container {
   position: absolute;
-  bottom: 5rem;
   right: 5rem;
-  left: 5rem;
+  bottom: 5rem;
 }
 
 

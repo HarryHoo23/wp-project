@@ -53,7 +53,6 @@ const GlobalProvider = ({ children }) => {
       ...isModalShow.case,
     });
     window.fullpage_api.setAllowScrolling(true);
-
   };
 
   const onClickScrollDown = () => {

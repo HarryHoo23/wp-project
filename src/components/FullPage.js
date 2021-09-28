@@ -142,11 +142,6 @@ const Fullpage = () => {
 
             <SectionWrapper class={'section'} idName={'sunday-welcome-home'}>
               <div className='bg-wrapper'>
-                <Title
-                  colorClassName='white-title'
-                  firstHalfTitle='Welcome'
-                  secondHalfTitle='home.'
-                />
                 <WelcomeHome />
               </div>
             </SectionWrapper>

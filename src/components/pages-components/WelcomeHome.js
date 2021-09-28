@@ -5,11 +5,13 @@ import { tabContent } from '../../data/Content';
 import { areas_maps } from '../../data/Coordinates';
 import ImagePropertyMapper from '../ImageMapper/ImagePropertyMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
+import Title from './Title';
 
 const WelcomeHome = () => {
   const { width } = useWindowDimensions();
 
-  let containerWidth = width - 160;
+  let containerWidth = (width - 130) * 2 / 3 - 15;
+    ;
 
   const [map, setMap] = useState(areas_maps[0]);
 
@@ -19,6 +21,11 @@ const WelcomeHome = () => {
 
   return (
     <>
+      <Title
+        colorClassName='white-title'
+        firstHalfTitle='Welcome'
+        secondHalfTitle='home.'
+      />
       <Row className='welcome-tabs'>
         <Tab.Container defaultActiveKey='first'>
           <Col md={4}>
