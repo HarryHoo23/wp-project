@@ -23,7 +23,7 @@ export default function Signup() {
         try {
             setError('');
             setLoading(true);            
-            await signup(emailRef.current.value + "gmail.com", passwordRef.current.value, nameRef.current.value);            
+            await signup(emailRef.current.value + "@gmail.com", passwordRef.current.value, nameRef.current.value);            
             history.push('/login');
         } catch (err){
             console.log(err);            
