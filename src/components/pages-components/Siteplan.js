@@ -101,7 +101,7 @@ const Siteplan = () => {
                   <ImageUnitMapper
                     width={containerWidth}
                     src={img}
-                    maps={unitMap[unitMapIndex]}
+                    maps={unitMap}
                   />
                 </div>
               </Col>

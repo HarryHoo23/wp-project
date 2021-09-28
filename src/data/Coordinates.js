@@ -95,63 +95,42 @@ export const areas_maps = [
   areas_type_e,
 ];
 
-const office_warehouse_maps = [
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [417, 596, 523, 701],
-        preFillColor: 'rgba(72,72,72,0.7)',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [417, 516, 523, 588],
-        preFillColor: 'rgba(72,72,72,0.7)',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [417, 422, 523, 509],
-        preFillColor: 'rgba(72,72,72,0.7)',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [417, 328, 523, 416],
-        preFillColor: 'rgba(72,72,72,0.7)',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [417, 422, 523, 509],
-        preFillColor: 'rgba(72,72,72,0.7)',
-      },
-    ],
-  },
-];
+const office_warehouse_maps = {
+  name: 'my-map',
+  areas: [
+    {
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 596, 523, 701],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.7)'
+    },
+    {
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 516, 523, 588],
+      fillColor: 'rgba(72,72,72,0.7)',
+    },
+    {
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+    },
+    {
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 328, 523, 416],
+      fillColor: 'rgba(72,72,72,0.7)',
+    },
+    {
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+    },
+  ],
+};
 
 const office_maps = [
   {

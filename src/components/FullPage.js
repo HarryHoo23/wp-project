@@ -42,6 +42,13 @@ const Fullpage = () => {
     { id: 1, className: '' },
     { id: 2, className: '' },
     { id: 3, className: '' },
+    { id: 4, className: '' },
+    { id: 5, className: '' },
+    { id: 6, className: '' },
+    { id: 7, className: '' },
+    { id: 8, className: '' },
+    { id: 9, className: '' },
+    { id: 10, className: '' }
   ]);
 
   const [navBarTitle, setNavBarTitle] = useState({
@@ -109,7 +116,7 @@ const Fullpage = () => {
         for (let i = 0; i < hrefLinks.length; i++) {
           if (document.body.classList.contains(hrefLinks[i].link)) {
             let newArr = [...name];
-            newArr[0].className = 'show';
+            newArr[i].className = 'show';
             setName(newArr);
             setNavBarTitle({
               bgColorClass: hrefLinks[i].bgColorClass,
@@ -151,7 +158,7 @@ const Fullpage = () => {
             <SectionWrapper class={'section'} idName={'home-modal'}>
               <div
                 id='home-modal-container'
-                className={name[0].className}
+                className={name[2].className}
               ></div>
             </SectionWrapper>
 
@@ -252,18 +259,9 @@ const Fullpage = () => {
               </div>
             </SectionWrapper>
 
-            <SectionWrapper class={'section'} idName={'doorstep'}>
-              <div className='bg-wrapper'>
-                <Row>
-                  <Col
-                    md={8}
-                    className='dp-container-left'
-                    id='slow-start'
-                  ></Col>
-                  <Col md={4}>
-                    <DoorStepAccordion />
-                  </Col>
-                </Row>
+            <SectionWrapper class={'section'} idName={'doorstep-1'}>
+              <div className={`doorstep-container ${name[5].className}`}>
+                <DoorStepAccordion />
               </div>
             </SectionWrapper>
 
@@ -282,7 +280,7 @@ const Fullpage = () => {
                     secondHalfTitle='answers.'
                   />
                   <Row className='contacts'>
-                    {sale_contacts.map(info => {
+                    {sale_contacts.map((info) => {
                       return (
                         <Col
                           md={6}

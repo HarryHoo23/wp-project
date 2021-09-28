@@ -73,7 +73,7 @@ export const hrefLinks = [
     topTitle: 'Creative partners'
   },
   {
-    link: 'fp-viewing-doorstep',
+    link: 'fp-viewing-doorsteps',
     bgColorClass: 'opacity-deep',
     title: 'Financial',
     topTitle: 'Fixture & Fittings'
@@ -84,12 +84,12 @@ export const hrefLinks = [
     title: 'Maps',
     topTitle: 'On your Doorstep'
   },
-  {
-    link: 'fp-viewing-map',
-    bgColorClass: 'opacity-deep',
-    title: 'Contact Us',
-    topTitle: 'Maps'
-  },
+  // {
+  //   link: 'fp-viewing-map',
+  //   bgColorClass: 'opacity-deep',
+  //   title: 'Contact Us',
+  //   topTitle: 'Maps'
+  // },
   {
     link: 'fp-viewing-contact-us',
     bgColorClass: 'opacity-deep',
