@@ -5,9 +5,12 @@ import { useGlobalContext } from '../../contexts/GlobalContext';
 const LoadingPage = () => {
   const { setIsLoading } = useGlobalContext();
    useEffect(() => {
-     setInterval(() => {
+     const interval = setInterval(() => {
        setIsLoading(false);
      }, 3000);
+
+     return () => clearInterval(interval);
+     // eslint-disable-next-line
    }, []);
   return (
     <div id='loader'>

@@ -11,9 +11,10 @@ const SingleUnit = (props) => {
   let history = useHistory();
   let replacedUrl = url.replace(/\//g, '');
   useEffect(() => {
-
     if (id) {
-      const property_type = sitePlanData.find((element) => element.type === replacedUrl);
+      const property_type = sitePlanData.find(
+        (element) => element.type === replacedUrl
+      );
       const unit = property_type.data.find((element) => element.unit_id === id);
       setUnitData(unit);
     } else {
@@ -22,6 +23,7 @@ const SingleUnit = (props) => {
       );
       setUnitData(unit);
     }
+    // eslint-disable-next-line
   }, []);
   return (
     <article className={`${id ? 'unit-wrapper' : ''}`}>

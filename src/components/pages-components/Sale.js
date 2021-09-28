@@ -4,13 +4,6 @@ const Sale = ({ sale }) => {
   return (
     <>
       <div className='sale-img-box'>
-        <a aria-roledescription='button'>
-          <img
-            src='https://sundayhawksburn.com.au/client/assets/img/icons/video.svg'
-            alt='expand-icon'
-            className='expand-icon'
-          />
-        </a>
         <img src={sale.img} className='sale-img' alt={sale.name} />
         <div className='contact-btn-container'>
           <button className='email btn btn-outline-secondary'>Message</button>

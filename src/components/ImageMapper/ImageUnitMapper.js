@@ -1,10 +1,10 @@
 import ImageMapper from 'react-image-mapper';
 import React, { useEffect, useState } from 'react';
 
-const moveOnImage = (evt) => {
-  const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
-  // console.log(coords);
-};
+// const moveOnImage = (evt) => {
+//   const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+//   // console.log(coords);
+// };
 
 const ImagePropertyMapper = ({ src, width, maps }) => {
   const [rerender, setRerender] = useState(false);
@@ -16,6 +16,7 @@ const ImagePropertyMapper = ({ src, width, maps }) => {
 
   useEffect(() => {
     setRerender(!rerender);
+    // eslint-disable-next-line
   }, [maps]);
 
   return (
@@ -24,7 +25,7 @@ const ImagePropertyMapper = ({ src, width, maps }) => {
       map={maps}
       width={width}
       imgWidth={1234}
-      onImageMouseMove={(event) => moveOnImage(event)}
+      // onImageMouseMove={(event) => moveOnImage(event)}
     />
   );
 };

@@ -49,6 +49,7 @@ const Siteplan = () => {
       setImg(unitType.img);
       setUnitMap(unit_maps[0].data);
     }
+    // eslint-disable-next-line
   }, []);
 
   return (

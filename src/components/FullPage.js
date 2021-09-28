@@ -76,6 +76,7 @@ const Fullpage = () => {
     }, 1000 * 60 * 60 * 10);
 
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line
   }, []);
 
   return (
