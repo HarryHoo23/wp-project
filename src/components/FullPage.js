@@ -17,8 +17,6 @@ import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
 import GeneralModal from './pages-components/GeneralModal';
 import ContactForm from './pages-components/ContactForm/ContactForm';
-// import SingleUnit from './pages-components/SingleUnit';
-// import Siteplan from './pages-components/Siteplan';
 import FixtureList from './pages-components/FixtureList';
 import DoorStepAccordion from './pages-components/DoorStepAccordion';
 import Sale from './pages-components/Sale';
@@ -75,7 +73,7 @@ const Fullpage = () => {
     }
     const timeout = setTimeout(() => {
       handleLogOut();
-    }, 1000 * 60 * 60 * 24);
+    }, 1000 * 60 * 60 * 10);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -92,7 +90,6 @@ const Fullpage = () => {
         'intro',
         'every',
         'partners',
-        'units',
         'fixtures',
         'doorsteps',
         // 'map',
@@ -217,17 +214,17 @@ const Fullpage = () => {
               </div>
             </SectionWrapper> */}
 
-            <SectionWrapper class={'section'} idName={'unit-sitemap'}>
+            {/* <SectionWrapper class={'section'} idName={'unit-sitemap'}>
               <div className='bg-wrapper'>
                 <Title
                   colorClassName='white-title'
                   firstHalfTitle='Units'
                   secondHalfTitle=''
                 />
-                {/* <UnitDropdown /> */}
-                {/* <SingleUnit /> */}
+                <UnitDropdown />
+                <SingleUnit />
               </div>
-            </SectionWrapper>
+            </SectionWrapper> */}
 
             <SectionWrapper class={'section'} idName={'fixtures-finishes'}>
               <div className='bg-wrapper'>

@@ -4,7 +4,6 @@ import {
   useHistory,
   Link,
   useRouteMatch,
-  Route,
 } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
@@ -15,11 +14,10 @@ import UnitDropdown from './UnitDropdown';
 import ImageUnitMapper from '../ImageMapper/ImageUnitMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
 import { useGlobalContext } from '../../contexts/GlobalContext';
-import SingleUnit from './SingleUnit';
 
 const Siteplan = () => {
   const { type } = useParams();
-  let { url, path } = useRouteMatch();
+  let { url } = useRouteMatch();
   const { width } = useWindowDimensions();
   const { unitMapIndex } = useGlobalContext();
 
@@ -53,8 +51,6 @@ const Siteplan = () => {
     }
   }, []);
 
-  console.log(url);
-
   return (
     <>
       {sitePlan && img && unitMap && (
@@ -79,7 +75,10 @@ const Siteplan = () => {
                   </p>
                 </div>
                 <Link
-                  to={`${url}/${sitePlan[unitMapIndex].unit_id}`}
+                  to={{
+                    pathname: `${url}/${sitePlan[unitMapIndex].unit_id}`,
+                    state: {url: `${url}`}
+                  }}
                   className='btn btn-primary view-specs'
                 >
                   View Specs
