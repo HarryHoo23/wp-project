@@ -1128,3 +1128,31 @@ export const sale_contacts = [
     img: 'https://sundayhawksburn.com.au/client/assets/img/lana.jpg',
   },
 ];
+
+
+export const financialContent = [
+  {
+    position: 'first',
+    name: 'PRICE LIST'
+  },
+  {
+    position: 'second',
+    name: 'ESTIMATED OUTGOINGS'
+  },
+  {
+    position: 'third',
+    name: 'OWNERS CORPORATION'
+  },
+  {
+    position: 'forth',
+    name: 'DEPRECIATION SCHEDULE'
+  },
+  {
+    position: 'fifth',
+    name: 'INVESTMENT ANALYSIS: BASED ON UNIT 12/89 ELM PARK DRIVE'
+  },
+  {
+    position: 'sixth',
+    name: 'YOUR INVESTMENT PERFORMANCE AT YEAR 10'
+  }
+];

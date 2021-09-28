@@ -21,19 +21,23 @@ const WelcomeHome = () => {
 
   return (
     <>
-      <Title
-        colorClassName='white-title'
-        firstHalfTitle='Welcome'
-        secondHalfTitle='home.'
-      />
       <Row className='welcome-tabs'>
         <Tab.Container defaultActiveKey='first'>
           <Col md={4}>
+            <Title
+              colorClassName='white-title'
+              firstHalfTitle='Welcome'
+              secondHalfTitle='home.'
+            />
             <Nav variant='pills' className='flex-column tabs-column'>
               {tabContent.map((tab, index) => {
                 return (
-                  <Nav.Item key={index} onClick={() => changeMap(index)}>
-                    <Nav.Link eventKey={tab.position} className='welcome-title'>
+                  <Nav.Item key={index}>
+                    <Nav.Link
+                      eventKey={tab.position}
+                      className='welcome-title'
+                      onClick={() => changeMap(index)}
+                    >
                       {tab.title}
                     </Nav.Link>
                   </Nav.Item>
@@ -43,7 +47,7 @@ const WelcomeHome = () => {
           </Col>
           <Col md={8}>
             <Tab.Content>
-              {tabContent.map((tab) => {
+              {tabContent.map(tab => {
                 return (
                   <Tab.Pane key={tab.position} eventKey={tab.position}>
                     <p>{tab.content}</p>

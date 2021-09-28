@@ -21,6 +21,7 @@ import FixtureList from './pages-components/FixtureList';
 import DoorStepAccordion from './pages-components/DoorStepAccordion';
 import Sale from './pages-components/Sale';
 import WelcomeHome from './pages-components/WelcomeHome';
+import Financial from './pages-components/Financial';
 import { useAuth } from '../contexts/AuthContext';
 
 const Fullpage = () => {
@@ -93,6 +94,7 @@ const Fullpage = () => {
         'partners',
         'fixtures',
         'doorsteps',
+        'financial',
         // 'map',
         'contact-us',
         'disclaimer',
@@ -265,6 +267,12 @@ const Fullpage = () => {
               </div>
             </SectionWrapper>
 
+            <SectionWrapper class={'section'} idName={'financial'}>
+              <div className='bg-wrapper'>
+                <Financial />
+              </div>
+            </SectionWrapper>
+
             <SectionWrapper class={'section'} idName={'doorstep'}>
               <div className='bg-wrapper'>
                 <div className='contact-container'>
@@ -274,7 +282,7 @@ const Fullpage = () => {
                     secondHalfTitle='answers.'
                   />
                   <Row className='contacts'>
-                    {sale_contacts.map((info) => {
+                    {sale_contacts.map(info => {
                       return (
                         <Col
                           md={6}

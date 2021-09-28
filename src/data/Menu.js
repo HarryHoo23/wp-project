@@ -46,48 +46,60 @@ export const hrefLinks = [
     link: 'fp-viewing-intro',
     bgColorClass: '',
     title: 'Sunday you know',
-    topTitle: 'Home',
+    topTitle: 'Home'
   },
   {
     link: 'fp-viewing-every',
     bgColorClass: 'opacity-deep',
     title: 'Creative partners',
-    topTitle: 'Sunday you know',
+    topTitle: 'Sunday you know'
   },
   {
     link: 'fp-viewing-partners',
     bgColorClass: '',
     title: 'Welcome home',
-    topTitle: 'Sunday every day',
+    topTitle: 'Sunday every day'
   },
   {
     link: 'fp-viewing-welcomeHome',
     bgColorClass: '',
     title: 'The siteplan',
-    topTitle: 'Welcome home',
+    topTitle: 'Welcome home'
   },
   {
     link: 'fp-viewing-fixtures',
     bgColorClass: '',
-    title: 'Creative Partners',
-    topTitle: 'Sunday you know',
+    title: 'On your doorstep',
+    topTitle: 'Creative partners'
   },
   {
     link: 'fp-viewing-doorstep',
     bgColorClass: 'opacity-deep',
-    title: 'Sunday you know',
-    topTitle: 'Fixture & Fittings',
+    title: 'Financial',
+    topTitle: 'Fixture & Fittings'
+  },
+  {
+    link: 'fp-viewing-financial',
+    bgColorClass: '',
+    title: 'Maps',
+    topTitle: 'On your Doorstep'
+  },
+  {
+    link: 'fp-viewing-map',
+    bgColorClass: 'opacity-deep',
+    title: 'Contact Us',
+    topTitle: 'Maps'
   },
   {
     link: 'fp-viewing-contact-us',
     bgColorClass: 'opacity-deep',
-    title: 'Doorstep',
-    topTitle: 'Disclaimer',
+    title: 'Disclaimer',
+    topTitle: 'Maps'
   },
   {
     link: 'fp-viewing-disclaimer',
     bgColorClass: '',
     title: '',
-    topTitle: 'Contact us',
-  },
+    topTitle: 'Contact us'
+  }
 ];
