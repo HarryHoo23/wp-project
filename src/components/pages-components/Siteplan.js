@@ -103,7 +103,7 @@ const Siteplan = () => {
                     {sitePlan[unitMapIndex].ground_level}
                   </p>
                   <p>
-                    <strong>Mezzainne:</strong>{' '}
+                    <strong>Mezzanine:</strong>{' '}
                     {sitePlan[unitMapIndex].mezzanine_level}
                   </p>
                   <p>
@@ -139,9 +139,8 @@ const Siteplan = () => {
             </Row>
           </div>
           <BottomBar>
-            <span className="bread-text">
-              <Link to="/">UNITS</Link> / 
-              {` ${title.first}`} {title.second}
+            <span className='bread-text'>
+              <Link to='/'>UNITS</Link> /{` ${title.first}`} {title.second}
             </span>
           </BottomBar>
         </SectionWrapper>
