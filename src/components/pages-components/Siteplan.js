@@ -61,21 +61,41 @@ const Siteplan = () => {
         <SectionWrapper class={'section'}>
           <div className='bg-wrapper white'>
             <Row className='sd-everyday-row siteplan-row'>
+              <a className="download-btn" href="#" download>Download Pdf</a>
               <Col md={4}>
                 <Title
                   colorClassName=''
                   firstHalfTitle='Office'
                   secondHalfTitle='Warehouse'
                 />
-                <br/>
-                <UnitDropdown type={sitePlan} />
+                <br />
+                <div className='button-group'>
+                  <UnitDropdown type={sitePlan} />
+                  {type && (
+                    <button
+                      className='back-button'
+                      type='button'
+                      onClick={clickHandler}
+                    >
+                      BACK
+                    </button>
+                  )}
+                </div>
                 <div className='siteplan_Info'>
                   <h5>{sitePlan[unitMapIndex].unit_id}</h5>
-                  <p>Ground Level: {sitePlan[unitMapIndex].ground_level}</p>
-                  <p>Mezzainne: {sitePlan[unitMapIndex].mezzanine_level}</p>
-                  <p>Total: {sitePlan[unitMapIndex].total_area}</p>
                   <p>
-                    Allocated Car Spaces:{' '}
+                    <strong>Ground Level:</strong>{' '}
+                    {sitePlan[unitMapIndex].ground_level}
+                  </p>
+                  <p>
+                    <strong>Mezzainne:</strong>{' '}
+                    {sitePlan[unitMapIndex].mezzanine_level}
+                  </p>
+                  <p>
+                    <strong>Total:</strong> {sitePlan[unitMapIndex].total_area}
+                  </p>
+                  <p style={{ marginTop: '1rem' }}>
+                    <strong>Allocated Car Spaces: </strong>
                     {sitePlan[unitMapIndex].allocated_car_spaces}
                   </p>
                 </div>
@@ -84,21 +104,12 @@ const Siteplan = () => {
                     pathname: `${url}/${sitePlan[unitMapIndex].unit_id}`,
                     state: { url: `${url}` },
                   }}
-                  className='btn btn-primary view-specs'
+                  className='btn unit-button'
                 >
-                  View Specs
+                  {`View Unit ${unitMapIndex + 1} Spec`}
                 </Link>
 
                 <br />
-                {type && (
-                  <button
-                    className='btn btn-primary'
-                    type='button'
-                    onClick={clickHandler}
-                  >
-                    Go Back
-                  </button>
-                )}
               </Col>
               <Col md={8}>
                 <div className='img-mapper-container'>
