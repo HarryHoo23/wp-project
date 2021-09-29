@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Link, useRouteMatch } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Breadcrumb } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { unit_maps } from '../../data/Coordinates';
 import SectionWrapper from '../SectionWrapper';
@@ -9,12 +9,17 @@ import UnitDropdown from './UnitDropdown';
 import ImageUnitMapper from '../ImageMapper/ImageUnitMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
 import { useGlobalContext } from '../../contexts/GlobalContext';
+import BottomBar from '../header & footer/BottomBar';
 
 const Siteplan = () => {
   const { type } = useParams();
   let { url } = useRouteMatch();
   const { width, height } = useWindowDimensions();
   const { unitMapIndex, setIsLoading } = useGlobalContext();
+  const [title, setTitle] = useState({
+    first: 'office',
+    second: 'warehouse'
+  })
 
   let containerWidth;
   const [unitMap, setUnitMap] = useState();
@@ -41,6 +46,12 @@ const Siteplan = () => {
     if (type) {
       const unitType = sitePlanData.find((element) => element.type === type);
       const unitMapData = unit_maps.find((element) => element.type === type);
+      const { first_half_title, second_half_title } = unitType;
+      let pageTitle = {
+        first: first_half_title,
+        second: second_half_title
+      };
+      setTitle(pageTitle);
       setSitePlan(unitType.data);
       setUnitMap(unitMapData.data);
       setImg(unitType.img);
@@ -55,18 +66,22 @@ const Siteplan = () => {
     // eslint-disable-next-line
   }, []);
 
+  
+
   return (
     <>
       {sitePlan && img && unitMap && (
-        <SectionWrapper class={'section'}>
+        <SectionWrapper class={'section'} idName={'units'}>
           <div className='bg-wrapper white'>
             <Row className='sd-everyday-row siteplan-row'>
-              <a className="download-btn" href="#" download>Download Pdf</a>
+              <a className='download-btn' href='#' download>
+                Download Pdf
+              </a>
               <Col md={4}>
                 <Title
                   colorClassName=''
-                  firstHalfTitle='Office'
-                  secondHalfTitle='Warehouse'
+                  firstHalfTitle={`${title.first}`}
+                  secondHalfTitle={`${title.second}`}
                 />
                 <br />
                 <div className='button-group'>
@@ -123,6 +138,12 @@ const Siteplan = () => {
               </Col>
             </Row>
           </div>
+          <BottomBar>
+            <span className="bread-text">
+              <Link to="/">UNITS</Link> / 
+              {` ${title.first}`} {title.second}
+            </span>
+          </BottomBar>
         </SectionWrapper>
       )}
     </>

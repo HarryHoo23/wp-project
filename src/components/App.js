@@ -10,7 +10,6 @@ import SingleUnit from './pages-components/SingleUnit';
 import Fullpage from './FullPage';
 import 'react-toastify/dist/ReactToastify.css';
 import Siteplan from './pages-components/Siteplan';
-// import Footer from './header & footer/Footer';
 
 const App = () => {
   return (

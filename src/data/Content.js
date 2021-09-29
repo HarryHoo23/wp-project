@@ -785,26 +785,36 @@ const rollerOrOfficePlanData = [
 export const sitePlanData = [
   {
     type: 'office-warehouse',
+    first_half_title: 'Office',
+    second_half_title: 'Warehouse',
     data: officeWarehouseSitePlanData,
     img: unitTypeB_img,
   },
   {
     type: 'office',
+    first_half_title: 'Office',
+    second_half_title: '',
     data: officeSitePlanData,
     img: unitTypeB_img,
   },
   {
     type: 'hybrid',
+    first_half_title: 'Hybrid',
+    second_half_title: '',
     data: hybridSitePlanData,
     img: unitTypeB_img,
   },
   {
     type: 'roller-doors',
+    first_half_title: 'Roller',
+    second_half_title: 'doors',
     data: rollerDoorsSitePlanData,
     img: unitTypeB_img,
   },
   {
     type: 'roller-office',
+    first_half_title: 'Roller/Office',
+    second_half_title: 'Warehouse',
     data: rollerOrOfficePlanData,
     img: unitTypeB_img,
   },

@@ -2776,8 +2776,14 @@ textarea.form-control:focus {
 }
 
 .siteplan-row {
+  margin: 0;
   border-top: 1px solid var(--border-grey-color);
   border-bottom: 1px solid var(--border-grey-color);
+}
+
+.siteplan-row .col-md-4,
+.siteplan-row .col-md-8 {
+  padding: 0;
 }
 
 /* Unit Page */
@@ -3077,3 +3083,12 @@ article {
    background-color: rgba(112, 112, 112, 0.2);
 }
 
+.bread-text {
+  text-transform: uppercase;
+  color: var(--background-color-grey);
+}
+
+.bread-text a {
+  text-decoration: none;
+  color: #969696;
+}
