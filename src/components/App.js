@@ -5,20 +5,16 @@ import { AuthProvider } from '../contexts/AuthContext';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from '../components/login&signup/ForgotPassword';
-import { useGlobalContext } from '../contexts/GlobalContext';
 import Header from './header & footer/Header';
 import SingleUnit from './pages-components/SingleUnit';
 import Fullpage from './FullPage';
-import LoadingPage from './pages-components/LoadingPage';
 import 'react-toastify/dist/ReactToastify.css';
 import Siteplan from './pages-components/Siteplan';
 // import Footer from './header & footer/Footer';
 
 const App = () => {
-  const { isLoading } = useGlobalContext();
   return (
     <>
-      {isLoading && <LoadingPage />}
       <BrowserRouter basename={'/access'}>
         <AuthProvider>
           <Header />

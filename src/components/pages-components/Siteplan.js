@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  useParams,
-  useHistory,
-  Link,
-  useRouteMatch,
-} from 'react-router-dom';
+import { useParams, useHistory, Link, useRouteMatch } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { unit_maps } from '../../data/Coordinates';
@@ -18,21 +13,29 @@ import { useGlobalContext } from '../../contexts/GlobalContext';
 const Siteplan = () => {
   const { type } = useParams();
   let { url } = useRouteMatch();
-  const { width } = useWindowDimensions();
-  const { unitMapIndex } = useGlobalContext();
+  const { width, height } = useWindowDimensions();
+  const { unitMapIndex, setIsLoading } = useGlobalContext();
 
   let containerWidth;
   const [unitMap, setUnitMap] = useState();
   const [sitePlan, setSitePlan] = useState();
 
-  if (width > 2012) {
-    containerWidth = 1234;
-  } else {
-    containerWidth = ((width - 160) * 2) / 3;
+  let containerHeight = height - 224;
+  let fakeWidth = (width - 160) * 2 / 3;
+  console.log(fakeWidth + ", " + containerHeight);
+  if (containerHeight < 1167 && fakeWidth / containerHeight <= 1234 / 1167) {
+    containerWidth = (containerHeight * 1234) / 1167;
+  } else if (containerHeight < 1167 && fakeWidth / containerHeight >= 1234 / 1167) {
+    containerWidth = (containerHeight * 1234) / 1167;
   }
 
   const [img, setImg] = useState();
   let history = useHistory();
+
+  const clickHandler = () => {
+    setIsLoading(true);
+    history.goBack();
+  };
 
   useEffect(() => {
     if (type) {
@@ -57,13 +60,14 @@ const Siteplan = () => {
       {sitePlan && img && unitMap && (
         <SectionWrapper class={'section'}>
           <div className='bg-wrapper white'>
-            <Row className='sd-everyday-row'>
+            <Row className='sd-everyday-row siteplan-row'>
               <Col md={4}>
                 <Title
                   colorClassName=''
-                  firstHalfTitle='SitePlan'
-                  secondHalfTitle=''
+                  firstHalfTitle='Office'
+                  secondHalfTitle='Warehouse'
                 />
+                <br/>
                 <UnitDropdown type={sitePlan} />
                 <div className='siteplan_Info'>
                   <h5>{sitePlan[unitMapIndex].unit_id}</h5>
@@ -78,7 +82,7 @@ const Siteplan = () => {
                 <Link
                   to={{
                     pathname: `${url}/${sitePlan[unitMapIndex].unit_id}`,
-                    state: {url: `${url}`}
+                    state: { url: `${url}` },
                   }}
                   className='btn btn-primary view-specs'
                 >
@@ -90,7 +94,7 @@ const Siteplan = () => {
                   <button
                     className='btn btn-primary'
                     type='button'
-                    onClick={() => history.goBack()}
+                    onClick={clickHandler}
                   >
                     Go Back
                   </button>
@@ -102,6 +106,7 @@ const Siteplan = () => {
                     width={containerWidth}
                     src={img}
                     maps={unitMap}
+                    height={containerHeight}
                   />
                 </div>
               </Col>

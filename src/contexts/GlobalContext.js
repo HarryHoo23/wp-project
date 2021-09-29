@@ -4,7 +4,8 @@ import { modalData, building_construction_details as building_data } from '../da
 const GlobalContext = React.createContext();
 
 const GlobalProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showed, setShowed] = useState(false);
   const [isModalShow, setIsModalShow] = useState({
     showModal: false,
     case: 1
@@ -84,6 +85,8 @@ const GlobalProvider = ({ children }) => {
         singleFixtureModalContent,
         handleFixtureModalClickOpen,
         unitMapIndex,
+        showed,
+        setShowed,
         setUnitMapIndex,
         setError,
       }}

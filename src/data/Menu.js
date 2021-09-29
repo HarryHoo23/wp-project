@@ -86,7 +86,7 @@ export const hrefLinks = [
   },
   // {
   //   link: 'fp-viewing-map',
-  //   bgColorClass: 'opacity-deep',
+  //   bgColorClass: '',
   //   title: 'Contact Us',
   //   topTitle: 'Maps'
   // },

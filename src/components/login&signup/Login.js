@@ -50,37 +50,40 @@ export default function Login() {
   }
 
   return (
-    <Container
-      className='d-flex align-items-center justify-content-center login-container'
-      style={{ minHeight: '100vh' }}
-    >
-      <div className='w-100' style={{ maxWidth: '400px' }}>
-        <Card>
-          <Card.Body>
-            <h2 className='text-center mb-4'>Log In</h2>
-            {error && <Alert variant='danger'>{error}</Alert>}
-            <Form onSubmit={handleSubmit}>
-              <Form.Group id='email'>
-                <Form.Label>Username</Form.Label>
-                <Form.Control type='text' ref={emailRef} required />
-              </Form.Group>
-              <Form.Group id='password'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control type='password' ref={passwordRef} />
-              </Form.Group>
-              <Button disabled={loading} className='w-100' type='submit'>
-                Login
-              </Button>
-            </Form>
-            <div className='w-100 text-center mt-3'>
-              <Link to='/forgot-password'>Forgot password?</Link>
-            </div>
-          </Card.Body>
-        </Card>
-        <div className='w-100 text-center mt-2'>
-          Need an account? <Link to='/signup'>Sign Up</Link>
+    <div className="login-page">
+      <Container
+        className='d-flex align-items-center justify-content-center login-container'
+        style={{ minHeight: '100vh' }}
+      >
+        <div className='w-100' style={{ maxWidth: '400px' }}>
+          <Card>
+            <Card.Body>
+              <h2 className='text-center mb-4'>Login</h2>
+              {error && <Alert variant='danger'>{error}</Alert>}
+              <Form onSubmit={handleSubmit}>
+                <Form.Group id='email'>
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type='text' ref={emailRef} required />
+                </Form.Group>
+                <Form.Group id='password'>
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type='password' ref={passwordRef} />
+                </Form.Group>
+                <Button disabled={loading} className='w-100 login-btn' type='submit'>
+                  Login
+                </Button>
+              </Form>
+              <div className='w-100 text-center mt-3'>
+                <Link to='/forgot-password'>Forgot password?</Link>
+              </div>
+            </Card.Body>
+          </Card>
+          <div className='w-100 text-center mt-2 font-sm'>
+            Need an account? <Link to='/signup'>Sign Up</Link>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+
+    </div>
   );
 }

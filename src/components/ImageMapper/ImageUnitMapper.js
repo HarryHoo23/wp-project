@@ -1,4 +1,5 @@
-import ImageMapper from 'react-image-mapper';
+//import ImageMapper from 'react-image-mapper';
+import ImageMapper from 'react-img-mapper';
 import React, { useEffect, useState } from 'react';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 
@@ -7,28 +8,21 @@ import { useGlobalContext } from '../../contexts/GlobalContext';
 //   // console.log(coords);
 // };
 
-const ImagePropertyMapper = ({ src, width, maps }) => {
+const ImagePropertyMapper = ({ src, width, maps, height }) => {
   const [rerender, setRerender] = useState(false);
   const { areas } = maps;
-  const [areasMap, setAreasMap] = useState(areas);
   const { setUnitMapIndex } = useGlobalContext();
   const clickHandler = (area, index, event) => {
     setUnitMapIndex(index);
-    let temp_state = [...areasMap];
-    let temp_element = { ...temp_state[index]};
-    temp_element.preFillColor = '';
-    temp_state[index] = temp_element;
-    setAreasMap(temp_state);
+    // let temp_state = [...areasMap];
+    // let temp_element = { ...temp_state[index]};
+    // temp_element.preFillColor = '';
+    // temp_state[index] = temp_element;
+    // setAreasMap(temp_state);
 
     // getNotionPage(area.name);
   };
 
-
-  console.log(areasMap);
-  let MAP = {
-    name: 'name',
-    areas
-  }
   useEffect(() => {
     setRerender(!rerender);
     // eslint-disable-next-line
@@ -37,11 +31,16 @@ const ImagePropertyMapper = ({ src, width, maps }) => {
   return (
     <ImageMapper
       src={src}
-      map={MAP}
+      map={maps}
       width={width}
+      stayHighlighted={true}
+      // width={width}
       imgWidth={1234}
+      // height = {height}
       onClick={clickHandler}
       // onImageMouseMove={(event) => moveOnImage(event)}
+      // responsive={true}
+      // parentWidth={width}
     />
   );
 };

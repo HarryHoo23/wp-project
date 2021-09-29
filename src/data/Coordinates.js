@@ -99,31 +99,38 @@ const office_warehouse_maps = {
   name: 'my-map',
   areas: [
     {
+      id: 1,
       name: 'B',
       shape: 'rect',
       coords: [417, 596, 523, 701],
       fillColor: 'rgba(72,72,72,0.7)',
-      preFillColor: 'rgba(72,72,72,0.7)'
+      preFillColor: 'rgba(72,72,72,0.3)',
     },
     {
+      id: 2,
       name: 'B',
       shape: 'rect',
       coords: [417, 516, 523, 588],
       fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
     },
     {
+      id: 3,
       name: 'B',
       shape: 'rect',
       coords: [417, 422, 523, 509],
       fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
     },
     {
+      id: 4,
       name: 'B',
       shape: 'rect',
       coords: [417, 328, 523, 416],
       fillColor: 'rgba(72,72,72,0.7)',
     },
     {
+      id: 5,
       name: 'B',
       shape: 'rect',
       coords: [417, 422, 523, 509],
@@ -132,105 +139,139 @@ const office_warehouse_maps = {
   ],
 };
 
-const office_maps = [
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [419, 597, 524, 702],
-        preFillColor: 'red',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [869, 138, 955, 232],
-        preFillColor: 'black',
-      },
-    ],
-  },
-];
+const office_maps = {
+  name: 'my-map',
+  areas: [
+    {
+      id: 6,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 596, 523, 701],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 7,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 516, 523, 588],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 8,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 9,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 328, 523, 416],
+      fillColor: 'rgba(72,72,72,0.7)',
+    },
+    {
+      id: 10,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+    },
+  ],
+};
 
-const hybrid_maps = [
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [419, 597, 524, 702],
-        preFillColor: 'red',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [869, 138, 955, 232],
-        preFillColor: 'black',
-      },
-    ],
-  },
-];
+const hybrid_maps = {
+  name: 'my-map',
+  areas: [
+    {
+      id: 11,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 596, 523, 701],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 12,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 516, 523, 588],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 13,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    }
+  ],
+};
 
-const roller_doors_maps = [
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [419, 597, 524, 702],
-        preFillColor: 'red',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [869, 138, 955, 232],
-        preFillColor: 'black',
-      },
-    ],
-  },
-];
+const roller_doors_maps = {
+  name: 'my-map',
+  areas: [
+    {
+      id: 14,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 596, 523, 701],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 15,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 516, 523, 588],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 16,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    }
+  ],
+};
 
-const roller_office_maps = [
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [419, 597, 524, 702],
-        preFillColor: 'red',
-      },
-    ],
-  },
-  {
-    name: 'my-map',
-    areas: [
-      {
-        name: 'B',
-        shape: 'rect',
-        coords: [869, 138, 955, 232],
-        preFillColor: 'black',
-      },
-    ],
-  },
-];
+const roller_office_maps = {
+  name: 'my-map',
+  areas: [
+    {
+      id: 17,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 596, 523, 701],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 18,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 516, 523, 588],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    },
+    {
+      id: 19,
+      name: 'B',
+      shape: 'rect',
+      coords: [417, 422, 523, 509],
+      fillColor: 'rgba(72,72,72,0.7)',
+      preFillColor: 'rgba(72,72,72,0.3)',
+    }
+  ],
+};
 
 export const unit_maps = [
   {

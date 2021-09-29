@@ -7,7 +7,7 @@ const UnitDropdown = (props) => {
   const unitData = props.type;
 
   return (
-    <DropdownButton id='dropdown-basic-button' title='Dropdown button'>      
+    <DropdownButton id='dropdown-basic-button' title='Unit No.'>      
       {unitData.map((unit, index) => {
         return (
           <Dropdown.Item

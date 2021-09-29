@@ -1,4 +1,5 @@
 import unitTypeB_img from '../assests/img/floorplan/unitPlan/First_Floor.png';
+
 export const modalData = [
   {
     bgImg: '',
