@@ -6,8 +6,6 @@ import PriceList from './FinancialTabs/PriceList';
 import EstOutgoings from './FinancialTabs/EstOutgoings';
 import OwnersCoorporation from './FinancialTabs/OwnersCooporation';
 import DepreSchedule from './FinancialTabs/DepreSchedule';
-import InvestmentAnalysis from './FinancialTabs/InvestmentAnalysis';
-import InvestmentPerformance from './FinancialTabs/InvestmentPerformance';
 
 const Financial = () => {
   return (
@@ -20,7 +18,7 @@ const Financial = () => {
               firstHalfTitle='Financial.'
               secondHalfTitle=''
             />
-            <Nav variant='pills' className='flex-column tabs-column'>
+            <Nav variant='pills' className='flex-column tabs-column' style={{marginTop: '2rem'}}>
               {financialContent.map((tab, index) => {
                 return (
                   <Nav.Item key={index}>
@@ -45,12 +43,6 @@ const Financial = () => {
               </Tab.Pane>
               <Tab.Pane eventKey='forth'>
                 <DepreSchedule />
-              </Tab.Pane>
-              <Tab.Pane eventKey='fifth'>
-                <InvestmentAnalysis />
-              </Tab.Pane>
-              <Tab.Pane eventKey='sixth'>
-                <InvestmentPerformance />
               </Tab.Pane>
             </Tab.Content>
           </Col>

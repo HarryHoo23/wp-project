@@ -139,6 +139,7 @@ h6 {
   position: relative;
   font-weight: var(--font-weight);
   margin: 0;
+  display: inline-block;
 }
 
 .sunday-title h3::before {
@@ -462,6 +463,11 @@ h6 {
   font-size: 14px;
   cursor: pointer;
   font-weight: 600;
+}
+
+.btn-left-box .bread-text {
+  color: var(--background-color-grey);
+  font-weight: 400;
 }
 
 .active-nav .btn-right-box svg path,
@@ -927,17 +933,17 @@ a.logo-link {
 
 .logo-row .col-md-4:nth-child(1) .partners-logo-container {
   /* background-image: url('./assests/logo/avian-1.svg'); */
-  background-size: 24% 27%;
+  background-size: 80% 40%;
 }
 
 .logo-row .col-md-4:nth-child(2) .partners-logo-container {
   /* background-image: url('./assets/logo/mim-1.svg'); */
-  background-size: 80% 20%;
+  background-size: 80% 40%;
 }
 
 .logo-row .col-md-4:nth-child(3) .partners-logo-container {
   /* background-image: url('./assets/logo/e-1.svg'); */
-  background-size: 18% 30%;
+  background-size: 80% 40%;
 }
 
 .creative-section .sunday-title p {
@@ -2719,17 +2725,17 @@ textarea.form-control:focus {
   top: 5rem;
 }
 
-.sunday-everyday-carousel-box .image-gallery,
-.sunday-everyday-carousel-box .image-gallery-content,
-.sunday-everyday-carousel-box .image-gallery-slide-wrapper,
-.sunday-everyday-carousel-box .image-gallery-swipe,
-.sunday-everyday-carousel-box .image-gallery-slides,
-.sunday-everyday-carousel-box .image-gallery-slide,
-.sunday-everyday-carousel-box .image-gallery-image {
+.image-gallery,
+.image-gallery-content,
+.image-gallery-slide-wrapper,
+.image-gallery-swipe,
+.image-gallery-slides,
+.image-gallery-slide,
+.image-gallery-image {
   height: 100%;
 }
 
-.sunday-everyday-carousel-box .image-gallery-image {
+.image-gallery-slide .image-gallery-image {
   object-fit: cover;
 }
 
@@ -2777,8 +2783,6 @@ textarea.form-control:focus {
 
 .siteplan-row {
   margin: 0;
-  border-top: 1px solid var(--border-grey-color);
-  border-bottom: 1px solid var(--border-grey-color);
 }
 
 .siteplan-row .col-md-4,
@@ -2786,33 +2790,25 @@ textarea.form-control:focus {
   padding: 0;
 }
 
+button.hide-enquiry {
+  visibility: hidden;
+}
+
+.unit-bar {
+  visibility: hidden;
+}
+
 /* Unit Page */
 .unit-wrapper {
   height: 100vh;
   padding: 5rem;
   position: relative;
-  background-color: var(--font-primary-color);
-}
-
-.unit-title {
-  color: var(--secondary-color-white);
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.unit-title::after {
-  position: absolute;
-  content: '';
-  width: 20px;
-  height: 1px;
-  left: 0;
-  bottom: -10px;
-  background-color: var(--secondary-color-white);
+  background-color: #FAFAFA;
 }
 
 .unit-info {
   font-size: var(--font-size);
-  color: var(--secondary-color-white);
+  color: var(--background-color-grey);
 }
 
 .unit-info span {
@@ -2844,7 +2840,7 @@ textarea.form-control:focus {
 
 #dropdown-basic-button {
   border-radius: 0px;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: #2d2d2d;
   border: 1px solid #2d2d2d;
   color: var(--secondary-color-white);
@@ -2858,7 +2854,7 @@ textarea.form-control:focus {
 }
 
 .back-button {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   margin-top: 2rem;
   position: relative;
   font-size: 15px;
@@ -3046,11 +3042,16 @@ article {
   display: flex;
 }
 
+.unit-wrapper .row {
+  height: 100%;
+  position: relative;
+}
+
 .unit-button {
   margin-top: 4rem;
   font-size: 15px;
   text-transform: uppercase;
-  padding: 1rem 3rem;
+  padding: 0.75rem 2.5rem;
   font-weight: 600;
   background-color: transparent;
   border-color: var(--font-primary-color);
@@ -3061,6 +3062,21 @@ article {
 .unit-button:hover {
   color: var(--secondary-color-white);
   background-color: var(--font-primary-color);
+}
+
+.units-button-group .unit-button {
+  margin-top: 1rem;
+  width: 215px;
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+}
+
+.image-gallery-container {
+  background-color: grey;
+  position: absolute;
+  left: 0;
+  right: -5rem;
+  bottom: 0;
 }
 
 .download-btn {
@@ -3075,6 +3091,10 @@ article {
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   background-color: rgba(112, 112, 112, 0.02);
+}
+
+.unit-wrapper .download-btn {
+  right: 15px;
 }
 
 .download-btn:hover {

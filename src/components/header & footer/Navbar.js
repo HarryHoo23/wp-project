@@ -12,7 +12,7 @@ const Navbar = (props) => {
             {props.title}
           </span>
           <div
-            className={`menu-arrow-box ${props.additionClass}`}
+            className={`menu-arrow-box ${props.additionClass} ${props.unitClass}`}
             onClick={onClickScrollDown}
           >
             <svg

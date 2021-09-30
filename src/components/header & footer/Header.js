@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { links } from '../../data/Menu';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 import logo from '../../assests/logo/Viridian_Logo-coloured.svg';
@@ -31,9 +32,9 @@ export default function Header() {
                   const { id, href, text } = link;
                   return (
                     <li key={id} onClick={openAndCloseNavbar}>
-                      <a className='nav-link' href={href}>
+                      <Link className='nav-link' to={href}>
                         {text}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}

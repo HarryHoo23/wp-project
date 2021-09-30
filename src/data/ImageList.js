@@ -10,9 +10,9 @@ import img9 from '../assests/img/slider-9-popup.jpg';
 import img10 from '../assests/img/slider-10-popup.jpg';
 import img11 from '../assests/img/slider-11-popup.jpg';
 
-import svgImage1 from '../assests/logo/avian-1.svg';
-import svgImage2 from '../assests/logo/mim-1.svg';
-import svgImage3 from '../assests/logo/e-1.svg';
+import svgImage1 from '../assests/logo/Viridian_Logo-white.svg';
+import svgImage2 from '../assests/logo/Viridian_Logo-white.svg';
+import svgImage3 from '../assests/logo/Viridian_Logo-white.svg';
 
 
 

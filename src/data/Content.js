@@ -1154,14 +1154,6 @@ export const financialContent = [
     position: 'forth',
     name: 'DEPRECIATION SCHEDULE',
   },
-  {
-    position: 'fifth',
-    name: 'INVESTMENT ANALYSIS: BASED ON UNIT 12/89 ELM PARK DRIVE',
-  },
-  {
-    position: 'sixth',
-    name: 'YOUR INVESTMENT PERFORMANCE AT YEAR 10',
-  },
 ];
 
 export const allUnitInfo = [

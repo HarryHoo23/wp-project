@@ -120,8 +120,8 @@ const Fullpage = () => {
         // sectionsColor={['orange', 'purple', 'green']}
         navigation={false}
         anchors={[
-          'wf-home',
-          'welcomeHome',
+          'home',
+          'comercial-units',
           'intro',
           'every',
           'partners',

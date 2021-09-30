@@ -1,43 +1,43 @@
 export const links = [
   {
     id: 1,
-    href: '#home',
+    href: '/#home',
     text: 'Home',
   },
   {
     id: 2,
-    href: '#every',
+    href: '/#every',
     text: 'Sunday, Every day',
   },
   {
     id: 3,
-    href: '#partners',
+    href: '/#partners',
     text: 'Creative partners',
   },
   {
     id: 4,
-    href: '#welcomeHome',
-    text: 'Welcome home',
+    href: '/#comercial-units',
+    text: 'Comercial units',
   },
   {
     id: 5,
-    href: '#siteplan',
+    href: '/#siteplan',
     text: 'Residences',
   },
   {
     id: 6,
-    href: '#residencies',
+    href: '/#residencies',
     text: 'On your doorstep',
   },
   {
     id: 7,
-    href: '#map',
+    href: '/#map',
     text: 'Out and about',
   },
   {
     id: 8,
-    href: '#contact-us',
-    text: 'Contact'
+    href: '/#contact-us',
+    text: 'Contact',
   },
 ];
 

@@ -1,8 +1,15 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 
 const TopNavbar = (props) => {
   const { handleFormModalClickOpen, onClickScrollUp } = useGlobalContext();
+  let history = useHistory();
+
+  const clickToGoBack = () => {
+    history.goBack();
+  }
+
   return (
     <div className='nav-wrapper-top'>
       <div className={`nav-top-row ${props.addtionalClass} `}>
@@ -14,7 +21,7 @@ const TopNavbar = (props) => {
             id='menu-arrow-down-box'
             className={props.addtionalClass}
             role='button'
-            onClick={onClickScrollUp}
+            onClick={props.goBack ? clickToGoBack : onClickScrollUp}
           >
             <svg
               id='menu-arrow-down'

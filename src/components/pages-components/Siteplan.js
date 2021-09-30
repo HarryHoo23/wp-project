@@ -9,6 +9,8 @@ import UnitDropdown from './UnitDropdown';
 import ImageUnitMapper from '../ImageMapper/ImageUnitMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
 import { useGlobalContext } from '../../contexts/GlobalContext';
+import TopNavbar from '../header & footer/TopNavbar';
+import Navbar from '../header & footer/Navbar';
 import BottomBar from '../header & footer/BottomBar';
 
 const Siteplan = () => {
@@ -27,7 +29,6 @@ const Siteplan = () => {
 
   let containerHeight = height - 224;
   let fakeWidth = (width - 160) * 2 / 3;
-  console.log(fakeWidth + ", " + containerHeight);
   if (containerHeight < 1167 && fakeWidth / containerHeight <= 1234 / 1167) {
     containerWidth = (containerHeight * 1234) / 1167;
   } else if (containerHeight < 1167 && fakeWidth / containerHeight >= 1234 / 1167) {
@@ -66,12 +67,18 @@ const Siteplan = () => {
     // eslint-disable-next-line
   }, []);
 
+  let breadComponent = (
+    <span className='bread-text'>
+      <Link to='/'>UNITS</Link> /{` ${title.first}`} {title.second}
+    </span>
+  );
   
 
   return (
     <>
       {sitePlan && img && unitMap && (
         <SectionWrapper class={'section'} idName={'units'}>
+          <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' />
           <div className='bg-wrapper white'>
             <Row className='sd-everyday-row siteplan-row'>
               <a className='download-btn' href='#' download>
@@ -117,7 +124,7 @@ const Siteplan = () => {
                 <Link
                   to={{
                     pathname: `${url}/${sitePlan[unitMapIndex].unit_id}`,
-                    state: { url: `${url}` },
+                    state: { url: `${url}`, siteData: sitePlan },
                   }}
                   className='btn unit-button'
                 >
@@ -138,11 +145,7 @@ const Siteplan = () => {
               </Col>
             </Row>
           </div>
-          <BottomBar>
-            <span className='bread-text'>
-              <Link to='/'>UNITS</Link> /{` ${title.first}`} {title.second}
-            </span>
-          </BottomBar>
+          <Navbar title={breadComponent} additionClass="opacity-deep" unitClass='unit-bar' />
         </SectionWrapper>
       )}
     </>
