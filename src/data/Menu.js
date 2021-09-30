@@ -52,7 +52,7 @@ export const hrefLinks = [
     link: 'fp-viewing-every',
     bgColorClass: 'opacity-deep',
     title: 'Creative partners',
-    topTitle: 'Sunday you know'
+    topTitle: 'About'
   },
   {
     link: 'fp-viewing-partners',

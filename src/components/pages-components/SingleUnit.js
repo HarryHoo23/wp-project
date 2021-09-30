@@ -3,16 +3,19 @@ import { useParams, useHistory, Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { useEffect } from 'react';
+import { useGlobalContext } from '../../contexts/GlobalContext';
 import Title from './Title';
 import TopNavbar from '../header & footer/TopNavbar';
 import UnitDropdown from './UnitDropdown';
 import UnitModal from './UnitModals/UnitModal';
 import ImageGallary from '../ImageGallary';
 import Navbar from '../header & footer/Navbar';
-
+import arrow from '../../assests/img/download-2.png';
+import fullScreen from '../../assests/img/icons/lightbox-expand.svg';
 
 const SingleUnit = (props) => {
   const { id } = useParams();
+  const { unitMapIndex } = useGlobalContext();
   const [height, setHeight] = useState(0);
   const { url, siteData } = props.location.state;
   const [unitData, setUnitData] = useState(sitePlanData[0]);
@@ -33,7 +36,25 @@ const SingleUnit = (props) => {
     setComponentNumber(1);
   };
 
+  function changeArrow() {
+    let image_gallery_icons =
+      document.getElementsByClassName('image-gallery-icon');
+    for (let i = 0; i < image_gallery_icons.length; i++) {
+      image_gallery_icons[i].innerHTML = `<img src=${arrow} alt="arrow" />`;
+    }
+
+    let fullscreenButtons = document.getElementsByClassName(
+      'image-gallery-fullscreen-button'
+    );
+    for (let i = 0; i < fullscreenButtons.length; i++) {
+      fullscreenButtons[
+        i
+      ].innerHTML = `<img src=${fullScreen} alt="fullScreen" />`;
+    }
+  }
+
   useEffect(() => {
+    changeArrow();
     setHeight(heightRef.current.clientHeight);
     if (id) {
       const property_type = sitePlanData.find(
@@ -49,14 +70,19 @@ const SingleUnit = (props) => {
     }
     // eslint-disable-next-line
   }, []);
+  
+  useEffect(() => {
+    const property_type = sitePlanData.find(
+      (element) => element.type === replacedUrl
+    );
+    setUnitData(property_type.data[unitMapIndex]);
+  }, [unitMapIndex]);
 
   let imageHeight;
   if (height !== 0) {
     imageHeight = height + 32 + 160;
   }
 
-  console.log(props);
-  
   function unitType(string) {
     let unitType = string.replace(/-/g, ' ');
     return unitType;
@@ -158,6 +184,6 @@ const SingleUnit = (props) => {
       />
     </>
   );
-};;
+};
 
 export default SingleUnit;

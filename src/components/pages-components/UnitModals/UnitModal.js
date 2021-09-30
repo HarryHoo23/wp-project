@@ -10,7 +10,7 @@ const UnitModal = (props) => {
   function renderComponent() {
     if (props.number === 1) {
       return <DepreSchedule />;
-    } else if (props.number == 2) {
+    } else if (props.number === 2) {
       return <OwnersCooporation />;
     } else {
       return <PriceList />;

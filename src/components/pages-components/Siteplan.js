@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Link, useRouteMatch } from 'react-router-dom';
-import { Row, Col, Breadcrumb } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { unit_maps } from '../../data/Coordinates';
 import SectionWrapper from '../SectionWrapper';
@@ -11,7 +11,6 @@ import useWindowDimensions from '../../contexts/useWindowsDimension';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 import TopNavbar from '../header & footer/TopNavbar';
 import Navbar from '../header & footer/Navbar';
-import BottomBar from '../header & footer/BottomBar';
 
 const Siteplan = () => {
   const { type } = useParams();

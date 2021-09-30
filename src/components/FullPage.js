@@ -24,6 +24,8 @@ import CommercialUnits from './pages-components/CommercialUnits';
 import Financial from './pages-components/Financial';
 import { useAuth } from '../contexts/AuthContext';
 import logo from '../assests/logo/Viridian_Logo-white.svg';
+import arrow from '../assests/img/download-2.png';
+import fullScreen from '../assests/img/icons/lightbox-expand.svg';
 
 
 const Fullpage = () => {
@@ -73,6 +75,23 @@ const Fullpage = () => {
     }
   }
 
+  function changeArrow() {
+    let image_gallery_icons = document.getElementsByClassName(
+      'image-gallery-icon'
+    );
+    for (let i = 0; i < image_gallery_icons.length; i++) {
+      image_gallery_icons[i].innerHTML = `<img src=${arrow} alt="arrow" />`;
+    }
+
+    let fullscreenButtons = document.getElementsByClassName(
+      'image-gallery-fullscreen-button');
+    for (let i = 0; i < fullscreenButtons.length; i++) {
+      fullscreenButtons[
+        i
+      ].innerHTML = `<img src=${fullScreen} alt="fullScreen" />`;
+    }
+  }
+
   useEffect(() => {
     async function handleLogOut() {
       setError('');
@@ -94,6 +113,7 @@ const Fullpage = () => {
   }, []);
 
   useEffect(() => {
+    changeArrow();
     setIsLoading(false);
     setShowLoadingClass('show');
     const first_timeout = setTimeout(() => {
@@ -193,15 +213,12 @@ const Fullpage = () => {
                   <Col lg={3} md={4} className='sunday-paragraph'>
                     <Title
                       colorClassName=''
-                      firstHalfTitle='Sunday,'
-                      secondHalfTitle='every day.'
+                      firstHalfTitle='About'
+                      secondHalfTitle='Development.'
                     />
 
                     <p style={{ paddingTop: '18px', marginBottom: '30px' }}>
-                      Sunday is slow, deliberate. It’s a Tivoli Road croissant.
-                      Or an afternoon stroll around Como Park. It’s about being
-                      truly present — exploring each moment with curiosity,
-                      without striving for it to be something more.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat neque iure quasi, impedit delectus quisquam iusto hic ipsum vel nam aspernatur voluptatem, vero voluptas. Quae alias dignissimos officia. Corporis, quo!
                     </p>
                   </Col>
                   <Col lg={9} md={8} className='sunday-everyday-carousel-box'>

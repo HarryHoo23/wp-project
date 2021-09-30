@@ -14,7 +14,12 @@ const LogoModalContent = (props) => {
           <div className='title-box'>
             <span className='title'>{props.title}</span>
             <br />
-            <a href={props.href} target='_blank' rel="noreferrer">
+            <a
+              href={props.href}
+              className='logo-link'
+              target='_blank'
+              rel='noreferrer'
+            >
               {props.link}{' '}
             </a>
           </div>

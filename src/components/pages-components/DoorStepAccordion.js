@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Button, Accordion, Row, Col } from 'react-bootstrap';
-import img1 from '../../assests/img/doorstep/abacus.jpg';
+import img1 from '../../assests/img/doorstep/barrys.jpg';
 import img2 from '../../assests/img/doorstep/atlas.jpg';
-import img3 from '../../assests/img/doorstep/barrys.jpg';
+import img3 from '../../assests/img/doorstep/abacus.jpg';
 import img4 from '../../assests/img/doorstep/tivoli.jpg';
 
 const DoorStepAccordion = () => {
