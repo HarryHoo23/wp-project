@@ -22,6 +22,7 @@ import DoorStepAccordion from './pages-components/DoorStepAccordion';
 import Sale from './pages-components/Sale';
 import CommercialUnits from './pages-components/CommercialUnits';
 import Financial from './pages-components/Financial';
+import Map from './pages-components/Map';
 import { useAuth } from '../contexts/AuthContext';
 import logo from '../assests/logo/Viridian_Logo-white.svg';
 import arrow from '../assests/img/download-2.png';
@@ -61,8 +62,8 @@ const Fullpage = () => {
 
   const [navBarTitle, setNavBarTitle] = useState({
     bgColorClass: '',
-    title: 'Sunday Everyday',
-    topTitle: 'Home',
+    title: 'Commercial Units',
+    topTitle: '',
   });
 
   function renderModalContent() {
@@ -140,7 +141,7 @@ const Fullpage = () => {
         // sectionsColor={['orange', 'purple', 'green']}
         navigation={false}
         anchors={[
-          'home',
+          'wf-home',
           'comercial-units',
           'intro',
           'every',
@@ -148,7 +149,7 @@ const Fullpage = () => {
           'fixtures',
           'doorsteps',
           'financial',
-          // 'map',
+          'maps',
           'contact-us',
           'disclaimer',
         ]}
@@ -187,7 +188,7 @@ const Fullpage = () => {
               <GeneralModal renderBodyComponent={renderModalContent()} />
 
               {/* First Section */}
-              <SectionWrapper class={'section'} idName={'home'}>
+              <SectionWrapper class={'section'} idName={'wf-home'}>
                 <div className='home-video'>
                   <video loop autoPlay muted id='home-bg-video'>
                     <source src={HomeVideo} type='video/mp4' />
@@ -204,7 +205,7 @@ const Fullpage = () => {
               <SectionWrapper class={'section'} idName={'home-modal'}>
                 <div
                   id='home-modal-container'
-                  className={name[0].className}
+                  className={name[1].className}
                 ></div>
               </SectionWrapper>
 
@@ -218,7 +219,10 @@ const Fullpage = () => {
                     />
 
                     <p style={{ paddingTop: '18px', marginBottom: '30px' }}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat neque iure quasi, impedit delectus quisquam iusto hic ipsum vel nam aspernatur voluptatem, vero voluptas. Quae alias dignissimos officia. Corporis, quo!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quaerat neque iure quasi, impedit delectus quisquam iusto
+                      hic ipsum vel nam aspernatur voluptatem, vero voluptas.
+                      Quae alias dignissimos officia. Corporis, quo!
                     </p>
                   </Col>
                   <Col lg={9} md={8} className='sunday-everyday-carousel-box'>
@@ -308,13 +312,19 @@ const Fullpage = () => {
                 </div>
               </SectionWrapper>
 
-              <SectionWrapper class={'section'} idName={'financial'}>
+              <SectionWrapper class={'section'} idName={'wf-financial'}>
                 <div className='bg-wrapper'>
                   <Financial />
                 </div>
               </SectionWrapper>
 
-              <SectionWrapper class={'section'} idName={'contact-us'}>
+              <SectionWrapper class={'section'} idName={'wf-map'}>
+                <div className="bg-wrapper">
+                  <Map />
+                </div>
+              </SectionWrapper>
+
+              <SectionWrapper class={'section'} idName={'wf-contact-us'}>
                 <div className='bg-wrapper'>
                   <div className='contact-container'>
                     <Title

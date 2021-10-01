@@ -107,7 +107,8 @@ h6 {
   position: relative;
 }
 
-#sunday-partners .bg-wrapper {
+#sunday-partners .bg-wrapper,
+#wf-map .bg-wrapper {
   background: var(--font-primary-color);
 }
 
@@ -116,8 +117,8 @@ h6 {
   background: #2d2d2d;
 }
 
-#financial .bg-wrapper,
-#contact-us .bg-wrapper {
+#wf-financial .bg-wrapper,
+#wf-contact-us .bg-wrapper {
   background: #fdfdfd;
 }
 
@@ -1914,27 +1915,24 @@ button.btn.btn-link[aria-expanded='true'] {
 }
 
 /* Maps Section */
-#map-section {
-  padding: 5rem;
-  background-color: #8b958e;
-  position: relative;
-}
-
 .mapcontainer {
   position: relative;
   height: 100%;
   background-color: #e0e0e0;
 }
 
-#map {
+#wf-map {
   height: 100%;
-  background-color: #e0e0e0;
 }
 
 #map-accordion .card-header .btn-link,
 #map-accordion .card-body {
   color: var(--secondary-color-white);
   font-size: 14px;
+}
+
+#map-accordion .card-header .btn-link {
+  text-transform: uppercase;
 }
 
 #map-accordion .card-body {
@@ -1947,6 +1945,7 @@ button.btn.btn-link[aria-expanded='true'] {
 
 #map-accordion .btn-link.collapsed {
   border-bottom: 1px solid var(--secondary-color-white);
+  margin-bottom: 1px;
   border-radius: 0;
 }
 
@@ -1955,10 +1954,11 @@ button.btn.btn-link[aria-expanded='true'] {
   padding-inline-start: 0px;
 }
 
-#map-accordion .card-body ul a {
+#map-accordion .card-body ul li {
   color: var(--secondary-color-white);
   font-weight: 300;
   font-style: italic;
+  cursor: pointer;
 }
 
 /* Contact us section */

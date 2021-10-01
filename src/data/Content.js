@@ -1,4 +1,6 @@
 import unitTypeB_img from '../assests/img/floorplan/unitPlan/First_Floor.png';
+import marty_fox from '../assests/img/marty.jpg';
+import lana_img from '../assests/img/lana.jpg';
 
 export const modalData = [
   {
@@ -1122,7 +1124,7 @@ export const sale_contacts = [
     phone: '0438 808 859',
     email: 'marty@whitefoxrealestate.com.au',
     insta_link: 'https://www.instagram.com/martyfox01/?hl=en',
-    img: 'https://sundayhawksburn.com.au/client/assets/img/marty.jpg',
+    img: marty_fox,
   },
   {
     id: 2,
@@ -1133,7 +1135,7 @@ export const sale_contacts = [
     phone: '0438 808 859',
     email: 'marty@whitefoxrealestate.com.au',
     insta_link: 'https://www.instagram.com/martyfox01/?hl=en',
-    img: 'https://sundayhawksburn.com.au/client/assets/img/lana.jpg',
+    img: lana_img,
   },
 ];
 
