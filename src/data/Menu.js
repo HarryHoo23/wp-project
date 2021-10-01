@@ -80,7 +80,7 @@ export const hrefLinks = [
   },
   {
     link: 'fp-viewing-financial',
-    bgColorClass: '',
+    bgColorClass: 'opacity-deep',
     title: 'Maps',
     topTitle: 'On your Doorstep'
   },

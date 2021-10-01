@@ -14,7 +14,7 @@ const Financial = () => {
         <Tab.Container defaultActiveKey='first'>
           <Col md={3}>
             <Title
-              colorClassName='white-title'
+              colorClassName=''
               firstHalfTitle='Financial.'
               secondHalfTitle=''
             />

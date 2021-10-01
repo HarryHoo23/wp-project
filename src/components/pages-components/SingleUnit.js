@@ -76,7 +76,7 @@ const SingleUnit = (props) => {
       (element) => element.type === replacedUrl
     );
     setUnitData(property_type.data[unitMapIndex]);
-  }, [unitMapIndex]);
+  }, [unitMapIndex, replacedUrl]);
 
   let imageHeight;
   if (height !== 0) {

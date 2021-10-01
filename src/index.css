@@ -111,8 +111,14 @@ h6 {
   background: var(--font-primary-color);
 }
 
-#commercial-units .bg-wrapper {
+#commercial-units .bg-wrapper,
+#disclaimer-page .bg-wrapper {
   background: #2d2d2d;
+}
+
+#financial .bg-wrapper,
+#contact-us .bg-wrapper {
+  background: #fdfdfd;
 }
 
 .fp-viewing-wf-home .nav-wrapper-top {
@@ -976,6 +982,11 @@ a.logo-link {
   text-transform: uppercase;
 }
 
+.nav-pills .nav-link:hover {
+  background: var(--secondary-color-white);
+  color: var(--font-primary-color);
+}
+
 #v-pills-tab {
   padding-top: 5rem;
 }
@@ -1092,8 +1103,8 @@ a.logo-link {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background-color: #f6f7fa;
-  transition: 0.2s linear;
   color: var(--font-primary-color);
+  transition: 0.2s linear;
 }
 
 .nav-pills .nav-link {
@@ -1102,6 +1113,35 @@ a.logo-link {
   padding: 8px 13px;
   margin: 8px 0;
   line-height: 24px;
+}
+
+
+.financials .nav-pills .nav-link.active,
+.financials .nav-pills .show > .nav-link {
+  transition: 0.2s linear;
+  border-radius: 0px;
+  background-color: #2d2d2d;
+  border: 1px solid #2d2d2d;
+  color: var(--secondary-color-white);
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+}
+
+.financials .nav-pills .nav-link {
+  border: 1px solid #2d2d2d;
+  color: #2d2d2d;
+  font-weight: 500;
+  border-radius: 0px;
+  padding: 8px 13px;
+  margin: 8px 0;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.financials .tab-content table {
+  font-size: 13px;
 }
 
 .welcome-tabs .nav {
@@ -1922,10 +1962,6 @@ button.btn.btn-link[aria-expanded='true'] {
 }
 
 /* Contact us section */
-#contact-us {
-  padding: 5rem;
-}
-
 .contact-container {
   height: 100%;
   position: relative;
@@ -1972,12 +2008,12 @@ button.btn.btn-link[aria-expanded='true'] {
 }
 
 .sale-name {
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 0.02rem;
   font-weight: 600;
   color: #656565;
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid var(--title-primary-color);
+  border-bottom: 3px solid var(--background-color-grey);
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -1987,7 +2023,7 @@ button.btn.btn-link[aria-expanded='true'] {
   padding-bottom: 0.5rem;
   color: #656565;
   border-bottom: 1px solid rgba(143, 143, 143, 0.43);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .sale-intro {
@@ -2025,14 +2061,14 @@ ul.sale-contact li a {
 .contact-btn-container button {
   text-transform: uppercase;
   flex: 1 1 auto;
-  border-color: var(--title-primary-color);
+  border-color: var(--background-color-grey);
   border-radius: 0px;
   padding: 0.35rem 0.75rem 0.4rem 0.75rem;
 }
 
 .email:hover {
-  background-color: var(--title-primary-color);
-  border: var(--title-primary-color);
+  background-color: var(--background-color-grey);
+  border: var(--background-color-grey);
 }
 
 .email {
@@ -2048,7 +2084,7 @@ ul.sale-contact li a {
 }
 
 .call {
-  background-color: var(--title-primary-color);
+  background-color: var(--background-color-grey);
   color: var(--secondary-color-white);
 }
 
@@ -2059,7 +2095,7 @@ ul.sale-contact li a {
 
 .call:hover {
   background-color: var(--secondary-color-white);
-  border-color: var(--title-primary-color);
+  border-color: var(--background-color-grey);
 }
 
 .call:hover a {
@@ -2506,7 +2542,7 @@ ul.sale-contact li a {
   position: absolute;
   bottom: 0;
   right: -40px;
-  width: 250px;
+  width: 350px;
 }
 
 .logobox p {
@@ -2517,7 +2553,7 @@ ul.sale-contact li a {
 }
 
 .whitefox-logo {
-  width: 250px;
+  width: 350px;
 }
 
 /*  Contact Form */

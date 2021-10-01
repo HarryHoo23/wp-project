@@ -314,7 +314,7 @@ const Fullpage = () => {
                 </div>
               </SectionWrapper>
 
-              <SectionWrapper class={'section'} idName={'doorstep'}>
+              <SectionWrapper class={'section'} idName={'contact-us'}>
                 <div className='bg-wrapper'>
                   <div className='contact-container'>
                     <Title

@@ -1140,19 +1140,19 @@ export const sale_contacts = [
 export const financialContent = [
   {
     position: 'first',
-    name: 'PRICE LIST',
+    name: 'Price List',
   },
   {
     position: 'second',
-    name: 'ESTIMATED OUTGOINGS',
+    name: 'Estimated Outgoings',
   },
   {
     position: 'third',
-    name: 'OWNERS CORPORATION',
+    name: 'Owners Corporation',
   },
   {
     position: 'forth',
-    name: 'DEPRECIATION SCHEDULE',
+    name: 'Depreciation Schedule',
   },
 ];
 
@@ -1860,8 +1860,8 @@ export const invest_performance_year_10 = [
     year_7: '20.25%',
     year_8: '20.25%',
     year_9: '20.25%',
-    year_10: '20.25%'
-  }
+    year_10: '20.25%',
+  },
 ];
 
 export const investment_analysis = [
