@@ -38,9 +38,11 @@ const Siteplan = () => {
   let history = useHistory();
 
   const clickHandler = () => {
-    setIsLoading(true);
-    history.goBack();
+    setIsLoading(false);
+    history.push('/');
   };
+
+  console.log(type);
 
   useEffect(() => {
     if (type) {
@@ -49,7 +51,7 @@ const Siteplan = () => {
       const { first_half_title, second_half_title } = unitType;
       let pageTitle = {
         first: first_half_title,
-        second: second_half_title
+        second: second_half_title,
       };
       setTitle(pageTitle);
       setSitePlan(unitType.data);
@@ -64,11 +66,11 @@ const Siteplan = () => {
       setUnitMap(unit_maps[0].data);
     }
     // eslint-disable-next-line
-  }, []);
+  }, [url]);
 
   let breadComponent = (
     <span className='bread-text'>
-      <Link to='/'>UNITS</Link> /{` ${title.first}`} {title.second}
+      <button onClick={clickHandler}>UNITS</button> /{` ${title.first}`} {title.second}
     </span>
   );
   
@@ -80,7 +82,7 @@ const Siteplan = () => {
           <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' />
           <div className='bg-wrapper white'>
             <Row className='sd-everyday-row siteplan-row'>
-              <a className='download-btn' href='#' download>
+              <a className='download-btn' href='http://localhost:3000/access#maps' download>
                 Download Pdf
               </a>
               <Col md={4}>
@@ -93,17 +95,17 @@ const Siteplan = () => {
                 <div className='button-group'>
                   <UnitDropdown type={sitePlan} />
                   {type && (
-                    <button
+                    <span
                       className='back-button'
                       type='button'
                       onClick={clickHandler}
                     >
                       BACK
-                    </button>
+                    </span>
                   )}
                 </div>
                 <div className='siteplan_Info'>
-                  <h5>{sitePlan[unitMapIndex].unit_id}</h5>
+                  <h5>{sitePlan[unitMapIndex].unit_number}</h5>
                   <p>
                     <strong>Ground Level:</strong>{' '}
                     {sitePlan[unitMapIndex].ground_level}

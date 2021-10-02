@@ -80,3 +80,9 @@
     font-size: 16px;
   }
 } */
+
+@media screen and (max-height: 800px) {
+  .sunday-navbar.sunday-navbar-active {
+    height: 60%;
+  }
+}

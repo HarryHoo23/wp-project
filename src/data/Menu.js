@@ -1,47 +1,76 @@
 export const links = [
   {
     id: 1,
-    href: '/#home',
+    href: '#wf-home',
     text: 'Home',
   },
   {
     id: 2,
-    href: '/#every',
-    text: 'Sunday, Every day',
+    href: '#commercial-units',
+    text: 'Commercial units',
   },
   {
     id: 3,
-    href: '/#partners',
+    href: '#intro',
     text: 'Creative partners',
   },
   {
     id: 4,
-    href: '/#comercial-units',
-    text: 'Comercial units',
+    href: '#fixtures',
+    text: 'Fixture / finishes',
   },
   {
     id: 5,
-    href: '/#siteplan',
-    text: 'Residences',
+    href: '#financial',
+    text: 'Financials',
   },
   {
     id: 6,
-    href: '/#residencies',
-    text: 'On your doorstep',
+    href: '#doorsteps',
+    text: 'Neighbourhood',
   },
   {
     id: 7,
-    href: '/#map',
-    text: 'Out and about',
+    href: '#maps',
+    text: 'Map',
   },
   {
     id: 8,
-    href: '/#contact-us',
+    href: '#contact-us',
     text: 'Contact',
   },
 ];
 
+export const subMenuLink = [
+  {
+    text: 'Office warehouse',
+    link: 'office-warehouse',
+  },
+  {
+    text: 'Office',
+    link: 'office',
+  },
+  {
+    text: 'Hybrid',
+    link: 'hybrid',
+  },
+  {
+    text: 'Roller doors',
+    link: 'roller-doors',
+  },
+  {
+    text: 'Roller / Office',
+    link: 'roller-office',
+  },
+];
+
 export const hrefLinks = [
+  {
+    link: 'fp-viewing-wf-home',
+    bgColorClass: '',
+    title: 'Commercial Units',
+    topTitle: 'Home',
+  },
   {
     link: 'fp-viewing-commercial-units',
     bgColorClass: '',
@@ -64,7 +93,7 @@ export const hrefLinks = [
     link: 'fp-viewing-partners',
     bgColorClass: '',
     title: 'Fixtures and Finishes',
-    topTitle: 'Commercial Units',
+    topTitle: 'About Development',
   },
   {
     link: 'fp-viewing-fixtures',

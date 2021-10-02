@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useParams, useHistory, Link } from 'react-router-dom';
+import { useParams, useHistory, Link, useRouteMatch } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { useEffect } from 'react';
@@ -15,13 +15,16 @@ import fullScreen from '../../assests/img/icons/lightbox-expand.svg';
 
 const SingleUnit = (props) => {
   const { id } = useParams();
-  const { unitMapIndex } = useGlobalContext();
-  const [height, setHeight] = useState(0);
+  let { currentUrl } = useRouteMatch();
   const { url, siteData } = props.location.state;
+  const { unitMapIndex, setIsLoading } = useGlobalContext();
+
+  const [height, setHeight] = useState(0);
   const [unitData, setUnitData] = useState(sitePlanData[0]);
   const [isOpen, setIsOpen] = useState(false);
-  const heightRef = useRef();
   const [componentNumber, setComponentNumber] = useState(1);
+
+  const heightRef = useRef();
 
   let history = useHistory();
   let replacedUrl = url.replace(/\//g, '');
@@ -70,13 +73,13 @@ const SingleUnit = (props) => {
     }
     // eslint-disable-next-line
   }, []);
-  
+
   useEffect(() => {
     const property_type = sitePlanData.find(
       (element) => element.type === replacedUrl
     );
     setUnitData(property_type.data[unitMapIndex]);
-  }, [unitMapIndex, replacedUrl]);
+  }, [unitMapIndex, replacedUrl, currentUrl]);
 
   let imageHeight;
   if (height !== 0) {
@@ -88,10 +91,15 @@ const SingleUnit = (props) => {
     return unitType;
   }
 
+  const clickHandler = () => {
+    setIsLoading(false);
+    history.push('/');
+  };
+
   let breadComponent = (
     <span className='bread-text'>
       <Link to='/'>UNITS</Link> /{' '}
-      <span className='bread-text' onClick={() => history.goBack()}>
+      <span className='bread-text' onClick={clickHandler}>
         {unitType(props.match.params.type)}
       </span>{' '}
       / {unitData.unit_number}
@@ -103,7 +111,11 @@ const SingleUnit = (props) => {
       <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' />
       <div className={`${id ? 'unit-wrapper' : ''}`}>
         <Row>
-          <a className='download-btn' href='#' download>
+          <a
+            className='download-btn'
+            href='http://localhost:3000/access#maps'
+            download
+          >
             Download Pdf
           </a>
           <Col md={4}>

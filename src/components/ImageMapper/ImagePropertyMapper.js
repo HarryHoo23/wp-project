@@ -4,7 +4,8 @@ import floorplanImg from '../../assests/img/floorplan/Example-1.jpg';
 
 
 // const moveOnImage = (evt) => {
-//   const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+//   //const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+//   console.log(evt);
 // };
 
 const ImagePropertyMapper = ({ maps, width }) => {

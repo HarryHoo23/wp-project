@@ -19,6 +19,7 @@ import svgImage3 from '../assests/logo/Viridian_Logo-white.svg';
 export const ImageList = [
   {
     original: img1,
+    link: 'this is a link test'
   },
   {
     original: img2,

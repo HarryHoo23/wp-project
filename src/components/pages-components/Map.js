@@ -1,33 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Button, Accordion, Row, Col } from 'react-bootstrap';
 import GoogleMapReact from 'google-map-react';
 import { google_map_data, locationAccordion } from '../../data/MapData';
 
-const AnyReactComponent = ({ text, src }) => <div>{text}<img src={src} /></div>;
+const AnyReactComponent = ({ src, info, show, click }) => (
+  <div
+    style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}
+    onClick={click}
+  >
+    {show && <div className='info-window'>{info}</div>}
+    <img src={src} alt="marker" />
+  </div>
+);
 
 const Map = () => {
   const [center, setCenter] = useState({ lat: -37.84075, lng: 145.00199 });
   const [zoom, setZoom] = useState(16);
+  const [isShow, SetIsShow] = useState(google_map_data.loactions_coordinates);
 
-  console.log(process.env.REACT_APP_GOOGLE_MAP_API_KEY);
-  // const [activeMarker, setActiveMarker] = useState(null);
+  function toggleMarker (index) {
+    let tempState = [...isShow];
+    let temp_element = { ...tempState[index] };
+    temp_element.show = !temp_element.show;
+    tempState[index] = temp_element;
+    SetIsShow(tempState)
+  }
 
-  // useEffect(() => {
-  //   googleMap = initGoogleMap();
-  //   var bounds = new window.google.maps.LatLngBounds();
-  //   markerList.map((x) => {
-  //     const marker = createMarker(x);
-  //     bounds.extend(marker.position);
-  //   });
-  //   googleMap.fitBounds(bounds); // the map to contain all markers
-  // }, []);
+  const changeMapCenter = () => {
+    let mapButtonList = document.getElementsByClassName('zoomIn');
+    for (let i = 0; i < mapButtonList.length; i++) {
+      mapButtonList[i].addEventListener('click', () => {
+        let centerPosition = google_map_data.loactions_coordinates[i].position;
+        console.log(centerPosition);
+        setCenter(centerPosition);
+        setZoom(20);
+        toggleMarker(i);
+      });
+    }
+  }
 
-  // const handleActiveMarker = (marker) => {
-  //   if (marker === activeMarker) {
-  //     return;
-  //   }
-  //   setActiveMarker(marker);
-  // };
+  useEffect(() => {
+    changeMapCenter();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Row className='h-100'>
@@ -202,6 +217,9 @@ const Map = () => {
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
           defaultCenter={center}
           defaultZoom={zoom}
+          center={center}
+          zoom={zoom}
+          options={{ styles: google_map_data.mapStyle }}
         >
           {google_map_data.loactions_coordinates.map((marker, index) => {
             return (
@@ -209,8 +227,10 @@ const Map = () => {
                 key={index}
                 lat={marker.position.lat}
                 lng={marker.position.lng}
-                text='My Marker'
                 src={marker.type}
+                info={google_map_data.locationAddress[index]}
+                show={isShow[index].show}
+                click={() => toggleMarker(index)}
               />
             );
           })}

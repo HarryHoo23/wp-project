@@ -248,305 +248,559 @@ const loactions_coordinates = [
   {
     position: {lat: -37.83852, lng: 145.00508},
     type: cafeMarker,
+    show: false
   },
   {
     position: {lat: -37.84834, lng: 145.00948},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.845661,lng:  144.994156},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.83164, lng: 145.00508},
     type: cafeMarker,
+    show: false
   },
   {
     position: {lat: -37.83848, lng: 144.98666},
     type: cafeMarker,
+    show: false
   },
   {
     position: {lat: -37.8350858, lng: 144.9964926},
     type: foodMarker,
+    show: false
   },
   {
     position: { lat: -37.83937, lng: 144.99819 },
     type: cafeMarker,
+    show: false
   },
   {
     position: {lat: -37.83851, lng: 44.99141},
     type: cafeMarker,
+    show: false
   },
   {
     position: {lat: -37.84754, lng: 144.99918},
     type: cafeMarker,
+    show: false
   },
   {
     position: {lat: -37.83348, lng: 144.99031},
     type: foodMarker,
+    show: false
   },
   // food grove;
   // Sunday Service
   {
     position: {lat: -37.8341565, lng: 144.9814522},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.8570368, lng: 144.9925459},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.839447021484375,  lng: 144.99560546875},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.8460252, lng: 144.987745},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.83403, lng: 144.98176},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.8381528, lng: 144.98667},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.8384, lng: 144.99026},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.83405, lng: 144.98186}, 
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.83387, lng: 144.98051},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.84813, lng: 145.00347}, 
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.84753, lng: 144.99907},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.84771, lng: 145.00039}, 
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.83741, lng: 144.97925}, 
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.86874, lng: 144.9933},
     type: foodMarker,
+    show: false
   },
   {
     position: {lat: -37.84099, lng: 144.99472},
     type: foodMarker,
+    show: false
   },
   // Sunday Sweat
   {
     position: {lat: -37.83577, lng: 145.00562},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.84506, lng: 144.98039},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.81739, lng: 144.96752},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.83912, lng: 144.99271}, 
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.83809, lng: 144.99747}, 
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.84888, lng: 144.99382},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.84797, lng: 144.99662},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.85055, lng: 144.99482},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.85482, lng: 145.0156},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.83644, lng: 144.99781},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.844, lng: 144.9974},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.84403, lng: 144.99759},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.83958, lng: 144.9964},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.8392149, lng: 144.9964991},
     type: movingMarker,
+    show: false
   },
   {
     position: {lat: -37.85192, lng: 144.9939},
     type: movingMarker,
+    show: false
   },
   // Sunday Market
   {
     position: {lat: -37.83937, lng: 144.99819},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.83712, lng: 144.99609},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84659, lng: 144.99217},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.83712, lng: 144.99629},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84827, lng: 145.0046},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84573, lng: 144.99375},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.83975, lng: 144.99782}, 
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84338, lng: 144.99764},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.8388, lng: 144.99015},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.83693, lng: 144.99706},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84573, lng: 144.99375},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84106, lng: 145.00869},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84829, lng: 145.00475},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84828, lng: 145.00465},
     type: shopMarker,
+    show: false
   },
   // Sunday Best
   {
     position: {lat: -37.84828, lng: 144.99213},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.83949, lng: 144.99559},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84251, lng: 144.99501},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.83862, lng: 144.98889},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84146, lng: 145.01208},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84845, lng: 145.00596},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.8483, lng: 145.00485},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84033, lng: 144.99545},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84847, lng: 145.00607},
     type: shopMarker,
+    show: false
   },
   {
     position: {lat: -37.84832, lng: 145.00496},
     type: shopMarker,
+    show: false
   },
   // Sunday School
   {
     position: {lat: -37.84301, lng: 145.01042},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.84864, lng: 145.01435},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.83775, lng: 145.02198},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.83889, lng: 145.02774},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.83914, lng: 145.00888},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.85212, lng: 145.02467},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.85218, lng: 145.01794},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.8391, lng: 144.98636},
     type: bookMarker,
+    show: false
   },
   {
     position: {lat: -37.83405, lng: 145.02944},
     type: bookMarker,
+    show: false
   },
+];
+
+const mapStyle = [
+  {
+    "featureType": "all",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "saturation": 36
+      },
+      {
+        "color": "#333333"
+      },
+      {
+        "lightness": 40
+      }
+    ]
+  },
+  {
+    "featureType": "all",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "on"
+      },
+      {
+        "color": "#ffffff"
+      },
+      {
+        "lightness": 16
+      }
+    ]
+  },
+  {
+    "featureType": "all",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#fefefe"
+      },
+      {
+        "lightness": 20
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#fefefe"
+      },
+      {
+        "lightness": 17
+      },
+      {
+        "weight": 1.2
+      }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      },
+      {
+        "lightness": 20
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      },
+      {
+        "lightness": 21
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dedede"
+      },
+      {
+        "lightness": 21
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      },
+      {
+        "lightness": 17
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      },
+      {
+        "lightness": 29
+      },
+      {
+        "weight": 0.2
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      },
+      {
+        "lightness": 18
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      },
+      {
+        "lightness": 16
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f2f2f2"
+      },
+      {
+        "lightness": 19
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e9e9e9"
+      },
+      {
+        "lightness": 17
+      }
+    ]
+  }
 ];
 
 export const google_map_data = {
   locationsName,
   locationAddress,
   loactions_coordinates,
+  mapStyle
 };

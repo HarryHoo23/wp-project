@@ -846,7 +846,7 @@ export const building_construction_details = [
         description: 'Shift Convert Carpet Tiles',
         colour: 'Grey/Charcoal',
         notes: '500x500mm Quarter turn pattern, First floors and stairs only',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg',
       },
       {
         item: 'SUSPENDED CEILING',
@@ -926,7 +926,7 @@ export const building_construction_details = [
         description: 'Single bowl Stainless Steel Sink',
         colour: 'Stainless Steel',
         notes: 'Stainless Steel Top mount Sink',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg',
       },
       {
         item: 'KITCHEN MIXER',

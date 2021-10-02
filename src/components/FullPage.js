@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
-import { hrefLinks } from '../data/Menu';
-import { fixtures_type, sale_contacts } from '../data/Content';
-import { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { hrefLinks } from '../data/Menu';
+import { useAuth } from '../contexts/AuthContext';
+import { fixtures_type, sale_contacts } from '../data/Content';
 import { useHistory } from 'react-router';
 import { useGlobalContext } from '../contexts/GlobalContext';
 import Navbar from './header & footer/Navbar';
@@ -23,7 +23,6 @@ import Sale from './pages-components/Sale';
 import CommercialUnits from './pages-components/CommercialUnits';
 import Financial from './pages-components/Financial';
 import Map from './pages-components/Map';
-import { useAuth } from '../contexts/AuthContext';
 import logo from '../assests/logo/Viridian_Logo-white.svg';
 import arrow from '../assests/img/download-2.png';
 import fullScreen from '../assests/img/icons/lightbox-expand.svg';
@@ -32,7 +31,6 @@ import fullScreen from '../assests/img/icons/lightbox-expand.svg';
 const Fullpage = () => {
   const {
     isLoading,
-    setIsLoading,
     individualModalContent,
     handleLogoModalClickOpen,
     isModalShow,
@@ -57,12 +55,13 @@ const Fullpage = () => {
     { id: 7, className: '' },
     { id: 8, className: '' },
     { id: 9, className: '' },
-    { id: 10, className: '' }
+    { id: 10, className: '' },
+    { id: 11, className: '' },
   ]);
 
   const [navBarTitle, setNavBarTitle] = useState({
     bgColorClass: '',
-    title: 'Commercial Units',
+    title: '',
     topTitle: '',
   });
 
@@ -115,7 +114,6 @@ const Fullpage = () => {
 
   useEffect(() => {
     changeArrow();
-    setIsLoading(false);
     setShowLoadingClass('show');
     const first_timeout = setTimeout(() => {
       setShowImgClass('fadeIn');
@@ -130,19 +128,19 @@ const Fullpage = () => {
 
   return (
     <>
-      { !isLoading && (
+      {isLoading && (
         <div id='preloader' className={`${showLoadingClass}`}>
           <img src={logo} alt='Sunday' className={`${showImgClass}`} />
         </div>
       )}
       <ReactFullpage
         //fullpage options
-        scrollingSpeed={1000} /* Options here */
+        scrollingSpeed={800} /* Options here */
         // sectionsColor={['orange', 'purple', 'green']}
         navigation={false}
         anchors={[
           'wf-home',
-          'comercial-units',
+          'commercial-units',
           'intro',
           'every',
           'partners',
@@ -155,7 +153,7 @@ const Fullpage = () => {
         ]}
         autoScrolling={true}
         scrollBar={true}
-        normalScrollElements={'.sale-intro'}
+        normalScrollElements={'.fixture-list'}
         // normalScrollElements: '.vs-img, .sale-intro, #map',
         touchSensitivity={15}
         fitToSection={true}
@@ -188,7 +186,7 @@ const Fullpage = () => {
               <GeneralModal renderBodyComponent={renderModalContent()} />
 
               {/* First Section */}
-              <SectionWrapper class={'section'} idName={'wf-home'}>
+              <SectionWrapper class={'section'} idName={'home'}>
                 <div className='home-video'>
                   <video loop autoPlay muted id='home-bg-video'>
                     <source src={HomeVideo} type='video/mp4' />
@@ -196,7 +194,7 @@ const Fullpage = () => {
                 </div>
               </SectionWrapper>
 
-              <SectionWrapper class={'section'} idName={'commercial-units'}>
+              <SectionWrapper class={'section'} idName={'comm_units'}>
                 <div className='bg-wrapper'>
                   <CommercialUnits />
                 </div>
@@ -205,7 +203,7 @@ const Fullpage = () => {
               <SectionWrapper class={'section'} idName={'home-modal'}>
                 <div
                   id='home-modal-container'
-                  className={name[1].className}
+                  className={name[2].className}
                 ></div>
               </SectionWrapper>
 
@@ -319,7 +317,7 @@ const Fullpage = () => {
               </SectionWrapper>
 
               <SectionWrapper class={'section'} idName={'wf-map'}>
-                <div className="bg-wrapper">
+                <div className='bg-wrapper'>
                   <Map />
                 </div>
               </SectionWrapper>

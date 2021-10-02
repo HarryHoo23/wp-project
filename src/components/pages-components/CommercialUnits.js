@@ -10,7 +10,7 @@ import Title from './Title';
 const CommercialUnits = () => {
   const { width } = useWindowDimensions();
 
-  let containerWidth = (width - 130) * 2 / 3 - 15;
+  let containerWidth = (width - 130) * 3 / 4 - 30;
     ;
 
   const [map, setMap] = useState(areas_maps[0]);
