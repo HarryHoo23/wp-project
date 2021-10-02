@@ -85,4 +85,7 @@
   .sunday-navbar.sunday-navbar-active {
     height: 60%;
   }
+  #mobile-nav-content .nav-link {
+    padding: 0.5rem 1rem;
+  }
 }

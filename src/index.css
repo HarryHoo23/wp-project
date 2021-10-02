@@ -202,7 +202,7 @@ h6 {
 }
 
 #preloader {
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
   position: fixed;
   height: 100%;
   width: 0px;
@@ -306,6 +306,8 @@ h6 {
   align-items: center;
   margin-top: 1px;
   margin-bottom: 0;
+  padding: 0.75rem 1rem;
+  position: relative;
 }
 
 #scroll-down {
@@ -3190,4 +3192,21 @@ article {
   bottom: 0;
   position: absolute;
   transform: translateX(-50%) translateY(10px);
+}
+
+.units-link::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: '';
+  border-top: 9px solid;
+  border-right: 6px solid transparent;
+  border-bottom: 0;
+  border-left: 6px solid transparent;
+  color: var(--background-color-grey);
+  font-size: 20px;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
 }

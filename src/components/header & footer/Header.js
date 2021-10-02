@@ -50,7 +50,7 @@ export default function Header() {
         if (id === 2) {
           return (
             <li key={2} onClick={subMenuLinkClickHandler}>
-              <p className='nav-link'>{text}</p>
+              <p className='nav-link units-link'>{text}</p>
             </li>
           );
         } else {
