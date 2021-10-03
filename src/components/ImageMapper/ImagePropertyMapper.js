@@ -1,6 +1,6 @@
 import ImageMapper from 'react-image-mapper';
 import React, { useEffect, useState } from 'react';
-import floorplanImg from '../../assests/img/floorplan/Example-1.jpg';
+import floorplanImg from '../../assests/img/floorplan/Example-1.png';
 
 
 // const moveOnImage = (evt) => {

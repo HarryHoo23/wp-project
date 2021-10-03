@@ -19,7 +19,7 @@ const DoorStepAccordion = () => {
       ></Col>
       <Col md={4}>
         <Title
-          colorClassName=''
+          colorClassName='ds-title'
           firstHalfTitle='Neighbourhood'
           secondHalfTitle=''
         />

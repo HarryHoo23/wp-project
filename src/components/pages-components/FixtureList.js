@@ -1,12 +1,17 @@
 import React from 'react';
 import Fixture from './Fixture';
+import Title from './Title';
 
 const FixtureList = (props) => {
   const { type, items } = props;
   return (
     <div className={`fixture-modal-body ${type}`}>
       <div className='fixture-container'>
-        <h3 className='fixture-title'>{type}</h3>
+        <Title
+          colorClassName='capitalize'
+          firstHalfTitle={`${type}`}
+          secondHalfTitle=''
+        />
         <div className='fixture-list'>
           {items.map((fixture, index) => {
             return <Fixture fixture={fixture} key={index} />;

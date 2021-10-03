@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const Fixture = ({ fixture }) => {
   const [isShow, setIsShow] = useState(false);
@@ -13,10 +13,16 @@ const Fixture = ({ fixture }) => {
       <h6 className='fitting-title'>{fixture.item}</h6>
       <ul className='fitting-info'>
         <li>{fixture.description}</li>
-        <li className={`${fixture.notes ? '' : 'last-li'}`}>{fixture.colour}</li>
+        <li className={`${fixture.notes ? '' : 'last-li'}`}>
+          {fixture.colour}
+        </li>
         {fixture.notes && <li className='last-li'>{fixture.notes}</li>}
-        <button type='button' className='view-img-btn' onClick={() => setIsShow(true)}>
-          View image  
+        <button
+          type='button'
+          className='view-img-btn'
+          onClick={() => setIsShow(true)}
+        >
+          View image
         </button>
       </ul>
       <div

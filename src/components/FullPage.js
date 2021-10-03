@@ -216,7 +216,7 @@ const Fullpage = () => {
                       secondHalfTitle='development'
                     />
 
-                    <p style={{ paddingTop: '18px', marginBottom: '30px' }}>
+                    <p style={{ paddingTop: '30px', marginBottom: '30px' }}>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Quaerat neque iure quasi, impedit delectus quisquam iusto
                       hic ipsum vel nam aspernatur voluptatem, vero voluptas.
