@@ -16,7 +16,7 @@ const Fixture = ({ fixture }) => {
         <li className={`${fixture.notes ? '' : 'last-li'}`}>{fixture.colour}</li>
         {fixture.notes && <li className='last-li'>{fixture.notes}</li>}
         <button type='button' className='view-img-btn' onClick={() => setIsShow(true)}>
-          Click to See Image.
+          View image  
         </button>
       </ul>
       <div

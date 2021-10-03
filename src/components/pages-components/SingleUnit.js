@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useParams, useHistory, Link, useRouteMatch } from 'react-router-dom';
+import { useParams, useHistory, useRouteMatch } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
 import { useEffect } from 'react';
@@ -93,13 +93,13 @@ const SingleUnit = (props) => {
 
   const clickHandler = () => {
     setIsLoading(false);
-    history.push('/');
+    history.push('/#commercial-units');
   };
 
   let breadComponent = (
     <span className='bread-text'>
-      <Link to='/'>UNITS</Link> /{' '}
-      <span className='bread-text' onClick={clickHandler}>
+      <button onClick={clickHandler}>UNITS</button> /{' '}
+      <span className='bread-text' onClick={() => history.goBack()}>
         {unitType(props.match.params.type)}
       </span>{' '}
       / {unitData.unit_number}
@@ -123,7 +123,7 @@ const SingleUnit = (props) => {
               <Title
                 colorClassName=''
                 firstHalfTitle={unitData.unit_number}
-                secondHalfTitle='Specifications'
+                secondHalfTitle='specifications'
               />
             </div>
 

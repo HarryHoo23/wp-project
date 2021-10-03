@@ -213,7 +213,7 @@ const Fullpage = () => {
                     <Title
                       colorClassName=''
                       firstHalfTitle='About'
-                      secondHalfTitle='Development.'
+                      secondHalfTitle='development'
                     />
 
                     <p style={{ paddingTop: '18px', marginBottom: '30px' }}>
@@ -234,7 +234,7 @@ const Fullpage = () => {
                   <Title
                     colorClassName='white-title'
                     firstHalfTitle='Creative'
-                    secondHalfTitle='partners.'
+                    secondHalfTitle='partners'
                   />
                   <Row className='logo-row'>
                     {svgImagePath.map((svgImage, index) => {
@@ -281,7 +281,7 @@ const Fullpage = () => {
                   <Title
                     colorClassName='white-title'
                     firstHalfTitle='Fixtures'
-                    secondHalfTitle='& finishes.'
+                    secondHalfTitle='& finishes'
                   />
                   <Row>
                     {fixtures_type.map((fixture, index) => {
@@ -328,7 +328,7 @@ const Fullpage = () => {
                     <Title
                       colorClassName=''
                       firstHalfTitle='Questions?'
-                      secondHalfTitle='answers.'
+                      secondHalfTitle='answers'
                     />
                     <Row className='contacts'>
                       {sale_contacts.map((info) => {
@@ -355,7 +355,7 @@ const Fullpage = () => {
                     <Col md={8}>
                       <Title
                         colorClassName='white-title'
-                        firstHalfTitle='Disclaimer.'
+                        firstHalfTitle='Disclaimer'
                         secondHalfTitle=''
                       />
                       <div className='claimer-content'>

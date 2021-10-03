@@ -28,7 +28,7 @@ const LogoModalContent = (props) => {
       <Row className='logo-row-modal'>
         <Col md={4}>
           <div className='logo-content mb-3'>
-            <p>{props.content}</p>
+            <p style={{marginBottom: '30px'}}>{props.content}</p>
             <p className='quote'>{props.quote}</p>
           </div>
         </Col>

@@ -4,6 +4,7 @@ import img1 from '../../assests/img/doorstep/barrys.jpg';
 import img2 from '../../assests/img/doorstep/atlas.jpg';
 import img3 from '../../assests/img/doorstep/abacus.jpg';
 import img4 from '../../assests/img/doorstep/tivoli.jpg';
+import Title from './Title';
 
 const DoorStepAccordion = () => {
   const [image, setImage] = useState(img1);
@@ -17,13 +18,12 @@ const DoorStepAccordion = () => {
         style={{ backgroundImage: `url(${image})` }}
       ></Col>
       <Col md={4}>
+        <Title
+          colorClassName=''
+          firstHalfTitle='Neighbourhood'
+          secondHalfTitle=''
+        />
         <div className='doorstep-accordion-box right'>
-          <div className='dp-container-title'>
-            <p>
-              A SLOW START, <br /> OR FAST HEART RATE - <br /> IT’S YOUR CHOICE
-            </p>
-          </div>
-
           <Accordion defaultActiveKey='0'>
             <Card>
               <Card.Header>

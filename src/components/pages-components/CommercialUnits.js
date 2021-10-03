@@ -29,7 +29,7 @@ const CommercialUnits = () => {
             <Title
               colorClassName='white-title'
               firstHalfTitle='Commercial'
-              secondHalfTitle='Units.'
+              secondHalfTitle='units'
             />
             <Nav variant='pills' className='flex-column tabs-column'>
               {tabContent.map((tab, index) => {

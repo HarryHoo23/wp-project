@@ -153,7 +153,7 @@ h6 {
 
 .sunday-title h3 {
   font-size: var(--xl-font-size);
-  line-height: 40px;
+  line-height: 34px;
   color: #2d2d2d;
   position: relative;
   font-weight: var(--font-weight);
@@ -338,7 +338,7 @@ h6 {
 #scroll-down-title {
   opacity: 0.5;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .fp-viewing-disclaimer #scroll-down,
@@ -418,7 +418,7 @@ h6 {
   color: var(--secondary-color-white);
   opacity: 0.5;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .scroll-up {
@@ -735,7 +735,6 @@ p.home-modal-title::before {
 }
 
 .modal-logo-container {
-  padding: 4rem;
   height: 100%;
   position: relative;
   display: flex;
@@ -1129,7 +1128,7 @@ a.logo-link {
 .nav-pills .nav-link {
   border-bottom: 1px solid;
   border-radius: 0px;
-  padding: 8px 13px;
+  padding: 10px 13px;
   margin: 8px 0;
   line-height: 24px;
 }
@@ -1152,7 +1151,7 @@ a.logo-link {
   color: #2d2d2d;
   font-weight: 500;
   border-radius: 0px;
-  padding: 8px 13px;
+  padding: 10px 13px;
   margin: 8px 0;
   line-height: 24px;
   text-transform: capitalize;
@@ -1170,9 +1169,8 @@ a.logo-link {
   color: #f6f7fa;
   border: 1px solid #f6f7fa;
   max-width: 250px;
-  padding: 8px 13px;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 15px;
   letter-spacing: 0.02em;
 }
 
@@ -1196,6 +1194,12 @@ a.logo-link {
   border-color: var(--secondary-color-white);
   text-transform: uppercase;
   font-size: 15px;
+  font-weight: 500;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #969696;
 }
 
 .commercial-tab-content {
@@ -1204,12 +1208,12 @@ a.logo-link {
 
 .welcome-tabs .tab-content p {
   color: var(--secondary-color-white);
+  margin-bottom: 0;
 }
 
 .financials .tab-content {
   height: 100%;
   width: 100%;
-  background-color: #f6f7fa;
   opacity: 0.9;
   margin-top: 0;
   position: absolute;
@@ -1223,6 +1227,7 @@ a.logo-link {
 .table th,
 .table td {
   text-align: left;
+  text-transform: capitalize;
 }
 
 .table th {
@@ -1931,6 +1936,10 @@ button.btn.btn-link[aria-expanded='true'] {
   bottom: 0;
 }
 
+.video-title {
+  color: var(--background-color-grey);
+}
+
 /* Maps Section */
 .mapcontainer {
   position: relative;
@@ -1957,7 +1966,7 @@ button.btn.btn-link[aria-expanded='true'] {
 }
 
 #map-accordion .collapse.show {
-  border-top: 2px solid var(--secondary-color-white);
+  border-top: 1px solid var(--secondary-color-white);
 }
 
 #map-accordion .btn-link.collapsed {
@@ -2025,7 +2034,7 @@ button.btn.btn-link[aria-expanded='true'] {
 }
 
 .sale-name {
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.02rem;
   font-weight: 600;
   color: #656565;
@@ -2080,7 +2089,7 @@ ul.sale-contact li a {
   flex: 1 1 auto;
   border-color: var(--background-color-grey);
   border-radius: 0px;
-  padding: 0.35rem 0.75rem 0.4rem 0.75rem;
+  padding: 10px 13px;
 }
 
 .email:hover {
@@ -2742,6 +2751,7 @@ textarea.form-control:focus {
 .image-gallery-fullscreen-button {
   top: 0;
   bottom: unset;
+  right: 1rem;
 }
 
 .image-gallery-icon {
@@ -2871,9 +2881,9 @@ button.hide-enquiry {
   color: var(--secondary-color-white);
   text-transform: uppercase;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
-  margin-top: 2rem;
+  margin-top: 34px;
   width: 215px;
   position: relative;
 }
@@ -2941,8 +2951,8 @@ button.hide-enquiry {
 
 .fixture-type {
   position: absolute;
-  left: 10px;
-  right: 10px;
+  left: 18px;
+  right: 18px;
   height: 20%;
   display: flex;
   align-items: center;
@@ -2951,9 +2961,8 @@ button.hide-enquiry {
 
 .fixture-type p {
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 21px;
   color: #fff;
-  padding: 2px;
 }
 
 .fixture-box:hover .fixture-type {
@@ -2988,8 +2997,8 @@ button.hide-enquiry {
 .fixture-title,
 .fitting-title {
   position: relative;
-  font-size: var(--xl-font-size);
-  font-weight: var(--font-weight);
+  font-size: 18px;
+  font-weight: 400;
   color: #2d2d2d;
   text-transform: capitalize;
   margin-bottom: 3rem;
@@ -3001,7 +3010,7 @@ h3.fixture-title::before,
   position: absolute;
   background-color: #e0e0e0;
   height: 1px;
-  width: 20px;
+  width: 15px;
   left: 0;
   bottom: -10px;
 }
@@ -3032,13 +3041,6 @@ h3.fixture-title::before,
   padding-top: 100%;
 }
 
-.fitting-title {
-  font-size: var(--font-size);
-  font-weight: 500;
-  margin-bottom: 0;
-  text-transform: capitalize;
-}
-
 .fitting-info {
   margin-top: 1rem;
   list-style: none;
@@ -3050,7 +3052,7 @@ h3.fixture-title::before,
 }
 
 .fitting-info li {
-  padding-top: 7px;
+  padding: 10px 0;
   border-bottom: 1px solid #e0e0e0;
   font-size: 13px;
   font-weight: 300;
@@ -3067,11 +3069,11 @@ h3.fixture-title::before,
   background-color: #2d2d2d;
   border: 1px solid #2d2d2d;
   color: var(--secondary-color-white);
-  text-transform: uppercase;
-  text-align: left;
-  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 500;
   font-size: 15px;
-  width: 215px;
+  width: 100%;
   position: relative;
 }
 
@@ -3099,10 +3101,10 @@ article {
 }
 
 .unit-button {
-  margin-top: 4rem;
+  margin-top: 3rem;
   font-size: 15px;
   text-transform: uppercase;
-  padding: 0.75rem 2.5rem;
+  padding: 10px 40px;
   font-weight: 600;
   background-color: transparent;
   border-color: var(--font-primary-color);
@@ -3124,7 +3126,9 @@ article {
   margin-top: 1rem;
   width: 215px;
   text-align: left;
-  padding: 0.75rem 1.5rem;
+  padding: 10px 13px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .image-gallery-container {
@@ -3146,7 +3150,7 @@ article {
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
-  background-color: rgba(112, 112, 112, 0.02);
+  background-color: rgba(112, 112, 112, 0.04);
 }
 
 .unit-wrapper .download-btn {

@@ -15,7 +15,7 @@ const Financial = () => {
           <Col md={3}>
             <Title
               colorClassName=''
-              firstHalfTitle='Financial.'
+              firstHalfTitle='Financial'
               secondHalfTitle=''
             />
             <Nav variant='pills' className='flex-column tabs-column' style={{marginTop: '2rem'}}>

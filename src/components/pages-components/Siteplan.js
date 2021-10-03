@@ -39,10 +39,8 @@ const Siteplan = () => {
 
   const clickHandler = () => {
     setIsLoading(false);
-    history.push('/');
+    history.push('/#commercial-units');
   };
-
-  console.log(type);
 
   useEffect(() => {
     if (type) {
