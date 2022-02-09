@@ -35,13 +35,14 @@ export default function Login() {
         )
         .then(
           (result) => {
+            history.push('/');
             console.log(result.text);
           },
           (error) => {
+            throw new Error("error message: " + error);
             console.log(error.text);
           }
         );
-      history.push('/');
     } catch {
       setError('Failed to Log in');
     }
