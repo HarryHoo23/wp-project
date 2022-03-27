@@ -11,7 +11,7 @@ import img10 from '../assests/img/slider-10-popup.jpg';
 import img11 from '../assests/img/slider-11-popup.jpg';
 
 import svgImage1 from '../assests/logo/Viridian_Logo-white.svg';
-import svgImage2 from '../assests/logo/Viridian_Logo-white.svg';
+import svgImage2 from '../assests/logo/ikos_group_logo_rgb_web_lightbg.svg';
 import svgImage3 from '../assests/logo/Viridian_Logo-white.svg';
 
 

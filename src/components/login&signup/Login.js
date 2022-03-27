@@ -39,8 +39,8 @@ export default function Login() {
             console.log(result.text);
           },
           (error) => {
-            throw new Error("error message: " + error);
             console.log(error.text);
+            throw new Error("error message: " + error);
           }
         );
     } catch {

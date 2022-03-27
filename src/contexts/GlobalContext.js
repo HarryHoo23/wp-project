@@ -28,6 +28,7 @@ const GlobalProvider = ({ children }) => {
       showModal: true,
       case: 1
     });
+    setIndividualModalContent(modalData[index]);
     window.fullpage_api.setAllowScrolling(false);
   };
 

@@ -5,6 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 import { hrefLinks } from '../data/Menu';
 import { useAuth } from '../contexts/AuthContext';
 import { fixtures_type, sale_contacts } from '../data/Content';
+import { doorStep_One_Right, doorStep_Two_Left_eat, doorStep_Three_Right_drink, doorStep_Four_Left_leisure, doorStep_Five_Right_play } from '../data/Neighbourhood';
 import { useHistory } from 'react-router';
 import { useGlobalContext } from '../contexts/GlobalContext';
 import Navbar from './header & footer/Navbar';
@@ -57,6 +58,10 @@ const Fullpage = () => {
     { id: 9, className: '' },
     { id: 10, className: '' },
     { id: 11, className: '' },
+    { id: 12, className: '' },
+    { id: 13, className: '' },
+    { id: 14, className: '' },
+    { id: 15, className: '' },
   ]);
 
   const [navBarTitle, setNavBarTitle] = useState({
@@ -137,6 +142,7 @@ const Fullpage = () => {
         //fullpage options
         scrollingSpeed={800} /* Options here */
         // sectionsColor={['orange', 'purple', 'green']}
+        licenseKey={'zMccI0J!a3'}
         navigation={false}
         anchors={[
           'wf-home',
@@ -146,6 +152,10 @@ const Fullpage = () => {
           'partners',
           'fixtures',
           'doorsteps',
+          'doorsteps-eat',
+          'doorsteps-drink',
+          'doorsteps-leisure',
+          'doorsteps-play',
           'financial',
           'maps',
           'contact-us',
@@ -159,7 +169,7 @@ const Fullpage = () => {
         fitToSection={true}
         afterLoad={() => {
           for (let i = 0; i < hrefLinks.length; i++) {
-            if (document.body.classList.contains(hrefLinks[i].link)) {
+            if (document.body.classList[0] === hrefLinks[i].link) {
               let newArr = [...name];
               newArr[i].className = 'show';
               setName(newArr);
@@ -305,8 +315,32 @@ const Fullpage = () => {
               </SectionWrapper>
 
               <SectionWrapper class={'section'} idName={'doorstep-1'}>
-                <div className={`doorstep-container ${name[5].className}`}>
-                  <DoorStepAccordion />
+                <div className={`doorstep-container ${name[6].className}`}>
+                  <DoorStepAccordion direction='right' second_direction='left' data={doorStep_One_Right} title="Neighbourhood" />
+                </div>
+              </SectionWrapper>
+
+              <SectionWrapper class={'section'} idName={'doorstep-2'}>
+                <div className={`doorstep-container ${name[7].className}`}>
+                  <DoorStepAccordion direction='left' second_direction='right' data={doorStep_Two_Left_eat} title="Eat" />
+                </div>
+              </SectionWrapper>
+
+              <SectionWrapper class={'section'} idName={'doorstep-3'}>
+                <div className={`doorstep-container ${name[8].className}`}>
+                  <DoorStepAccordion direction='right' second_direction='left' data={doorStep_Three_Right_drink} title="Drink" />
+                </div>
+              </SectionWrapper>
+
+              <SectionWrapper class={'section'} idName={'doorstep-4'}>
+                <div className={`doorstep-container ${name[9].className}`}>
+                  <DoorStepAccordion direction='left' second_direction='right' data={doorStep_Four_Left_leisure} title="Leisure" />
+                </div>
+              </SectionWrapper>
+
+              <SectionWrapper class={'section'} idName={'doorstep-5'}>
+                <div className={`doorstep-container ${name[10].className}`}>
+                  <DoorStepAccordion direction='right' second_direction='left' data={doorStep_Five_Right_play} title="Play" />
                 </div>
               </SectionWrapper>
 

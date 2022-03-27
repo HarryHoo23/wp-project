@@ -1,6 +1,7 @@
 import ImageMapper from 'react-image-mapper';
 import React, { useEffect, useState } from 'react';
 import floorplanImg from '../../assests/img/floorplan/Example-1.png';
+import { useHistory } from 'react-router-dom';
 
 
 // const moveOnImage = (evt) => {
@@ -8,13 +9,14 @@ import floorplanImg from '../../assests/img/floorplan/Example-1.png';
 //   console.log(evt);
 // };
 
-const ImagePropertyMapper = ({ maps, width }) => {
+const ImagePropertyMapper = ({ maps, width, destination }) => {
   const [rerender, setRerender] = useState(false);
-  // const clickHandler = (area, index, event) => {
-  //   console.log(area);
-  //   console.log(index);
-  //   // getNotionPage(area.name);
-  // };
+  const history = useHistory();
+  const clickHandler = (area, index, event) => {
+    console.log(area);
+    history.push(`/${destination}`);
+    // getNotionPage(area.name);
+  };
   
   useEffect(() => {
     setRerender(!rerender);
@@ -27,6 +29,7 @@ const ImagePropertyMapper = ({ maps, width }) => {
       map={maps}
       width={width}
       imgWidth={1980}
+      onClick={clickHandler}
       // onImageMouseMove={(event) => moveOnImage(event)}
     />
   );

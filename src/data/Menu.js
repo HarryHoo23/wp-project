@@ -104,8 +104,32 @@ export const hrefLinks = [
   {
     link: 'fp-viewing-doorsteps',
     bgColorClass: 'opacity-deep',
-    title: 'Financial',
+    title: 'Doorstep - Eat',
     topTitle: 'Fixture & Fittings',
+  },
+  {
+    link: "fp-viewing-doorsteps-eat",
+    bgColorClass: 'opacity-deep',
+    title: 'Doorstep - Drink',
+    topTitle: 'Neighbourhood',
+  },
+  {
+    link: "fp-viewing-doorsteps-drink",
+    bgColorClass: 'opacity-deep',
+    title: 'Doorstep - Leisure',
+    topTitle: 'Doorstep - Eat',
+  },
+  {
+    link: "fp-viewing-doorsteps-leisure",
+    bgColorClass: 'opacity-deep',
+    title: 'Doorstep - Play',
+    topTitle: 'Doorstep - drink',
+  },
+  {
+    link: "fp-viewing-doorsteps-play",
+    bgColorClass: 'opacity-deep',
+    title: 'Financial',
+    topTitle: 'DoorStep - Leisure',
   },
   {
     link: 'fp-viewing-financial',

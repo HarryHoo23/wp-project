@@ -1712,7 +1712,7 @@ a.logo-link {
 } */
 
 .doorstep-container .dp-container-left,
-.dp-container-right {
+.doorstep-container .dp-container-right {
   width: 100%;
   z-index: 2;
   object-fit: cover;
@@ -1723,9 +1723,11 @@ a.logo-link {
   align-items: flex-start;
 }
 
-.doorstep-container.show .dp-container-left {
+.doorstep-container.show .dp-container-left,
+.doorstep-container.show .dp-container-right {
   background-size: auto 120%;
   transition: background-size 3s ease;
+  background-repeat: no-repeat;
 }
 
 /* 
@@ -1763,17 +1765,17 @@ a.logo-link {
   }
 }
 
-.doorstep-container.show .dp-container-left {
+.doorstep-container.show .dp-container-left{
   opacity: 1;
   background-size: auto 100%;
   animation: 0.7s ease revealToRight;
 }
 
-/* #doorstep-2 .dp-container-right.show {
+.doorstep-container.show .dp-container-right {
   opacity: 1;
   background-size: auto 100%;
-  animation: 0.7s ease reveal !important;
-} */
+  animation: 0.7s ease toLeft;
+}
 
 .doorstep-container-mid {
   padding: 5rem 0;
@@ -2901,11 +2903,18 @@ button.hide-enquiry {
 .back-button {
   padding: 10px 13px;
   margin-top: 2rem;
+  margin-left: 1rem;
   position: relative;
   font-size: 15px;
-  border-color: transparent;
+  border: 1px solid var(--border-grey-color);
   background-color: transparent;
   color: #acacac;
+  transition: var(--transition);
+}
+
+.back-button:hover {
+  background-color: var(--border-grey-color);
+  color: #ffffff;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -3228,4 +3237,8 @@ article {
 
 .ds-title {
   padding-left: 2rem;
+}
+
+.ds-left-title {
+  padding-left: 5rem;
 }

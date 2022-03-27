@@ -33,9 +33,7 @@ export const modalData = [
     href: 'https://www.dko.com.au',
     link: 'dko.com.au',
     content: `Much like Sunday itself, the gardens established by iconic designer Rick Eckersley are relaxed — adopting a less structured approach to landscape, whilst still maintaining a strong sense of purpose. You won’t find rows of box hedges at Eckersley, just plenty of dirt under their fingers — so yours can carefully turn the pages of The Sunday Times bestseller, surrounded by a garden that celebrates diversity, texture and foliage.`,
-    quote: `“The primary focus was to design a landscape that complimented
-  the strong architectural form and create an urban oasis within the busy
-inner suburb of South Yarra."`,
+    quote: `“The primary focus was to design a landscape that complimented the strong architectural form and create an urban oasis within the busy inner suburb of South Yarra."`,
     video: '',
     videoSource: '',
     name: 'Scott Leung',
@@ -46,78 +44,52 @@ inner suburb of South Yarra."`,
 export const tabContent = [
   {
     position: 'first',
-    title: 'Office Warehouse',
-    content: `Private sanctuaries, these residences embody the feeling of filling up your
-                                            cup on a restful Sunday, allowing you to recharge your battery at any point
-                                            throughout the week. Cohesive. Authentic. Strong. In a world of disposable
-                                            trends, all aspects of Sunday work cohesively to create timeless value and
-                                            assert longevity throughout the marketplace and surrounding landscape.`,
-    link: 'office-warehouse',
+    title: 'Showroom',
+    subtitle: 'Time to show off',
+    content: `With complete exposure to Chesterville Road, this exceptional fit out takes full advantage of the front of the complex on the ground floor. Bulky goods can be stored and serviced by the rear roller door.`,
+    link: 'office',
   },
   {
     position: 'second',
-    title: 'Offices',
-    content: `Although the building is integrated seamlessly within its
-                                            treelined environment, Sunday remains ambitious. The interior is unique and
-                                            authentic — with gentle dappling of light and an inward aperture creating a
-                                            quiet
-                                            sanctuary that complements an active lifestyle and reflects its bustling
-                                            locality.
-                                            From the penthouse, with its three-sided views to South Yarra and
-                                            Melbourne’s
-                                            CBD,
-                                            to ground floor garden apartments with large verdant gardens, each of the
-                                            generously
-                                            proportioned apartments at Sunday are designed with purpose and reason.`,
+    title: 'Strata Office Suites',
+    subtitle: 'The suite office life',
+    content: `The first thing you’ll notice is the impressive entry foyer, the second thing is the uninterrupted and raised views over the parkland through the floor-to-ceiling glass. Disability lift access, undercover car parking, and shared staff amenities.`,
     link: 'office',
   },
   {
     position: 'third',
-    title: 'Hybrid',
-    content: `The overarching design of Sunday is based on iconic form and
-                                            shape — such as the stepped stone island benches that have been carefully
-                                            laid
-                                            alongside floors, resonating with the architecture of the building. The use
-                                            of
-                                            natural stone within the kitchens and bathrooms complements natural timber
-                                            engineered floorboards and technically sound ceramic tiles. Additionally,
-                                            the
-                                            timber
-                                            veneers and laminates deliver all of the finishes you would find in a
-                                            traditional
-                                            home.`,
-    link: 'hybrid',
+    title: 'Walk-up offices',
+    subtitle: 'Working across two levels',
+    content: `Situated on the ground and first floor, you’ll get the floor-to-ceiling glazed windows with parkland views and private amenities like bathrooms and kitchenettes. Parking at the front and signage showcased on the first-floor. `,
+    link: 'roller-office',
   },
   {
     position: 'forth',
-    title: 'Roller Doors',
-    content: `Sunday was designed to maximise the outlook from within each
-                                            apartment to the surrounding environment. Complemented by the chamfered sill
-                                            and
-                                            balcony details, the mass of glazing provides an abundance of natural light
-                                            which
-                                            spills into each residence — further balancing the harmony between both
-                                            inside
-                                            and
-                                            out and strengthening the affinity between Sunday and the leafy streetscape
-                                            below.`,
-    link: 'roller-doors',
+    title: 'Two-level hybrid',
+    subtitle: 'Everything you need spread across two levels',
+    content: `Designed-for-purpose ground and first floor offices with a glass roller door to facilitate easy loading from vehicles into the warehouse. Under the mezzanine in the office is a 3.5 metre clearance, with an eight-metre atrium-style ceiling.`,
+    link: 'hybrid',
   },
   {
     position: 'fifth',
-    title: 'Roller/Office Warehouse',
-    content: `Alongside the key design philosophies is clever planning. The
-                                            spatial layout, proportion of form and size, finite detailing and aspect
-                                            planning
-                                            flatters the use of timeless materials to deliver a successful interior
-                                            space.
-                                            Designed with intention, at every stage throughout the process the
-                                            collaborators
-                                            have ensured that all elements of Sunday tell a story that you’d like to
-                                            share
-                                            come
-                                            Monday morning.`,
-    link: 'roller-office',
+    title: 'Triple-level hybrid',
+    subtitle: 'Everything but the kitchen sink (it has that, too)',
+    content: `This three-level design includes ground floor warehousing with two levels of glass-to-ceiling office space above it. The mezzanines also include the 3.5 metre clearance, with an eight-metre atrium-style ceiling and glass roller door for easy loading.`,
+    link: 'hybrid',
+  },
+  {
+    position: 'sixth',
+    title: 'Working plus storage',
+    subtitle: 'Best of both worlds',
+    content: `Either convenient ground floor option or tranquil first-floor environment. Eight metres of warehousing included in the floorplan, floor-to-ceiling glazing, individual staff amenities and front parking.`,
+    link: 'roller-doors',
+  },
+  {
+    position: 'seventh',
+    title: 'Storage complex',
+    subtitle: 'Underground micro-warehousing',
+    content: `Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives plenty of flexibility, the 24-hour security system will keep watch, and there’s an automatic motion sensor lighting in common driveways and inside units. Brilliantly paired with an office suite..`,
+    link: 'office-warehose',
   },
 ];
 

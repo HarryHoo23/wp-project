@@ -52,6 +52,7 @@ const CommercialUnits = () => {
               {tabContent.map((tab) => {
                 return (
                   <Tab.Pane key={tab.position} eventKey={tab.position}>
+                    <h3 style={{color: '#ffffff', fontSize:'18px'}} className="mb-3">{tab.subtitle}</h3>
                     <p>{tab.content}</p>
                     {/* <Link to={`/${tab.link}`} className='view-option btn'>
                       View Option
@@ -69,7 +70,7 @@ const CommercialUnits = () => {
         </Col>
       </Row>
       <div className='wh-fp-container'>
-        <ImagePropertyMapper width={containerWidth} maps={map} />
+        <ImagePropertyMapper width={containerWidth} maps={map} destination={destination} />
       </div>
     </>
   );
