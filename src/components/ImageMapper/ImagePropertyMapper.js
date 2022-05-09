@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 
-
+// eslint-disable-next-line
 const moveOnImage = (evt) => {
-    const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+    //const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
 };
 
 const ImagePropertyMapper = ({ maps, width, destination, image, isSitePlan }) => {
@@ -34,7 +34,7 @@ const ImagePropertyMapper = ({ maps, width, destination, image, isSitePlan }) =>
       width={width}
       imgWidth={1466}
       onClick={!isSitePlan ? clickHandler : clickNewHandler}
-      onImageMouseMove={(event) => moveOnImage(event)}
+      //onImageMouseMove={(event) => moveOnImage(event)}
     />
   );
 };

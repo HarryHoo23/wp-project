@@ -1108,7 +1108,6 @@ a.logo-link {
 }
 
 .welcome-home {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/img/slide-welcome-home-bg.jpg"); */
   background-size: cover;
   padding: 5rem 0 5rem 5rem;
   padding-bottom: 0;

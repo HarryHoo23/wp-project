@@ -25,6 +25,7 @@ const Siteplan = () => {
     const [unitMap, setUnitMap] = useState();
     const [sitePlan, setSitePlan] = useState();
     const [img, setImg] = useState();
+    // eslint-disable-next-line
     const [unitContent, setUnitContent] = useState();
     const [isOpen, setIsOpen] = useState(false);
     const [componentNumber, setComponentNumber] = useState(1);
