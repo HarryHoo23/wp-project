@@ -25,6 +25,7 @@ const Siteplan = () => {
     const [unitMap, setUnitMap] = useState();
     const [sitePlan, setSitePlan] = useState();
     const [img, setImg] = useState();
+    const [mapperImg, setMapperImg] = useState();
     // eslint-disable-next-line
     const [unitContent, setUnitContent] = useState();
     const [isOpen, setIsOpen] = useState(false);
@@ -82,12 +83,17 @@ const Siteplan = () => {
                 first: first_half_title,
                 second: second_half_title,
             };
-            console.log(unitType);
+            
             setTitle(pageTitle);
             setSitePlan(unitType.data);
             setUnitMap(unitMapData.data);
             setUnitContent(unitType.data[unitMapIndex]);
             setImg(unitType.img);
+            if (unitType.data[unitMapIndex].img) {
+                setMapperImg(unitType.data[unitMapIndex].img);
+            } else {
+                setMapperImg(planImage);
+            }
         } else {
             const unitType = sitePlanData.find(
                 (element) => element.type === 'showroom'
@@ -179,7 +185,7 @@ const Siteplan = () => {
                                 <img src={img} alt="siteplan-img" className="w-100" />
                             </div>
                             <div className="img-bottom-container">
-                                <ImagePropertyMapper width={width} maps={unitMap} image={planImage} isSitePlan={true} />    
+                                <ImagePropertyMapper width={width} maps={unitMap} image={mapperImg} isSitePlan={true} />    
                             </div>
                         </Col>
                     </Row>

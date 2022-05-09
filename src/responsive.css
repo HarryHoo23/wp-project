@@ -86,6 +86,16 @@
     height: 60%;
   }
   #mobile-nav-content .nav-link {
-    padding: 0.5rem 1rem;
-  }
+      padding: 0.5rem 1rem;
+    }
+    
+    .img-mapper-container {
+        height: 60%;
+        min-height: 60%;
+    }
+    
+    .img-bottom-container {
+        height: 40%;
+        min-height: 40%;
+    }
 }

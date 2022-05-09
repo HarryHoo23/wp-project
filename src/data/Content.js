@@ -1,6 +1,8 @@
 import unitTypeB_img from '../assests/img/floorplan/unitPlan/2.png';
 import marty_fox from '../assests/img/marty.jpg';
 import lana_img from '../assests/img/lana.jpg';
+import a1 from '../assests/img/floorplan/3.png';
+import a2 from '../assests/img/floorplan/3.a2.png';
 
 export const modalData = [
   {
@@ -96,7 +98,7 @@ export const tabContent = [
 const officeWarehouseSitePlanData = [
   {
     unit_id: 'unit-01',
-    unit_number: 'Unit 01',
+    unit_number: 'Unit A1',
     ground_level: '137.57 sqm',
     mezzanine_level: '73.26 sqm',
     total_area: '210.83 sqm',
@@ -129,10 +131,11 @@ const officeWarehouseSitePlanData = [
       residual: '$140,000 - $160,000',
       fourty_year_total: '$190,000 - $210,000',
     },
+    img: a1
   },
   {
     unit_id: 'unit-02',
-    unit_number: 'Unit 02',
+    unit_number: 'Unit A2',
     ground_level: '96.04 sqm',
     mezzanine_level: '36.00 sqm',
     total_area: '132.04 sqm',
@@ -165,10 +168,11 @@ const officeWarehouseSitePlanData = [
       residual: '$100,000 - $130,000',
       fourty_year_total: '$150,000 - $170,000',
     },
+    img: a2
   },
   {
     unit_id: 'unit-03',
-    unit_number: 'Unit 03',
+    unit_number: 'Unit A3',
     ground_level: '96.04 sqm',
     mezzanine_level: '36.00 sqm',
     total_area: '132.04 sqm',
@@ -204,7 +208,7 @@ const officeWarehouseSitePlanData = [
   },
   {
     unit_id: 'unit-04',
-    unit_number: 'Unit 04',
+    unit_number: 'Unit A4',
     ground_level: '115.06 sqm',
     mezzanine_level: '34.34 sqm',
     total_area: '149.40 sqm',
@@ -240,7 +244,7 @@ const officeWarehouseSitePlanData = [
   },
   {
     unit_id: 'unit-05',
-    unit_number: 'Unit 05',
+    unit_number: 'Unit A5',
     ground_level: '90.98 sqm',
     mezzanine_level: '34.17 sqm',
     total_area: '125.15 sqm',
