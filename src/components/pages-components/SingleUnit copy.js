@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams, useHistory, useRouteMatch } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
+import { useEffect } from 'react';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 import Title from './Title';
 import TopNavbar from '../header & footer/TopNavbar';

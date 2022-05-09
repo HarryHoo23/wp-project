@@ -5,7 +5,6 @@ import Title from './Title';
 
 const DoorStepAccordion = ({direction, second_direction, data, title}) => {
   const [image, setImage] = useState(data[0].image);
-  console.log(data);
   if (direction && data) {
     if (direction === 'right') {
       return (
@@ -13,7 +12,7 @@ const DoorStepAccordion = ({direction, second_direction, data, title}) => {
           <Col
             md={8}
             className={`dp-container-${second_direction}`}
-            style={{ backgroundImage: `url(${data[0].image})` }}
+            style={{ backgroundImage: `url(${image})` }}
           ></Col>
           <Col md={4}>
             <Title

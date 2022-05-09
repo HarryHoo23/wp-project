@@ -195,7 +195,6 @@ const Fullpage = () => {
 
               <GeneralModal renderBodyComponent={renderModalContent()} />
 
-              {/* First Section */}
               <SectionWrapper class={'section'} idName={'home'}>
                 <div className='home-video'>
                   <video loop autoPlay muted id='home-bg-video'>

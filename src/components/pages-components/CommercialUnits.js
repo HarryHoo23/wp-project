@@ -6,21 +6,22 @@ import { areas_maps } from '../../data/Coordinates';
 import ImagePropertyMapper from '../ImageMapper/ImagePropertyMapper';
 import useWindowDimensions from '../../contexts/useWindowsDimension';
 import Title from './Title';
+import floorplanImg from '../../assests/img/floorplan/1.png';
+
 
 const CommercialUnits = () => {
   const { width } = useWindowDimensions();
 
   let containerWidth = (width - 130) * 3 / 4 - 30;
-    ;
 
   const [map, setMap] = useState(areas_maps[0]);
   const [destination, setDestination] = useState(tabContent[0].link);
 
-  function changeMap(index) {
+  const changeMap = (index) => {
     setMap(areas_maps[index]);
     setDestination(tabContent[index].link);
   }
-
+    
   return (
     <>
       <Row className='welcome-tabs'>
@@ -54,9 +55,6 @@ const CommercialUnits = () => {
                   <Tab.Pane key={tab.position} eventKey={tab.position}>
                     <h3 style={{color: '#ffffff', fontSize:'18px'}} className="mb-3">{tab.subtitle}</h3>
                     <p>{tab.content}</p>
-                    {/* <Link to={`/${tab.link}`} className='view-option btn'>
-                      View Option
-                    </Link> */}
                   </Tab.Pane>
                 );
               })}
@@ -70,7 +68,7 @@ const CommercialUnits = () => {
         </Col>
       </Row>
       <div className='wh-fp-container'>
-        <ImagePropertyMapper width={containerWidth} maps={map} destination={destination} />
+        <ImagePropertyMapper width={containerWidth} maps={map} destination={destination} image={floorplanImg} />
       </div>
     </>
   );

@@ -1,21 +1,25 @@
 import ImageMapper from 'react-image-mapper';
 import React, { useEffect, useState } from 'react';
-import floorplanImg from '../../assests/img/floorplan/Example-1.png';
 import { useHistory } from 'react-router-dom';
+import { useGlobalContext } from '../../contexts/GlobalContext';
 
 
-// const moveOnImage = (evt) => {
-//   //const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
-//   console.log(evt);
-// };
+const moveOnImage = (evt) => {
+    const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+};
 
-const ImagePropertyMapper = ({ maps, width, destination }) => {
+const ImagePropertyMapper = ({ maps, width, destination, image, isSitePlan }) => {
   const [rerender, setRerender] = useState(false);
   const history = useHistory();
+  
+  const { setUnitMapIndex } = useGlobalContext();
+    
   const clickHandler = (area, index, event) => {
-    console.log(area);
     history.push(`/${destination}`);
-    // getNotionPage(area.name);
+  };
+    
+  const clickNewHandler = (area, index) => {
+    setUnitMapIndex(index)
   };
   
   useEffect(() => {
@@ -25,12 +29,12 @@ const ImagePropertyMapper = ({ maps, width, destination }) => {
 
   return (
     <ImageMapper
-      src={floorplanImg}
+      src={image}
       map={maps}
       width={width}
-      imgWidth={1980}
-      onClick={clickHandler}
-      // onImageMouseMove={(event) => moveOnImage(event)}
+      imgWidth={1466}
+      onClick={!isSitePlan ? clickHandler : clickNewHandler}
+      onImageMouseMove={(event) => moveOnImage(event)}
     />
   );
 };

@@ -2,98 +2,91 @@ const areas_type_a = {
   name: 'my-map',
   areas: [
     {
-      name: 'A',
-      shape: 'rect',
-      coords: [610, 138, 697, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
-    {
-      name: 'A',
-      shape: 'rect',
-      coords: [784, 138, 865, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
+        name: 'A1',
+        shape: 'rect',
+        coords: [1070, 120, 1100, 190],
+        preFillColor: 'rgba(75, 74, 74, 0.5)',
+        fillColor: 'rgba(75, 74, 74, 0.8)',
+    }
   ],
 };
 
 const areas_type_b = {
   name: 'my-map',
   areas: [
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [698, 138, 785, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [869, 138, 955, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [698, 138, 785, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [869, 138, 955, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
   ],
 };
 
 const areas_type_c = {
   name: 'my-map',
   areas: [
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [698, 138, 785, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [869, 138, 955, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    }
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [698, 138, 785, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [869, 138, 955, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // }
   ],
 };
 
 const areas_type_d = {
   name: 'my-map',
   areas: [
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [698, 138, 785, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [869, 138, 955, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [698, 138, 785, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [869, 138, 955, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
   ],
 };
 const areas_type_e = {
   name: 'my-map',
   areas: [
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [698, 138, 785, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
-    {
-      name: 'B',
-      shape: 'rect',
-      coords: [869, 138, 955, 232],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-    },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [698, 138, 785, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
+    // {
+    //   name: 'B',
+    //   shape: 'rect',
+    //   coords: [869, 138, 955, 232],
+    //   preFillColor: '#f4f2f2',
+    //   fillColor: '#dbdada',
+    // },
   ],
 };
 
@@ -112,43 +105,18 @@ const office_warehouse_maps = {
       id: 1,
       name: 'B',
       shape: 'rect',
-      coords: [417, 596, 523, 701],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-      
+      coords: [1069, 119, 1100, 190],
+      preFillColor: 'rgba(255, 255, 255, 0.3)',
+      fillColor: 'rgba(75, 74, 74, 0.8)',
     },
     {
       id: 2,
       name: 'B',
       shape: 'rect',
-      coords: [417, 516, 523, 588],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-      
-    },
-    {
-      id: 3,
-      name: 'B',
-      shape: 'rect',
-      coords: [417, 422, 523, 509],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-      
-    },
-    {
-      id: 4,
-      name: 'B',
-      shape: 'rect',
-      coords: [417, 328, 523, 416],
-      fillColor: 'rgba(72,72,72,0.7)',
-    },
-    {
-      id: 5,
-      name: 'B',
-      shape: 'rect',
-      coords: [417, 422, 523, 509],
-      fillColor: 'rgba(72,72,72,0.7)',
-    },
+      coords: [1037, 118, 1068, 190],
+      preFillColor: 'rgba(75, 74, 74, 0.4)',
+      fillColor: 'rgba(75, 74, 74, 0.8)',
+    }
   ],
 };
 
@@ -299,24 +267,32 @@ const roller_office_maps = {
 };
 
 export const unit_maps = [
-  {
-    type: 'office-warehouse',
-    data: office_warehouse_maps,
-  },
-  {
-    type: 'office',
-    data: office_maps,
-  },
-  {
-    type: 'hybrid',
-    data: hybrid_maps,
-  },
-  {
-    type: 'roller-doors',
-    data: roller_doors_maps,
-  },
-  {
-    type: 'roller-office',
-    data: roller_office_maps,
-  },
+    {
+        type: 'showroom',
+        data: office_warehouse_maps,
+    },
+    {
+        type: 'strata-office-suites',
+        data: office_maps,
+    },
+    {
+        type: 'walk-up-office',
+        data: roller_doors_maps,
+    },
+    {
+        type: 'two-level-hybrid',
+        data: hybrid_maps,
+    },
+    {
+        type: 'three-level-hybrid',
+        data: roller_office_maps,
+    },
+    {
+        type: 'working-storage',
+        data: roller_office_maps,
+    },
+    {
+        type: 'storage-complex',
+        data: roller_office_maps,
+      },
 ];

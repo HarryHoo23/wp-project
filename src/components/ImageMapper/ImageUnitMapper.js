@@ -18,7 +18,7 @@ const ImagePropertyMapper = ({ src, width, maps, height }) => {
   useEffect(() => {
     setRerender(!rerender);
     // eslint-disable-next-line
-  }, [maps]);
+  }, []);
 
   return (
     <ImageMapper

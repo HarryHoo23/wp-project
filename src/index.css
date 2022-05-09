@@ -1303,6 +1303,7 @@ a.logo-link {
   position: absolute;
   right: 5rem;
   bottom: 5rem;
+  background-color: var(--secondary-color-white);
 }
 
 /* Floor plan */
@@ -2822,10 +2823,22 @@ textarea.form-control:focus {
 
 .img-mapper-container {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 2rem;
-  bottom: 2rem;
+  top: 0;
+  height: 75%;
+  min-height: 75%;
+  width: 100%;
+}
+
+.img-mapper-container img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.img-bottom-container {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    min-height: 25%;
 }
 
 .siteplan-row {
@@ -3160,17 +3173,14 @@ article {
 }
 
 .download-btn {
-  position: absolute;
-  right: 0;
-  top: 2rem;
-  margin-top: 0;
-  z-index: 200;
+  margin-top: 1rem;
+  width: 215px;
   color: #bababa;
   font-size: 15px;
   text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
+  padding: 10px 13px;
   font-weight: 600;
-  background-color: rgba(112, 112, 112, 0.04);
+  background-color: rgba(112, 112, 112, 0.1);
 }
 
 .unit-wrapper .download-btn {
@@ -3241,4 +3251,8 @@ article {
 
 .ds-left-title {
   padding-left: 5rem;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--background-color-grey);
 }
