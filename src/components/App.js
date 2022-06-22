@@ -11,27 +11,7 @@ import Fullpage from './FullPage';
 import 'react-toastify/dist/ReactToastify.css';
 import Siteplan from './pages-components/Siteplan';
 
-const App = () => {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
-        return (
-            <>
-                <BrowserRouter>
-                    <AuthProvider>
-                    <Header />
-                    <Switch>
-                        <PrivateRoute exact path='/' component={Fullpage} />
-                        <Route path='/signup' component={Signup} />
-                        <Route path='/login' component={Login} />
-                        <Route path='/forgot-password' component={ForgotPassword} />
-                        <Route exact path='/:type' component={Siteplan} />
-                        <Route exact path='/:type/:id' component={SingleUnit} />
-                    </Switch>
-                    </AuthProvider>
-                </BrowserRouter>
-            </>
-        );
-    } 
-
+const App = () => {    
     return (
         <>
             <BrowserRouter basename={'/access'}>

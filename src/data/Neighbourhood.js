@@ -16,12 +16,7 @@ export const doorStep_One_Right = [
   {
     title: 'Highett',
     content: `One of Melbourne’s best kept secrets is starting to spread – Highett has everything you could ever want from Bayside living without the Brighton price tag. Situated only 12 km* from the CBD, however residents are finding it redundant to even leave the area.
-    <br/><br/>
-    Close by to Southland shopping centre and Sandringham Village, plenty of cafes and boutiques have recently set up shop in the area to cater to the established families and older demographic who have set down roots here.
-    <br/><br/>
-    Those who have chosen to live here don’t typically bounce around from suburb to suburb across Melbourne – they’re loyal Bayside residents who like to keep their work, friends, and lifestyle coastal. Therefore, there are plenty of education choices on offer and local grocers to keep travelling to a minimum.
-    <br/><br/>
-    Public transport is simple with the Highett railway station taking you into the CBD in 40 minutes. There are also several popular buses operating in the area to take you into neighbouring suburbs, but the established bike lanes will get you around faster and safely.`,
+    <br/><br/>`,
     image: img12,
   }
 ];

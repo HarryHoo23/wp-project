@@ -56,7 +56,7 @@ const Siteplan = () => {
 
     const closeUnitModal = () => {
         setIsOpen(false);
-        setComponentNumber(1);
+        setComponentNumber(1);        
     };
 
     useEffect(() => {
@@ -68,7 +68,8 @@ const Siteplan = () => {
     }, [width, size]);
 
     useEffect(() => {
-        window.addEventListener("resize", checkSize);
+        window.addEventListener("resize", checkSize);  
+        // document.body.style.setProperty('overflow', 'scroll', 'important');
         return () => {
             window.removeEventListener("resize", checkSize);
         };
@@ -136,7 +137,7 @@ const Siteplan = () => {
                                     </span>
                                 )}
                             </div>
-                            <div className='siteplan_Info'>
+                            <div className='siteplan_Info mt-4'>
                                 <h5>{sitePlan[unitMapIndex].unit_number}</h5>
                                 <p>
                                     <strong>Ground Level:</strong>{' '}
@@ -174,7 +175,7 @@ const Siteplan = () => {
                                     DEPRECIATION
                                 </button>
                                 <a className='download-btn' href='http://localhost:3000/access#maps' download>
-                                    Download Pdf
+                                    Print
                                 </a>
                             </div>
 

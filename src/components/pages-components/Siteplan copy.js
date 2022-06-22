@@ -102,7 +102,7 @@ const Siteplan = () => {
                     </span>
                   )}
                 </div>
-                <div className='siteplan_Info'>
+                <div className='mt-3'>
                   <h5>{sitePlan[unitMapIndex].unit_number}</h5>
                   <p>
                     <strong>Ground Level:</strong>{' '}
