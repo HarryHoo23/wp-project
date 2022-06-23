@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 import { useGlobalContext } from '../../contexts/GlobalContext';
+import Logo from '../../assests/logo/Viridian_Logo-coloured.svg';
 
 const TopNavbar = (props) => {
   const { handleFormModalClickOpen, onClickScrollUp } = useGlobalContext();
@@ -16,6 +17,7 @@ const TopNavbar = (props) => {
         <div className='btn-left-box scroll-up'>
           <span id='scroll-up' className={props.addtionalClass}>
             {props.heading}
+            {props.showLogo && <img src={Logo} alt="logo" />}
           </span>
           <div
             id='menu-arrow-down-box'

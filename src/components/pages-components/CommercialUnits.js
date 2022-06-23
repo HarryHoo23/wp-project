@@ -29,8 +29,8 @@ const CommercialUnits = () => {
                     <Col md={3}>
                         <Title
                             colorClassName="white-title"
-                            firstHalfTitle="Commercial"
-                            secondHalfTitle="units"
+                            firstHalfTitle={unitData.first_half_title}
+                            secondHalfTitle={unitData.second_half_title}
                         />         
                         <CommercialDropdown />
                     </Col>

@@ -26,8 +26,7 @@ const Siteplan = () => {
     const [sitePlan, setSitePlan] = useState();
     const [img, setImg] = useState();
     const [mapperImg, setMapperImg] = useState();
-    // eslint-disable-next-line
-    const [unitContent, setUnitContent] = useState();
+    // eslint-disable-next-line    
     const [isOpen, setIsOpen] = useState(false);
     const [componentNumber, setComponentNumber] = useState(1);
     const [width, setWidth] = useState();
@@ -87,8 +86,7 @@ const Siteplan = () => {
             
             setTitle(pageTitle);
             setSitePlan(unitType.data);
-            setUnitMap(unitMapData.data);
-            setUnitContent(unitType.data[unitMapIndex]);
+            setUnitMap(unitMapData.data);            
             setImg(unitType.img);
             if (unitType.data[unitMapIndex].img) {
                 setMapperImg(unitType.data[unitMapIndex].img);
@@ -116,10 +114,10 @@ const Siteplan = () => {
         <>
             {sitePlan && img && unitMap && (
                 <SectionWrapper class={'section'} idName={'units'}>
-                <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' />
-                <div className='bg-wrapper white'>
-                    <Row className='sd-everyday-row siteplan-row'>
-                        <Col md={4}>
+                <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' showLogo={true} />
+                <div className='bg-wrapper white site-plan'>
+                    <Row className='sd-everyday-row siteplan-row' ref={imageRef}>
+                        <Col xl={4} lg={3} className="p-0">
                             <Title
                             colorClassName=''
                             firstHalfTitle={`${title.first}`}
@@ -136,6 +134,9 @@ const Siteplan = () => {
                                         BACK
                                     </span>
                                 )}
+                                <a className='download-btn' href='http://localhost:3000/access#maps' download>
+                                    Print
+                                </a>
                             </div>
                             <div className='siteplan_Info mt-4'>
                                 <h5>{sitePlan[unitMapIndex].unit_number}</h5>
@@ -173,18 +174,17 @@ const Siteplan = () => {
                                     onClick={() => openUnitModal(3)}
                                 >
                                     DEPRECIATION
-                                </button>
-                                <a className='download-btn' href='http://localhost:3000/access#maps' download>
-                                    Print
-                                </a>
+                                </button>                               
                             </div>
 
                             <br />
                         </Col>
-                        <Col md={8} className="d-flex" style={styles} ref={imageRef}>
+                        <Col xl={8} lg={9} className="d-flex p-0 align-items-center" style={styles}>
                             <div className='img-mapper-container'>
                                 <img src={img} alt="siteplan-img" className="w-100" />
                             </div>
+                            </Col>
+                        <Col md={12} className="p-0">
                             <div className="img-bottom-container">
                                 <ImagePropertyMapper width={width} maps={unitMap} image={mapperImg} isSitePlan={true} />    
                             </div>

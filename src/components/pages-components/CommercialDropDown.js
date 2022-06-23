@@ -7,7 +7,7 @@ const CommercialDropdown = () => {
     const { unitData, setUnitData } = useGlobalContext();
 
     return (
-        <DropdownButton id="dropdown-commercial-button" title={unitData.title}>
+        <DropdownButton id="dropdown-commercial-button" title="Commercial units">
             {tabContent.map((item, index) => {
                 return (
                     <Dropdown.Item

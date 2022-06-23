@@ -26,8 +26,15 @@ body {
     height: 100%;
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: var(--font-weight);
-    overflow: hidden !important;    
+    font-weight: var(--font-weight);       
+}
+
+html.fp-enabled {
+    overflow: hidden !important;
+}
+
+#fullpage {
+    overflow: hidden;
 }
 
 p {
@@ -433,6 +440,10 @@ h6 {
     opacity: 0.5;
     text-transform: uppercase;
     font-weight: 400;
+}
+
+#scroll-up img {
+    max-width: 150px;
 }
 
 .scroll-up {
@@ -2840,23 +2851,19 @@ textarea.form-control:focus {
 }
 
 .img-mapper-container {
-    position: absolute;
-    top: 0;
-    height: 75%;
-    min-height: 75%;
     width: 100%;
+    height: 100%;
 }
 
 .img-mapper-container img {
     object-fit: contain;
     height: 100%;
+    max-height: 70vh;
+    margin: auto;
 }
 
 .img-bottom-container {
-    position: absolute;
-    bottom: 0;
-    height: 25%;
-    min-height: 25%;
+    position: relative;    
 }
 
 .siteplan-row {
@@ -2916,41 +2923,41 @@ button.hide-enquiry {
     display: inline-block;
 }
 
-#dropdown-basic-button,
-#dropdown-commercial-button {
-    border-radius: 0px;
-    padding: 10px 13px;
-    background-color: #2d2d2d;
-    border: 1px solid #2d2d2d;
-    color: var(--secondary-color-white);
-    text-transform: uppercase;
-    text-align: left;
-    font-weight: 500;
-    font-size: 15px;
+.site-plan .button-group {
+    width: 100%;
+    justify-content: flex-start;
     margin-top: 1.5rem;
+    gap: 20px;
+}
+
+#dropdown-basic-button {
+    min-width: 150px;
+}
+
+.download-btn {
+    margin-top: 1rem;
     width: 215px;
-    position: relative;
+    color: #bababa;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 13px;
+    font-weight: 600;
+    background-color: rgba(112, 112, 112, 0.1);
 }
 
-#dropdown-commercial-button {
-    background-color: var(--secondary-color-white);
-    color: var(--font-primary-color);
-    border: 1px solid var(--secondary-color-white);
-}
-
-.com-dropdown {    
-    color: var(--font-primary-color);
-}
-
-.welcome-tabs .dropdown-menu {
-    padding: 0;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.site-plan .download-btn {
+    margin-top: 0rem;    
+    width: unset;
+    color: #bababa;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: rgba(112, 112, 112, 0.1);
 }
 
 .back-button {
-    padding: 10px 13px;
-    margin-top: 1.5rem;
-    margin-left: 1rem;
+    padding: 10px 13px;    
     position: relative;
     font-size: 15px;
     border: 1px solid var(--border-grey-color);
@@ -2963,6 +2970,38 @@ button.hide-enquiry {
     background-color: var(--border-grey-color);
     color: #ffffff;
 }
+
+#dropdown-basic-button,
+#dropdown-commercial-button {
+    border-radius: 0px;
+    padding: 10px 13px;
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+    color: var(--secondary-color-white);
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+
+#dropdown-commercial-button {
+    background-color: var(--secondary-color-white);
+    color: var(--font-primary-color);
+    border: 1px solid var(--secondary-color-white);
+    margin-top: 1.5rem;
+    width: 215px;
+}
+
+.com-dropdown {    
+    color: var(--font-primary-color);
+}
+
+.welcome-tabs .dropdown-menu {
+    padding: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -3206,17 +3245,6 @@ article {
     bottom: 0;
 }
 
-.download-btn {
-    margin-top: 1rem;
-    width: 215px;
-    color: #bababa;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 10px 13px;
-    font-weight: 600;
-    background-color: rgba(112, 112, 112, 0.1);
-}
-
 .unit-wrapper .download-btn {
     right: 15px;
 }
@@ -3297,4 +3325,20 @@ article {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+}
+
+.site-plan {
+    height: auto;
+    padding-top: 0; 
+    padding-bottom: 2rem;
+}
+
+.site-plan .btn {
+    max-width: 150px !important;
+    font-size: 14px !important;    
+}
+
+#units .nav-wrapper,
+#units .nav-wrapper-top {
+    position: relative;
 }
