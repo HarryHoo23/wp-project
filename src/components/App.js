@@ -13,8 +13,9 @@ import Siteplan from './pages-components/Siteplan';
 
 const App = () => {    
     return (
-        <>
-            <BrowserRouter basename={'/access'}>
+        <>  
+            {/* <BrowserRouter basename={'/access'}> */}
+            <BrowserRouter>
                 <AuthProvider>
                 <Header />
                 <Switch>
