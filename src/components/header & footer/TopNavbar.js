@@ -12,7 +12,7 @@ const TopNavbar = (props) => {
   }
 
   return (
-    <div className='nav-wrapper-top'>
+    <div className={`nav-wrapper-top ${props.className}`}>
       <div className={`nav-top-row ${props.addtionalClass} `}>
         <div className='btn-left-box scroll-up'>
           <span id='scroll-up' className={props.addtionalClass}>

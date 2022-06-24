@@ -3342,3 +3342,7 @@ article {
 #units .nav-wrapper-top {
     position: relative;
 }
+
+.color-white {
+    background-color: #fafafa;
+}

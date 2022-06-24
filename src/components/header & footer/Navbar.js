@@ -5,7 +5,7 @@ const Navbar = (props) => {
   const { openAndCloseNavbar, isOpen, onClickScrollDown } = useGlobalContext();
 
   return (
-    <div className={`${isOpen ? 'nav-wrapper active-nav' : 'nav-wrapper'}`}>
+    <div className={`${isOpen ? 'nav-wrapper active-nav' : 'nav-wrapper'} ${props.className}`}>
       <div className={`${props.additionClass} nav-bottom-row`}>
         <div className='btn-left-box scroll-down-box'>
           <span id='scroll-down-title' className={props.additionClass}>

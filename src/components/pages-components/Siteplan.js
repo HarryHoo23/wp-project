@@ -114,7 +114,7 @@ const Siteplan = () => {
         <>
             {sitePlan && img && unitMap && (
                 <SectionWrapper class={'section'} idName={'units'}>
-                <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' showLogo={true} />
+                <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' className='color-white' showLogo={true} />
                 <div className='bg-wrapper white site-plan'>
                     <Row className='sd-everyday-row siteplan-row' ref={imageRef}>
                         <Col xl={4} lg={3} className="p-0">
@@ -196,7 +196,7 @@ const Siteplan = () => {
                         number={componentNumber}
                     />
                 </div>
-                <Navbar title={breadComponent} additionClass="opacity-deep" unitClass='unit-bar' />
+                <Navbar title={breadComponent} additionClass="opacity-deep" className="color-white" unitClass='unit-bar' />
             </SectionWrapper>
         )}
         </>
