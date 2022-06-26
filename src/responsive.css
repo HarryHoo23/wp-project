@@ -82,16 +82,15 @@
 } */
 
 @media screen and (max-height: 800px) {
-  .sunday-navbar.sunday-navbar-active {
-    height: 60%;
-  }
-  #mobile-nav-content .nav-link {
+    .sunday-navbar.sunday-navbar-active {
+        height: 60%;
+    }
+    #mobile-nav-content .nav-link {
       padding: 0.5rem 1rem;
     }
     
     .img-mapper-container {
-        height: 60%;
-        min-height: 60%;
+        height: 100%;        
     }
     
     .img-bottom-container {

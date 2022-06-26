@@ -1222,6 +1222,9 @@ a.logo-link {
     max-height: 50px;
     background-color: transparent;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome-title:hover {
