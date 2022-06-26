@@ -35,10 +35,6 @@ const Siteplan = () => {
     const imageRef = useRef(null);
     let history = useHistory();
 
-    const styles = {
-        flexDirection: "column"
-    }
-
     const checkSize = () => {
         setSize(window.innerWidth);
     };
@@ -179,7 +175,7 @@ const Siteplan = () => {
 
                             <br />
                         </Col>
-                        <Col xl={8} lg={9} className="d-flex p-0 align-items-center" style={styles}>
+                        <Col xl={8} lg={9} className="d-flex p-0 align-items-center">
                             <div className='img-mapper-container'>
                                 <img src={img} alt="siteplan-img" className="w-100" />
                             </div>

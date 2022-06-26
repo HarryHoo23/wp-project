@@ -43,24 +43,32 @@ export const links = [
 
 export const subMenuLink = [
     {
-        text: "Office warehouse",
-        link: "office-warehouse",
+        text: "Showroom",
+        link: "showroom",
     },
     {
-        text: "Office",
-        link: "office",
+        text: "Strata office suites",
+        link: "strate-office-suites",
     },
     {
-        text: "Hybrid",
-        link: "hybrid",
+        text: "Walk-up offices",
+        link: "walk-up-offices",
     },
     {
-        text: "Roller doors",
-        link: "roller-doors",
+        text: "Two-level hybrid",
+        link: "two-level-hybrid",
     },
     {
-        text: "Roller / Office",
-        link: "roller-office",
+        text: "Triple-level hybrid",
+        link: "three-level-hybrid",
+    },
+    {
+        text: "Working plus storage",
+        link: "working-storage",
+    },
+    {
+        text: "Storage complex",
+        link: "storage-complex",
     },
 ];
 
