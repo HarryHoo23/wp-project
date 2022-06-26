@@ -1,8 +1,8 @@
 import unitTypeB_img from "../assests/img/floorplan/unitPlan/2.png";
 import marty_fox from "../assests/img/marty.jpg";
 import lana_img from "../assests/img/lana.jpg";
-import a1 from "../assests/img/floorplan/3.png";
-import a2 from "../assests/img/floorplan/3.a2.png";
+import a1 from "../assests/img/floorplan/update.png";
+import a2 from "../assests/img/floorplan/update.png";
 
 export const modalData = [
     {

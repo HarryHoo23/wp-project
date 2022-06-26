@@ -1245,6 +1245,7 @@ a.logo-link {
     font-size: 18px;
     font-weight: bold;
     margin-right: auto;
+    text-transform: uppercase;
 }
 
 .view-option {
@@ -1262,6 +1263,7 @@ a.logo-link {
 .dropdown-item {
     padding: 10px 13px;
     color: #969696;
+    text-transform: uppercase;
 }
 
 .tab-contents p {
@@ -1326,7 +1328,7 @@ a.logo-link {
 }
 
 .welcome-tabs a:hover {
-    color: var(--secondary-color-white);
+    color: var(--font-primary-color);
 }
 
 .welcome-tab-content-hidden .tab-pane {
@@ -2873,8 +2875,7 @@ textarea.form-control:focus {
 
 .img-mapper-container img {
     object-fit: contain;
-    height: 100%;
-    max-height: 70vh;
+    height: 100%;    
     margin: auto;
 }
 
@@ -3356,11 +3357,16 @@ article {
     font-size: 14px !important;    
 }
 
+.site-plan .sunday-title,
+.welcome-tabs .sunday-title {
+    text-transform: uppercase;
+}
+
 #units .nav-wrapper,
 #units .nav-wrapper-top {
     position: relative;
 }
 
 .bg-white {
-    background-color: #fafafa;
+    background-color: #fafafa !important;
 }
