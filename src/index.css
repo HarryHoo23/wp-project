@@ -3,6 +3,20 @@
 Variables
 ===============
 */
+@font-face {
+    font-family: "WeissenhofGroteskW01-Rg"; 
+    src: url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.eot"); 
+    src: url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.woff") format("woff"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.svg#WeissenhofGroteskW01-Rg") format("svg"); 
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Commuters Sans';
+    src: local('Commuters Sans SemiBold'), url('./assests/CommutersSans-SemiBold.ttf'),
+        url('./assests/CommutersSans-SemiBold.ttf') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
 
 :root {
     --font-primary-color: #484848;
@@ -10,11 +24,11 @@ Variables
     --background-color-grey: #969696;
     --secondary-color-white: #ffffff;
     --animate-delay: 0.5s;
-    --title-font-family: "Open Sans";
+    --title-font-family: "Commuters Sans";
     --font-size: 15px;
     --lg-font-size: 20px;
     --xl-font-size: 28px;
-    --font-weight: 300;
+    --font-weight: normal;
     --title-font-weight: 400;
     --transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     --margin-top-m: 3rem;
@@ -24,7 +38,7 @@ Variables
 html,
 body {
     height: 100%;
-    font-family: "Roboto", sans-serif;
+    font-family: "WeissenhofGroteskW01-Rg", sans-serif;
     font-style: normal;
     font-weight: var(--font-weight);       
 }
@@ -54,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--title-font-family);
+    font-family: var(--title-font-family) !important;
     font-weight: var(--title-font-weight);
 }
 
@@ -1207,6 +1221,7 @@ a.logo-link {
     letter-spacing: 0.02em;
     max-height: 50px;
     background-color: transparent;
+    text-transform: uppercase;
 }
 
 .welcome-title:hover {
@@ -1229,6 +1244,7 @@ a.logo-link {
 .tab-contents h3 {
     font-size: 18px;
     font-weight: bold;
+    margin-right: auto;
 }
 
 .view-option {
@@ -2932,6 +2948,7 @@ button.hide-enquiry {
 
 #dropdown-basic-button {
     min-width: 150px;
+    padding: 11px 13px 8px 11px !important;
 }
 
 .download-btn {
@@ -2948,16 +2965,17 @@ button.hide-enquiry {
 .site-plan .download-btn {
     margin-top: 0rem;    
     width: unset;
-    color: #bababa;
+    color: #acacac;
     font-size: 15px;
     text-transform: uppercase;
-    padding: 10px 20px;
-    font-weight: 600;
-    background-color: rgba(112, 112, 112, 0.1);
+    font-weight: 300;
+    padding: 11px 13px 8px 14px !important;
+    background-color: hsla(0,0%,43.9%,.07);
+    border: 1px solid #70707012;
 }
 
 .back-button {
-    padding: 10px 13px;    
+    padding: 11px 13px 8px 11px;    
     position: relative;
     font-size: 15px;
     border: 1px solid var(--border-grey-color);
@@ -2974,7 +2992,7 @@ button.hide-enquiry {
 #dropdown-basic-button,
 #dropdown-commercial-button {
     border-radius: 0px;
-    padding: 10px 13px;
+    padding: 11px 13px 8px 11px;
     background-color: #2d2d2d;
     border: 1px solid #2d2d2d;
     color: var(--secondary-color-white);
@@ -3232,7 +3250,7 @@ article {
     margin-top: 1rem;
     width: 215px;
     text-align: left;
-    padding: 10px 13px;
+    padding: 11px 13px 8px 11px;
     font-size: 15px;
     font-weight: 500;
 }

@@ -26,7 +26,7 @@ const CommercialUnits = () => {
         return (
             <>
                 <Row className="welcome-tabs">
-                    <Col md={3}>
+                    <Col md={3} className="d-flex" style={{flexDirection: 'column'}}>
                         <Title
                             colorClassName="white-title"
                             firstHalfTitle={unitData.first_half_title}
