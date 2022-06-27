@@ -459,6 +459,7 @@ h6 {
 
 #scroll-up img {
     max-width: 150px;
+    display: none;
 }
 
 .scroll-up {
