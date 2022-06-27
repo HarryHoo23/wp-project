@@ -322,9 +322,9 @@ h6 {
 }
 
 #mobile-nav-content .nav-link {
-    font-size: 14px;
+    font-size: 13px;
     color: #656565;
-    text-transform: capitalize;
+    text-transform: uppercase;
     border-bottom: 1px solid #e5e5e5;
     height: 100%;
     display: flex;
@@ -333,6 +333,7 @@ h6 {
     margin-bottom: 0;
     padding: 0.5rem 1rem;
     position: relative;
+    font-family: var(--title-font-family) !important;
 }
 
 #scroll-down {
@@ -521,9 +522,10 @@ h6 {
 
 .btn-left-box span {
     color: var(--secondary-color-white);
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     font-weight: 600;
+    font-family: "Commuters Sans"!important;
 }
 
 .btn-left-box .bread-text {
@@ -813,6 +815,7 @@ span.title {
     text-transform: uppercase;
     color: #969696;
     font-weight: 600;
+    font-family: var(--title-font-family);
 }
 
 a.logo-link {
@@ -1191,6 +1194,7 @@ a.logo-link {
     font-weight: 500;
     font-size: 15px;
     position: relative;
+    font-family: var(--title-font-family);
 }
 
 .financials .nav-pills .nav-link {
@@ -1202,6 +1206,8 @@ a.logo-link {
     margin: 8px 0;
     line-height: 24px;
     text-transform: uppercase;
+    font-family: var(--title-font-family);
+    font-size: 13px;
 }
 
 .financials .tab-content table {
@@ -1225,6 +1231,8 @@ a.logo-link {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20px;
+    font-family: var(--title-font-family) !important;
 }
 
 .welcome-title:hover {
@@ -1259,14 +1267,17 @@ a.logo-link {
     padding: 1rem;
     border-color: var(--secondary-color-white);
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
+    font-family: var(--title-font-family);
 }
 
 .dropdown-item {
     padding: 10px 13px;
     color: #969696;
     text-transform: uppercase;
+    font-family: var(--title-font-family);
+    font-size: 13px !important;
 }
 
 .tab-contents p {
@@ -1309,6 +1320,12 @@ a.logo-link {
     top: 50%;
     transform: translateY(-50%);
     padding: 20px;
+}
+
+.table thead th {
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    font-size: 11px;
 }
 
 .table {
@@ -1391,7 +1408,8 @@ a.logo-link {
     text-transform: uppercase;
     padding-top: 2rem;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
+    font-family: var(--title-font-family);
 }
 
 #floor-plan .residencies-dropdown {
@@ -1896,9 +1914,12 @@ button.btn.btn-link[aria-expanded="true"] {
 }
 
 .card-header .btn-link {
-    color: #656565;
+    color: var(--title-primary-color);
     padding: 0.375rem 0;
-    opacity: 0.7;
+    opacity: 1;
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 .card-header .btn-link:hover {
@@ -2036,6 +2057,8 @@ button.btn.btn-link[aria-expanded="true"] {
     border-bottom: 1px solid var(--secondary-color-white);
     margin-bottom: 1px;
     border-radius: 0;
+    color: var(--secondary-color-white);
+    font-size: 13px;
 }
 
 #map-accordion .card-body ul {
@@ -2112,7 +2135,9 @@ button.btn.btn-link[aria-expanded="true"] {
     padding-bottom: 0.5rem;
     color: #656565;
     border-bottom: 1px solid rgba(143, 143, 143, 0.43);
-    font-size: 13px;
+    font-size: 11px;
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
 }
 
 .sale-intro {
@@ -2153,6 +2178,8 @@ ul.sale-contact li a {
     border-color: var(--background-color-grey);
     border-radius: 0px;
     padding: 10px 13px;
+    font-family: var(--title-font-family);
+    font-size: 10px;
 }
 
 .email:hover {
@@ -2582,6 +2609,7 @@ ul.sale-contact li a {
     left: 15px;
     color: var(--secondary-color-white);
     font-size: 12px;
+    font-family: var(--title-font-family);
 }
 
 .claimer-right {
@@ -2601,6 +2629,7 @@ ul.sale-contact li a {
     color: var(--secondary-color-white);
     font-size: 12px;
     letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 .whitefox-logo {
@@ -2769,6 +2798,7 @@ textarea.form-control:focus {
     z-index: 2000;
     margin-bottom: 0;
     opacity: 0.4;
+    font-family: var(--title-font-family);
 }
 
 .btn-contact-purchase {
@@ -2845,7 +2875,7 @@ textarea.form-control:focus {
 .siteplan_Info h5 {
     position: relative;
     margin-bottom: 2rem;
-    color: var(--background-color-grey);
+    color: var(--title-primary-color);
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
@@ -2863,7 +2893,7 @@ textarea.form-control:focus {
 
 .siteplan_Info p {
     margin: 0;
-    color: #969696;
+    color: #2d2d2d;
 }
 
 .button-group {
@@ -2879,7 +2909,7 @@ textarea.form-control:focus {
 .img-mapper-container img {
     object-fit: contain;
     height: 100%;  
-    max-height: 75vh;  
+    max-height: 70vh;  
     margin: auto;
 }
 
@@ -2949,11 +2979,12 @@ button.hide-enquiry {
     justify-content: flex-start;
     margin-top: 1.5rem;
     gap: 20px;
+    font-family: var(--title-font-family) !important;
 }
 
 #dropdown-basic-button {
     min-width: 150px;
-    padding: 11px 13px 8px 11px !important;
+    padding: 11px 13px 8px 13px !important;
 }
 
 .download-btn {
@@ -2982,11 +3013,12 @@ button.hide-enquiry {
 .back-button {
     padding: 11px 13px 8px 11px;    
     position: relative;
-    font-size: 15px;
-    border: 1px solid var(--border-grey-color);
-    background-color: transparent;
+    font-size: 15px;    
+    border: 1px solid rgb(192,195,193) !important;
+    background-color: var(--secondary-color-white);
     color: #acacac;
     transition: var(--transition);
+    font-family: var(--title-font-family);
 }
 
 .back-button:hover {
@@ -3004,8 +3036,9 @@ button.hide-enquiry {
     text-transform: uppercase;
     text-align: left;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     position: relative;
+    font-family: var(--title-font-family);
 }
 
 #dropdown-commercial-button {
@@ -3040,10 +3073,9 @@ button.hide-enquiry {
 .dropdown-menu.show {
     margin: 0px;
     margin-left: 0px;
-    width: 100%;
+    width: 215px;
     border-radius: 0px;
     border-width: 0px;
-    width: 100%;
 }
 
 #fixtures-finishes .row {
@@ -3089,8 +3121,11 @@ button.hide-enquiry {
 
 .fixture-type p {
     margin-bottom: 0;
-    font-size: 21px;
+    font-size: 18px;
     color: #fff;
+    font-family: var(--title-font-family);
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .fixture-box:hover .fixture-type {
@@ -3128,7 +3163,7 @@ button.hide-enquiry {
     font-size: 18px;
     font-weight: 400;
     color: #2d2d2d;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 3rem;
 }
 
@@ -3204,6 +3239,7 @@ h3.fixture-title::before,
     font-size: 15px;
     width: 100%;
     position: relative;
+    font-family: var(--title-font-family);
 }
 
 .fitting-overlay {
@@ -3255,8 +3291,7 @@ article {
     margin-top: 1rem;
     width: 215px;
     text-align: left;
-    padding: 10px 15px 10px 11px;
-    font-size: 15px;
+    padding: 10px 15px;    
     font-weight: 500;
 }
 
@@ -3365,7 +3400,7 @@ article {
 .back-button,
 .site-plan .download-btn {
     max-width: 180px !important;
-    font-size: 14px !important;  
+    font-size: 13px !important;  
     font-family: var(--title-font-family);  
 }
 
