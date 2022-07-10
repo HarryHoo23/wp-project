@@ -1,26 +1,25 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-const DepreSchedule = (props) => {    
+const EstimateOutgoings = (props) => {
     return (
         <>
-            <h2 className="text-center">Estimated Depreciation</h2>
-            <Table responsive striped hover size="lg" className="depre-table mt-5 h-100">
+            <h2 className="text-center">Estimated Outgoings</h2>
+            <Table responsive bordered striped hover size="lg" className="depre-table mt-5 h-100">
                 <thead>
                     <tr>
-                        <th>unit</th>
-                        <th>year 1</th>
-                        <th>year 2</th>
-                        <th>year 3</th>
-                        <th>year 4</th>
-                        <th>year 5</th>
-                        <th>year 6</th>
-                        <th>year 7</th>
-                        <th>year 8</th>
-                        <th>year 9</th>
-                        <th>year 10</th>                
+                        <th>Address</th>
+                        <th>Building Area &#13217;</th>
+                        <th>CIV</th>
+                        <th>NAV - 5% of CIV</th>
+                        <th>Est Land Value</th>
+                        <th>Council Rates</th>
+                        <th>Water Rates</th>
+                        <th>Lot E&L</th>
+                        <th>Owners Corp</th>
+                        <th>Total </th>
                     </tr>
-                </thead>                
+                </thead>
                 <tbody>
                     {props.data && props.data.map((item, index) => {
                         return (
@@ -40,4 +39,4 @@ const DepreSchedule = (props) => {
     );
 };
 
-export default DepreSchedule;
+export default EstimateOutgoings;

@@ -41,7 +41,7 @@ const CommercialUnits = () => {
                         </div>
                     </Col>
                     <Col md={3}>
-                        <Link to={`/${unitData.link}`} className="view-option btn">
+                        <Link to={`/units/${unitData.link}`} className="view-option btn">
                             View Options
                         </Link>
                     </Col>

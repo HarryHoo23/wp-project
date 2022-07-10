@@ -4,16 +4,19 @@ import { Modal } from 'react-bootstrap';
 import closeButton from '../../../assests/img/icons/close.svg';
 import DepreSchedule from '../FinancialTabs/DepreSchedule';
 import OwnersCooporation from '../FinancialTabs/OwnersCooporation';
-import PriceList from '../FinancialTabs/PriceList';
+import EstimateOutgoings from '../FinancialTabs/EstimateOutgoings';
+import InvestmentAnalysis from '../FinancialTabs/InvestmentAnalysis';
 
 const UnitModal = (props) => {
   function renderComponent() {
     if (props.number === 1) {
-      return <DepreSchedule />;
+      return <EstimateOutgoings unit={props.data.unit} data={props.data.estimateOutgoings} unitNumber={props.unitMapIndex} />;
     } else if (props.number === 2) {
-      return <OwnersCooporation />;
+      return <OwnersCooporation showFull={true} />;
+    } else if (props.number ===3) {
+      return <DepreSchedule unit={props.data.unit} data={props.data.depreciationScheduleData} unitNumber={props.unitMapIndex} />;
     } else {
-      return <PriceList />;
+        return <InvestmentAnalysis unitNumber={props.unitNumber} type={props.type} />
     }
   }
 
@@ -29,7 +32,7 @@ const UnitModal = (props) => {
         <button className='close' type='button' onClick={props.onClose}>
           <img src={closeButton} alt='closeModalButton' />
         </button>
-        <Modal.Body>
+        <Modal.Body className={props.className}>
           <div className='contact-form-container'>{renderComponent()}</div>
         </Modal.Body>
       </div>

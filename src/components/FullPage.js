@@ -177,7 +177,7 @@ const Fullpage = () => {
                 ]}
                 autoScrolling={true}
                 scrollBar={true}
-                normalScrollElements=".fixture-list"
+                normalScrollElements=".fixture-list, .contact-form-container"
                 // normalScrollElements: '.vs-img, .sale-intro, #map',
                 touchSensitivity={15}
                 fitToSection={true}
@@ -207,9 +207,7 @@ const Fullpage = () => {
                                 addtionalClass={navBarTitle.bgColorClass}
                             />
 
-                            <GeneralModal
-                                renderBodyComponent={renderModalContent()}
-                            />
+                            <GeneralModal renderBodyComponent={renderModalContent()} />
 
                             <SectionWrapper class={"section"} idName={"home"}>
                                 <div className="home-video">
@@ -296,10 +294,7 @@ const Fullpage = () => {
                                 </Row>
                             </SectionWrapper>
 
-                            <SectionWrapper
-                                class={"section"}
-                                idName={"sunday-partners"}
-                            >
+                            <SectionWrapper class={"section"} idName={"sunday-partners"} >
                                 <div className="bg-wrapper">
                                     <Title
                                         colorClassName="white-title"
@@ -313,11 +308,7 @@ const Fullpage = () => {
                                                     key={index}
                                                     md={4}
                                                     role="button"
-                                                    onClick={() =>
-                                                        handleLogoModalClickOpen(
-                                                            index
-                                                        )
-                                                    }
+                                                    onClick={() => handleLogoModalClickOpen(index)}
                                                 >
                                                     <LogoContainer
                                                         bgImg={svgImage}
@@ -347,11 +338,7 @@ const Fullpage = () => {
                                                     key={fixture.id}
                                                     md={3}
                                                     sm={6}
-                                                    onClick={() =>
-                                                        handleFixtureModalClickOpen(
-                                                            index
-                                                        )
-                                                    }
+                                                    onClick={() => handleFixtureModalClickOpen(index)}
                                                 >
                                                     <div className="fixture-box">
                                                         <div className="fixture-type">
@@ -371,9 +358,7 @@ const Fullpage = () => {
                                 class={"section"}
                                 idName={"doorstep-1"}
                             >
-                                <div
-                                    className={`doorstep-container ${name[6].className}`}
-                                >
+                                <div className={`doorstep-container ${name[6].className}`} >
                                     <DoorStepAccordion
                                         direction="right"
                                         second_direction="left"
@@ -419,9 +404,7 @@ const Fullpage = () => {
                                 class={"section"}
                                 idName={"doorstep-4"}
                             >
-                                <div
-                                    className={`doorstep-container ${name[9].className}`}
-                                >
+                                <div className={`doorstep-container ${name[9].className}`} >
                                     <DoorStepAccordion
                                         direction="left"
                                         second_direction="right"
@@ -435,9 +418,7 @@ const Fullpage = () => {
                                 class={"section"}
                                 idName={"doorstep-5"}
                             >
-                                <div
-                                    className={`doorstep-container ${name[10].className}`}
-                                >
+                                <div className={`doorstep-container ${name[10].className}`} >
                                     <DoorStepAccordion
                                         direction="right"
                                         second_direction="left"
@@ -464,8 +445,7 @@ const Fullpage = () => {
 
                             <SectionWrapper
                                 class={"section"}
-                                idName={"wf-contact-us"}
-                            >
+                                idName={"wf-contact-us"} >
                                 <div className="bg-wrapper">
                                     <div className="contact-container">
                                         <Title
@@ -542,7 +522,7 @@ const Fullpage = () => {
                                                 </p>
                                             </div>
                                             <p className="copyright">
-                                                Copyright © 2021{" "}
+                                                Copyright © {new Date().getFullYear()}
                                             </p>
                                         </Col>
                                         <Col md={4}>

@@ -515,6 +515,7 @@ h6 {
     padding-right: 0;
     color: var(--secondary-color-white);
     opacity: 0.5;
+    font-family: var(--title-font-family);
 }
 
 .property-contact-btn.opacity-deep {
@@ -1193,7 +1194,7 @@ a.logo-link {
     color: var(--secondary-color-white);
     text-align: left;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     position: relative;
     font-family: var(--title-font-family);
 }
@@ -1299,18 +1300,6 @@ a.logo-link {
     height: 100%;
 }
 
-.table th,
-.table td {
-    text-align: left;
-    text-transform: capitalize;
-}
-
-.table th {
-    border-top: none;
-    padding: 0.25rem;
-    border-bottom: 1px solid var(--font-primary-color) !important;
-}
-
 .table td {
     padding: 0.25rem;
 }
@@ -1331,16 +1320,52 @@ a.logo-link {
 
 .table {
     margin-bottom: 0;
+    font-size: 14px;
 }
 
 .depre-table {
     white-space: nowrap;
     overflow-x: scroll;
-    display: block;
+    width: 100%;
 }
 
-.owners td {
-    border: none;
+.depre-table tr.active {
+    background-color: var(--font-primary-color) !important;
+    color: var(--secondary-color-white);
+}
+
+.depre-table tr.active:hover {
+    color: var(--secondary-color-white) !important;
+}
+
+.depre-table th {
+    text-align: center;
+}
+
+.depre-table td, .depre-table th {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.owners tr td:nth-child(1),
+.owners tr td:nth-child(2) {
+    width: 80px;
+    font-family: var(--title-font-family);
+}
+
+.owners tr td:nth-child(4),
+.owners tr td:nth-child(6),
+.owners tr td:nth-child(8),
+.owners tr td:nth-child(10),
+.owners tr td:nth-child(12) {
+    display: none;
+}
+
+.investment tr td:nth-child(1) {
+    width: 120px;    
+    font-family: var(--title-font-family);
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .owners .final-tr {
@@ -3421,4 +3446,31 @@ article {
 
 .bg-white {
     background-color: #fafafa !important;
+}
+
+.scroll-modal-body .contact-form-container {
+    overflow: scroll;
+}
+
+.modal-logo-div {
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: -50px;
+}
+
+/* 
+====== 
+Error
+======
+*/
+.error-page {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color-grey);
+}
+.error-container {
+    text-align: center;
+    text-transform: capitalize;
 }

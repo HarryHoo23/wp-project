@@ -6,7 +6,6 @@ import { useGlobalContext } from '../../contexts/GlobalContext';
 import logo from '../../assests/logo/Viridian_Logo-coloured.svg';
 import MenuImgGallery from './MenuImgGallary';
 
-
 export default function Header() {
   let history = useHistory();
 
@@ -18,7 +17,7 @@ export default function Header() {
   };
 
   const subMenuLinkClickedHandler = (item) => {
-    history.push(`/${item}`)
+    history.push(`/units/${item}`)
     setIsSubMenuShow(false);
     openAndCloseNavbar();
   };
@@ -58,7 +57,7 @@ export default function Header() {
             <li key={id} onClick={openAndCloseNavbar}>
               <a
                 className='nav-link'
-                href={`http://localhost:3000/access${href}`}
+                href={`${href}`}
               >
                 {text}
               </a>

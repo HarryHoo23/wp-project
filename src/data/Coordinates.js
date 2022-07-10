@@ -70,6 +70,7 @@ const areas_type_d = {
     // },
   ],
 };
+
 const areas_type_e = {
   name: 'my-map',
   areas: [
@@ -98,6 +99,8 @@ export const areas_maps = [
   areas_type_e,
 ];
 
+// For SitePlan below:::
+
 const office_warehouse_maps = {
   name: 'my-map',
   areas: [
@@ -124,46 +127,21 @@ const office_maps = {
   name: 'my-map',
   areas: [
     {
-      id: 6,
+      id: 1,
       name: 'B',
       shape: 'rect',
-      coords: [417, 596, 523, 701],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-      
+      coords: [1352, 12, 1312, 100],
+      preFillColor: '',
+      fillColor: 'rgba(94, 94, 94, 0.8)',
     },
     {
-      id: 7,
+      id: 2,
       name: 'B',
       shape: 'rect',
-      coords: [417, 516, 523, 588],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-      
-    },
-    {
-      id: 8,
-      name: 'B',
-      shape: 'rect',
-      coords: [417, 422, 523, 509],
-      preFillColor: '#f4f2f2',
-      fillColor: '#dbdada',
-      
-    },
-    {
-      id: 9,
-      name: 'B',
-      shape: 'rect',
-      coords: [417, 328, 523, 416],
-      fillColor: 'rgba(72,72,72,0.7)',
-    },
-    {
-      id: 10,
-      name: 'B',
-      shape: 'rect',
-      coords: [417, 422, 523, 509],
-      fillColor: 'rgba(72,72,72,0.7)',
-    },
+      coords: [1312, 12, 1272, 100],
+      preFillColor: '',
+      fillColor: 'rgba(94, 94, 94, 0.8)',
+    }
   ],
 };
 

@@ -11,6 +11,8 @@ export function useAuth() {
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState();
     const [loading, setLoading] = useState(true);
+    const [errorMessage, setErrorMessage] = useState("");
+
     function signup(email, password, name) {
         auth.createUserWithEmailAndPassword(email, password);
         auth.onAuthStateChanged(user => {
@@ -32,6 +34,7 @@ export function AuthProvider({ children }) {
           .catch((error) => {
             // Handle Errors here.
             console.log(`An error happened! ${error.message}, the error code is ${error.code}`);
+            setErrorMessage(`An error happened! ${error.message}`);  
           });
       }
 
@@ -50,7 +53,7 @@ export function AuthProvider({ children }) {
         })
 
         return unsubscribe
-    }, [])
+    }, []);
     
 
     const value = {
@@ -59,6 +62,7 @@ export function AuthProvider({ children }) {
         login,
         logout,
         resetPassword,
+        errorMessage
     }
     
     return (

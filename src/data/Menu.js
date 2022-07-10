@@ -48,11 +48,11 @@ export const subMenuLink = [
     },
     {
         text: "Strata office suites",
-        link: "strate-office-suites",
+        link: "strata-office-suites",
     },
     {
-        text: "Walk-up offices",
-        link: "walk-up-offices",
+        text: "Walk-up office",
+        link: "walk-up-office",
     },
     {
         text: "Two-level hybrid",

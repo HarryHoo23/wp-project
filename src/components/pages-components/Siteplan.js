@@ -26,7 +26,6 @@ const Siteplan = () => {
     const [sitePlan, setSitePlan] = useState();
     const [img, setImg] = useState();
     const [mapperImg, setMapperImg] = useState();
-    // eslint-disable-next-line    
     const [isOpen, setIsOpen] = useState(false);
     const [componentNumber, setComponentNumber] = useState(1);
     const [width, setWidth] = useState();
@@ -64,7 +63,6 @@ const Siteplan = () => {
 
     useEffect(() => {
         window.addEventListener("resize", checkSize);  
-        // document.body.style.setProperty('overflow', 'scroll', 'important');
         return () => {
             window.removeEventListener("resize", checkSize);
         };
@@ -73,22 +71,20 @@ const Siteplan = () => {
     useEffect(() => {
         if (type) {
             const unitType = sitePlanData.find((element) => element.type === type);
-            const unitMapData = unit_maps.find((element) => element.type === type);
-            const { first_half_title, second_half_title } = unitType;
+            const unitMapData = unit_maps.find((element) => element.type === type);                       
             let pageTitle = {
-                first: first_half_title,
-                second: second_half_title,
+                first: unitType.first_half_title,
+                second: unitType.second_half_title,
             };
-            
             setTitle(pageTitle);
             setSitePlan(unitType.data);
             setUnitMap(unitMapData.data);            
-            setImg(unitType.img);
+            setImg(unitType.img);            
             if (unitType.data[unitMapIndex].img) {
                 setMapperImg(unitType.data[unitMapIndex].img);
             } else {
                 setMapperImg(planImage);
-            }
+            }            
         } else {
             const unitType = sitePlanData.find(
                 (element) => element.type === 'showroom'
@@ -105,6 +101,21 @@ const Siteplan = () => {
             <button onClick={clickHandler}>UNITS</button> /{` ${title.first}`} {title.second}
         </span>
     );
+
+    let data = {
+        unit: [],
+        estimateOutgoings: [],
+        ownersCorp: [],
+        depreciationScheduleData: [],
+    };
+
+    //depreciation_schedule is estimate depreciation.
+    if (sitePlan) {
+        data.unit = sitePlan.map((item) => item.unit_number);
+        data.depreciationScheduleData = sitePlan.map((item) => Object.values(item.depreciation_schedule));
+        data.estimateOutgoings = sitePlan.map((item) => Object.values(item.estimated_outgoings));
+        console.log(data);
+    }
     
     return (
         <>
@@ -130,22 +141,37 @@ const Siteplan = () => {
                                         BACK
                                     </span>
                                 )}
-                                <a className='download-btn' href='http://localhost:3000/access#maps' download>
+                                <a className='download-btn' href='#' download>
                                     Print
                                 </a>
                             </div>
                             <div className='siteplan_Info mt-4'>
                                 <h5>{sitePlan[unitMapIndex].unit_number}</h5>
+                                {sitePlan[unitMapIndex].ground_level > 0 && 
+                                    <p>
+                                        <strong>Ground Level:</strong>{' '}
+                                        {sitePlan[unitMapIndex].ground_level} &#13217;
+                                    </p>                                
+                                    }
+                                    
+                                {sitePlan[unitMapIndex].first_level > 0 &&
+                                    <p>                            
+                                        <strong>First Level:</strong>{' '}
+                                        {sitePlan[unitMapIndex].first_level} &#13217;
+                                    </p>                            
+                                }
+                                {sitePlan[unitMapIndex].upper_floor > 0 &&
+                                    <p>                            
+                                        <strong>Upper Level:</strong>{' '}
+                                        {sitePlan[unitMapIndex].upper_floor} &#13217;
+                                    </p>                            
+                                }        
+                                {sitePlan[unitMapIndex].yard_space && <p>                            
+                                        <strong>Yard Space:</strong>{' '}
+                                        {sitePlan[unitMapIndex].yard_space} &#13217;
+                                    </p>}                        
                                 <p>
-                                    <strong>Ground Level:</strong>{' '}
-                                    {sitePlan[unitMapIndex].ground_level}
-                                </p>
-                                <p>
-                                    <strong>Mezzanine:</strong>{' '}
-                                    {sitePlan[unitMapIndex].mezzanine_level}
-                                </p>
-                                <p>
-                                    <strong>Total:</strong> {sitePlan[unitMapIndex].total_area}
+                                    <strong>Total:</strong> {parseInt(sitePlan[unitMapIndex].ground_level) + parseInt(sitePlan[unitMapIndex].first_level) + parseInt(sitePlan[unitMapIndex].upper_floor)} &#13217;
                                 </p>
                                 <p style={{ marginTop: '1rem' }}>
                                     <strong>Allocated Car Spaces: </strong>
@@ -170,7 +196,13 @@ const Siteplan = () => {
                                     onClick={() => openUnitModal(3)}
                                 >
                                     DEPRECIATION
-                                </button>                               
+                                </button>  
+                                {type !== "showroom" && <button
+                                    className='btn unit-button'
+                                    onClick={() => openUnitModal(4)}
+                                >
+                                    INVESTMENT ANALYSIS
+                                </button>  }                                   
                             </div>
 
                             <br />
@@ -190,6 +222,11 @@ const Siteplan = () => {
                         onClose={closeUnitModal}
                         onShow={isOpen}
                         number={componentNumber}
+                        data={data}    
+                        unitNumber={sitePlan[unitMapIndex].unit_number}  
+                        type={type}    
+                        unitMapIndex={unitMapIndex}
+                        className="scroll-modal-body"    
                     />
                 </div>
                 <Navbar title={breadComponent} additionClass="opacity-deep" className="bg-white" unitClass='unit-bar' />
