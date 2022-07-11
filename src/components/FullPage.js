@@ -177,7 +177,7 @@ const Fullpage = () => {
                 ]}
                 autoScrolling={true}
                 scrollBar={true}
-                normalScrollElements=".fixture-list, .contact-form-container"
+                normalScrollElements=".fixture-list, .contact-form-container, .sale-intro"
                 // normalScrollElements: '.vs-img, .sale-intro, #map',
                 touchSensitivity={15}
                 fitToSection={true}

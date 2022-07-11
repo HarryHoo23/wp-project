@@ -112,9 +112,10 @@ const Siteplan = () => {
     //depreciation_schedule is estimate depreciation.
     if (sitePlan) {
         data.unit = sitePlan.map((item) => item.unit_number);
-        data.depreciationScheduleData = sitePlan.map((item) => Object.values(item.depreciation_schedule));
-        data.estimateOutgoings = sitePlan.map((item) => Object.values(item.estimated_outgoings));
-        console.log(data);
+        if (data.depreciationScheduleData) {
+            data.depreciationScheduleData = sitePlan.map((item) => Object.values(item.depreciation_schedule));
+        }
+        data.estimateOutgoings = sitePlan.map((item) => Object.values(item.estimated_outgoings));        
     }
     
     return (
@@ -169,9 +170,15 @@ const Siteplan = () => {
                                 {sitePlan[unitMapIndex].yard_space && <p>                            
                                         <strong>Yard Space:</strong>{' '}
                                         {sitePlan[unitMapIndex].yard_space} &#13217;
-                                    </p>}                        
+                                    </p>
+                                }
+                                {sitePlan[unitMapIndex].basement && <p>                            
+                                        <strong>Basement:</strong>{' '}
+                                        {sitePlan[unitMapIndex].basement} &#13217;
+                                    </p>
+                                }        
                                 <p>
-                                    <strong>Total:</strong> {parseInt(sitePlan[unitMapIndex].ground_level) + parseInt(sitePlan[unitMapIndex].first_level) + parseInt(sitePlan[unitMapIndex].upper_floor)} &#13217;
+                                    <strong>Total:</strong> {parseInt(sitePlan[unitMapIndex].ground_level) + parseInt(sitePlan[unitMapIndex].first_level) + parseInt(sitePlan[unitMapIndex].upper_floor) + (sitePlan[unitMapIndex].basement ? sitePlan[unitMapIndex].basement : 0)} &#13217;
                                 </p>
                                 <p style={{ marginTop: '1rem' }}>
                                     <strong>Allocated Car Spaces: </strong>
@@ -191,18 +198,18 @@ const Siteplan = () => {
                                 >
                                     OWNERS CORP
                                 </button>
-                                <button
+                                {type !== "showroom" && <button
                                     className='btn unit-button'
                                     onClick={() => openUnitModal(3)}
                                 >
                                     DEPRECIATION
-                                </button>  
+                                </button> }                                    
                                 {type !== "showroom" && <button
                                     className='btn unit-button'
                                     onClick={() => openUnitModal(4)}
                                 >
                                     INVESTMENT ANALYSIS
-                                </button>  }                                   
+                                </button> }                                   
                             </div>
 
                             <br />

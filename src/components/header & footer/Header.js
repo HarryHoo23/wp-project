@@ -90,8 +90,8 @@ export default function Header() {
                 </div>
                 {isSubMenuShow ? subMenu : Menu}
               </Col>
-              <Col md={2} className='empty-box'></Col>
-              <Col md={3} className='swiper-col-container'>
+              <Col lg={2} xl={1} className='empty-box'></Col>
+              <Col lg={3} xl={4} className='swiper-col-container'>
                 <MenuImgGallery />
               </Col>
             </Row>

@@ -28,6 +28,8 @@ const EstimateOutgoingsFinancial = (props) => {
                                 })}
                             </tr>
                         )
+                    } else {
+                        return null;
                     }
                 })}
             </tbody>
@@ -49,6 +51,8 @@ const EstimateOutgoingsFinancial = (props) => {
                                 })}
                             </tr>
                         )
+                    } else {
+                        return null;
                     }
                 })}
             </tbody>
