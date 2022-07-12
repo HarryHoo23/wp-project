@@ -135,8 +135,7 @@ const SHOWROOM = [
             total: "$38,917.08",
         },   
         depreciation_schedule: {           
-        },
-        img: a1
+        }        
     },
 ];
 
@@ -173,8 +172,7 @@ const STRATA_OFFICE_SUITES = [
             year_8: "$3,500.00",
             year_9: "$3,500.00",
             year_10: "$3,500.00",
-        },
-        img: a1
+        }
     },
     {
         unit_id: "office-2",
@@ -208,8 +206,7 @@ const STRATA_OFFICE_SUITES = [
             year_8: "$3,500.00",
             year_9: "$3,500.00",
             year_10: "$3,500.00",
-        },
-        img: a1
+        }
     },
     {
         unit_id: "office-3",
@@ -3343,54 +3340,66 @@ const STORAGE_COMPLEX = [
     },
 ];
 
+const addImageToUnits = (array) => {
+    let resultArray = [];
+    resultArray = array.map((element) => {
+        return (
+            { ...element, img: a1 }
+        )
+    })
+    return resultArray;
+}
+
+addImageToUnits(WORKING_PLUS_STORAGE);
+
 export const sitePlanData = [
     {
         type: "showroom",
         first_half_title: "Showroom",
         second_half_title: "",
-        data: SHOWROOM,
+        data: addImageToUnits(SHOWROOM),
         img: unitTypeB_img,
     },
     {
         type: "strata-office-suites",
         first_half_title: "Strata office",
         second_half_title: "suites",
-        data: STRATA_OFFICE_SUITES,
+        data: addImageToUnits(STRATA_OFFICE_SUITES),
         img: unitTypeB_img,
     },
     {
         type: "walk-up-office",
         first_half_title: "Walk-up",
         second_half_title: "office",
-        data: WALK_UP_OFFICES,
+        data: addImageToUnits(WALK_UP_OFFICES),
         img: unitTypeB_img,
     },
     {
         type: "two-level-hybrid",
         first_half_title: "Two level",
         second_half_title: "hybrid",
-        data: TWO_LEVEL_HYBRID,
+        data: addImageToUnits(TWO_LEVEL_HYBRID),
         img: unitTypeB_img,
     },
     {
         type: "three-level-hybrid",
         first_half_title: "Three level",
         second_half_title: "hybrid",
-        data: TRIPLE_LEVEL_HYBRID,
+        data: addImageToUnits(TRIPLE_LEVEL_HYBRID),
         img: unitTypeB_img,
     },
     {
         type: "working-storage",
         first_half_title: "Working",
         second_half_title: "storage",
-        data: WORKING_PLUS_STORAGE,
+        data: addImageToUnits(WORKING_PLUS_STORAGE),
         img: unitTypeB_img,
     },
     {
         type: "storage-complex",
         first_half_title: "Storage",
         second_half_title: "complex",
-        data: STORAGE_COMPLEX,
+        data: addImageToUnits(STORAGE_COMPLEX),
         img: unitTypeB_img,
     },
 ];
