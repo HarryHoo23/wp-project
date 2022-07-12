@@ -17,7 +17,7 @@ const DepreScheduleFinancial = (props) => {
         return (
             <tbody>                   
                 {props.data.data.slice(0,rowNumber).map((item, index) => {
-                    if (item) {
+                    if (item.length > 0) {
                         return (
                             <tr key={index}>
                                 <td>{props.data.unit[index]}</td>
@@ -39,8 +39,8 @@ const DepreScheduleFinancial = (props) => {
     const fullList = () => {
         return (
             <tbody>                   
-                {props.data.data.map((item, index) => {
-                    if (item) {
+                {props.data.data.map((item, index) => {                    
+                    if (item.length > 0) {
                         return (
                             <tr key={index}>
                                 <td>{props.data.unit[index]}</td>
