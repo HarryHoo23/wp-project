@@ -6,11 +6,11 @@ import { useGlobalContext } from '../../contexts/GlobalContext';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 
-import img1 from '../../assests/img/slider-1-popup.jpg';
-import img2 from '../../assests/img/slider-2-popup.jpg';
-import img3 from '../../assests/img/slider-3-popup.jpg';
-import img4 from '../../assests/img/slider-4-popup.jpg';
-import img5 from '../../assests/img/slider-5-popup.jpg';
+import img1 from "../../assests/img/sliders/1.jpg";
+import img2 from "../../assests/img/sliders/2.jpg";
+import img3 from "../../assests/img/sliders/3.jpg";
+import img4 from "../../assests/img/sliders/4.jpg";
+import img5 from "../../assests/img/sliders/5.jpg";
 
 const ImageList = [  
     {

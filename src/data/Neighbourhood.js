@@ -1,15 +1,15 @@
-import img1 from '../assests/img/doorstep/Abbiocco.jpg';
-import img2 from '../assests/img/doorstep/Mid_Valley.png';
-import img3 from '../assests/img/doorstep/Aromi.jpg';
-import img4 from '../assests/img/doorstep/HamptonWineCo.jpg';
-import img5 from '../assests/img/doorstep/Garden_good_evil.jpg';
-import img6 from '../assests/img/doorstep/Arcobar.jpg';
-import img7 from '../assests/img/doorstep/Springdayspa.jpeg';
-import img8 from '../assests/img/doorstep/KingstonGolfClub.jpeg';
-import img9 from '../assests/img/doorstep/WavesLeisureCentre.jpeg';
-import img10 from '../assests/img/doorstep/HighettBowlsClub.jpeg';
-import img11 from '../assests/img/doorstep/MoorabbinArcheryClub.jpeg';
-import img12 from '../assests/img/doorstep/StompingGroundBrewery.jpeg';
+import img1 from '../assests/img/doorstep/abbiocco.jpg';
+import img2 from '../assests/img/doorstep/mid-valley.jpg';
+import img3 from '../assests/img/doorstep/aromi.jpg';
+import img4 from '../assests/img/doorstep/hampton.jpg';
+import img5 from '../assests/img/doorstep/garden_of_Good_and_Evil.jpg';
+import img6 from '../assests/img/doorstep/arcobar.jpg';
+import img7 from '../assests/img/doorstep/spring-house-day-spa.jpg';
+import img8 from '../assests/img/doorstep/kingston-golf-club.jpg';
+import img9 from '../assests/img/doorstep/wavesLeisureCentre.jpeg';
+import img10 from '../assests/img/doorstep/highettBowlsClub.jpg';
+import img11 from '../assests/img/doorstep/moorabbinArcheryClub.jpeg';
+import img12 from '../assests/img/doorstep/stompingGroundBrewery.jpeg';
 
 
 export const doorStep_One_Right = [

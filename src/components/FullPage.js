@@ -268,13 +268,7 @@ const Fullpage = () => {
                                             firstHalfTitle="About"
                                             secondHalfTitle="development"
                                         />
-
-                                        <p
-                                            style={{
-                                                paddingTop: "30px",
-                                                marginBottom: "30px",
-                                            }}
-                                        >
+                                        <p style={{ paddingTop: "30px", marginBottom: "30px"}}>
                                             Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit.
                                             Quaerat neque iure quasi, impedit
@@ -363,7 +357,7 @@ const Fullpage = () => {
                                         direction="right"
                                         second_direction="left"
                                         data={doorStep_One_Right}
-                                        title="Neighbourhood"
+                                        title="NEIGHBOURHOOD"
                                     />
                                 </div>
                             </SectionWrapper>
@@ -379,7 +373,7 @@ const Fullpage = () => {
                                         direction="left"
                                         second_direction="right"
                                         data={doorStep_Two_Left_eat}
-                                        title="Eat"
+                                        title="EAT"
                                     />
                                 </div>
                             </SectionWrapper>
@@ -395,7 +389,7 @@ const Fullpage = () => {
                                         direction="right"
                                         second_direction="left"
                                         data={doorStep_Three_Right_drink}
-                                        title="Drink"
+                                        title="DRINK"
                                     />
                                 </div>
                             </SectionWrapper>
@@ -409,7 +403,7 @@ const Fullpage = () => {
                                         direction="left"
                                         second_direction="right"
                                         data={doorStep_Four_Left_leisure}
-                                        title="Leisure"
+                                        title="LEISURE"
                                     />
                                 </div>
                             </SectionWrapper>
@@ -423,7 +417,7 @@ const Fullpage = () => {
                                         direction="right"
                                         second_direction="left"
                                         data={doorStep_Five_Right_play}
-                                        title="Play"
+                                        title="PLAY"
                                     />
                                 </div>
                             </SectionWrapper>
