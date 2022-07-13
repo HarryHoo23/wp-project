@@ -17,7 +17,7 @@ export const doorStep_One_Right = [
     title: 'Highett',
     content: `One of Melbourne’s best kept secrets is starting to spread – Highett has everything you could ever want from Bayside living without the Brighton price tag. Situated only 12 km* from the CBD, however residents are finding it redundant to even leave the area.
     <br/><br/>`,
-    image: img12,
+    image: img10,
   }
 ];
 
