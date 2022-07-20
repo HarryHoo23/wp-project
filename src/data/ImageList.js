@@ -13,9 +13,10 @@ import img12 from "../assests/img/sliders/12.jpg";
 import img13 from "../assests/img/sliders/13.jpg";
 import img14 from "../assests/img/sliders/14.jpg";
 
-import svgImage1 from "../assests/logo/Viridian_Logo-white.svg";
-import svgImage2 from "../assests/logo/ikos_group_logo_rgb_web_lightbg.svg";
-import svgImage3 from "../assests/logo/Viridian_Logo-white.svg";
+import logo1 from '../assests/logo/ikos_group-white.svg';
+import logo2 from '../assests/logo/cva-white.svg';
+import logo3 from '../assests/logo/tag-white.svg'
+import logo4 from '../assests/logo/species-white.svg';
 
 export const ImageList = [
     {
@@ -62,4 +63,4 @@ export const ImageList = [
     },
 ];
 
-export const svgImagePath = [svgImage1, svgImage2, svgImage3];
+export const svgImagePath = [logo1, logo2, logo3, logo4];

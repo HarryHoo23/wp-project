@@ -3,47 +3,60 @@ import marty_fox from "../assests/img/marty.jpg";
 import lana_img from "../assests/img/lana.jpg";
 import a1 from "../assests/img/floorplan/update.png";
 import a2 from "../assests/img/floorplan/a2.png";
-import svgImage1 from '../assests/logo/Viridian_Logo-white.svg';
-import svgImage2 from '../assests/logo/ikos_group_logo_rgb_web_lightbg.svg';
-import svgImage3 from '../assests/logo/Viridian_Logo-white.svg';
+import logo1 from '../assests/logo/ikos_group-popup.svg';
+import logo2 from '../assests/logo/cva-colour.svg';
+import logo3 from '../assests/logo/tag-colour.svg'
+import logo4 from '../assests/logo/species-colour.svg';
 
 export const modalData = [
     {
-        bgImg: svgImage1,
-        title: "Architect",
+        bgImg: logo1,
+        title: "Ikos Group",
         href: "https://www.dko.com.au",
         link: "dko.com.au",
-        content: `At the heart of your home? Connection: to the space, the locality and its lifestyle. Which is exactly what DKO have been doing since the turn of the millennium. As smart devices increasingly replace having the smarts, DKO haven’t lost sight of their most fundamental value: to design spaces for people. Which bodes well for you when your home is full of them come Sunday morning or Thursday night for that matter.`,
-        quote: `“The building was designed to maximise the outlook from within the apartments to the surrounding context — a significant gesture to tie into the leafy streetscape.`,
+        content: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+        quote: `"Viridian is meticulously responding to the industrial ,office and storage needs in the immediate and surrounding area. <br /> It has raised the standard of industrial development  by adopting generous design appointments in form and materials`,
         video: "",
         videoSource: "",
-        name: "Jesse Linardi",
-        jobTitle: "Design Director",
+        name: "Peter Kalimnakis",
+        jobTitle: "Ikos Group Planning & Design",
     },
     {
-        bgImg: svgImage2,
-        title: "Interior design",
+        bgImg: logo2,
+        title: "CVA Property",
         href: "https://www.mimdesign.com.au",
         link: "mimdesign.com.au",
-        content: `One flip through a design magazine and you’ll notice the prolific influence that Mim Design has had on their industry. It’s what others nationally, and internationally, have been publishing, and awarding, for the last 20 years — creativity, high-end finishes and attention to detail. Which is exactly what you’ll be coming home to here at Sunday.`,
-        quote: `“We wanted to deliver a home we would want to live in ourselves — making sure all aspects work cohesively to create timeless value an longevity in the marketplace and surrounding landscape.”`,
+        content: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+        quote: `“Never before have we seen or will we likely see again a commercial estate where literally every property features an uninterrupted park view from their first or second floor office. Truly a unique attribute that has occupiers, investors and tenants alike excited about basing themselves in these stunning workspaces at Viridian.”`,
         video: "",
         videoSource: "",
-        name: "Miriam Fanning",
-        jobTitle: "Founder and Principal Interior Designer",
+        name: "John Nockles",
+        jobTitle: "CVA Property Consultants",
     },
     {
-        bgImg: svgImage3,
-        title: "Landscape design",
+        bgImg: logo3,
+        title: "TAG",
         href: "https://www.dko.com.au",
         link: "dko.com.au",
-        content: `Much like Sunday itself, the gardens established by iconic designer Rick Eckersley are relaxed — adopting a less structured approach to landscape, whilst still maintaining a strong sense of purpose. You won’t find rows of box hedges at Eckersley, just plenty of dirt under their fingers — so yours can carefully turn the pages of The Sunday Times bestseller, surrounded by a garden that celebrates diversity, texture and foliage.`,
-        quote: `“The primary focus was to design a landscape that complimented the strong architectural form and create an urban oasis within the busy inner suburb of South Yarra."`,
+        content: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+        quote: `"Viridian takes its name from the Latin viridis, meaning "green". The selection of materials for Viridian highlights the transitional nature of the space, by juxtaposing industrial finishes and fittings with the natural elements from surrounding parklands. <br /> All nominated finishes, symbolise the colours & textures reflected in the neighbouring flora. Sophisticated muted greens, soft greys, accents of rust, replicating the colours and textures of the native eucalyptus tree. <br />Through the application of these finishes, Viridian will be integrated harmoniously with the existing natural surrounds."`,
         video: "",
         videoSource: "",
-        name: "Scott Leung",
-        jobTitle: "Director and Principal Designer, Eckersley Garden Architecture",
+        name: "Tracy Goudsblom",
+        jobTitle: "TAG Interiors",
     },
+    {
+        bgImg: logo4,
+        title: "Species",
+        href: "https://www.dko.com.au",
+        link: "dko.com.au",
+        content: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+        quote: `“The landscape proposal provides enhanced views through canopy vegetation into the adjoining landscaped reserve. <br /> The reserve is brought into the estate with the retention of a mature eucalypt that provides a passive seating area for the occupants as well as  access to the reserve."`,
+        video: "",
+        videoSource: "",
+        name: "Tony Aravidis",
+        jobTitle: "Species Landscape Architecture",
+    }
 ];
 
 export const tabContent = [
@@ -54,7 +67,8 @@ export const tabContent = [
         first_half_title: "Showroom",
         second_half_title: "",
         content: `With complete exposure to Chesterville Road, this exceptional fit out takes full advantage of the front of the complex on the ground floor. Bulky goods can be stored and serviced by the rear roller door.`,
-        link: "showroom",
+        link: "units/showroom",
+        img: "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/fitness-centre-siteplan.png"
     },
     {
         position: "second",
@@ -63,7 +77,8 @@ export const tabContent = [
         first_half_title: "Strata office",
         second_half_title: "Suites",
         content: `The first thing you’ll notice is the impressive entry foyer, the second thing is the uninterrupted and raised views over the parkland through the floor-to-ceiling glass. Disability lift access, undercover car parking, and shared staff amenities.`,
-        link: "strata-office-suites",
+        link: "units/strata-office-suites",
+        img: "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/office1-siteplan.png",
     },
     {
         position: "third",
@@ -72,7 +87,8 @@ export const tabContent = [
         second_half_title: "offices",
         subtitle: "Working across two levels",
         content: `Situated on the ground and first floor, you’ll get the floor-to-ceiling glazed windows with parkland views and private amenities like bathrooms and kitchenettes. Parking at the front and signage showcased on the first-floor. `,
-        link: "walk-up-office",
+        link: "units/walk-up-office",
+        img: "https://viridian-highett.com.au/images/site-plans/C/C-siteplan.png"
     },
     {
         position: "forth",
@@ -81,7 +97,8 @@ export const tabContent = [
         second_half_title: "hybrid",
         subtitle: "Everything you need spread across two levels",
         content: `Designed-for-purpose ground and first floor offices with a glass roller door to facilitate easy loading from vehicles into the warehouse. Under the mezzanine in the office is a 3.5 metre clearance, with an eight-metre atrium-style ceiling.`,
-        link: "two-level-hybrid",
+        link: "units/two-level-hybrid",
+        img: "https://viridian-highett.com.au/images/site-plans/A/A-siteplan.png"
     },
     {
         position: "fifth",
@@ -90,7 +107,8 @@ export const tabContent = [
         second_half_title: "hybrid",
         subtitle: "Everything but the kitchen sink (it has that, too)",
         content: `This three-level design includes ground floor warehousing with two levels of glass-to-ceiling office space above it. The mezzanines also include the 3.5 metre clearance, with an eight-metre atrium-style ceiling and glass roller door for easy loading.`,
-        link: "three-level-hybrid",
+        link: "units/three-level-hybrid",
+        img: "https://viridian-highett.com.au/images/site-plans/B/B-siteplan.png"
     },
     {
         position: "sixth",
@@ -99,7 +117,8 @@ export const tabContent = [
         second_half_title: "plus storage",
         subtitle: "Best of both worlds",
         content: `Either convenient ground floor option or tranquil first-floor environment. Eight metres of warehousing included in the floorplan, floor-to-ceiling glazing, individual staff amenities and front parking.`,
-        link: "working-storage",
+        link: "units/working-storage",
+        img: "https://viridian-highett.com.au/images/site-plans/E/E-siteplan.png"
     },
     {
         position: "seventh",
@@ -108,7 +127,8 @@ export const tabContent = [
         second_half_title: "complex",
         subtitle: "Underground micro-warehousing",
         content: `Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives plenty of flexibility, the 24-hour security system will keep watch, and there’s an automatic motion sensor lighting in common driveways and inside units. Brilliantly paired with an office suite..`,
-        link: "storage-complex",
+        link: "units/storage-complex",
+        img: "https://viridian-highett.com.au/images/site-plans/STORAGE-UNITS/storage-siteplan.png"
     },
 ];
 
@@ -312,7 +332,7 @@ const STRATA_OFFICE_SUITES = [
     },
     {
         unit_id: "office-6",
-        unit_number: "Office 5",
+        unit_number: "Office 6",
         ground_level: 0,        
         first_level: 0,
         upper_floor: "60",
@@ -1728,41 +1748,6 @@ const STORAGE_COMPLEX = [
         },
     },
     {
-        unit_id: "micro-4",
-        unit_number: "Micro Warehouse 4",
-        basement: 42,
-        ground_level: 0,        
-        first_level: 0,
-        upper_floor: 0,
-        sale_price: "$189,000.00",
-        lease_price: "$9,660.00",        
-        allocated_car_spaces: 0,        
-        sold: false,
-        estimated_outgoings: {
-            area: 42,
-            civ: "$189,000.00",
-            nav_of_civ: "$9,450.00",
-            est_land_value: "$19,668.74",
-            council_rates: "$858.56",
-            water_rates: "$717.30",            
-            lot_el: 189,
-            owners_copr: "$1,839.77",
-            total: "$3,415.62",
-        },
-        depreciation_schedule: {
-            year_1: "$3,000.00",
-            year_2: "$2,500.00",
-            year_3: "$2,500.00",
-            year_4: "$2,000.00",
-            year_5: "$2,000.00",
-            year_6: "$2,000.00",
-            year_7: "$2,000.00",
-            year_8: "$2,000.00",
-            year_9: "$2,000.00",
-            year_10: "$2,000.00",            
-        },
-    },
-    {
         unit_id: "micro-5",
         unit_number: "Micro Warehouse 5",
         basement: 42,
@@ -2290,41 +2275,6 @@ const STORAGE_COMPLEX = [
     {
         unit_id: "micro-20",
         unit_number: "Micro Warehouse 20",
-        basement: 42,
-        ground_level: 0,        
-        first_level: 0,
-        upper_floor: 0,
-        sale_price: "$189,000.00",
-        lease_price: "$9,660.00",        
-        allocated_car_spaces: 0,        
-        sold: false,
-        estimated_outgoings: {
-            area: 42,
-            civ: "$189,000.00",
-            nav_of_civ: "$9,450.00",
-            est_land_value: "$19,668.74",
-            council_rates: "$858.56",
-            water_rates: "$717.30",            
-            lot_el: 189,
-            owners_copr: "$1,839.77",
-            total: "$3,415.62",
-        },
-        depreciation_schedule: {
-            year_1: "$3,000.00",
-            year_2: "$2,500.00",
-            year_3: "$2,500.00",
-            year_4: "$2,000.00",
-            year_5: "$2,000.00",
-            year_6: "$2,000.00",
-            year_7: "$2,000.00",
-            year_8: "$2,000.00",
-            year_9: "$2,000.00",
-            year_10: "$2,000.00",            
-        },
-    },
-    {
-        unit_id: "micro-8",
-        unit_number: "Micro Warehouse 8",
         basement: 42,
         ground_level: 0,        
         first_level: 0,
@@ -3340,67 +3290,125 @@ const STORAGE_COMPLEX = [
     },
 ];
 
-const addImageToUnits = (array) => {
-    let resultArray = [];
-    resultArray = array.map((element) => {
-        return (
-            { ...element, img: a1 }
-        )
-    })
+const addImageToUnits = (array, unitType) => {
+    let resultArray = [],
+        imageUrl = '',
+        sitePlanImageUrl = '';
+    if (unitType === "showroom") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/Main-Building/showroom-floorplan.png";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Main-Building/fitness-centre-mainb-internal-siteplan.png";
+        resultArray = array.map((element) => {
+            return (
+                { ...element, img: imageUrl, sitePlanImg: sitePlanImageUrl}
+            )
+        })
+    }
+    if (unitType === "strata") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/Main-Building";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Main-Building/";
+        resultArray = array.map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/office-${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}${index+1}-office-mainb-internal-siteplan.png` }
+            )
+        })
+    }
+    if (unitType === "office") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/C";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/C";
+        resultArray = array.map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/c${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/c${index+1}-internal-siteplan.png` }
+            )
+        })
+    }
+    if (unitType === "hybrid") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/";        
+        let tempArray_A = array.slice(0,12).map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/A/a${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/A/a${index+1}-internal-siteplan.png` }
+            )
+        })
+        let tempArray_D = array.slice(12,15).map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/D/d${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/D/d${index+1}-internal-siteplan.png` }
+            )
+        })
+        resultArray = tempArray_A.concat(tempArray_D);
+    }
+    if (unitType === "three") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/B";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/B";
+        resultArray = array.map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/b${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/B${index+1}-internal-siteplan.png` }
+            )
+        })
+    }
+    if (unitType === "storage") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/E";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/site-plans/E";
+        resultArray = array.map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/e${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/e${index+1}-internal-siteplan.png` }
+            )
+        })
+    }
+    if (unitType === "complex") {
+        imageUrl = "https://viridian-highett.com.au/images/floor-plans/Storage-Units";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Storage-Units";
+        resultArray = array.map((element, index) => {
+            return (
+                { ...element, img: `${imageUrl}/${index+1}-storage-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/${index+1}-unit-internal-siteplan.png` }
+            )
+        })
+    }
+    
     return resultArray;
 }
-
-addImageToUnits(WORKING_PLUS_STORAGE);
 
 export const sitePlanData = [
     {
         type: "showroom",
         first_half_title: "Showroom",
         second_half_title: "",
-        data: addImageToUnits(SHOWROOM),
-        img: unitTypeB_img,
+        data: addImageToUnits(SHOWROOM, "showroom"),
     },
     {
         type: "strata-office-suites",
         first_half_title: "Strata office",
         second_half_title: "suites",
-        data: addImageToUnits(STRATA_OFFICE_SUITES),
-        img: unitTypeB_img,
+        data: addImageToUnits(STRATA_OFFICE_SUITES, "strata"),        
     },
     {
         type: "walk-up-office",
         first_half_title: "Walk-up",
         second_half_title: "office",
-        data: addImageToUnits(WALK_UP_OFFICES),
-        img: unitTypeB_img,
+        data: addImageToUnits(WALK_UP_OFFICES, "office"),        
     },
     {
         type: "two-level-hybrid",
         first_half_title: "Two level",
         second_half_title: "hybrid",
-        data: addImageToUnits(TWO_LEVEL_HYBRID),
-        img: unitTypeB_img,
+        data: addImageToUnits(TWO_LEVEL_HYBRID, "hybrid"),        
     },
     {
         type: "three-level-hybrid",
         first_half_title: "Three level",
         second_half_title: "hybrid",
-        data: addImageToUnits(TRIPLE_LEVEL_HYBRID),
-        img: unitTypeB_img,
+        data: addImageToUnits(TRIPLE_LEVEL_HYBRID, "three"),        
     },
     {
         type: "working-storage",
         first_half_title: "Working",
         second_half_title: "storage",
-        data: addImageToUnits(WORKING_PLUS_STORAGE),
-        img: unitTypeB_img,
+        data: addImageToUnits(WORKING_PLUS_STORAGE, "storage"),        
     },
     {
         type: "storage-complex",
         first_half_title: "Storage",
         second_half_title: "complex",
-        data: addImageToUnits(STORAGE_COMPLEX),
-        img: unitTypeB_img,
+        data: addImageToUnits(STORAGE_COMPLEX, "complex"),        
     },
 ];
 
@@ -3737,641 +3745,5 @@ export const financialContent = [
     {
         position: "forth",
         name: "Depreciation Schedule",
-    },
-];
-
-export const allUnitInfo = [
-    {
-        unit_id: "unit-01",
-        unit_number: "Unit 01",
-        ground_level: "137.57",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 4,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$665,000",
-            nav_of_civ: "$33,250",
-            est_land_value: "$220,563.85",
-            council_rates: "$2,591.11",
-            water_rates: "$1071.55",
-            lot_el: 190,
-            owners_copr: "$2,048.09",
-            total: "$5,710.75",
-        },
-        depreciation_schedule: {
-            year_1: "$7,000.00",
-            year_2: "$7,000.00",
-            year_3: "$6,000.00",
-            year_4: "$6,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$190,000 - $210,000",
-        },
-    },
-    {
-        unit_id: "unit-02",
-        unit_number: "Unit 02",
-        ground_level: "96.04",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$425,000",
-            nav_of_civ: "$21,250",
-            est_land_value: "$141,625.21",
-            council_rates: "$1,761.43",
-            water_rates: "$961.67",
-            lot_el: 122,
-            owners_copr: "$1,315.09",
-            total: "$4,038.18",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$100,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-03",
-        unit_number: "Unit 03",
-        ground_level: "96.04",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$425,000",
-            nav_of_civ: "$21,250",
-            est_land_value: "$141,625.21",
-            council_rates: "$1,761.43",
-            water_rates: "$961.67",
-            lot_el: 122,
-            owners_copr: "$1,315.09",
-            total: "$4,038.18",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$100,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-04",
-        unit_number: "Unit 04",
-        ground_level: "115.06",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 5,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$480,000",
-            nav_of_civ: "$24,000",
-            est_land_value: "$163,681.59",
-            council_rates: "$1,951.56",
-            water_rates: "$986.85",
-            lot_el: 141,
-            owners_copr: "$1,519.90",
-            total: "$4,458.31",
-        },
-        depreciation_schedule: {
-            year_1: "$6,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$185,000 - $205,000",
-        },
-    },
-    {
-        unit_id: "unit-05",
-        unit_number: "Unit 05",
-        ground_level: "90.98",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 4,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$395,000",
-            nav_of_civ: "$19,750",
-            est_land_value: "$134,660.03",
-            council_rates: "$1,657.72",
-            water_rates: "$947.93",
-            lot_el: 116,
-            owners_copr: "$1,250.41",
-            total: "$3,856.06",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$110,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-06",
-        unit_number: "Unit 06",
-        ground_level: "92.34",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$400,000",
-            nav_of_civ: "$20,000",
-            est_land_value: "$136,981.76",
-            council_rates: "$1,675.00",
-            water_rates: "$950.22",
-            lot_el: 118,
-            owners_copr: "$1,271.97",
-            total: "$3,897.19",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$110,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-07",
-        unit_number: "Unit 07",
-        ground_level: "100.19",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$445,000",
-            nav_of_civ: "$22,250",
-            est_land_value: "$146,268.66",
-            council_rates: "$1,830.57",
-            water_rates: "$970.82",
-            lot_el: 126,
-            owners_copr: "$1,358.21",
-            total: "$4,159.60",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$110,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-08",
-        unit_number: "Unit 08",
-        ground_level: "100.19",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$435,000",
-            nav_of_civ: "$21,750",
-            est_land_value: "$146,268.66",
-            council_rates: "$1,796.00",
-            water_rates: "$966.24",
-            lot_el: 126,
-            owners_copr: "$1,358.21",
-            total: "$4,120.45",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$110,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-09",
-        unit_number: "Unit 09",
-        ground_level: "100.19",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$435,000",
-            nav_of_civ: "$21,750",
-            est_land_value: "$148,590.38",
-            council_rates: "$1,796.00",
-            water_rates: "$966.24",
-            lot_el: 128,
-            owners_copr: "$1,379.77",
-            total: "$4,142.01",
-        },
-        depreciation_schedule: {
-            year_1: "$5,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$4,000.00",
-            year_6: "$4,000.00",
-            year_7: "$4,000.00",
-            year_8: "$4,000.00",
-            year_9: "$4,000.00",
-            year_10: "$4,000.00",
-            residual: "$110,000 - $130,000",
-            fourty_year_total: "$150,000 - $170,000",
-        },
-    },
-    {
-        unit_id: "unit-10",
-        unit_number: "Unit 10",
-        ground_level: "167.19",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$620,000",
-            nav_of_civ: "$31,000",
-            est_land_value: "$164,842.45",
-            council_rates: "$2,435.54",
-            water_rates: "$1,050.95",
-            lot_el: 142,
-            owners_copr: "$1,530.68",
-            total: "$5,017.17",
-        },
-        depreciation_schedule: {
-            year_1: "$7,000.00",
-            year_2: "$7,000.00",
-            year_3: "$6,000.00",
-            year_4: "$6,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$190,000 - $210,000",
-        },
-    },
-    {
-        unit_id: "unit-11",
-        unit_number: "Unit 11",
-        ground_level: "164.33",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 4,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$660,000",
-            nav_of_civ: "$33,000",
-            est_land_value: "$321,558.87",
-            council_rates: "$2,573.82",
-            water_rates: "$1,069.26",
-            lot_el: 277,
-            owners_copr: "$2,985.90",
-            total: "$6,628.98",
-        },
-        depreciation_schedule: {
-            year_1: "$7,000.00",
-            year_2: "$7,000.00",
-            year_3: "$6,000.00",
-            year_4: "$6,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$190,000 - $210,000",
-        },
-    },
-    {
-        unit_id: "unit-12",
-        unit_number: "Unit 12",
-        ground_level: "120.00",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            area: 170,
-            civ: "$787,100.00",
-            nav_of_civ: "$39,355.00",
-            est_land_value: "$81,380.73",
-            council_rates: "$2,531.20",
-            water_rates: "$1,265.57",            
-            lot_el: 782,
-            owners_copr: "$4,246.50",
-            total: "$8,043.28",
-        },
-        depreciation_schedule: {
-            year_1: "$6,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$185,000 - $205,000",
-        },
-    },
-    {
-        unit_id: "unit-13",
-        unit_number: "Unit 13",
-        ground_level: "120.00",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            area: 170,
-            civ: "$787,100.00",
-            nav_of_civ: "$39,355.00",
-            est_land_value: "$81,380.73",
-            council_rates: "$2,531.20",
-            water_rates: "$1,265.57",            
-            lot_el: 782,
-            owners_copr: "$4,246.50",
-            total: "$8,043.28",
-        },
-        depreciation_schedule: {
-            year_1: "$6,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$185,000 - $205,000",
-        },
-    },
-    {
-        unit_id: "unit-14",
-        unit_number: "Unit 14",
-        ground_level: "120.00",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            area: 170,
-            civ: "$787,100.00",
-            nav_of_civ: "$39,355.00",
-            est_land_value: "$81,380.73",
-            council_rates: "$2,531.20",
-            water_rates: "$1,265.57",            
-            lot_el: 782,
-            owners_copr: "$4,246.50",
-            total: "$8,043.28",
-        },
-        depreciation_schedule: {
-            year_1: "$6,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$185,000 - $205,000",
-        },
-    },
-    {
-        unit_id: "unit-15",
-        unit_number: "Unit 15",
-        ground_level: "136.23",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$595,000",
-            nav_of_civ: "$29,750",
-            est_land_value: "$251,907.13",
-            council_rates: "$2,349.12",
-            water_rates: "$1,039.50",
-            lot_el: 217,
-            owners_copr: "$2,339.14",
-            total: "$5,727.75",
-        },
-        depreciation_schedule: {
-            year_1: "$7,000.00",
-            year_2: "$7,000.00",
-            year_3: "$6,000.00",
-            year_4: "$6,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$190,000 - $210,000",
-        },
-    },
-    {
-        unit_id: "unit-16",
-        unit_number: "Unit 16",
-        ground_level: "131.77",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: true,
-        estimated_outgoings: {
-            civ: "$585,000",
-            nav_of_civ: "$29,250",
-            est_land_value: "$244,941.96",
-            council_rates: "$2,314.55",
-            water_rates: "$1,034.92",
-            lot_el: 211,
-            owners_copr: "$2,274.46",
-            total: "$5,623.93",
-        },
-        depreciation_schedule: {
-            year_1: "$7,000.00",
-            year_2: "$7,000.00",
-            year_3: "$6,000.00",
-            year_4: "$6,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$190,000 - $210,000",
-        },
-    },
-    {
-        unit_id: "unit-17",
-        unit_number: "Unit 17",
-        ground_level: "146.47",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 4,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$620,000",
-            nav_of_civ: "$31,000",
-            est_land_value: "$261,194.03",
-            council_rates: "$2,435.54",
-            water_rates: "$1,050.95",
-            lot_el: 225,
-            owners_copr: "$2,425.37",
-            total: "$5,911.86",
-        },
-        depreciation_schedule: {
-            year_1: "$7,000.00",
-            year_2: "$7,000.00",
-            year_3: "$6,000.00",
-            year_4: "$6,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$190,000 - $210,000",
-        },
-    },
-    {
-        unit_id: "unit-18",
-        unit_number: "Unit 18",
-        ground_level: "134.36",        
-        first_level: "60",
-        upper_floor: "60",
-        sale_price: "$787,100.00",
-        lease_price: "$39,100.00",        
-        allocated_car_spaces: 3,        
-        sold: false,
-        estimated_outgoings: {
-            civ: "$565,000",
-            nav_of_civ: "$28,250",
-            est_land_value: "$258,872.31",
-            council_rates: "$2,245.41",
-            water_rates: "$1,025.77",
-            lot_el: 223,
-            owners_copr: "$2,403.81",
-            total: "$5,674.98",
-        },
-        depreciation_schedule: {
-            year_1: "$6,000.00",
-            year_2: "$5,000.00",
-            year_3: "$5,000.00",
-            year_4: "$5,000.00",
-            year_5: "$5,000.00",
-            year_6: "$5,000.00",
-            year_7: "$5,000.00",
-            year_8: "$5,000.00",
-            year_9: "$5,000.00",
-            year_10: "$5,000.00",
-            residual: "$140,000 - $160,000",
-            fourty_year_total: "$185,000 - $205,000",
-        },
     },
 ];

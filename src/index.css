@@ -786,9 +786,6 @@ p.home-modal-title::before {
 .modal-logo-container {
     height: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .logo-content p {
@@ -987,6 +984,7 @@ a.logo-link {
     background-position: 50%;
     border-bottom: 1px solid rgb(255, 255, 255, 0.6);
     background-position-y: 80%;
+    background-size: contain;
 }
 
 .logo-row {
@@ -995,21 +993,6 @@ a.logo-link {
     right: 5rem;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.logo-row .col-md-4:nth-child(1) .partners-logo-container {
-    /* background-image: url('./assests/logo/avian-1.svg'); */
-    background-size: 80% 40%;
-}
-
-.logo-row .col-md-4:nth-child(2) .partners-logo-container {
-    /* background-image: url('./assets/logo/mim-1.svg'); */
-    background-size: 80% 40%;
-}
-
-.logo-row .col-md-4:nth-child(3) .partners-logo-container {
-    /* background-image: url('./assets/logo/e-1.svg'); */
-    background-size: 80% 40%;
 }
 
 .creative-section .sunday-title p {
@@ -3464,12 +3447,10 @@ article {
     overflow: scroll;
 }
 
-.modal-logo-div {
-    width: 200px;
-    height: 100px;
+.modal-logo-div {    
+    height: 80px;
     background-size: contain;
-    background-repeat: no-repeat;
-    margin-bottom: -50px;
+    background-repeat: no-repeat;    
 }
 
 /* 

@@ -8,7 +8,7 @@ const FixtureList = (props) => {
     <div className={`fixture-modal-body ${type}`}>
       <div className='fixture-container'>
         <Title
-          colorClassName='capitalize'
+          colorClassName=''
           firstHalfTitle={`${type}`}
           secondHalfTitle=''
         />

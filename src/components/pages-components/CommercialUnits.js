@@ -7,7 +7,6 @@ import ImagePropertyMapper from "../ImageMapper/ImagePropertyMapper";
 import useWindowDimensions from "../../contexts/useWindowsDimension";
 import Title from "./Title";
 import CommercialDropdown from "./CommercialDropDown";
-import floorplanImg from "../../assests/img/floorplan/1.png";
 
 const CommercialUnits = () => {
     const { width } = useWindowDimensions();
@@ -26,7 +25,7 @@ const CommercialUnits = () => {
         return (
             <>
                 <Row className="welcome-tabs">
-                    <Col md={3} className="d-flex" style={{flexDirection: 'column'}}>
+                    <Col lg={3} className="d-flex" style={{flexDirection: 'column'}}>
                         <Title
                             colorClassName="white-title"
                             firstHalfTitle={unitData.first_half_title}
@@ -34,14 +33,14 @@ const CommercialUnits = () => {
                         />         
                         <CommercialDropdown />
                     </Col>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <div className="tab-contents">
                             <h3 className="color-white mb-3">{unitData.subtitle}</h3>
                             <p>{unitData.content}</p>                        
                         </div>
                     </Col>
-                    <Col md={3}>
-                        <Link to={`/units/${unitData.link}`} className="view-option btn">
+                    <Col lg={3}>
+                        <Link to={`/${unitData.link}`} className="view-option btn">
                             View Options
                         </Link>
                     </Col>
@@ -51,7 +50,7 @@ const CommercialUnits = () => {
                         width={containerWidth}
                         maps={map}
                         destination={unitData.link}
-                        image={floorplanImg}
+                        image={unitData.img}
                     />
                 </div>
             </>

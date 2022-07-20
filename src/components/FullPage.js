@@ -300,7 +300,7 @@ const Fullpage = () => {
                                             return (
                                                 <Col
                                                     key={index}
-                                                    md={4}
+                                                    md={3}
                                                     role="button"
                                                     onClick={() => handleLogoModalClickOpen(index)}
                                                 >

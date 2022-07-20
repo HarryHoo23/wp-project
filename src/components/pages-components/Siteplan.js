@@ -58,7 +58,7 @@ const Siteplan = () => {
             setWidth(1);
         } else {
             setWidth(imageRef.current.offsetWidth);
-        }
+        }        
     }, [width, size]);
 
     useEffect(() => {
@@ -79,9 +79,10 @@ const Siteplan = () => {
             setTitle(pageTitle);
             setSitePlan(unitType.data);
             setUnitMap(unitMapData.data);            
-            setImg(unitType.img);            
+            setImg(unitType.data[unitMapIndex].img);
+            console.log(unitType.data[unitMapIndex].sitePlanImg);
             if (unitType.data[unitMapIndex].img) {
-                setMapperImg(unitType.data[unitMapIndex].img);
+                setMapperImg(unitType.data[unitMapIndex].sitePlanImg);
             } else {
                 setMapperImg(planImage);
             }            
