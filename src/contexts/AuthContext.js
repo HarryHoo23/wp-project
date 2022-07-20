@@ -26,16 +26,15 @@ export function AuthProvider({ children }) {
     }
 
     function login(email, password) {
-        auth
-          .setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-          .then(() => {
-            return auth.signInWithEmailAndPassword(email, password);
-          })
-          .catch((error) => {
-            // Handle Errors here.
+        auth.signInWithEmailAndPassword(email, password)
+            .then((response) => {
+                setCurrentUser(response.user);
+            })
+        .catch((error) => {
+        // Handle Errors here.
             console.log(`An error happened! ${error.message}, the error code is ${error.code}`);
             setErrorMessage(`An error happened! ${error.message}`);  
-          });
+        });
       }
 
     function logout() {
@@ -55,9 +54,20 @@ export function AuthProvider({ children }) {
         return unsubscribe
     }, []);
     
+    useEffect(() => {
+        const timeOut = setTimeout(() => {
+            setCurrentUser(null);
+        }, 60 * 1000 * 8);
+
+        if (currentUser === null) {
+            auth.signOut();
+        };
+
+        return () => clearTimeout(timeOut);
+    }, []);
 
     const value = {
-        currentUser,
+        currentUser,        
         signup,
         login,
         logout,

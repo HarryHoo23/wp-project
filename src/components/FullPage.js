@@ -3,7 +3,6 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import SectionWrapper from "./SectionWrapper";
 import { Row, Col } from "react-bootstrap";
 import { hrefLinks } from "../data/Menu";
-import { useAuth } from "../contexts/AuthContext";
 import { fixtures_type, sale_contacts } from "../data/Content";
 import {
     doorStep_One_Right,
@@ -12,7 +11,6 @@ import {
     doorStep_Four_Left_leisure,
     doorStep_Five_Right_play,
 } from "../data/Neighbourhood";
-import { useHistory } from "react-router";
 import { useGlobalContext } from "../contexts/GlobalContext";
 import Navbar from "./header & footer/Navbar";
 import TopNavbar from "./header & footer/TopNavbar";
@@ -42,15 +40,12 @@ const Fullpage = () => {
         handleLogoModalClickOpen,
         isModalShow,
         singleFixtureModalContent,
-        handleFixtureModalClickOpen,
-        setIsOpen,
+        handleFixtureModalClickOpen,        
     } = useGlobalContext();
-
-    const history = useHistory();
+    
     const [showLoadingClass, setShowLoadingClass] = useState("");
     const [showImgClass, setShowImgClass] = useState("");
-    const [error, setError] = useState("");
-    const { logout } = useAuth();
+    
 
     const [name, setName] = useState([
         { id: 1, className: "" },
@@ -105,26 +100,6 @@ const Fullpage = () => {
             ].innerHTML = `<img src=${fullScreen} alt="fullScreen" />`;
         }
     }
-
-    useEffect(() => {
-        async function handleLogOut() {
-            setError("");
-            try {
-                await logout();
-                console.log(error);
-                setIsOpen(false);
-                history.pushState("/login");
-            } catch {
-                setError("Unable to log out.");
-            }
-        }
-        const timeout = setTimeout(() => {
-            handleLogOut();
-        }, 1000 * 60 * 60 * 10);
-
-        return () => clearTimeout(timeout);
-        // eslint-disable-next-line
-    }, []);
 
     useEffect(() => {
         changeArrow();

@@ -5,13 +5,16 @@ import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 import './index.css';
 import './responsive.css';
 import { GlobalProvider } from './contexts/GlobalContext';
+import { AuthProvider } from './contexts/AuthContext';
 import App from './components/App';
 
 
 ReactDOM.render(
-  <GlobalProvider>
-    <App />
-  </GlobalProvider>,
+    <AuthProvider>
+        <GlobalProvider>
+            <App />
+        </GlobalProvider>
+    </AuthProvider>,
   document.getElementById('root')
 );
 
