@@ -57,7 +57,7 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const timeOut = setTimeout(() => {
             setCurrentUser(null);
-        }, 60 * 1000 * 8);
+        }, 60 * 1000 * 60 * 8);
 
         if (currentUser === null) {
             auth.signOut();

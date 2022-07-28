@@ -1,4 +1,3 @@
-import unitTypeB_img from "../assests/img/floorplan/unitPlan/2.png";
 import marty_fox from "../assests/img/marty.jpg";
 import lana_img from "../assests/img/lana.jpg";
 import a1 from "../assests/img/floorplan/update.png";
@@ -68,7 +67,7 @@ export const tabContent = [
         second_half_title: "",
         content: `With complete exposure to Chesterville Road, this exceptional fit out takes full advantage of the front of the complex on the ground floor. Bulky goods can be stored and serviced by the rear roller door.`,
         link: "units/showroom",
-        img: "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/fitness-centre-siteplan.png"
+        img: "https://viridian-highett.com.au/images/site-plans/showroom-siteplan.png"
     },
     {
         position: "second",
@@ -3296,7 +3295,7 @@ const addImageToUnits = (array, unitType) => {
         sitePlanImageUrl = '';
     if (unitType === "showroom") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/Main-Building/showroom-floorplan.png";
-        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Main-Building/fitness-centre-mainb-internal-siteplan.png";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/internal-showroom.png";
         resultArray = array.map((element) => {
             return (
                 { ...element, img: imageUrl, sitePlanImg: sitePlanImageUrl}
@@ -3341,13 +3340,13 @@ const addImageToUnits = (array, unitType) => {
         sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/B";
         resultArray = array.map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/b${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/B${index+1}-internal-siteplan.png` }
+                { ...element, img: `${imageUrl}/b${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/b${index+1}-internal-siteplan.png` }
             )
         })
     }
     if (unitType === "storage") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/E";
-        sitePlanImageUrl = "https://viridian-highett.com.au/images/site-plans/E";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/E";
         resultArray = array.map((element, index) => {
             return (
                 { ...element, img: `${imageUrl}/e${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/e${index+1}-internal-siteplan.png` }
@@ -3432,79 +3431,176 @@ export const building_construction_details = [
         type: "general",
         items: [
             {
-                item: "Caprpet tile",
-                description: "Shift Convert Carpet Tiles",
-                colour: "Grey/Charcoal",
-                notes: "500x500mm Quarter turn pattern, First floors and stairs only",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg",
+                item: "Stainless Steel Sink",
+                description: "Stainless Steel Sink",
+                colour: "ANX110-34 Single Bowl Undermount Sink Only Stainless Steel",
+                notes: "Product code: 2400799",
+                img: "https://viridian-highett.com.au/images/fixtures/sink.jpg",
             },
-            {
-                item: "Suspended ceiling",
+            { // not find
+                item: "Sink Mixer",
                 description:
-                    "Mineral fibre Ceiling Tiles in White Suspended T-bar grib",
-                colour: "Matte Black",
-                notes: "1200x600x19mm Second Look",
-                img: "",
+                    "Black",
+                colour: "Posh Solus MK2 Gooseneck Sink Mixer Tap Chrome (4 star)*",
+                notes: "Product code: 9502640",
+                img: "https://viridian-highett.com.au/images/fixtures/basin.jpg",
             },
             {
-                item: "Caprpet tile",
-                description: "Shift Convert Carpet Tiles",
-                colour: "Grey/Charcoal",
-                notes: "500x500mm Quarter turn pattern, First floors and stairs only",
-                img: "",
+                item: "Splashback Porcelain Tiles ",
+                description: "Pressed Edge White Gloss ",
+                colour: "300 x 100",
+                notes: "Product code: BELWP200",
+                img: "https://viridian-highett.com.au/images/fixtures/splashback.jpg",
             },
             {
-                item: "Suspended ceiling",
+                item: "Vanity Basin",
                 description:
-                    "Mineral fibre Ceiling Tiles in White Suspended T-bar grib",
-                colour: "Matte Black",
-                notes: "1200x600x19mm Second Look",
-                img: "",
+                    "Chrome Sink Mixer with extended Lever ",
+                colour: "Posh Bristol MK2 Basin Mixer Tap with Extended Lever Chrome (4 star) *",
+                notes: "Product code: 9505250",
+                img: "https://viridian-highett.com.au/images/fixtures/Wall-Basin.jpg",
             },
             {
-                item: "Caprpet tile",
-                description: "Shift Convert Carpet Tiles",
-                colour: "Grey/Charcoal",
-                notes: "500x500mm Quarter turn pattern, First floors and stairs only",
-                img: "",
+                item: "Mirror",
+                description: "ADP Oasis Polished edge Mirror",
+                colour: "600mm x 800mm",
+                notes: "Product Code: 2304685",
+                img: "https://viridian-highett.com.au/images/fixtures/mirror.jpg",
             },
             {
-                item: "Suspended ceiling",
+                item: "Toilet",
                 description:
-                    "Mineral fibre Ceiling Tiles in White Suspended T-bar grib",
-                colour: "Matte Black",
-                notes: "1200x600x19mm Second Look",
-                img: "",
+                    "Vitreous China Pan with Dual Flush Cistern ",
+                colour: "Posh Solus Square Closed Coupled Back to Wall Back Inlet Toilet Suite",
+                notes: "Product code: 9505481",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet.jpg",
             },
             {
-                item: "Caprpet tile",
-                description: "Shift Convert Carpet Tiles",
-                colour: "Grey/Charcoal",
-                notes: "500x500mm Quarter turn pattern, First floors and stairs only",
-                img: "",
+                item: "Grabrails",
+                description: "Chrome with concealed fixings ",
+                colour: "Mobi 840 x 700mm x 140 ",
+                notes: "Product code: 9502627",
+                img: "https://viridian-highett.com.au/images/fixtures/grabrail.jpg",
             },
             {
-                item: "Suspended ceiling",
+                item: "Toilet Roll Holder",
                 description:
-                    "Mineral fibre Ceiling Tiles in White Suspended T-bar grib",
-                colour: "Matte Black",
-                notes: "1200x600x19mm Second Look",
-                img: "",
+                    "Chrome",
+                colour: "Caroma Cosmo Toilet Roll Holder (Metal) Chrome *",
+                notes: "Product code: 146573",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet-holder.jpg",
             },
             {
-                item: "Caprpet tile",
-                description: "Shift Convert Carpet Tiles",
-                colour: "Grey/Charcoal",
-                notes: "500x500mm Quarter turn pattern, First floors and stairs only",
-                img: "",
+                //not found
+                item: "Hand Towel Holder", 
+                description: "Chrome",
+                colour: "Phoenix Gen X Guest Towel Holder Chrome*",
+                notes: "Product Code: 274283",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet-holder.jpg",
             },
             {
-                item: "Suspended ceiling",
+                item: "Porcelain Tiles",
                 description:
-                    "Mineral fibre Ceiling Tiles in White Suspended T-bar grib",
-                colour: "Matte Black",
-                notes: "1200x600x19mm Second Look",
-                img: "",
+                    "Floor - Tech Lab Mono Gunmetal Natural",
+                colour: "300 x 600",
+                notes: "Product code: NT17-4302FL",
+                img: "https://viridian-highett.com.au/images/fixtures/porcelain.jpg",
+            },
+            {
+                item: "Ceramic Tiles ",
+                description:
+                    "Walls - Baseline Ivory Matt*",
+                colour: "",
+                notes: "Product code: NT19-2965FL",
+                img: "https://viridian-highett.com.au/images/fixtures/ceramic.jpg",
+            },
+            {
+                item: "LED Panel Lights ",
+                description:
+                    "1200*300",
+                colour: "White",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/1200x300-LED-Panel-Lights.jpg",
+            },
+            {
+                item: "Lexicon Paint",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Lexicon-Paint.jpg",
+            },
+            {
+                item: "Back To Wall Toilet Suite",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Back-to-Wall-Toilet-Suite.jpg",
+            },
+            {
+                item: "Benchtop Mottle Grey",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Benchtop--Mottle-Grey.jpg",
+            },
+            {
+                item: "Black Aluminium Skirting",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/black-aluminium-skirting.jpg",
+            },
+            {
+                item: "Carpet Tiles",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Carpet-Tiles.jpg",
+            },
+            {
+                item: "High Bay Warehouse LED",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/High-Bay-Warehouse-LED.jpg",
+            },
+            {
+                item: "LED Downlight",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/LED-Downlight.jpg",
+            },
+            {
+                item: "Shower Head Matte Black",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Shower-Head--Matte-Black.jpg",
+            },
+            {
+                item: "Shower Mixer Tap Matte Black",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/shower-mixer.jpg",
+            },
+            {
+                item: "White Ceiling Black Tracks",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/white-ceiling--black-tracks.jpg",
             },
         ],
     },
@@ -3512,74 +3608,176 @@ export const building_construction_details = [
         type: "kitchen",
         items: [
             {
-                item: "Sink",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Stainless Steel",
-                notes: "Stainless Steel Top mount Sink",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg",
+                item: "Stainless Steel Sink",
+                description: "Stainless Steel Sink",
+                colour: "ANX110-34 Single Bowl Undermount Sink Only Stainless Steel",
+                notes: "Product code: 2400799",
+                img: "https://viridian-highett.com.au/images/fixtures/sink.jpg",
+            },
+            { // not find
+                item: "Sink Mixer",
+                description:
+                    "Black",
+                colour: "Posh Solus MK2 Gooseneck Sink Mixer Tap Chrome (4 star)*",
+                notes: "Product code: 9502640",
+                img: "https://viridian-highett.com.au/images/fixtures/basin.jpg",
             },
             {
-                item: "Kitchen mixer",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Matt Black",
-                notes: "160 mm",
-                img: "",
+                item: "Splashback Porcelain Tiles ",
+                description: "Pressed Edge White Gloss ",
+                colour: "300 x 100",
+                notes: "Product code: BELWP200",
+                img: "https://viridian-highett.com.au/images/fixtures/splashback.jpg",
             },
             {
-                item: "Sink",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Stainless Steel",
-                notes: "Stainless Steel Top mount Sink",
-                img: "",
+                item: "Vanity Basin",
+                description:
+                    "Chrome Sink Mixer with extended Lever ",
+                colour: "Posh Bristol MK2 Basin Mixer Tap with Extended Lever Chrome (4 star) *",
+                notes: "Product code: 9505250",
+                img: "https://viridian-highett.com.au/images/fixtures/Wall-Basin.jpg",
             },
             {
-                item: "Kitchen mixer",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Matt Black",
-                notes: "160 mm",
-                img: "",
+                item: "Mirror",
+                description: "ADP Oasis Polished edge Mirror",
+                colour: "600mm x 800mm",
+                notes: "Product Code: 2304685",
+                img: "https://viridian-highett.com.au/images/fixtures/mirror.jpg",
             },
             {
-                item: "Sink",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Stainless Steel",
-                notes: "Stainless Steel Top mount Sink",
-                img: "",
+                item: "Toilet",
+                description:
+                    "Vitreous China Pan with Dual Flush Cistern ",
+                colour: "Posh Solus Square Closed Coupled Back to Wall Back Inlet Toilet Suite",
+                notes: "Product code: 9505481",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet.jpg",
             },
             {
-                item: "Kitchen mixer",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Matt Black",
-                notes: "160 mm",
-                img: "",
+                item: "Grabrails",
+                description: "Chrome with concealed fixings ",
+                colour: "Mobi 840 x 700mm x 140 ",
+                notes: "Product code: 9502627",
+                img: "https://viridian-highett.com.au/images/fixtures/grabrail.jpg",
             },
             {
-                item: "Hot water unit",
-                description: "Electric Hot Water Storage Unit",
+                item: "Toilet Roll Holder",
+                description:
+                    "Chrome",
+                colour: "Caroma Cosmo Toilet Roll Holder (Metal) Chrome *",
+                notes: "Product code: 146573",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet-holder.jpg",
+            },
+            {
+                //not found
+                item: "Hand Towel Holder", 
+                description: "Chrome",
+                colour: "Phoenix Gen X Guest Towel Holder Chrome*",
+                notes: "Product Code: 274283",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet-holder.jpg",
+            },
+            {
+                item: "Porcelain Tiles",
+                description:
+                    "Floor - Tech Lab Mono Gunmetal Natural",
+                colour: "300 x 600",
+                notes: "Product code: NT17-4302FL",
+                img: "https://viridian-highett.com.au/images/fixtures/porcelain.jpg",
+            },
+            {
+                item: "Ceramic Tiles ",
+                description:
+                    "Walls - Baseline Ivory Matt*",
+                colour: "",
+                notes: "Product code: NT19-2965FL",
+                img: "https://viridian-highett.com.au/images/fixtures/ceramic.jpg",
+            },
+            {
+                item: "LED Panel Lights ",
+                description:
+                    "1200*300",
                 colour: "White",
-                notes: "Compact Electric 50 ltr, 2.4 kW",
-                img: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/1200x300-LED-Panel-Lights.jpg",
             },
             {
-                item: "Sink",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Stainless Steel",
-                notes: "Stainless Steel Top mount Sink",
-                img: "",
+                item: "Lexicon Paint",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Lexicon-Paint.jpg",
             },
             {
-                item: "Kitchen mixer",
-                description: "Single bowl Stainless Steel Sink",
-                colour: "Matt Black",
-                notes: "160 mm",
-                img: "",
+                item: "Back To Wall Toilet Suite",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Back-to-Wall-Toilet-Suite.jpg",
             },
             {
-                item: "Hot water unit",
-                description: "Electric Hot Water Storage Unit",
-                colour: "White",
-                notes: "Compact Electric 50 ltr, 2.4 kW",
-                img: "",
+                item: "Benchtop Mottle Grey",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Benchtop--Mottle-Grey.jpg",
+            },
+            {
+                item: "Black Aluminium Skirting",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/black-aluminium-skirting.jpg",
+            },
+            {
+                item: "Carpet Tiles",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Carpet-Tiles.jpg",
+            },
+            {
+                item: "High Bay Warehouse LED",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/High-Bay-Warehouse-LED.jpg",
+            },
+            {
+                item: "LED Downlight",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/LED-Downlight.jpg",
+            },
+            {
+                item: "Shower Head Matte Black",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Shower-Head--Matte-Black.jpg",
+            },
+            {
+                item: "Shower Mixer Tap Matte Black",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/shower-mixer.jpg",
+            },
+            {
+                item: "White Ceiling Black Tracks",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/white-ceiling--black-tracks.jpg",
             },
         ],
     },
@@ -3587,118 +3785,176 @@ export const building_construction_details = [
         type: "bathroom",
         items: [
             {
-                item: "Unisex accessible toilet suite",
-                description: "Life Assist Wall Faced C/C Suite",
-                colour: "White / Grey seat",
-                notes: "S-Trap, Grey Seat RB6044G",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg",
+                item: "Stainless Steel Sink",
+                description: "Stainless Steel Sink",
+                colour: "ANX110-34 Single Bowl Undermount Sink Only Stainless Steel",
+                notes: "Product code: 2400799",
+                img: "https://viridian-highett.com.au/images/fixtures/sink.jpg",
             },
-            {
-                item: "Wall basin",
-                description: "Liano Nexus 750 RHS / LHS Wall Basin",
-                colour: "White",
-                notes: "Black waste & overflow ring (687149B)",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Shower%20Rail_Typical%20Bathroom%20Master%20Ensuite.jpg",
-            },
-            {
-                item: "Unisex accessible toilet suite",
-                description: "Life Assist Wall Faced C/C Suite",
-                colour: "White / Grey seat",
-                notes: "S-Trap, Grey Seat RB6044G",
-                img: "",
-            },
-            {
-                item: "Basin trap",
-                description: "Arcisan Bottle Trap 40mm",
-                colour: "Matte Black",
-                notes: "",
-                img: "",
-            },
-            {
-                item: "Unisex accessible toilet suite",
-                description: "Life Assist Wall Faced C/C Suite",
-                colour: "White / Grey seat",
-                notes: "S-Trap, Grey Seat RB6044G",
-                img: "",
-            },
-            {
-                item: "Hand Towel Holder",
-                description: "Radii Hand Towel Holder",
-                colour: "Stainless Steel",
-                notes: "Round plate",
-                img: "",
-            },
-            {
-                item: "Basin Tap / Mixer",
-                description: "Lugano Basin Mixer C/W 150mm Pin Lever",
-                colour: "Matte Black",
-                notes: "With extended 1500mm lever",
-                img: "",
-            },
-            {
-                item: "Shower",
-                description: "Vivid Rail Shower Set",
-                colour: "White",
-                notes: "",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg",
-            },
-            {
-                item: "Shower mixer",
-                description: "Vivid Slimline Shower / Wall Mixer",
-                colour: "White",
-                notes: "Round plate",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg",
-            },
-            {
-                item: "Shower Shelf",
-                description: "Radii Metal Shelf",
-                colour: "Matte Black",
-                notes: "",
-                img: "https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg",
-            },
-            {
-                item: "Floor waste",
-                description: "Stainless Steel Floor Grate",
-                colour: "Stainless Steel",
-                notes: "Square Stainless steel floor grate",
-                img: "",
-            },
-            {
-                item: "Toilet Roll Holder",
-                description: "Radii Toilet Roll Holder",
-                colour: "Matte Black",
-                notes: "Round plate",
-                img: "",
-            },
-            {
-                item: "Grab Rails and back rest",
+            { // not find
+                item: "Sink Mixer",
                 description:
-                    "32mm Diameter 90 deg Grab rails with Concealed Fixings",
-                colour: "Matte Black",
-                notes: "LH (Type 136), RH (Type 137) Refer drawings, complies with AS1428.1",
-                img: "",
+                    "Black",
+                colour: "Posh Solus MK2 Gooseneck Sink Mixer Tap Chrome (4 star)*",
+                notes: "Product code: 9502640",
+                img: "https://viridian-highett.com.au/images/fixtures/basin.jpg",
             },
             {
-                item: "Ambulant Grab Rails",
+                item: "Splashback Porcelain Tiles ",
+                description: "Pressed Edge White Gloss ",
+                colour: "300 x 100",
+                notes: "Product code: BELWP200",
+                img: "https://viridian-highett.com.au/images/fixtures/splashback.jpg",
+            },
+            {
+                item: "Vanity Basin",
                 description:
-                    "32mm Diameter 90 Deg Grab Rails with Concealed Fixings",
-                colour: "Matte Black",
-                notes: "Type 145 450x450mm Reversible refer drawings, complies with AS1428.1",
-                img: "",
+                    "Chrome Sink Mixer with extended Lever ",
+                colour: "Posh Bristol MK2 Basin Mixer Tap with Extended Lever Chrome (4 star) *",
+                notes: "Product code: 9505250",
+                img: "https://viridian-highett.com.au/images/fixtures/Wall-Basin.jpg",
             },
             {
                 item: "Mirror",
-                description: "750W Mirror",
-                colour: "Silver",
-                notes: "750W x 1200H",
-                img: "",
+                description: "ADP Oasis Polished edge Mirror",
+                colour: "600mm x 800mm",
+                notes: "Product Code: 2304685",
+                img: "https://viridian-highett.com.au/images/fixtures/mirror.jpg",
             },
             {
-                item: "Rove hook",
-                description: "Radii robe hook",
-                colour: "Matte Black",
-                notes: "Round plate",
-                img: "",
+                item: "Toilet",
+                description:
+                    "Vitreous China Pan with Dual Flush Cistern ",
+                colour: "Posh Solus Square Closed Coupled Back to Wall Back Inlet Toilet Suite",
+                notes: "Product code: 9505481",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet.jpg",
+            },
+            {
+                item: "Grabrails",
+                description: "Chrome with concealed fixings ",
+                colour: "Mobi 840 x 700mm x 140 ",
+                notes: "Product code: 9502627",
+                img: "https://viridian-highett.com.au/images/fixtures/grabrail.jpg",
+            },
+            {
+                item: "Toilet Roll Holder",
+                description:
+                    "Chrome",
+                colour: "Caroma Cosmo Toilet Roll Holder (Metal) Chrome *",
+                notes: "Product code: 146573",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet-holder.jpg",
+            },
+            {
+                //not found
+                item: "Hand Towel Holder", 
+                description: "Chrome",
+                colour: "Phoenix Gen X Guest Towel Holder Chrome*",
+                notes: "Product Code: 274283",
+                img: "https://viridian-highett.com.au/images/fixtures/toilet-holder.jpg",
+            },
+            {
+                item: "Porcelain Tiles",
+                description:
+                    "Floor - Tech Lab Mono Gunmetal Natural",
+                colour: "300 x 600",
+                notes: "Product code: NT17-4302FL",
+                img: "https://viridian-highett.com.au/images/fixtures/porcelain.jpg",
+            },
+            {
+                item: "Ceramic Tiles ",
+                description:
+                    "Walls - Baseline Ivory Matt*",
+                colour: "",
+                notes: "Product code: NT19-2965FL",
+                img: "https://viridian-highett.com.au/images/fixtures/ceramic.jpg",
+            },
+            {
+                item: "LED Panel Lights ",
+                description:
+                    "1200*300",
+                colour: "White",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/1200x300-LED-Panel-Lights.jpg",
+            },
+            {
+                item: "Lexicon Paint",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Lexicon-Paint.jpg",
+            },
+            {
+                item: "Back To Wall Toilet Suite",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Back-to-Wall-Toilet-Suite.jpg",
+            },
+            {
+                item: "Benchtop Mottle Grey",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Benchtop--Mottle-Grey.jpg",
+            },
+            {
+                item: "Black Aluminium Skirting",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/black-aluminium-skirting.jpg",
+            },
+            {
+                item: "Carpet Tiles",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Carpet-Tiles.jpg",
+            },
+            {
+                item: "High Bay Warehouse LED",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/High-Bay-Warehouse-LED.jpg",
+            },
+            {
+                item: "LED Downlight",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/LED-Downlight.jpg",
+            },
+            {
+                item: "Shower Head Matte Black",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/Shower-Head--Matte-Black.jpg",
+            },
+            {
+                item: "Shower Mixer Tap Matte Black",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/shower-mixer.jpg",
+            },
+            {
+                item: "White Ceiling Black Tracks",
+                description:
+                    "White",
+                colour: "",
+                notes: "",
+                img: "https://viridian-highett.com.au/images/fixtures/white-ceiling--black-tracks.jpg",
             },
         ],
     },

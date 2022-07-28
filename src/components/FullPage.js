@@ -46,7 +46,6 @@ const Fullpage = () => {
     const [showLoadingClass, setShowLoadingClass] = useState("");
     const [showImgClass, setShowImgClass] = useState("");
     
-
     const [name, setName] = useState([
         { id: 1, className: "" },
         { id: 2, className: "" },

@@ -24,6 +24,7 @@ const GlobalProvider = ({ children }) => {
     );
     const [unitMapIndex, setUnitMapIndex] = useState(0);
     const [unitData, setUnitData] = useState(tabContent[0])
+    const [mapIndex, setMapIndex] = useState(0);
 
     const openAndCloseNavbar = () => {
         setIsOpen(!isOpen);
@@ -103,7 +104,9 @@ const GlobalProvider = ({ children }) => {
                 setError,
                 unitData,
                 setUnitData,
-                handleButtonClick
+                handleButtonClick,
+                mapIndex,
+                setMapIndex
             }}
         >
             {children}

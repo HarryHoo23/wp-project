@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import { areas_maps } from "../../data/Coordinates";
 import { useGlobalContext } from "../../contexts/GlobalContext";
@@ -10,16 +10,26 @@ import CommercialDropdown from "./CommercialDropDown";
 
 const CommercialUnits = () => {
     const { width } = useWindowDimensions();
+    const history = useHistory();
 
     let containerWidth = width - 160;
 
-    const { unitData } = useGlobalContext();    
+    const { unitData, mapIndex, setUnitMapIndex } = useGlobalContext();    
 
-    const [map, setMap] = useState(areas_maps[0]);
+    const [map, setMap] = useState(areas_maps[mapIndex]);
 
-    const changeMap = (index) => {
-        setMap(areas_maps[index]);
+    useEffect(() => {
+        changeMap();
+    }, [mapIndex]);
+
+    const changeMap = () => {
+        setMap(areas_maps[mapIndex]);
     };
+
+    const handleClickViewOptions = () => {
+        history.push(`/${unitData.link}`);
+        setUnitMapIndex(0);
+    }
     
     if (unitData) {
         return (
@@ -40,7 +50,7 @@ const CommercialUnits = () => {
                         </div>
                     </Col>
                     <Col lg={3}>
-                        <Link to={`/${unitData.link}`} className="view-option btn">
+                        <Link className="view-option btn" onClick={handleClickViewOptions}>
                             View Options
                         </Link>
                     </Col>
@@ -50,6 +60,7 @@ const CommercialUnits = () => {
                         width={containerWidth}
                         maps={map}
                         destination={unitData.link}
+                        isSitePlan={true}
                         image={unitData.img}
                     />
                 </div>

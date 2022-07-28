@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useHistory, useRouteMatch } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import { sitePlanData } from '../../data/Content';
-import { unit_maps } from '../../data/Coordinates';
+import { unit_maps, areas_type_storage_complex_siteplan_1, areas_type_storage_complex_siteplan_2 } from '../../data/Coordinates';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 import SectionWrapper from '../SectionWrapper';
 import Title from './Title';
@@ -22,7 +22,7 @@ const Siteplan = () => {
         first: '',
         second: ''
     })
-    const [unitMap, setUnitMap] = useState();
+    const [unitMap, setUnitMap] = useState(unit_maps[0].data);
     const [sitePlan, setSitePlan] = useState();
     const [img, setImg] = useState();
     const [mapperImg, setMapperImg] = useState();
@@ -30,6 +30,7 @@ const Siteplan = () => {
     const [componentNumber, setComponentNumber] = useState(1);
     const [width, setWidth] = useState();
     const [size, setSize] = useState(window.innerWidth);
+    const [isStorageTwo, setIsStorageTwo] = useState(false);
     
     const imageRef = useRef(null);
     let history = useHistory();
@@ -77,8 +78,17 @@ const Siteplan = () => {
                 second: unitType.second_half_title,
             };
             setTitle(pageTitle);
-            setSitePlan(unitType.data);
-            setUnitMap(unitMapData.data);            
+            setSitePlan(unitType.data);            
+            setUnitMap(unitMapData.data);
+            if (type === "storage-complex") {
+                if (unitMapIndex > 23) {
+                    setUnitMap(areas_type_storage_complex_siteplan_2);
+                    setIsStorageTwo(true);
+                } else {
+                    setUnitMap(areas_type_storage_complex_siteplan_1);
+                    setIsStorageTwo(false);
+                }
+            }
             setImg(unitType.data[unitMapIndex].img);
             console.log(unitType.data[unitMapIndex].sitePlanImg);
             if (unitType.data[unitMapIndex].img) {
@@ -222,8 +232,8 @@ const Siteplan = () => {
                             </Col>
                         <Col md={12} className="p-0">
                             <div className="img-bottom-container">
-                                <ImagePropertyMapper width={width} maps={unitMap} image={mapperImg} isSitePlan={true} />    
-                            </div>
+                                <ImagePropertyMapper width={width} maps={unitMap} image={mapperImg} isSitePlan={false} type={type} isStorageTwo={isStorageTwo} />
+                            </div> 
                         </Col>
                     </Row>
                     <UnitModal
