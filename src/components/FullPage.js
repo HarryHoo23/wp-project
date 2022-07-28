@@ -33,6 +33,8 @@ import logo from "../assests/logo/Viridian_Logo-white.svg";
 import arrow from "../assests/img/download-2.png";
 import fullScreen from "../assests/img/icons/lightbox-expand.svg";
 
+const animationValue = sessionStorage.getItem('hasShowed');
+
 const Fullpage = () => {
     const {
         isLoading,
@@ -45,6 +47,7 @@ const Fullpage = () => {
     
     const [showLoadingClass, setShowLoadingClass] = useState("");
     const [showImgClass, setShowImgClass] = useState("");
+    const [hasShownAnimation, setHasShownAnimation] = useState(animationValue);
     
     const [name, setName] = useState([
         { id: 1, className: "" },
@@ -114,9 +117,14 @@ const Fullpage = () => {
         return () => clearTimeout(first_timeout, second_timeout);
     }, []);
 
+    useEffect(() => {
+        sessionStorage.setItem('hasShowed', true);
+        setHasShownAnimation(animationValue);
+    }, []);
+
     return (
         <>
-            {isLoading && (
+            {(isLoading && !hasShownAnimation) && (
                 <div id="preloader" className={`${showLoadingClass}`}>
                     <img
                         src={logo}
@@ -185,16 +193,8 @@ const Fullpage = () => {
 
                             <SectionWrapper class={"section"} idName={"home"}>
                                 <div className="home-video">
-                                    <video
-                                        loop
-                                        autoPlay
-                                        muted
-                                        id="home-bg-video"
-                                    >
-                                        <source
-                                            src={HomeVideo}
-                                            type="video/mp4"
-                                        />
+                                    <video loop autoPlay muted id="home-bg-video" >
+                                        <source src={HomeVideo} type="video/mp4" />
                                     </video>
                                 </div>
                             </SectionWrapper>
