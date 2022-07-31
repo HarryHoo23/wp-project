@@ -4,10 +4,10 @@ import { useHistory } from "react-router-dom";
 import { useGlobalContext } from "../../contexts/GlobalContext";
 
 // eslint-disable-next-line
-const moveOnImage = (evt) => {
-    const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
-    console.log(coords);
-};
+// const moveOnImage = (evt) => {
+//     const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+//     console.log(coords);
+// };
 
 const ImagePropertyMapper = ({maps, width, destination, image, isSitePlan, type, isStorageTwo}) => {
     const [rerender, setRerender] = useState(false);
@@ -41,7 +41,7 @@ const ImagePropertyMapper = ({maps, width, destination, image, isSitePlan, type,
             imgWidth={1980}
             strokeColor={"rgba(0, 0, 0, 0.1)"}
             onClick={isSitePlan ? clickHandler : clickSiteplanHandler}
-            onImageMouseMove={(event) => moveOnImage(event)}
+            // onImageMouseMove={(event) => moveOnImage(event)}
         />
     );
 };

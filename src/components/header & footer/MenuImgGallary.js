@@ -58,8 +58,6 @@ const MenuImgGallery = () => {
     let history = useHistory();
     const location = useLocation();
 
-    console.log(location.pathname);
-
     const { openAndCloseNavbar } = useGlobalContext();
 
     const subMenuLinkClickedHandler = (item) => {

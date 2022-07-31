@@ -953,6 +953,68 @@ const areas_type_triple_level_hybrid_siteplan = {
     ],
 };
 
+const areas_type_walk_up_siteplan = {
+    name: "my-map",
+    areas: [
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [1572, 12, 1532, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [1532, 12, 1490, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [1128, 12, 1088, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [1088, 12, 1046, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [591, 12, 550, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [550, 12, 508, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [508, 12, 468, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "walk-up",
+            shape: "rect",
+            coords: [468, 12, 426, 72],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+    ],
+};
+
 const areas_type_working_storage_siteplan = {
     name: "my-map",
     areas: [
@@ -1362,7 +1424,7 @@ export const unit_maps = [
     },
     {
         type: "walk-up-office",
-        data: strata_office_suites_maps,
+        data: areas_type_walk_up_siteplan,
     },
     {
         type: "two-level-hybrid",

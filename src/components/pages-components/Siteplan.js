@@ -89,8 +89,7 @@ const Siteplan = () => {
                     setIsStorageTwo(false);
                 }
             }
-            setImg(unitType.data[unitMapIndex].img);
-            console.log(unitType.data[unitMapIndex].sitePlanImg);
+            setImg(unitType.data[unitMapIndex].img);            
             if (unitType.data[unitMapIndex].img) {
                 setMapperImg(unitType.data[unitMapIndex].sitePlanImg);
             } else {
