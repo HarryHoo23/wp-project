@@ -2659,6 +2659,10 @@ ul.sale-contact li a {
     position: relative;
 }
 
+.contact-form-container h2{
+    text-transform: uppercase;
+}
+
 #contact-form,
 #purchase-form {
     position: absolute;

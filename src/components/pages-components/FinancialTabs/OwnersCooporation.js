@@ -751,52 +751,7 @@ const OwnersCooporation = (props) => {
                         <td> $- </td>
                         <td></td>
                         <td> $- </td>
-                    </tr>  
-                    <tr>
-                        <td> </td>
-                        <td>Cleaning</td>
-                        <td> $6,000.00 </td>
-                        <td></td>
-                        <td> $10,000.00 </td>
-                        <td></td>
-                        <td> $12,000.00 </td>
-                        <td></td>
-                        <td> $10,000.00 </td>
-                        <td></td>
-                        <td> $16,000.00 </td>
-                        <td></td>
-                        <td> $16,000.00 </td>
                     </tr>
-                    <tr>
-                        <td> </td>
-                        <td>Sump Pump/Tank Maintenance</td>
-                        <td> $3,000.00 </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td>Lift Maintenance</td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $4,500.00 </td>
-                        <td></td>
-                        <td> $- </td>
-                        <td></td>
-                        <td> $- </td>
-                    </tr>                    
                 </tbody>
             </Table>
         )

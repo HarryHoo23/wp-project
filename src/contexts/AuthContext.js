@@ -1,6 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react';
-import firebase from 'firebase/app';
-import { auth, database } from '../firebase/firebase';
+import React, { useContext, useState, useEffect } from "react";
+import { auth, database } from "../firebase/firebase";
 
 const AuthContext = React.createContext();
 
@@ -15,14 +14,14 @@ export function AuthProvider({ children }) {
 
     function signup(email, password, name) {
         auth.createUserWithEmailAndPassword(email, password);
-        auth.onAuthStateChanged(user => {
-            if(user) {
-                database.ref('users/' + user.uid).set({
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                database.ref("users/" + user.uid).set({
                     username: name,
-                    email: email
-                })
+                    email: email,
+                });
             }
-        })
+        });
     }
 
     function login(email, password) {
@@ -30,12 +29,14 @@ export function AuthProvider({ children }) {
             .then((response) => {
                 setCurrentUser(response.user);
             })
-        .catch((error) => {
-        // Handle Errors here.
-            console.log(`An error happened! ${error.message}, the error code is ${error.code}`);
-            setErrorMessage(`An error happened! ${error.message}`);  
-        });
-      }
+            .catch((error) => {
+                // Handle Errors here.
+                console.log(
+                    `An error happened! ${error.message}, the error code is ${error.code}`
+                );
+                setErrorMessage(`An error happened! ${error.message}`);
+            });
+    }
 
     function logout() {
         return auth.signOut();
@@ -46,14 +47,14 @@ export function AuthProvider({ children }) {
     }
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(user => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
             setCurrentUser(user);
             setLoading(false);
-        })
+        });
 
-        return unsubscribe
+        return unsubscribe;
     }, []);
-    
+
     useEffect(() => {
         const timeOut = setTimeout(() => {
             setCurrentUser(null);
@@ -61,23 +62,23 @@ export function AuthProvider({ children }) {
 
         if (currentUser === null) {
             auth.signOut();
-        };
+        }
 
         return () => clearTimeout(timeOut);
     }, []);
 
     const value = {
-        currentUser,        
+        currentUser,
         signup,
         login,
         logout,
         resetPassword,
-        errorMessage
-    }
-    
+        errorMessage,
+    };
+
     return (
         <AuthContext.Provider value={value}>
             {!loading && children}
         </AuthContext.Provider>
-    )
+    );
 }

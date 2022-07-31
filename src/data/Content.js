@@ -1,7 +1,5 @@
 import marty_fox from "../assests/img/marty.jpg";
 import lana_img from "../assests/img/lana.jpg";
-import a1 from "../assests/img/floorplan/update.png";
-import a2 from "../assests/img/floorplan/a2.png";
 import logo1 from '../assests/logo/ikos_group-popup.svg';
 import logo2 from '../assests/logo/cva-colour.svg';
 import logo3 from '../assests/logo/tag-colour.svg'

@@ -18,13 +18,13 @@ const CommercialUnits = () => {
 
     const [map, setMap] = useState(areas_maps[mapIndex]);
 
-    useEffect(() => {
-        changeMap();
-    }, [mapIndex]);
-
     const changeMap = () => {
         setMap(areas_maps[mapIndex]);
     };
+
+    useEffect(() => {
+        changeMap();
+    }, [mapIndex]);    
 
     const handleClickViewOptions = () => {
         history.push(`/${unitData.link}`);
