@@ -3290,22 +3290,25 @@ const STORAGE_COMPLEX = [
 const addImageToUnits = (array, unitType) => {
     let resultArray = [],
         imageUrl = '',
-        sitePlanImageUrl = '';
+        sitePlanImageUrl = '',
+        pdfUrl = '';
     if (unitType === "showroom") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/Main-Building/showroom-floorplan.png";
         sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/internal-showroom.png";
+        pdfUrl = "https://viridian-highett.com.au/pdf/Main-building/showroom.pdf";
         resultArray = array.map((element) => {
             return (
-                { ...element, img: imageUrl, sitePlanImg: sitePlanImageUrl}
+                { ...element, img: imageUrl, sitePlanImg: sitePlanImageUrl, pdf: pdfUrl}
             )
         })
     }
     if (unitType === "strata") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/Main-Building";
         sitePlanImageUrl = "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/";
+        pdfUrl = "https://viridian-highett.com.au/pdf/Main-building/"
         resultArray = array.map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/office-${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}office${index+1}-siteplan.png` }
+                { ...element, img: `${imageUrl}/office-${index + 1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}office${index + 1}-siteplan.png`, pdf: `${pdfUrl}WHITEFOX_Marketing_CVA_Viridian_Floorplan_OFFICE_${index + 1}.pdf` }
             )
         })
     }
@@ -3320,10 +3323,11 @@ const addImageToUnits = (array, unitType) => {
     }
     if (unitType === "hybrid") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/";
-        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/";        
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/";  
+        pdfUrl = "https://viridian-highett.com.au/pdf/A/";
         let tempArray_A = array.slice(0,12).map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/A/a${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/A/a${index+1}-internal-siteplan.png` }
+                { ...element, img: `${imageUrl}/A/a${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/A/a${index+1}-internal-siteplan.png`, pdf: `${pdfUrl}WHITEFOX_Marketing_CVA_Viridian_Floorplan_A${index + 1}.pdf` }
             )
         })
         let tempArray_D = array.slice(12,15).map((element, index) => {
@@ -3345,18 +3349,20 @@ const addImageToUnits = (array, unitType) => {
     if (unitType === "storage") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/E";
         sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/E";
+        pdfUrl = "https://viridian-highett.com.au/pdf/E/";
         resultArray = array.map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/e${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/e${index+1}-internal-siteplan.png` }
+                { ...element, img: `${imageUrl}/e${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/e${index+1}-internal-siteplan.png`, pdf: `${pdfUrl}WHITEFOX_Marketing_CVA_Viridian_Floorplan_E${index + 1}.pdf` }
             )
         })
     }
     if (unitType === "complex") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/Storage-Units";
         sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Storage-Units";
+        pdfUrl = "https://viridian-highett.com.au/pdf/Storage_Units/";
         resultArray = array.map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/${index+1}-storage-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/${index+1}-unit-internal-siteplan.png` }
+                { ...element, img: `${imageUrl}/${index+1}-storage-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/${index+1}-unit-internal-siteplan.png`, pdf: `${pdfUrl}WHITEFOX_Marketing_CVA_Viridian_Floorplan_STORAGE_UNIT_${index + 1}.pdf` }
             )
         })
     }

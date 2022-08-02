@@ -152,7 +152,7 @@ const Siteplan = () => {
                                         BACK
                                     </span>
                                 )}
-                                <a className='download-btn' href='#' download>
+                                <a className='download-btn' href={sitePlan[unitMapIndex].pdf ? sitePlan[unitMapIndex].pdf : '#'} download target='_blank'>
                                     Print
                                 </a>
                             </div>
