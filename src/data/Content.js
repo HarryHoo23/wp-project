@@ -75,7 +75,7 @@ export const tabContent = [
         second_half_title: "Suites",
         content: `The first thing you’ll notice is the impressive entry foyer, the second thing is the uninterrupted and raised views over the parkland through the floor-to-ceiling glass. Disability lift access, undercover car parking, and shared staff amenities.`,
         link: "units/strata-office-suites",
-        img: "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/office1-siteplan.png",
+        img: "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/officeA-siteplan.png",
     },
     {
         position: "third",
@@ -3302,10 +3302,10 @@ const addImageToUnits = (array, unitType) => {
     }
     if (unitType === "strata") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/Main-Building";
-        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Main-Building/";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/";
         resultArray = array.map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/office-${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}${index+1}-office-mainb-internal-siteplan.png` }
+                { ...element, img: `${imageUrl}/office-${index+1}-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}office${index+1}-siteplan.png` }
             )
         })
     }

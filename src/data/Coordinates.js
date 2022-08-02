@@ -1420,7 +1420,7 @@ export const unit_maps = [
     },
     {
         type: "strata-office-suites",
-        data: strata_office_suites_maps,
+        data: strata_office_suites,
     },
     {
         type: "walk-up-office",
