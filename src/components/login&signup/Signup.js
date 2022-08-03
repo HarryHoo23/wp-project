@@ -41,7 +41,7 @@ export default function Signup() {
         <div className='w-100' style={{ maxWidth: '400px' }}>
           <Card>
             <Card.Body>
-              <h2 className='text-center mb-4'>Sign Up</h2>
+              <h2 className='text-center mb-4 text-uppercase'>Sign Up</h2>
               {error && <Alert variant='danger'>{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                 <Form.Group id='name'>

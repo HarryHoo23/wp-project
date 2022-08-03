@@ -50,7 +50,7 @@ export default function Login() {
                 <img className="w-50 m-auto d-block" src={Logo} alt="viridian logo" />
             <Card>
                 <Card.Body className="mt-4">
-                    <h2 className='text-center mb-4'>Login</h2>                
+                    <h2 className='text-center mb-4 text-uppercase'>Login</h2>                
                     {errorMessage !== "" && <Alert variant='danger'>{errorMessage}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id='email'>

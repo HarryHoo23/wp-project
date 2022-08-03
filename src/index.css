@@ -1214,7 +1214,8 @@ a.logo-link {
     border: 1px solid #f6f7fa;
     max-width: 250px;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
+    height: 40px;
     letter-spacing: 0.02em;
     max-height: 50px;
     background-color: transparent;
@@ -1224,6 +1225,7 @@ a.logo-link {
     justify-content: center;
     margin-right: 20px;
     font-family: var(--title-font-family) !important;
+    white-space: nowrap;
 }
 
 .welcome-title:hover {
@@ -2521,7 +2523,7 @@ ul.sale-contact li a {
 
 .property-contact-btn {
     background-color: #ccc8c2;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
     padding: 0.375rem 1rem;

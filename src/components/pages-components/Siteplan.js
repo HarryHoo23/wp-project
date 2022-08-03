@@ -151,10 +151,10 @@ const Siteplan = () => {
                                     onClick={clickHandler}>
                                         BACK
                                     </span>
-                                )}
-                                <a className='download-btn' href={sitePlan[unitMapIndex].pdf ? sitePlan[unitMapIndex].pdf : '#'} download target='_blank'>
+                                    )}
+                                {sitePlan[unitMapIndex].pdf && <a className='download-btn' href={sitePlan[unitMapIndex].pdf} download target='_blank'>
                                     Print
-                                </a>
+                                </a>}
                             </div>
                             <div className='siteplan_Info mt-4'>
                                 <h5>{sitePlan[unitMapIndex].unit_number}</h5>
@@ -229,7 +229,7 @@ const Siteplan = () => {
                                 <img src={img} alt="siteplan-img" className="w-100" />
                             </div>
                             </Col>
-                        <Col md={12} className="p-0">
+                        <Col md={12} className="p-0" style={{border: '1px solid #cacaca'}}>
                             <div className="img-bottom-container">
                                 <ImagePropertyMapper width={width} maps={unitMap} image={mapperImg} isSitePlan={false} type={type} isStorageTwo={isStorageTwo} />
                             </div> 
