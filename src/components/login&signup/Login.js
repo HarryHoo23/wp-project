@@ -64,14 +64,11 @@ export default function Login() {
                         <Button disabled={loading} className='w-100 login-btn mt-4' type='submit'>
                             Login
                         </Button>
-                    </Form>
-                    <div className='w-100 text-center mt-3'>
-                        <Link to='/forgot-password'>Forgot password?</Link>
-                    </div>
+                    </Form>                    
                 </Card.Body>
             </Card>
             <div className='w-100 text-center mt-2 font-sm'>
-                Need an account? <Link to='/signup'>Sign Up</Link>
+                Need an account? <a href='https://viridian-highett.com.au/request-login/' target='_blank'>Request here.</a>
             </div>
             </div>
         </Container>

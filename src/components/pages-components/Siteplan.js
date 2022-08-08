@@ -141,21 +141,7 @@ const Siteplan = () => {
                             firstHalfTitle={`${title.first}`}
                             secondHalfTitle={`${title.second}`}
                             />
-                            <br />
-                            <div className='button-group'>
-                                <UnitDropdown type={sitePlan} />
-                                {type && (
-                                    <span
-                                    className='back-button'
-                                    type='button'
-                                    onClick={clickHandler}>
-                                        BACK
-                                    </span>
-                                    )}
-                                {sitePlan[unitMapIndex].pdf && <a className='download-btn' href={sitePlan[unitMapIndex].pdf} download target='_blank'>
-                                    Print
-                                </a>}
-                            </div>
+                            <br />                            
                             <div className='siteplan_Info mt-4'>
                                 <h5>{sitePlan[unitMapIndex].unit_number}</h5>
                                 {sitePlan[unitMapIndex].ground_level > 0 && 
@@ -224,7 +210,21 @@ const Siteplan = () => {
 
                             <br />
                         </Col>
-                        <Col xl={8} lg={9} className="d-flex p-0 align-items-center">
+                        <Col xl={8} lg={9} className="d-flex p-0 align-items-center flex-column">
+                            <div className='button-group justify-content-end'>
+                                <UnitDropdown type={sitePlan} />
+                                {type && (
+                                    <span
+                                    className='back-button'
+                                    type='button'
+                                    onClick={clickHandler}>
+                                        BACK
+                                    </span>
+                                    )}
+                                {sitePlan[unitMapIndex].pdf && <a className='download-btn' href={sitePlan[unitMapIndex].pdf} download target='_blank'>
+                                    Print
+                                </a>}
+                            </div>
                             <div className='img-mapper-container'>
                                 <img src={img} alt="siteplan-img" className="w-100" />
                             </div>

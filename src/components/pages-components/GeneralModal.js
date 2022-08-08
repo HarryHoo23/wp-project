@@ -12,6 +12,7 @@ const GeneralModal = (props) => {
             backdrop="static"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            className={props.className}
         >
             <div className="modal-content">
                 <button

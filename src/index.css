@@ -146,7 +146,6 @@ h6 {
     background: var(--font-primary-color);
 }
 
-#comm_units .bg-wrapper,
 #units_all .bg-wrapper,
 #disclaimer-page .bg-wrapper {
     background: #2d2d2d;
@@ -155,6 +154,10 @@ h6 {
 #wf-financial .bg-wrapper,
 #wf-contact-us .bg-wrapper {
     background: #fdfdfd;
+}
+
+#comm_units .bg-wrapper {
+    background: var(--secondary-color-white);
 }
 
 .fp-viewing-wf-home .nav-wrapper-top {
@@ -285,6 +288,8 @@ h6 {
 
 #nav-open-btn {
     margin-right: 0;
+    transform: rotate(-180deg);
+    width: 30px;
 }
 
 /* Header */
@@ -384,7 +389,8 @@ h6 {
 }
 
 .fp-viewing-disclaimer #scroll-down,
-.fp-viewing-disclaimer #menu-arrow {
+.fp-viewing-disclaimer #menu-arrow,
+.fp-viewing-units #menu-arrow-down {
     display: none;
 }
 
@@ -703,6 +709,11 @@ h6 {
     position: relative;
     background-position: center center;
     transition: background-size 4s 0s ease, width 2s 0s ease;
+}
+
+#home-modal img {
+    height: 100%;
+    max-height: 100% !important;
 }
 
 #home-modal-container.show {
@@ -1145,15 +1156,6 @@ a.logo-link {
     /* margin-top: var(--margin-top-m); */
 }
 
-.welcome-tabs .video-box {
-    height: calc(60% - 1rem);
-}
-
-.welcome-tabs .video-box video {
-    height: 100%;
-    width: 100%;
-}
-
 .welcome-tabs .nav-pills .nav-item {
     max-width: 250px;
     padding: 3px 0;
@@ -1256,13 +1258,18 @@ a.logo-link {
     margin-top: 3rem;
     width: 100%;
     background: transparent;
-    color: var(--secondary-color-white);
+    color: var(--title-primary-color);
     padding: 1rem;
-    border-color: var(--secondary-color-white);
+    border-color: var(--title-primary-color);
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 500;
     font-family: var(--title-font-family);
+}
+
+.view-option:hover {
+    background-color: var(--title-primary-color);
+    color: var(--secondary-color-white) !important;
 }
 
 .dropdown-item {
@@ -2364,6 +2371,26 @@ ul.sale-contact li a {
     height: unset;
 }
 
+.small-modal.modal {
+    width: 1000px;
+    height: calc(100vh - 10rem);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.enquiry-modal.modal {
+    width: calc(50% - 5rem);
+    height: calc(100% - 10rem);
+    top: 5rem;
+    right: 5rem;
+    left: unset;
+}
+
+.enquiry-modal .modal-body {
+    padding: 2rem;
+}
+
 .modal-content,
 .modal-body {
     height: 100%;
@@ -2530,6 +2557,10 @@ ul.sale-contact li a {
     border-radius: 0;
     border-color: #ccc8c2;
     margin-bottom: 1rem;
+}
+
+.property-contact-btn img {
+    width: 25px;
 }
 
 .property-contact-btn:focus {
@@ -2864,9 +2895,9 @@ textarea.form-control:focus {
 }
 
 .image-gallery-fullscreen-button {
-    top: 0;
+    top: 5rem;
     bottom: unset;
-    right: 1rem;
+    right: 5rem;
 }
 
 .image-gallery-icon {
@@ -3069,6 +3100,12 @@ button.hide-enquiry {
     border: 1px solid var(--secondary-color-white);
     margin-top: 1.5rem;
     width: 215px;
+}
+
+.welcome-tabs #dropdown-commercial-button {
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+    color: var(--secondary-color-white);
 }
 
 .com-dropdown {    
@@ -3426,9 +3463,10 @@ article {
 .site-plan .btn,
 .back-button,
 .site-plan .download-btn {
-    max-width: 180px !important;
+    max-width: 200px !important;
     font-size: 13px !important;  
-    font-family: var(--title-font-family);  
+    font-family: var(--title-font-family);
+    white-space: nowrap;
 }
 
 .site-plan .sunday-title,

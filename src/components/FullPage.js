@@ -17,7 +17,8 @@ import TopNavbar from "./header & footer/TopNavbar";
 import Title from "./pages-components/Title";
 import { svgImagePath } from "../data/ImageList";
 import ImageGallary from "./ImageGallary";
-import HomeVideo from "../video/Sunday-Hero-Video.mp4";
+import HomeVideo from '../video/Sunday-Hero-Video.mp4';
+import ReactPlayer from 'react-player';
 import LogoContainer from "./pages-components/LogoContainer";
 import LogoModalContent from "./pages-components/LogoModalContent";
 import GeneralModal from "./pages-components/GeneralModal";
@@ -48,6 +49,7 @@ const Fullpage = () => {
     const [showLoadingClass, setShowLoadingClass] = useState("");
     const [showImgClass, setShowImgClass] = useState("");
     const [hasShownAnimation, setHasShownAnimation] = useState(animationValue);
+    const [modalClassName, setModalClassName] = useState("");
     
     const [name, setName] = useState([
         { id: 1, className: "" },
@@ -64,8 +66,7 @@ const Fullpage = () => {
         { id: 12, className: "" },
         { id: 13, className: "" },
         { id: 14, className: "" },
-        { id: 15, className: "" },
-        { id: 16, className: "" },
+        { id: 15, className: "" },        
     ]);
 
     const [navBarTitle, setNavBarTitle] = useState({
@@ -76,10 +77,13 @@ const Fullpage = () => {
 
     function renderModalContent() {
         if (isModalShow.case === 1) {
+            setModalClassName("small-modal");
             return <LogoModalContent {...individualModalContent} />;
         } else if (isModalShow.case === 2) {
+            setModalClassName("enquiry-modal");
             return <ContactForm />;
         } else {
+            setModalClassName("");
             return <FixtureList {...singleFixtureModalContent} />;
         }
     }
@@ -139,20 +143,19 @@ const Fullpage = () => {
                 // sectionsColor={['orange', 'purple', 'green']}
                 licenseKey={"zMccI0J!a3"}
                 navigation={false}
-                anchors={[
-                    "wf-home",
+                anchors={[                    
                     "units",
                     "commercial-units",
                     "intro",
                     "every",
                     "partners",
                     "fixtures",
+                    "financial",
                     "doorsteps",
                     "doorsteps-eat",
                     "doorsteps-drink",
                     "doorsteps-leisure",
                     "doorsteps-play",
-                    "financial",
                     "maps",
                     "contact-us",
                     "disclaimer",
@@ -189,15 +192,7 @@ const Fullpage = () => {
                                 addtionalClass={navBarTitle.bgColorClass}
                             />
 
-                            <GeneralModal renderBodyComponent={renderModalContent()} />
-
-                            <SectionWrapper class={"section"} idName={"home"}>
-                                <div className="home-video">
-                                    <video loop autoPlay muted id="home-bg-video" >
-                                        <source src={HomeVideo} type="video/mp4" />
-                                    </video>
-                                </div>
-                            </SectionWrapper>
+                            <GeneralModal renderBodyComponent={renderModalContent()} className={modalClassName} />                            
 
                             <SectionWrapper
                                 class={"section"}
@@ -221,10 +216,11 @@ const Fullpage = () => {
                                 class={"section"}
                                 idName={"home-modal"}
                             >
-                                <div
-                                    id="home-modal-container"
-                                    className={name[2].className}
-                                ></div>
+                                <div                                    
+                                    className={`${name[2].className} h-100`}
+                                >
+                                    <ImageGallary />
+                                </div>
                             </SectionWrapper>
 
                             <SectionWrapper
@@ -257,7 +253,7 @@ const Fullpage = () => {
                                         md={8}
                                         className="sunday-everyday-carousel-box"
                                     >
-                                        <ImageGallary />
+                                        <ReactPlayer controls={true} url={HomeVideo} width='calc(100% - 5rem)' height="100%" />
                                     </Col>
                                 </Row>
                             </SectionWrapper>
@@ -324,6 +320,15 @@ const Fullpage = () => {
 
                             <SectionWrapper
                                 class={"section"}
+                                idName={"wf-financial"}
+                            >
+                                <div className="bg-wrapper">
+                                    <Financial />
+                                </div>
+                            </SectionWrapper>
+
+                            <SectionWrapper
+                                class={"section"}
                                 idName={"doorstep-1"}
                             >
                                 <div className={`doorstep-container ${name[6].className}`} >
@@ -340,9 +345,7 @@ const Fullpage = () => {
                                 class={"section"}
                                 idName={"doorstep-2"}
                             >
-                                <div
-                                    className={`doorstep-container ${name[7].className}`}
-                                >
+                                <div className={`doorstep-container ${name[7].className}`}>
                                     <DoorStepAccordion
                                         direction="left"
                                         second_direction="right"
@@ -356,9 +359,7 @@ const Fullpage = () => {
                                 class={"section"}
                                 idName={"doorstep-3"}
                             >
-                                <div
-                                    className={`doorstep-container ${name[8].className}`}
-                                >
+                                <div className={`doorstep-container ${name[8].className}`}>
                                     <DoorStepAccordion
                                         direction="right"
                                         second_direction="left"
@@ -393,15 +394,6 @@ const Fullpage = () => {
                                         data={doorStep_Five_Right_play}
                                         title="PLAY"
                                     />
-                                </div>
-                            </SectionWrapper>
-
-                            <SectionWrapper
-                                class={"section"}
-                                idName={"wf-financial"}
-                            >
-                                <div className="bg-wrapper">
-                                    <Financial />
                                 </div>
                             </SectionWrapper>
 

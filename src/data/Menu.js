@@ -74,12 +74,6 @@ export const subMenuLink = [
 
 export const hrefLinks = [
     {
-        link: "fp-viewing-wf-home",
-        bgColorClass: "",
-        title: "Commercial Units",
-        topTitle: "Home",
-    },
-    {
         link: "fp-viewing-units",
         bgColorClass: "",
         title: "Commercial Units",
@@ -87,7 +81,7 @@ export const hrefLinks = [
     },
     {
         link: "fp-viewing-commercial-units",
-        bgColorClass: "",
+        bgColorClass: "opacity-deep",
         title: "Sunday Intro",
         topTitle: "Units",
     },

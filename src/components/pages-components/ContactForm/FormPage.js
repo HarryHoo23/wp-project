@@ -5,9 +5,11 @@ import emailjs from "emailjs-com";
 
 const FormPage = () => {
     const [validated, setValidated] = useState(false);
+    const [hasSent, setHasSent] = useState(false);
     const nameRef = useRef();
+    const phoneRef = useRef();
     const emailRef = useRef();
-    const textAreaRef = useRef();
+    const assetClassRef = useRef();
     const { handleModalClickClose } = useGlobalContext();
 
     const handleSubmit = (e) => {
@@ -21,7 +23,8 @@ const FormPage = () => {
         var template_params = {
             from_name: nameRef.current.value,
             email_address: emailRef.current.value,
-            message: textAreaRef.current.value,
+            phone_number: phoneRef.current.value,
+            message: assetClassRef.current.value,
         };
         if (form.checkValidity()) {
             emailjs
@@ -34,7 +37,9 @@ const FormPage = () => {
                 .then(
                     (result) => {
                         console.log(result.text);
-                        handleModalClickClose();
+                        setTimeout(() => {
+                            setHasSent(true);
+                        }, 500);                    
                     },
                     (error) => {
                         console.log(error.text);
@@ -47,46 +52,60 @@ const FormPage = () => {
 
     return (
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <h1 className="sunday-title text-center pb-5 d-block">Enquiry</h1>
-            <Row className="mb-3 mt-5">
-                <Form.Group as={Col} md="6" controlId="validationCustom01">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control
-                        required
-                        type="text"
-                        placeholder="Enter your name"
-                        ref={nameRef}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Please provide your name.
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="6" controlId="validationCustom02">
-                    <Form.Label>Contact number</Form.Label>
-                    <Form.Control
-                        required
-                        type="tel"
-                        placeholder="Enter your phone number"
-                        ref={emailRef}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Please provide your phone number.
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="12" controlId="Form.ControlTextarea1">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        required
-                        ref={textAreaRef}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Please provide your phone number.
-                    </Form.Control.Feedback>
-                </Form.Group>
-            </Row>
-            <Button type="submit">Submit form</Button>
+            <h2 className="sunday-title text-center pb-3 d-block">Enquiry now</h2>
+            {!hasSent ? (
+                <>
+                    <Row className="mb-3 mt-5">
+                        <Form.Group
+                            as={Col}
+                            md="12"
+                            controlId="validationCustom01"
+                        >
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control required type="text" ref={nameRef} />
+                            <Form.Control.Feedback type="invalid">
+                                Please provide your name.
+                            </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group as={Col} md="12">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control required type="text" ref={emailRef} />
+                            <Form.Control.Feedback type="invalid">
+                                Please provide your email address.
+                            </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group
+                            as={Col}
+                            md="12"
+                            controlId="validationCustom02"
+                        >
+                            <Form.Label>Contact number</Form.Label>
+                            <Form.Control required type="tel" ref={phoneRef} />
+                            <Form.Control.Feedback type="invalid">
+                                Please provide your phone number.
+                            </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group
+                            as={Col}
+                            md="12"
+                            controlId="Form.ControlTextarea1"
+                        >
+                            <Form.Label>Asset class</Form.Label>
+                            <Form.Control
+                                type="text"
+                                required={false}
+                                ref={assetClassRef}
+                            />
+                        </Form.Group>
+                    </Row>
+                    <Button type="submit">Submit</Button>
+                </>
+            ) : (
+                <p className="my-5">
+                    Thank you for your enquiry in Viridian. Someone will be in
+                    contact shortly.
+                </p>
+            )}
         </Form>
     );
 };

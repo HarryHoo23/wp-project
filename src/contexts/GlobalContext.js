@@ -73,6 +73,7 @@ const GlobalProvider = ({ children }) => {
     };
 
     const handleButtonClick = (index) => {        
+        setMapIndex(index);
         setUnitData(tabContent[index]);
         window.fullpage_api.moveSectionDown();
     }

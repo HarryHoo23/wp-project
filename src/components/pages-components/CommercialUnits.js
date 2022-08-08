@@ -37,7 +37,7 @@ const CommercialUnits = () => {
                 <Row className="welcome-tabs">
                     <Col lg={3} className="d-flex" style={{flexDirection: 'column'}}>
                         <Title
-                            colorClassName="white-title"
+                            colorClassName="title"
                             firstHalfTitle={unitData.first_half_title}
                             secondHalfTitle={unitData.second_half_title}
                         />         
