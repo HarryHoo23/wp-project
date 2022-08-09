@@ -58,7 +58,7 @@ const Siteplan = () => {
         if (!imageRef.current) {
             setWidth(1);
         } else {
-            setWidth(imageRef.current.offsetWidth);
+            setWidth(imageRef.current.offsetWidth - 1);
         }        
     }, [width, size]);
 

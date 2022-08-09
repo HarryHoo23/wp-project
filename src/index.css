@@ -2929,7 +2929,7 @@ textarea.form-control:focus {
     position: relative;
     margin-bottom: 2rem;
     color: var(--title-primary-color);
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -2967,8 +2967,9 @@ textarea.form-control:focus {
 }
 
 .img-bottom-container {
-    position: relative;    
+    position: relative;
 }
+
 
 .siteplan-row {
     margin: 0;
@@ -3349,6 +3350,8 @@ article {
 .units-button-group {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
+    gap: 5px;
 }
 
 .units-button-group .unit-button {
