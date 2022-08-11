@@ -1,5 +1,5 @@
-import marty_fox from "../assests/img/marty.jpg";
-import lana_img from "../assests/img/lana.jpg";
+import john from "../assests/img/john.jpg";
+import tim from "../assests/img/tim.jpg";
 import logo1 from '../assests/logo/ikos_group-popup.svg';
 import logo2 from '../assests/logo/cva-colour.svg';
 import logo3 from '../assests/logo/tag-colour.svg'
@@ -3974,7 +3974,7 @@ export const sale_contacts = [
         phone: "0438 808 859",
         email: "marty@whitefoxrealestate.com.au",
         insta_link: "https://www.instagram.com/martyfox01/?hl=en",
-        img: marty_fox,
+        img: john,
     },
     {
         id: 2,
@@ -3985,7 +3985,7 @@ export const sale_contacts = [
         phone: "0438 808 859",
         email: "marty@whitefoxrealestate.com.au",
         insta_link: "https://www.instagram.com/martyfox01/?hl=en",
-        img: lana_img,
+        img: tim,
     },
 ];
 

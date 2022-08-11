@@ -4,16 +4,22 @@ Variables
 ===============
 */
 @font-face {
-    font-family: "WeissenhofGroteskW01-Rg"; 
-    src: url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.eot"); 
-    src: url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.woff") format("woff"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.svg#WeissenhofGroteskW01-Rg") format("svg"); 
+    font-family: "WeissenhofGroteskW01-Rg";
+    src: url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.eot");
+    src: url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.eot?#iefix")
+            format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/0bf5b3831b9c3bde8cad5c7d9ae9f3d2.svg#WeissenhofGroteskW01-Rg")
+            format("svg");
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Commuters Sans';
-    src: local('Commuters Sans SemiBold'), url('./assests/CommutersSans-SemiBold.ttf'),
-        url('./assests/CommutersSans-SemiBold.ttf') format('woff2');
+    font-family: "Commuters Sans";
+    src: local("Commuters Sans SemiBold"), url("./assests/CommutersSans-SemiBold.ttf"),
+        url("./assests/CommutersSans-SemiBold.ttf") format("woff2");
     font-weight: 600;
     font-style: normal;
 }
@@ -40,7 +46,7 @@ body {
     height: 100%;
     font-family: "WeissenhofGroteskW01-Rg", sans-serif;
     font-style: normal;
-    font-weight: var(--font-weight);       
+    font-weight: var(--font-weight);
 }
 
 html.fp-enabled {
@@ -517,6 +523,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: auto;
 }
 
 .btn-left-box .property-contact-btn {
@@ -539,7 +546,7 @@ h6 {
     font-size: 13px;
     cursor: pointer;
     font-weight: 600;
-    font-family: "Commuters Sans"!important;
+    font-family: "Commuters Sans" !important;
 }
 
 .btn-left-box .bread-text {
@@ -561,15 +568,14 @@ h6 {
 }
 
 .menu-arrow-box {
-    position: absolute;
+    position: relative;
     height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .btn-right-box {
@@ -1340,7 +1346,8 @@ a.logo-link {
     text-align: center;
 }
 
-.depre-table td, .depre-table th {
+.depre-table td,
+.depre-table th {
     text-align: center;
     padding: 10px 5px;
 }
@@ -1361,7 +1368,7 @@ a.logo-link {
 }
 
 .investment tr td:nth-child(1) {
-    width: 120px;    
+    width: 120px;
     font-family: var(--title-font-family);
     padding-left: 20px;
     padding-right: 20px;
@@ -1539,9 +1546,7 @@ a.logo-link {
     display: flex;
 }
 
-.swiper-container-horizontal
-    > .swiper-pagination-bullets
-    .swiper-pagination-bullet {
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0;
 }
 
@@ -2415,10 +2420,14 @@ ul.sale-contact li a {
     position: absolute;
     right: 2rem;
     top: 1.7rem;
-    width: 35px;
-    height: 35px;
+    width: 20px;
+    height: 20px;
     z-index: 200;
     opacity: none;
+}
+
+.close img {
+    width: 100%;
 }
 
 .modal-content,
@@ -2690,10 +2699,18 @@ ul.sale-contact li a {
 .contact-form-container {
     height: 100%;
     position: relative;
+    font-size: 15px;
 }
 
-.contact-form-container h2{
+.contact-form-container h2 {
     text-transform: uppercase;
+    font-size: 21px;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form-container label {
+    margin-bottom: 0px;
 }
 
 #contact-form,
@@ -2874,15 +2891,19 @@ textarea.form-control:focus {
     object-fit: cover;
 }
 
+.image-gallery-bullets {
+    bottom: calc(5rem + 40px);
+}
+
 .image-gallery-bullets .image-gallery-bullet {
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
     border-radius: 50%;
     box-shadow: none;
     margin: 0 3px;
-    padding: 3px;
+    padding: 5px;
     transition: all 0.2s ease-out;
-    opacity: 0.2;
+    opacity: 0.8;
 }
 
 .image-gallery-bullets .image-gallery-bullet.active {
@@ -2898,6 +2919,7 @@ textarea.form-control:focus {
     top: 5rem;
     bottom: unset;
     right: 5rem;
+    display: none;
 }
 
 .image-gallery-icon {
@@ -2961,15 +2983,14 @@ textarea.form-control:focus {
 
 .img-mapper-container img {
     object-fit: contain;
-    height: 100%;  
-    max-height: 70vh;  
+    height: 100%;
+    max-height: 70vh;
     margin: auto;
 }
 
 .img-bottom-container {
     position: relative;
 }
-
 
 .siteplan-row {
     margin: 0;
@@ -3053,7 +3074,7 @@ button.hide-enquiry {
 }
 
 .site-plan .download-btn {
-    margin-top: 0rem;    
+    margin-top: 0rem;
     width: unset;
     color: #f9f9f9;
     font-size: 15px;
@@ -3065,10 +3086,10 @@ button.hide-enquiry {
 }
 
 .back-button {
-    padding: 11px 13px 8px 11px;    
+    padding: 11px 13px 8px 11px;
     position: relative;
-    font-size: 15px;    
-    border: 1px solid rgb(192,195,193) !important;
+    font-size: 15px;
+    border: 1px solid rgb(192, 195, 193) !important;
     background-color: var(--secondary-color-white);
     color: #acacac;
     transition: var(--transition);
@@ -3109,7 +3130,7 @@ button.hide-enquiry {
     color: var(--secondary-color-white);
 }
 
-.com-dropdown {    
+.com-dropdown {
     color: var(--font-primary-color);
 }
 
@@ -3117,7 +3138,6 @@ button.hide-enquiry {
     padding: 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -3358,7 +3378,7 @@ article {
     margin-top: 1rem;
     width: 215px;
     text-align: left;
-    padding: 10px 15px;    
+    padding: 10px 15px;
     font-weight: 500;
 }
 
@@ -3449,25 +3469,26 @@ article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 .site-plan {
     height: auto;
-    padding-top: 0; 
+    padding-top: 0;
     padding-bottom: 2rem;
 }
 
 .site-plan .dropdown-item {
-    font-size: 14px !important;  
-    font-family: var(--title-font-family); 
+    font-size: 14px !important;
+    font-family: var(--title-font-family);
 }
 
 .site-plan .btn,
 .back-button,
 .site-plan .download-btn {
     max-width: 200px !important;
-    font-size: 13px !important;  
+    font-size: 13px !important;
     font-family: var(--title-font-family);
     white-space: nowrap;
 }
@@ -3494,10 +3515,10 @@ article {
     overflow: scroll;
 }
 
-.modal-logo-div {    
+.modal-logo-div {
     height: 80px;
     background-size: contain;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
 }
 
 /* 
@@ -3513,4 +3534,50 @@ Error
 .error-container {
     text-align: center;
     text-transform: capitalize;
+}
+
+#menu-arrow-down {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition-duration: 1s;
+    transition-property: -webkit-transform;
+    animation-name: pulseReverse;
+    animation-duration: 1.5s;
+}
+
+.menu-arrow-box {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition-duration: 1s;
+    transition-property: -webkit-transform;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+}
+
+@keyframes pulseReverse {
+    0% {
+        transform: scale(1) rotate(-180deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(-180deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-180deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

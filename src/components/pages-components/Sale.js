@@ -1,19 +1,18 @@
 import React from "react";
+import { useGlobalContext } from "../../contexts/GlobalContext";
 
 const Sale = ({ sale }) => {
+
+    const { handleFormModalClickOpen } = useGlobalContext();
+
     return (
         <>
             <div className="sale-img-box">
                 <img src={sale.img} className="sale-img" alt={sale.name} />
                 <div className="contact-btn-container">
-                    <button className="email btn btn-outline-secondary">
+                    <button className="email btn btn-outline-secondary" onClick={handleFormModalClickOpen}>
                         Message
-                    </button>
-                    <button className="call btn btn-outline-secondary">
-                        <a href="facetime:marty@whitefoxrealestate.com.au">
-                            Facetime
-                        </a>
-                    </button>
+                    </button>                    
                 </div>
             </div>
             <div className="sale-info">

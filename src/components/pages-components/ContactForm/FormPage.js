@@ -52,7 +52,7 @@ const FormPage = () => {
 
     return (
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <h2 className="sunday-title text-center pb-3 d-block">Enquiry now</h2>
+            <h2 className="sunday-title text-center pb-3 d-block">Enquire Now</h2>
             {!hasSent ? (
                 <>
                     <Row className="mb-3 mt-5">

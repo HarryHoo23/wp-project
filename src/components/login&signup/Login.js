@@ -68,7 +68,7 @@ export default function Login() {
                 </Card.Body>
             </Card>
             <div className='w-100 text-center mt-2 font-sm'>
-                Need an account? <a href='https://viridian-highett.com.au/request-login/' target='_blank'>Request here.</a>
+                <a href='https://viridian-highett.com.au/request-login/' target='_blank'>Request Login</a>
             </div>
             </div>
         </Container>
