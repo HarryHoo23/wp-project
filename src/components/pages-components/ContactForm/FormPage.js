@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useGlobalContext } from "../../../contexts/GlobalContext";
 import emailjs from "emailjs-com";
+import { tabContent } from '../../../data/Content';
 
 const FormPage = () => {
     const [validated, setValidated] = useState(false);
@@ -39,7 +40,7 @@ const FormPage = () => {
                         console.log(result.text);
                         setTimeout(() => {
                             setHasSent(true);
-                        }, 500);                    
+                        }, 500);
                     },
                     (error) => {
                         console.log(error.text);
@@ -56,11 +57,7 @@ const FormPage = () => {
             {!hasSent ? (
                 <>
                     <Row className="mb-3 mt-5">
-                        <Form.Group
-                            as={Col}
-                            md="12"
-                            controlId="validationCustom01"
-                        >
+                        <Form.Group as={Col} md="12" controlId="validationCustom01">
                             <Form.Label>Name</Form.Label>
                             <Form.Control required type="text" ref={nameRef} />
                             <Form.Control.Feedback type="invalid">
@@ -74,36 +71,29 @@ const FormPage = () => {
                                 Please provide your email address.
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group
-                            as={Col}
-                            md="12"
-                            controlId="validationCustom02"
-                        >
+                        <Form.Group as={Col} md="12" controlId="validationCustom02">
                             <Form.Label>Contact number</Form.Label>
                             <Form.Control required type="tel" ref={phoneRef} />
                             <Form.Control.Feedback type="invalid">
                                 Please provide your phone number.
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group
-                            as={Col}
-                            md="12"
-                            controlId="Form.ControlTextarea1"
-                        >
+                        <Form.Group as={Col} md="12" controlId="Form.ControlTextarea1">
                             <Form.Label>Asset class</Form.Label>
-                            <Form.Control
-                                type="text"
-                                required={false}
-                                ref={assetClassRef}
-                            />
+                            <select className="w-100 mt-3 py-1">
+                                {tabContent.map((item) => {
+                                    return (
+                                        <option key={item.title} value={item.title}>{item.title}</option>
+                                    )
+                                })}
+                            </select>
                         </Form.Group>
                     </Row>
                     <Button type="submit">Submit</Button>
                 </>
             ) : (
                 <p className="my-5">
-                    Thank you for your enquiry in Viridian. Someone will be in
-                    contact shortly.
+                    Thank you for your enquiry in Viridian. Someone will be in contact shortly.
                 </p>
             )}
         </Form>

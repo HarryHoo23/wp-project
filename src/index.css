@@ -2385,7 +2385,7 @@ ul.sale-contact li a {
 }
 
 .enquiry-modal.modal {
-    width: calc(50% - 5rem);
+    width: calc(500px - 5rem);
     height: calc(100% - 10rem);
     top: 5rem;
     right: 5rem;
