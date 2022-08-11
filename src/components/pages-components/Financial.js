@@ -112,7 +112,7 @@ const Financial = () => {
         <>
             <Row className="financials">
                 <Tab.Container defaultActiveKey="first">
-                    <Col md={3}>
+                    <Col lg={3} md={6}>
                         <Title
                             colorClassName=""
                             firstHalfTitle="Financials"
@@ -137,7 +137,7 @@ const Financial = () => {
                             })}
                         </Nav>
                     </Col>
-                    <Col md={9}>
+                    <Col lg={9} md={6}>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
                                 <PriceList />

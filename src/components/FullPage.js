@@ -300,7 +300,8 @@ const Fullpage = () => {
                                             return (
                                                 <Col
                                                     key={fixture.id}
-                                                    md={3}
+                                                    lg={3}
+                                                    md={4}
                                                     sm={6}
                                                     onClick={() => handleFixtureModalClickOpen(index)}
                                                 >
