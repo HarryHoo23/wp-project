@@ -231,8 +231,8 @@ const Fullpage = () => {
                             >
                                 <Row className="sd-everyday-row">
                                     <Col
-                                        lg={3}
-                                        md={4}
+                                        lg={4}
+                                        md={5}
                                         className="sunday-paragraph"
                                     >
                                         <Title
@@ -248,8 +248,8 @@ const Fullpage = () => {
                                         </p>
                                     </Col>
                                     <Col
-                                        lg={9}
-                                        md={8}
+                                        lg={8}
+                                        md={7}
                                         className="sunday-everyday-carousel-box"
                                     >
                                         <ReactPlayer controls={true} url={HomeVideo} width='calc(100% - 5rem)' height="100%" />
