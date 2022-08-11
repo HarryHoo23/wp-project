@@ -26,13 +26,13 @@ const LogoModalContent = (props) => {
         </Col>
       </Row>
       <Row className='logo-row-modal'>
-        <Col md={6}>
+        <Col md={8}>
           <div className='logo-content mb-3'>
             <p style={{marginBottom: '30px'}}>{props.content}</p>
             <p className='quote' dangerouslySetInnerHTML={{__html: props.quote}} />
           </div>
         </Col>
-        <Col md={6}>
+        <Col md={4}>
           <video
             width='100%'
             controls=''

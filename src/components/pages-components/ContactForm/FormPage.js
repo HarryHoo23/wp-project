@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
-import { useGlobalContext } from "../../../contexts/GlobalContext";
+// import { useGlobalContext } from "../../../contexts/GlobalContext";
 import emailjs from "emailjs-com";
 import { tabContent } from '../../../data/Content';
 
@@ -11,7 +11,7 @@ const FormPage = () => {
     const phoneRef = useRef();
     const emailRef = useRef();
     const assetClassRef = useRef();
-    const { handleModalClickClose } = useGlobalContext();
+    // const { handleModalClickClose } = useGlobalContext();
 
     const handleSubmit = (e) => {
         e.preventDefault();

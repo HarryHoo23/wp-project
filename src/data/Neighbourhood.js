@@ -1,5 +1,4 @@
 import img1 from '../assests/img/doorstep/abbiocco.jpg';
-import img2 from '../assests/img/doorstep/mid-valley.jpg';
 import img3 from '../assests/img/doorstep/aromi.jpg';
 import img4 from '../assests/img/doorstep/hampton.jpg';
 import img5 from '../assests/img/doorstep/garden_of_Good_and_Evil.jpg';
@@ -10,6 +9,8 @@ import img9 from '../assests/img/doorstep/wavesLeisureCentre.jpeg';
 import img10 from '../assests/img/doorstep/highettBowlsClub.jpg';
 import img11 from '../assests/img/doorstep/moorabbinArcheryClub.jpeg';
 import img12 from '../assests/img/doorstep/stompingGroundBrewery.jpeg';
+import img13 from '../assests/img/road-trip.jpg';
+import img14 from '../assests/img/doorstep/eat.jpeg';
 
 
 export const doorStep_One_Right = [
@@ -17,7 +18,7 @@ export const doorStep_One_Right = [
     title: 'Highett',
     content: `One of Melbourne’s best kept secrets is starting to spread – Highett has everything you could ever want from Bayside living without the Brighton price tag. Situated only 12 km* from the CBD, however residents are finding it redundant to even leave the area.
     <br/><br/>`,
-    image: img10,
+    image: img13,
   }
 ];
 
@@ -30,7 +31,7 @@ export const doorStep_Two_Left_eat = [
   {
     title: 'Mid Valleys',
     content: 'Mid Valleys was created with a mission to share great food and experiences.Chef and owner Johnny and his wife, Lily, recently relocated to Cheltenham in 2020 having previously run a successful restaurant in Elsternwick for over 25 years.',
-    image: img2
+    image: img14
   },
   {
     title: 'Aromi Restaurant',
@@ -84,7 +85,7 @@ export const doorStep_Five_Right_play = [
   },
   {
     title: 'Moorabbin Archery club',
-    content: `Founded in 1946, Moorabbin Archery Club is the one of the oldest existing archery clubs in Victoria. Whether you have some archery experience, or you've never picked up a bow before, it’s a unique way to spend time outside of the office.`,
+    content: `Founded in 1946, Moorabbin Archery Club is one of the oldest existing archery clubs in Victoria. Whether you have some archery experience, or you've never picked up a bow before, it’s a unique way to spend time outside of the office.`,
     image: img11
   },
   {

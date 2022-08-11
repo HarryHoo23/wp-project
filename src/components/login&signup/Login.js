@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Form, Card, Button, Alert, Container } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Logo from '../../assests/logo/Viridian_Logo-coloured.svg';
 import emailjs from 'emailjs-com';
 
@@ -68,7 +68,7 @@ export default function Login() {
                 </Card.Body>
             </Card>
             <div className='w-100 text-center mt-2 font-sm'>
-                <a href='https://viridian-highett.com.au/request-login/' target='_blank'>Request Login</a>
+                <a href='https://viridian-highett.com.au/request-login/' rel="noreferrer" target='_blank'>Request Login</a>
             </div>
             </div>
         </Container>

@@ -20,19 +20,13 @@ const Sale = ({ sale }) => {
                 <p className="sale-job-title">{sale.title}</p>
 
                 <div className="sale-intro">
-                    <p>{sale.sale_intro}</p>
+                    <p dangerouslySetInnerHTML={{__html: sale.sale_intro}} />
                 </div>
                 <ul className="sale-contact">
                     <li>{sale.phone}</li>
                     <li>{sale.email}</li>
                     <li>
-                        <a
-                            href={sale.insta_link}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Instagram
-                        </a>
+                        {sale.tel}
                     </li>
                 </ul>
             </div>

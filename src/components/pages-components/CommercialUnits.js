@@ -24,6 +24,7 @@ const CommercialUnits = () => {
 
     useEffect(() => {
         changeMap();
+        // eslint-disable-next-line
     }, [mapIndex]);    
 
     const handleClickViewOptions = () => {

@@ -65,7 +65,7 @@ export function AuthProvider({ children }) {
         }
 
         return () => clearTimeout(timeOut);
-    }, []);
+    }, [currentUser]);
 
     const value = {
         currentUser,

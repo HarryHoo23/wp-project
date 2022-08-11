@@ -2,7 +2,7 @@ import React from 'react';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 
 const Navbar = (props) => {
-  const { openAndCloseNavbar, isOpen, onClickScrollDown } = useGlobalContext();
+  const { isOpen, onClickScrollDown } = useGlobalContext();
 
   return (
     <div className={`${isOpen ? 'nav-wrapper active-nav' : 'nav-wrapper'} ${props.className}`}>

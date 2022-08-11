@@ -17,7 +17,7 @@ import TopNavbar from "./header & footer/TopNavbar";
 import Title from "./pages-components/Title";
 import { svgImagePath } from "../data/ImageList";
 import ImageGallary from "./ImageGallary";
-import HomeVideo from '../video/Sunday-Hero-Video.mp4';
+import HomeVideo from '../video/Viridian-home.mp4';
 import ReactPlayer from 'react-player';
 import LogoContainer from "./pages-components/LogoContainer";
 import LogoModalContent from "./pages-components/LogoModalContent";
@@ -82,9 +82,11 @@ const Fullpage = () => {
         } else if (isModalShow.case === 2) {
             setModalClassName("enquiry-modal");
             return <ContactForm />;
-        } else {
+        } else if (isModalShow.case === 3) {
             setModalClassName("");
             return <FixtureList {...singleFixtureModalContent} />;
+        } else {
+            return null;
         }
     }
 
@@ -192,7 +194,7 @@ const Fullpage = () => {
                                 addtionalClass={navBarTitle.bgColorClass}
                             />
 
-                            <GeneralModal renderBodyComponent={renderModalContent()} className={modalClassName} />                            
+                            <GeneralModal renderBodyComponent={renderModalContent()} className={modalClassName} />
 
                             <SectionWrapper
                                 class={"section"}
@@ -239,13 +241,10 @@ const Fullpage = () => {
                                             secondHalfTitle="development"
                                         />
                                         <p style={{ paddingTop: "30px", marginBottom: "30px"}}>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Quaerat neque iure quasi, impedit
-                                            delectus quisquam iusto hic ipsum
-                                            vel nam aspernatur voluptatem, vero
-                                            voluptas. Quae alias dignissimos
-                                            officia. Corporis, quo!
+                                            A brilliantly designed and cleverly low-maintenance
+                                            development is coming to the Bayside. Not only is there an array of units being offered, there’s also versatility embedded within — the interiors have been meticulously designed with high-end materials in mind, focusing on creating offices and warehouses that go against the industrial grain.
+                                            <br />
+                                            The development can be categorised by two halves — offices and warehouse suites above ground that include premium fixtures and versatile floorplans, and a secure complex below ground that offers versatile micro-warehousing and storage options for business or personal use. Customise your investment by versatility embedded materials combining an office suite with a micro-warehouse space to keep the workplace clutter to a minimum.
                                         </p>
                                     </Col>
                                     <Col
@@ -262,8 +261,8 @@ const Fullpage = () => {
                                 <div className="bg-wrapper">
                                     <Title
                                         colorClassName="white-title"
-                                        firstHalfTitle="Creative"
-                                        secondHalfTitle="partners"
+                                        firstHalfTitle="Partners"
+                                        secondHalfTitle=""
                                     />
                                     <Row className="logo-row">
                                         {svgImagePath.map((svgImage, index) => {
