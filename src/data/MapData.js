@@ -1,8 +1,8 @@
-import cafeMarker from "../assests/img/icons/foodMarker.svg";
-import foodMarker from "../assests/img/icons/foodMarker.svg";
-import bookMarker from "../assests/img/icons/bookLibrary.svg";
-import shopMarker from "../assests/img/icons/shopMarker.svg";
-import movingMarker from "../assests/img/icons/movingMarker.svg";
+import cafeMarker from "../assests/img/icons/iconmonstr-location-1.svg";
+import foodMarker from "../assests/img/icons/iconmonstr-location-1.svg";
+import bookMarker from "../assests/img/icons/iconmonstr-location-1.svg";
+import shopMarker from "../assests/img/icons/iconmonstr-location-1.svg";
+import movingMarker from "../assests/img/icons/iconmonstr-location-1.svg";
 
 export const locationAccordion = {
     sunday_morning: [

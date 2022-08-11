@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Button, Accordion, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import GoogleMapReact from 'google-map-react';
-import { google_map_data, locationAccordion } from '../../data/MapData';
+import { google_map_data } from '../../data/MapData';
 
 const AnyReactComponent = ({ src, info, show, click }) => (
   <div
@@ -9,7 +9,7 @@ const AnyReactComponent = ({ src, info, show, click }) => (
     onClick={click}
   >
     {show && <div className='info-window'>{info}</div>}
-    <img src={src} alt="marker" />
+    <img className="marker-icon" src={src} alt="marker" />
   </div>
 );
 
@@ -46,173 +46,7 @@ const Map = () => {
 
   return (
     <Row className='h-100'>
-      <Col md={4} className='h-100'>
-        <p className='floor-plan-title'>OUT AND ABOUT</p>
-        <Accordion defaultActiveKey='0' id='map-accordion'>
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle
-                as={Button}
-                variant='link'
-                eventKey='0'
-                className='btn-block collapsed text-left'
-              >
-                Sunday Morning
-              </Accordion.Toggle>
-            </Card.Header>
-
-            <Accordion.Collapse eventKey='0'>
-              <Card.Body className='text-left'>
-                <ul>
-                  {locationAccordion.sunday_morning.map((item, index) => {
-                    return (
-                      <li className='zoomIn' key={index}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle
-                as={Button}
-                variant='link'
-                eventKey='1'
-                className='btn-block collapsed text-left'
-              >
-                Sunday Service
-              </Accordion.Toggle>
-            </Card.Header>
-
-            <Accordion.Collapse eventKey='1'>
-              <Card.Body className='text-left'>
-                <ul>
-                  {locationAccordion.sunday_service.map((item, index) => {
-                    return (
-                      <li className='zoomIn' key={index}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle
-                as={Button}
-                variant='link'
-                eventKey='2'
-                className='btn-block collapsed text-left'
-              >
-                Sunday Sweat
-              </Accordion.Toggle>
-            </Card.Header>
-
-            <Accordion.Collapse eventKey='2'>
-              <Card.Body className='text-left'>
-                <ul>
-                  {locationAccordion.sunday_sweat.map((item, index) => {
-                    return (
-                      <li className='zoomIn' key={index}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle
-                as={Button}
-                variant='link'
-                eventKey='3'
-                className='btn-block collapsed text-left'
-              >
-                Sunday Market
-              </Accordion.Toggle>
-            </Card.Header>
-
-            <Accordion.Collapse eventKey='3'>
-              <Card.Body className='text-left'>
-                <ul>
-                  {locationAccordion.sunday_market.map((item, index) => {
-                    return (
-                      <li className='zoomIn' key={index}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle
-                as={Button}
-                variant='link'
-                eventKey='4'
-                className='btn-block collapsed text-left'
-              >
-                Sunday Best
-              </Accordion.Toggle>
-            </Card.Header>
-
-            <Accordion.Collapse eventKey='4'>
-              <Card.Body className='text-left'>
-                <ul>
-                  {locationAccordion.sunday_best.map((item, index) => {
-                    return (
-                      <li className='zoomIn' key={index}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-
-          <Card>
-            <Card.Header>
-              <Accordion.Toggle
-                as={Button}
-                variant='link'
-                eventKey='5'
-                className='btn-block collapsed text-left'
-              >
-                Sunday Service
-              </Accordion.Toggle>
-            </Card.Header>
-
-            <Accordion.Collapse eventKey='5'>
-              <Card.Body className='text-left'>
-                <ul>
-                  {locationAccordion.sunday_service.map((item, index) => {
-                    return (
-                      <li className='zoomIn' key={index}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-        </Accordion>
-      </Col>
-      <Col md={8} className='h-100'>
+      <Col md={12} className='h-100 w-100'>
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
           defaultCenter={center}
