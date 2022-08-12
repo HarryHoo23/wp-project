@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import GoogleMapReact from 'google-map-react';
 import { google_map_data } from '../../data/MapData';
+import { useEffect } from 'react';
 
 const AnyReactComponent = ({ src, info, show, click }) => (
   <div
@@ -14,7 +15,7 @@ const AnyReactComponent = ({ src, info, show, click }) => (
 );
 
 const Map = () => {
-  const [center, setCenter] = useState({ lat: -37.84075, lng: 145.00199 });
+  const [center, setCenter] = useState({ lat: -37.94971603444668, lng: 145.05853242892192 });
   const [zoom, setZoom] = useState(16);
   const [isShow, SetIsShow] = useState(google_map_data.loactions_coordinates);
 
@@ -24,19 +25,6 @@ const Map = () => {
     temp_element.show = !temp_element.show;
     tempState[index] = temp_element;
     SetIsShow(tempState)
-  }
-
-  const changeMapCenter = () => {
-    let mapButtonList = document.getElementsByClassName('zoomIn');
-    for (let i = 0; i < mapButtonList.length; i++) {
-      mapButtonList[i].addEventListener('click', () => {
-        let centerPosition = google_map_data.loactions_coordinates[i].position;
-        console.log(centerPosition);
-        setCenter(centerPosition);
-        setZoom(20);
-        toggleMarker(i);
-      });
-    }
   }
 
   return (
