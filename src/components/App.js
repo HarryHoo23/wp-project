@@ -24,7 +24,7 @@ const App = () => {
                     <Route path="/units/:type" component={Siteplan} />
                     {/* <Route path="/:type/:id" component={SingleUnit} /> */}
                     <Route path="*" component={Error} />                            
-                </Switch>                
+                </Switch>
             </BrowserRouter>
         </>
     );

@@ -89,7 +89,7 @@ const FormPage = () => {
                             </select>
                         </Form.Group>
                     </Row>
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit" className="w-100 submit-btn">Submit</Button>
                 </>
             ) : (
                 <p className="my-5">

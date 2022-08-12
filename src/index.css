@@ -2378,7 +2378,8 @@ ul.sale-contact li a {
 
 .small-modal.modal {
     width: 800px;
-    height: calc(100vh - 20rem);
+    height: calc(100vh - 21rem);
+    min-height: 500px;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -2390,7 +2391,7 @@ ul.sale-contact li a {
 
 .enquiry-modal.modal {
     width: calc(500px - 5rem);
-    height: calc(100% - 10rem);
+    max-height: calc(100% - 10rem);
     top: 5rem;
     right: 5rem;
     left: unset;
@@ -2398,6 +2399,7 @@ ul.sale-contact li a {
 
 .enquiry-modal .modal-body {
     padding: 2rem;
+    padding-bottom: 1rem;
 }
 
 .modal-content,
@@ -2905,7 +2907,7 @@ textarea.form-control:focus {
     border-radius: 50%;
     box-shadow: none;
     margin: 0 3px;
-    padding: 5px;
+    padding: 4px;
     transition: all 0.2s ease-out;
     opacity: 0.8;
 }
@@ -3253,7 +3255,7 @@ button.hide-enquiry {
     font-weight: 400;
     color: #2d2d2d;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 }
 
 h3.fixture-title::before,
@@ -3278,6 +3280,7 @@ h3.fixture-title::before,
     grid-gap: 20px;
     padding: 0 20px 0 0;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: minmax(400px, 600px);
     overflow-y: scroll;
     margin-top: 2rem;
 }
@@ -3286,29 +3289,30 @@ h3.fixture-title::before,
     border: 1px solid #e0e0e0;
     position: relative;
     padding: 1.5rem;
-}
-
-.fitting::before {
-    content: "";
-    float: left;
-    padding-top: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .fitting-info {
     margin-top: 1rem;
     list-style: none;
     padding-inline-start: 0;
-    position: absolute;
-    bottom: 0;
-    left: 1rem;
-    right: 1rem;
 }
 
 .fitting-info li {
-    padding: 10px 0;
+    padding: 8px 0;
     border-bottom: 1px solid #e0e0e0;
     font-size: 13px;
     font-weight: 300;
+}
+
+.fitting-overlay {
+    position: relative;
+    height: auto;
+    max-height: calc(0.4 * 400px);
+    width: 100%;
+    object-fit: contain;
+    margin-top: 1rem;
 }
 
 .last-li {
@@ -3329,18 +3333,6 @@ h3.fixture-title::before,
     width: 100%;
     position: relative;
     font-family: var(--title-font-family);
-}
-
-.fitting-overlay {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    transition: height 0.8s 0s ease-in-out;
-}
-
-.fitting.flip .fitting-overlay {
-    height: 100%;
 }
 
 article {
@@ -3526,6 +3518,11 @@ article {
     height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.submit-btn {
+    font-family: var(--title-font-family);
+    font-size: 14px;
 }
 
 /* 

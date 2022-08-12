@@ -8,7 +8,7 @@ const GeneralModal = (props) => {
     return (
         <Modal
             show={isModalShow.showModal}
-            onHide={handleModalClickClose}
+            onHide={props.isSiteplan ? () => handleModalClickClose(true) : () => handleModalClickClose(false)}
             backdrop="static"
             aria-labelledby="contained-modal-title-vcenter"
             centered
@@ -18,7 +18,7 @@ const GeneralModal = (props) => {
                 <button
                     className="close"
                     type="button"
-                    onClick={handleModalClickClose}
+                    onClick={props.isSiteplan ? () => handleModalClickClose(false) : () => handleModalClickClose(true)}
                 >
                     <img src={closeButton} alt="closeModalButton" />
                 </button>

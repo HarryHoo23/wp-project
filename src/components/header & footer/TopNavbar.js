@@ -50,7 +50,7 @@ const TopNavbar = (props) => {
                         <button
                             type="button"
                             className={`property-contact-btn btn btn-secondary mr-3 ${props.addtionalClass}`}
-                            onClick={handleFormModalClickOpen}
+                            onClick={props.isSiteplan ? props.handleFormModalClickOpen : handleFormModalClickOpen}
                         >
                             <img src={message} alt="message" />
                         </button>

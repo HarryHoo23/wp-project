@@ -13,11 +13,13 @@ import Navbar from '../header & footer/Navbar';
 import UnitModal from './UnitModals/UnitModal';
 import ImagePropertyMapper from '../ImageMapper/ImagePropertyMapper';
 import planImage from '../../assests/img/floorplan/3.png';
+import GeneralModal from './GeneralModal';
+import ContactForm from './ContactForm/ContactForm';
 
 const Siteplan = () => {
     const { type } = useParams();
     let { url } = useRouteMatch();
-    const { unitMapIndex, setIsLoading } = useGlobalContext();
+    const { unitMapIndex, setIsLoading, handleFormModalClickOpen } = useGlobalContext();
     const [title, setTitle] = useState({
         first: '',
         second: ''
@@ -132,7 +134,7 @@ const Siteplan = () => {
         <>
             {sitePlan && img && unitMap && (
                 <SectionWrapper class={'section'} idName={'units'}>
-                <TopNavbar goBack={true} addtionalClass='opacity-deep hide-enquiry' className='bg-white' showLogo={true} />
+                <TopNavbar addtionalClass='opacity-deep' className='bg-white' showLogo={true} handleFormModalClickOpen={()=> handleFormModalClickOpen(false)} isSiteplan={true} />
                 <div className='bg-wrapper white site-plan'>
                     <Row className='sd-everyday-row siteplan-row' ref={imageRef}>
                         <Col xl={4} lg={3} className="p-0">
@@ -246,7 +248,8 @@ const Siteplan = () => {
                         className="scroll-modal-body"    
                     />
                 </div>
-                <Navbar title={breadComponent} additionClass="opacity-deep" className="bg-white" unitClass='unit-bar' />
+                    <Navbar title={breadComponent} additionClass="opacity-deep" className="bg-white" unitClass='unit-bar' />
+                    <GeneralModal isSitePlan={true} renderBodyComponent={<ContactForm />} className="enquiry-modal" />
             </SectionWrapper>
         )}
         </>

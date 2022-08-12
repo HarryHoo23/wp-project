@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import GoogleMapReact from 'google-map-react';
 import { google_map_data } from '../../data/MapData';
@@ -38,11 +38,6 @@ const Map = () => {
       });
     }
   }
-
-  useEffect(() => {
-    changeMapCenter();
-    // eslint-disable-next-line
-  }, []);
 
   return (
     <Row className='h-100'>

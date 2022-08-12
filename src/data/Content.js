@@ -9,8 +9,8 @@ export const modalData = [
     {
         bgImg: logo1,
         title: "Ikos Group",
-        href: "https://www.dko.com.au",
-        link: "dko.com.au",
+        href: "https://www.ikosconsulting.com",
+        link: "www.ikosconsulting.com",
         content: ``,
         quote: `"Viridian is meticulously responding to the industrial ,office and storage needs in the immediate and surrounding area. <br /> It has raised the standard of industrial development  by adopting generous design appointments in form and materials`,
         video: "",
@@ -21,8 +21,8 @@ export const modalData = [
     {
         bgImg: logo2,
         title: "CVA Property",
-        href: "https://www.mimdesign.com.au",
-        link: "mimdesign.com.au",
+        href: "https://www.cva.melbourne/",
+        link: "www.cva.melbourne/",
         content: ``,
         quote: `“Never before have we seen or will we likely see again a commercial estate where literally every property features an uninterrupted park view from their first or second floor office. Truly a unique attribute that has occupiers, investors and tenants alike excited about basing themselves in these stunning workspaces at Viridian.”`,
         video: "",
@@ -33,8 +33,8 @@ export const modalData = [
     {
         bgImg: logo3,
         title: "TAG",
-        href: "https://www.dko.com.au",
-        link: "dko.com.au",
+        href: "http://taginteriors.com.au/",
+        link: "taginteriors.com.au/",
         content: ``,
         quote: `"Viridian takes its name from the Latin viridis, meaning "green". The selection of materials for Viridian highlights the transitional nature of the space, by juxtaposing industrial finishes and fittings with the natural elements from surrounding parklands. <br /> All nominated finishes, symbolise the colours & textures reflected in the neighbouring flora. Sophisticated muted greens, soft greys, accents of rust, replicating the colours and textures of the native eucalyptus tree. <br />Through the application of these finishes, Viridian will be integrated harmoniously with the existing natural surrounds."`,
         video: "",
@@ -45,8 +45,8 @@ export const modalData = [
     {
         bgImg: logo4,
         title: "Species",
-        href: "https://www.dko.com.au",
-        link: "dko.com.au",
+        href: "",
+        link: "",
         content: ``,
         quote: `“The landscape proposal provides enhanced views through canopy vegetation into the adjoining landscaped reserve. <br /> The reserve is brought into the estate with the retention of a mature eucalypt that provides a passive seating area for the occupants as well as  access to the reserve."`,
         video: "",

@@ -39,12 +39,14 @@ const GlobalProvider = ({ children }) => {
         window.fullpage_api.setAllowScrolling(false);
     }
 
-    const handleFormModalClickOpen = () => {
+    const handleFormModalClickOpen = (isFullPage) => {
         setIsModalShow({
             showModal: true,
             case: 2,
         });
-        window.fullpage_api.setAllowScrolling(false);
+        if (isFullPage) {
+            window.fullpage_api.setAllowScrolling(false);
+        }
     };
 
     function handleFixtureModalClickOpen(index) {
@@ -56,12 +58,16 @@ const GlobalProvider = ({ children }) => {
         window.fullpage_api.setAllowScrolling(false);
     }
 
-    const handleModalClickClose = () => {
+    const handleModalClickClose = (isTrue) => {
         setIsModalShow({
             showModal: false,
             case: 0,
         });
-        window.fullpage_api.setAllowScrolling(true);
+        if (isTrue) {
+            window.fullpage_api.setAllowScrolling(true);            
+        } else {
+            return 
+        }
     };
 
     const onClickScrollDown = () => {
