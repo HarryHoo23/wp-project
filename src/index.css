@@ -2389,6 +2389,7 @@ ul.sale-contact li a {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+    max-height: 200px;
 }
 
 .small-modal .modal-body {
@@ -2405,7 +2406,14 @@ ul.sale-contact li a {
 
 .enquiry-modal .modal-body {
     padding: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+
+.enquiry-modal .modal-body,
+.enquiry-modal .modal-content,
+.enquiry-modal .modal-dialog {
+    height: unset !important;
+    min-height: unset !important;
 }
 
 .modal-content,
