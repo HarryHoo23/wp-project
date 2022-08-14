@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { auth, database } from "../firebase/firebase";
+import { auth, database, analytics } from "../firebase/firebase";
 
 const AuthContext = React.createContext();
 
@@ -50,6 +50,7 @@ export function AuthProvider({ children }) {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             setCurrentUser(user);
             setLoading(false);
+            analytics.logEvent('login');
         });
 
         return unsubscribe;

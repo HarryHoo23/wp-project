@@ -10,7 +10,7 @@ const FormPage = () => {
     const nameRef = useRef();
     const phoneRef = useRef();
     const emailRef = useRef();
-    const assetClassRef = useRef();
+    const [assetValue, setAssetValue] = useState("Showroom");
     // const { handleModalClickClose } = useGlobalContext();
 
     const handleSubmit = (e) => {
@@ -21,19 +21,26 @@ const FormPage = () => {
         }
 
         setValidated(true);
+
+        const message = `
+            Name: ${nameRef.current.value}, \n
+            Email: ${emailRef.current.value}, \n
+            Phone number: ${phoneRef.current.value},\n
+            Interested asset: ${assetValue}
+        `
+
         var template_params = {
-            from_name: nameRef.current.value,
-            email_address: emailRef.current.value,
-            phone_number: phoneRef.current.value,
-            message: assetClassRef.current.value,
+            from_name: nameRef.current.value,            
+            message: message
         };
+
         if (form.checkValidity()) {
             emailjs
                 .send(
-                    "service_r8y8t8g",
-                    "template_ym5qrt8",
+                    "service_l20p6pg",
+                    "template_3gu4mx6",
                     template_params,
-                    "user_ePbhQ0zjSmeO3JyJIjYUV"
+                    "Y4lLnTLvmrWNZkpKm"
                 )
                 .then(
                     (result) => {
@@ -50,6 +57,10 @@ const FormPage = () => {
             console.log("error");
         }
     };
+
+    const handleAssetClick = (e) => {
+        setAssetValue(e.target.value);
+    }
 
     return (
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -80,7 +91,7 @@ const FormPage = () => {
                         </Form.Group>
                         <Form.Group as={Col} md="12" controlId="Form.ControlTextarea1">
                             <Form.Label>Asset class</Form.Label>
-                            <select className="w-100 mt-3 py-1">
+                            <select className="w-100 mt-3 py-1" onChange={handleAssetClick}>
                                 {tabContent.map((item) => {
                                     return (
                                         <option key={item.title} value={item.title}>{item.title}</option>
