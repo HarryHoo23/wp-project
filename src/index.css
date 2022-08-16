@@ -483,7 +483,6 @@ h6 {
 
 #scroll-up img {
     max-width: 150px;
-    display: none;
 }
 
 .scroll-up {
@@ -3427,7 +3426,7 @@ article {
     color: #fff;
     font-size: 14px;
     left: 50%;
-    bottom: 180%;
+    bottom: 120%;
     transform: translateX(-50%) translateY(12px);
     white-space: pre;
 }
@@ -3444,8 +3443,8 @@ article {
 }
 
 .marker-icon {
-    width: 40px;
-    height: 40px;
+    width: 140px;
+    height: 140px;
 }
 
 .units-link::after {

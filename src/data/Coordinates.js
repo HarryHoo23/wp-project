@@ -2,12 +2,12 @@ const areas_type_a = {
     name: "my-map",
     areas: [
         {
-            name: "A1",
-            shape: "rect",
-            coords: [1070, 117, 1100, 188],
-            preFillColor: "",
+            name: "B",
+            shape: "poly",
+            coords: [1673, 374, 1649, 374, 1605, 402, 1636, 435,  1684,458, 1756, 460, 1817, 429, 1837, 400, 1731, 400, 1729, 392, 1675, 391],
+            preFillColor: "rgba(0,0,0,0.0)",
             fillColor: "rgba(94, 94, 94, 0.8)",
-        },
+        }
     ],
 };
 
@@ -697,21 +697,12 @@ const office_warehouse_maps = {
     name: "my-map",
     areas: [
         {
-            id: 1,
             name: "B",
-            shape: "rect",
-            coords: [1069, 118, 1100, 190],
-            preFillColor: "",
+            shape: "poly",
+            coords: [1673, 374, 1649, 374, 1605, 402, 1684,458],
+            preFillColor: "rgba(0,0,0,0.0)",
             fillColor: "rgba(94, 94, 94, 0.8)",
-        },
-        {
-            id: 2,
-            name: "B",
-            shape: "rect",
-            coords: [1037, 118, 1067, 190],
-            preFillColor: "",
-            fillColor: "rgba(94, 94, 94, 0.8)",
-        },
+        }
     ],
 };
 

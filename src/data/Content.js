@@ -123,7 +123,7 @@ export const tabContent = [
         first_half_title: "Storage",
         second_half_title: "complex",
         subtitle: "Underground micro-warehousing",
-        content: `Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives plenty of flexibility, the 24-hour security system will keep watch, and there’s an automatic motion sensor lighting in common driveways and inside units. Brilliantly paired with an office suite.`,
+        content: ` Please edit to the below: Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives flexibility, the 24-hour security keeps watch, and there’s automatic motion sensor lighting. Pair it with an office suite.`,
         link: "units/storage-complex",
         img: "https://viridian-highett.com.au/images/site-plans/STORAGE-UNITS/storage-siteplan.png"
     },
@@ -3967,7 +3967,7 @@ export const building_construction_details = [
 export const sale_contacts = [
     {
         id: 1,
-        name: "John Knockles",
+        name: "John Nockles",
         title: "Director - Agency Southern/Western Regions",
         sale_intro:
             "POINT OF INTEREST <br />John’s experience in commercial real estate is now pushing a decade and over that time he’s proud to see change when it comes to property in Melbourne. By adopting a lateral approach within a linear industry, John understands success within Melbourne’s commercial real estate market occurs by looking beyond what has been done, to what can be. It’s an approach that mirrors this city’s originality, commercially—and with it, creativity that extends beyond St Kilda Road.",

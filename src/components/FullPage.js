@@ -75,21 +75,6 @@ const Fullpage = () => {
         topTitle: "",
     });
 
-    function renderModalContent() {
-        if (isModalShow.case === 1) {
-            setModalClassName("small-modal");
-            return <LogoModalContent {...individualModalContent} />;
-        } else if (isModalShow.case === 2) {
-            setModalClassName("enquiry-modal");
-            return <ContactForm />;
-        } else if (isModalShow.case === 3) {
-            setModalClassName("");
-            return <FixtureList {...singleFixtureModalContent} />;
-        } else {
-            return null;
-        }
-    }
-
     function changeArrow() {
         let image_gallery_icons =
             document.getElementsByClassName("image-gallery-icon");
@@ -106,6 +91,21 @@ const Fullpage = () => {
             fullscreenButtons[
                 i
             ].innerHTML = `<img src=${fullScreen} alt="fullScreen" />`;
+        }
+    }
+
+    function renderModalContent() {
+        if (isModalShow.case === 1) {
+            setModalClassName("small-modal");
+            return <LogoModalContent {...individualModalContent} />;
+        } else if (isModalShow.case === 2) {
+            setModalClassName("enquiry-modal");
+            return <ContactForm />;
+        } else if (isModalShow.case === 3) {
+            setModalClassName("");
+            return <FixtureList {...singleFixtureModalContent} />;
+        } else {
+            return null;
         }
     }
 
@@ -185,6 +185,7 @@ const Fullpage = () => {
                 render={() => {
                     return (
                         <ReactFullpage.Wrapper>
+                            <GeneralModal renderBodyComponent={renderModalContent()} className={modalClassName} />
                             <Navbar
                                 title={navBarTitle.title}
                                 additionClass={navBarTitle.bgColorClass}
@@ -192,9 +193,7 @@ const Fullpage = () => {
                             <TopNavbar
                                 heading={navBarTitle.topTitle}
                                 addtionalClass={navBarTitle.bgColorClass}
-                            />
-
-                            <GeneralModal renderBodyComponent={renderModalContent()} className={modalClassName} />
+                            />                            
 
                             <SectionWrapper
                                 class={"section"}

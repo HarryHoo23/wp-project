@@ -1,4 +1,4 @@
-import bookMarker from "../assests/img/icons/iconmonstr-location-1.svg";
+import bookMarker from "../assests/img/marker.png";
 
 export const locationAccordion = {
     sunday_morning: [
@@ -655,7 +655,7 @@ const loactions_coordinates = [
 const locationName = ["Viridian"];
 
 const locationAddress = [
-    "119 Chesterville Road, Cheltenham, Melbourne VIC 3190"
+    "Viridian - 119 Chesterville Road, Cheltenham, Melbourne VIC 3190"
 ]
 
 const mapStyle = [

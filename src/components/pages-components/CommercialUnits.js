@@ -51,9 +51,9 @@ const CommercialUnits = () => {
                         </div>
                     </Col>
                     <Col lg={3}>
-                        <Link className="view-option btn" onClick={handleClickViewOptions}>
+                        <a className="view-option btn" onClick={handleClickViewOptions}>
                             View Options
-                        </Link>
+                        </a>
                     </Col>
                 </Row>
                 <div className="wh-fp-container">
