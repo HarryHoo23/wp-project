@@ -1,11 +1,10 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import { ImageList } from '../data/ImageList';
 
-const ImageGallary = () => {
+const ImageGallary = (props) => {
   return (
     <ImageGallery
-      items={ImageList}
+      items={props.list}
       showThumbnails={false}
       showBullets={true}
       showNav={true}

@@ -44,24 +44,9 @@ const OwnersCooporation = (props) => {
                         <td>Budget</td>
                         <td></td>
                         <td>Budget</td>
-                    </tr>
+                    </tr>                    
                     <tr>
                         <td>Operating</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td> </td>
                         <td>Cleaning Supplies</td>
                         <td> $4,000.00 </td>
                         <td></td>
@@ -329,24 +314,9 @@ const OwnersCooporation = (props) => {
                         <td> $- </td>
                         <td></td>
                         <td> $- </td>
-                    </tr>
+                    </tr>                    
                     <tr>
                         <td>Utilities</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
                         <td>Lift Telephone</td>
                         <td> $- </td>
                         <td></td>
@@ -389,24 +359,9 @@ const OwnersCooporation = (props) => {
                         <td> $2,000.00 </td>
                         <td></td>
                         <td> $2,000.00 </td>
-                    </tr>
+                    </tr>                    
                     <tr>
-                        <td>Essential Services</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td>Essential Services</td>                        
                         <td>Fire Monitoring</td>
                         <td> $2,400.00 </td>
                         <td></td>
@@ -464,24 +419,9 @@ const OwnersCooporation = (props) => {
                         <td> $- </td>
                         <td></td>
                         <td> $- </td>
-                    </tr>
+                    </tr>                   
                     <tr>
                         <td>Maintenance</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
                         <td>General Repairs</td>
                         <td> $2,450.00 </td>
                         <td></td>
@@ -509,24 +449,9 @@ const OwnersCooporation = (props) => {
                         <td> $1,000.00 </td>
                         <td></td>
                         <td> $1,000.00 </td>
-                    </tr>
+                    </tr>                    
                     <tr>
                         <td>Administration</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
                         <td>Accounting/BAS Fees</td>
                         <td> $1,500.00 </td>
                         <td></td>
@@ -676,24 +601,9 @@ const OwnersCooporation = (props) => {
                         <td>Budget</td>
                         <td></td>
                         <td>Budget</td>
-                    </tr>
+                    </tr>                    
                     <tr>
-                        <td>Operating</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td> </td>
+                        <td>Operating</td>                        
                         <td>Cleaning Supplies</td>
                         <td> $4,000.00 </td>
                         <td></td>

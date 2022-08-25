@@ -10,14 +10,11 @@ const EstimateOutgoings = (props) => {
                     <tr>
                         <th>Address</th>
                         <th>Building Area &#13217;</th>
-                        <th>CIV</th>
-                        <th>NAV - 5% of CIV</th>
-                        <th>Est Land Value</th>
                         <th>Council Rates</th>
                         <th>Water Rates</th>
-                        <th>Lot E&L</th>
                         <th>Owners Corp</th>
                         <th>Total </th>
+                        <th>Lot E&L</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +22,10 @@ const EstimateOutgoings = (props) => {
                         return (
                             <tr className={`${index === props.unitNumber ? 'active' : ''}`} key={index}>
                                 <td>{props.unit[index]}</td>
-                                {item.map((cell, index) => {
+                                {item.map((cell, index) => {                                    
+                                    if (index === 1 || index === 2 || index === 3) {
+                                        return null
+                                    }
                                     return (
                                         <td key={index}>{cell}</td>
                                     )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from '../../contexts/GlobalContext';
+import cva from '../../assests/logo/cva-colour.svg';
 
 const Navbar = (props) => {
   const { isOpen, onClickScrollDown } = useGlobalContext();
@@ -8,8 +9,8 @@ const Navbar = (props) => {
     <div className={`${isOpen ? 'nav-wrapper active-nav' : 'nav-wrapper'} ${props.className}`}>
       <div className={`${props.additionClass} nav-bottom-row`}>
         <div className='btn-left-box scroll-down-box'>
+            {props.showLogo && <img src={cva} className="py-2 h-100" alt="logo" />}
           <span id='scroll-down-title' className={props.additionClass}>
-            
           </span>
           <div
             className={`menu-arrow-box ${props.additionClass} ${props.unitClass}`}

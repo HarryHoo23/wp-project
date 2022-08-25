@@ -54,8 +54,7 @@ const GlobalProvider = ({ children }) => {
             showModal: true,
             case: 3,
         });
-        setSingleFixtureModalContent(building_data[index]);
-        window.fullpage_api.setAllowScrolling(false);
+        setSingleFixtureModalContent(building_data[index]);     
     }
 
     const handleModalClickClose = (isTrue) => {
@@ -66,7 +65,7 @@ const GlobalProvider = ({ children }) => {
         if (isTrue) {
             window.fullpage_api.setAllowScrolling(true);            
         } else {
-            return 
+            return
         }
     };
 

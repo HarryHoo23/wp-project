@@ -9,7 +9,7 @@ import img9 from '../assests/img/doorstep/wavesLeisureCentre.jpeg';
 import img10 from '../assests/img/doorstep/highettBowlsClub.jpg';
 import img11 from '../assests/img/doorstep/moorabbinArcheryClub.jpeg';
 import img12 from '../assests/img/doorstep/stompingGroundBrewery.jpeg';
-import img13 from '../assests/img/road-trip.jpg';
+import img13 from '../assests/img/doorstep/119chesterville.jpg';
 import img14 from '../assests/img/doorstep/eat.jpeg';
 
 

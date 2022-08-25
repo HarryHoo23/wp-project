@@ -33,6 +33,7 @@ import Map from "./pages-components/Map";
 import logo from "../assests/logo/Viridian_Logo-white.svg";
 import arrow from "../assests/img/download-2.png";
 import fullScreen from "../assests/img/icons/lightbox-expand.svg";
+import { ImageList } from '../data/ImageList';
 
 const animationValue = sessionStorage.getItem('hasShowed');
 
@@ -141,7 +142,7 @@ const Fullpage = () => {
             )}
             <ReactFullpage
                 //fullpage options
-                scrollingSpeed={800} /* Options here */
+                scrollingSpeed={800}
                 // sectionsColor={['orange', 'purple', 'green']}
                 licenseKey={"zMccI0J!a3"}
                 navigation={false}
@@ -164,10 +165,10 @@ const Fullpage = () => {
                 ]}
                 autoScrolling={true}
                 scrollBar={true}
-                normalScrollElements=".fixture-list, .contact-form-container, .sale-intro"
-                // normalScrollElements: '.vs-img, .sale-intro, #map',
+                normalScrollElements=".fixture-list, .contact-form-container, .contact-container"                
                 touchSensitivity={15}
                 fitToSection={true}
+                responsiveWidth={992}
                 afterLoad={() => {
                     for (let i = 0; i < hrefLinks.length; i++) {
                         if (document.body.classList[0] === hrefLinks[i].link) {
@@ -220,7 +221,7 @@ const Fullpage = () => {
                                 <div                                    
                                     className={`${name[2].className} h-100`}
                                 >
-                                    <ImageGallary />
+                                    <ImageGallary list={ImageList} />
                                 </div>
                             </SectionWrapper>
 
@@ -423,6 +424,9 @@ const Fullpage = () => {
                                                         <article>
                                                             <Sale sale={info} />
                                                         </article>
+                                                        <div className="sale-intro">
+                                                            <p dangerouslySetInnerHTML={{__html: info.sale_intro}} />
+                                                        </div>
                                                     </Col>
                                                 );
                                             })}
@@ -483,19 +487,7 @@ const Fullpage = () => {
                                             <p className="copyright">
                                                 Copyright © {new Date().getFullYear()}
                                             </p>
-                                        </Col>
-                                        <Col md={4}>
-                                            <div className="logobox">
-                                                <p>
-                                                    Created by <br />
-                                                    <img
-                                                        className="whitefox-logo"
-                                                        src="https://sundayhawksburn.com.au/wp-content/uploads/2021/03/logo-5.svg"
-                                                        alt="whitefox-logo"
-                                                    />
-                                                </p>
-                                            </div>
-                                        </Col>
+                                        </Col>                                        
                                     </Row>
                                 </div>
                             </SectionWrapper>

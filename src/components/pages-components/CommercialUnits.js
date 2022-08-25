@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import { areas_maps } from "../../data/Coordinates";
 import { useGlobalContext } from "../../contexts/GlobalContext";
@@ -27,7 +27,8 @@ const CommercialUnits = () => {
         // eslint-disable-next-line
     }, [mapIndex]);    
 
-    const handleClickViewOptions = () => {
+    const handleClickViewOptions = (e) => {
+        e.preventDefault();
         history.push(`/${unitData.link}`);
         setUnitMapIndex(0);
     }
@@ -51,7 +52,8 @@ const CommercialUnits = () => {
                         </div>
                     </Col>
                     <Col lg={3}>
-                        <a className="view-option btn" onClick={handleClickViewOptions}>
+                        {/* eslint-disable-next-line */}
+                        <a href="#" className="view-option btn" onClick={(e) => handleClickViewOptions(e)}>
                             View Options
                         </a>
                     </Col>

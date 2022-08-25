@@ -4,6 +4,7 @@ import logo1 from '../assests/logo/ikos_group-popup.svg';
 import logo2 from '../assests/logo/cva-colour.svg';
 import logo3 from '../assests/logo/tag-colour.svg'
 import logo4 from '../assests/logo/species-colour.svg';
+import { walkupImageList, showroomImageList, threeLevelImageList, threeLevelOfficeImageList, warehouseImageList, hybridImageList, strataImageList } from "./ImageList";
 
 export const modalData = [
     {
@@ -109,9 +110,9 @@ export const tabContent = [
     },
     {
         position: "sixth",
-        title: "Working plus storage",
-        first_half_title: "Working",
-        second_half_title: "plus storage",
+        title: "Three level office warehouses",
+        first_half_title: "Three level",
+        second_half_title: "office warehouses",
         subtitle: "Best of both worlds",
         content: `Either convenient ground floor option or tranquil first-floor environment. Eight metres of warehousing included in the floorplan, floor-to-ceiling glazing, individual staff amenities and front parking.`,
         link: "units/working-storage",
@@ -119,9 +120,9 @@ export const tabContent = [
     },
     {
         position: "seventh",
-        title: "Storage complex",
-        first_half_title: "Storage",
-        second_half_title: "complex",
+        title: "Micro warehouse",
+        first_half_title: "Micro",
+        second_half_title: "warehouse",
         subtitle: "Underground micro-warehousing",
         content: ` Please edit to the below: Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives flexibility, the 24-hour security keeps watch, and there’s automatic motion sensor lighting. Pair it with an office suite.`,
         link: "units/storage-complex",
@@ -147,9 +148,9 @@ const SHOWROOM = [
             est_land_value: "$223,328.71",
             council_rates: "$6,332.90",
             water_rates: "$2,511.74",            
-            lot_el: 2146,
             owners_copr: "$30,072.44",
             total: "$38,917.08",
+            lot_el: 2146,
         },   
         depreciation_schedule: {           
         }        
@@ -174,9 +175,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$36,215.47",
             council_rates: "$1,303.22",
             water_rates: "$863.05",            
-            lot_el: 348,
             owners_copr: "$7,613.86",
             total: "$9,780.13",
+            lot_el: 348,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -208,9 +209,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$44,332.73",
             council_rates: "$1,521.35",
             water_rates: "$934.55",
-            lot_el: 426,
             owners_copr: "$9,320.42",
             total: "$11,776.33",
+            lot_el: 426,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -242,9 +243,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$35,591.06",
             council_rates: "$1,286.44",
             water_rates: "$857.55",
-            lot_el: 342,
             owners_copr: "$7,482.59",
             total: "$9,626.58",
+            lot_el: 342,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -276,9 +277,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$42,459.51",
             council_rates: "$1,471.01",
             water_rates: "$918.05",
-            lot_el: 408,
             owners_copr: "$8,926.60",
             total: "$11,315.67",
+            lot_el: 408,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -310,9 +311,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$46,205.94",
             council_rates: "$1,571.69",
             water_rates: "$951.05",
-            lot_el: 444,
             owners_copr: "$9,714.24",
             total: "$12,236.99",
+            lot_el: 444,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -344,9 +345,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$37,464.28",
             council_rates: "$1,336.78",
             water_rates: "$874.05",
-            lot_el: 360,
             owners_copr: "$7,876.41",
             total: "$10,087.24",
+            lot_el: 360,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -378,9 +379,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$46,830.34",
             council_rates: "$1,588.47",
             water_rates: "$956.56",
-            lot_el: 450,
             owners_copr: "$9,845.51",
             total: "$12,390.54",
+            lot_el: 450,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -412,9 +413,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$36,215.47",
             council_rates: "$1,303.22",
             water_rates: "$863.05",            
-            lot_el: 348,
             owners_copr: "$7,613.86",
             total: "$9,780.13",
+            lot_el: 348,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -446,9 +447,9 @@ const STRATA_OFFICE_SUITES = [
             est_land_value: "$36,839.87",
             council_rates: "$1,320.00",
             water_rates: "$868.55",            
-            lot_el: 354,
             owners_copr: "$7,745.14",
             total: "$9,933.69",
+            lot_el: 354,
         },
         depreciation_schedule: {
             year_1: "$6,000.00",
@@ -483,9 +484,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -517,9 +518,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -551,9 +552,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -585,9 +586,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -619,9 +620,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -653,9 +654,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -687,9 +688,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -721,9 +722,9 @@ const WALK_UP_OFFICES = [
             est_land_value: "$71,806.53",
             council_rates: "$2,259.65",
             water_rates: "$1,176.56",            
-            lot_el: 690,
             owners_copr: "$3,746.91",
             total: "$7,183.13",
+            lot_el: 690,
         },
         depreciation_schedule: {
             year_1: "$11,000.00",
@@ -758,9 +759,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -792,9 +793,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -826,9 +827,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -860,9 +861,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -894,9 +895,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -928,9 +929,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -962,9 +963,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -996,9 +997,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -1030,9 +1031,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -1064,9 +1065,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -1098,9 +1099,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -1132,9 +1133,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$81,380.73",
             council_rates: "$2,531.20",
             water_rates: "$1,265.57",            
-            lot_el: 782,
             owners_copr: "$4,246.50",
             total: "$8,043.28",
+            lot_el: 782,
         },
         depreciation_schedule: {
             year_1: "$13,000.00",
@@ -1166,9 +1167,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$105,836.58",
             council_rates: "$3,189.94",
             water_rates: "$1,481.50",            
-            lot_el: 1017,
             owners_copr: "$7,182.16",
             total: "$11,853.61",
+            lot_el: 1017,
         },
         depreciation_schedule: {
             year_1: "$17,500.00",
@@ -1200,9 +1201,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$103,026.76",
             council_rates: "$3,114.02",
             water_rates: "$1,456.61",            
-            lot_el: 990,
             owners_copr: "$6,991.48",
             total: "$11,562.11",
+            lot_el: 990,
         },
         depreciation_schedule: {
             year_1: "$17,500.00",
@@ -1234,9 +1235,9 @@ const TWO_LEVEL_HYBRID = [
             est_land_value: "$105,836.58",
             council_rates: "$3,189.94",
             water_rates: "$1,481.50",            
-            lot_el: 1017,
             owners_copr: "$7,182.16",
             total: "$11,853.61",
+            lot_el: 1017,
         },
         depreciation_schedule: {
             year_1: "$17,500.00",
@@ -1271,9 +1272,9 @@ const TRIPLE_LEVEL_HYBRID = [
             est_land_value: "$107,709.79",
             council_rates: "$3,240.56",
             water_rates: "$1,498.10",            
-            lot_el: 1035,
             owners_copr: "$7,309.28",
             total: "$12,047.94",
+            lot_el: 1035,
         },
         depreciation_schedule: {
             year_1: "$17,000.00",
@@ -1305,9 +1306,9 @@ const TRIPLE_LEVEL_HYBRID = [
             est_land_value: "$107,709.79",
             council_rates: "$3,240.56",
             water_rates: "$1,498.10",            
-            lot_el: 1035,
             owners_copr: "$7,309.28",
             total: "$12,047.94",
+            lot_el: 1035,
         },
         depreciation_schedule: {
             year_1: "$17,000.00",
@@ -1339,9 +1340,9 @@ const TRIPLE_LEVEL_HYBRID = [
             est_land_value: "$107,709.79",
             council_rates: "$3,240.56",
             water_rates: "$1,498.10",            
-            lot_el: 1035,
             owners_copr: "$7,309.28",
             total: "$12,047.94",
+            lot_el: 1035,
         },
         depreciation_schedule: {
             year_1: "$17,000.00",
@@ -1373,9 +1374,9 @@ const TRIPLE_LEVEL_HYBRID = [
             est_land_value: "$107,709.79",
             council_rates: "$3,240.56",
             water_rates: "$1,498.10",            
-            lot_el: 1035,
             owners_copr: "$7,309.28",
             total: "$12,047.94",
+            lot_el: 1035,
         },
         depreciation_schedule: {
             year_1: "$17,000.00",
@@ -1407,9 +1408,9 @@ const TRIPLE_LEVEL_HYBRID = [
             est_land_value: "$107,709.79",
             council_rates: "$3,240.56",
             water_rates: "$1,498.10",            
-            lot_el: 1035,
             owners_copr: "$7,309.28",
             total: "$12,047.94",
+            lot_el: 1035,
         },
         depreciation_schedule: {
             year_1: "$17,000.00",
@@ -1441,9 +1442,9 @@ const TRIPLE_LEVEL_HYBRID = [
             est_land_value: "$107,709.79",
             council_rates: "$3,240.56",
             water_rates: "$1,498.10",            
-            lot_el: 1035,
             owners_copr: "$7,309.28",
             total: "$12,047.94",
+            lot_el: 1035,
         },
         depreciation_schedule: {
             year_1: "$17,000.00",
@@ -1479,9 +1480,9 @@ const WORKING_PLUS_STORAGE = [
             est_land_value: "$79,819.72",
             council_rates: "$2,584.76",
             water_rates: "$1,283.13",            
-            lot_el: 767,
             owners_copr: "$4,165.05",
             total: "$8,032.94",
+            lot_el: 767,
         },
         depreciation_schedule: {
             year_1: "$12,500.00",
@@ -1514,9 +1515,9 @@ const WORKING_PLUS_STORAGE = [
             est_land_value: "$79,819.72",
             council_rates: "$2,584.76",
             water_rates: "$1,283.13",            
-            lot_el: 767,
             owners_copr: "$4,165.05",
             total: "$8,032.94",
+            lot_el: 767,
         },
         depreciation_schedule: {
             year_1: "$12,500.00",
@@ -1549,9 +1550,9 @@ const WORKING_PLUS_STORAGE = [
             est_land_value: "$79,819.72",
             council_rates: "$2,584.76",
             water_rates: "$1,283.13",            
-            lot_el: 767,
             owners_copr: "$4,165.05",
             total: "$8,032.94",
+            lot_el: 767,
         },
         depreciation_schedule: {
             year_1: "$12,500.00",
@@ -1584,9 +1585,9 @@ const WORKING_PLUS_STORAGE = [
             est_land_value: "$77,426.17",
             council_rates: "$2,553.30",
             water_rates: "$1,272.82",            
-            lot_el: 744,
             owners_copr: "$4,040.15",
             total: "$7,866.26",
+            lot_el: 744,
         },
         depreciation_schedule: {
             year_1: "$12,500.00",
@@ -1622,9 +1623,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1657,9 +1658,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1692,9 +1693,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1727,9 +1728,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1762,9 +1763,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1797,9 +1798,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1832,9 +1833,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1867,9 +1868,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1902,9 +1903,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$17,795.53",
             council_rates: "$808.22",
             water_rates: "$700.80",            
-            lot_el: 171,
             owners_copr: "$1,664.55",
             total: "$3,173.56",
+            lot_el: 171,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1937,9 +1938,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$17,795.53",
             council_rates: "$808.22",
             water_rates: "$700.80",            
-            lot_el: 171,
             owners_copr: "$1,664.55",
             total: "$3,173.56",
+            lot_el: 171,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -1972,9 +1973,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2007,9 +2008,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2042,9 +2043,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2077,9 +2078,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2112,9 +2113,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2147,9 +2148,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2182,9 +2183,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2217,9 +2218,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2252,9 +2253,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2287,9 +2288,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2322,9 +2323,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$17,795.53",
             council_rates: "$808.22",
             water_rates: "$700.80",            
-            lot_el: 171,
             owners_copr: "$1,664.55",
             total: "$3,173.56",
+            lot_el: 171,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2357,9 +2358,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2392,9 +2393,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$19,668.74",
             council_rates: "$858.56",
             water_rates: "$717.30",            
-            lot_el: 189,
             owners_copr: "$1,839.77",
             total: "$3,415.62",
+            lot_el: 189,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2427,9 +2428,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$17,795.53",
             council_rates: "$808.22",
             water_rates: "$700.80",            
-            lot_el: 171,
             owners_copr: "$1,664.55",
             total: "$3,173.56",
+            lot_el: 171,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2463,9 +2464,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$23,415.17",
             council_rates: "$959.24",
             water_rates: "$750.30",            
-            lot_el: 225,
             owners_copr: "$2,190.20",
             total: "$3,899.73",
+            lot_el: 225,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2498,9 +2499,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$17,691.46",
             council_rates: "$805.42",
             water_rates: "$699.88",            
-            lot_el: 170,
             owners_copr: "$1,654.82",
             total: "$3,160.12",
+            lot_el: 170,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2533,9 +2534,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$40,586.30",
             council_rates: "$1,420.67",
             water_rates: "$901.55",            
-            lot_el: 390,
             owners_copr: "$3,796.35",
             total: "$6,118.58",
+            lot_el: 390,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2568,9 +2569,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$42,147.31",
             council_rates: "$1,464.30",
             water_rates: "$915.85",            
-            lot_el: 405,
             owners_copr: "$3,942.36",
             total: "$6,322.51",
+            lot_el: 405,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2603,9 +2604,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$24,351.78",
             council_rates: "$984.40",
             water_rates: "$758.55",            
-            lot_el: 234,
             owners_copr: "$2,277.81",
             total: "$4,020.76",
+            lot_el: 234,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2638,9 +2639,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$24,351.78",
             council_rates: "$984.40",
             water_rates: "$758.55",            
-            lot_el: 234,
             owners_copr: "$2,277.81",
             total: "$4,020.76",
+            lot_el: 234,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2673,9 +2674,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$24,351.78",
             council_rates: "$984.40",
             water_rates: "$758.55",            
-            lot_el: 234,
             owners_copr: "$2,277.81",
             total: "$4,020.76",
+            lot_el: 234,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2708,9 +2709,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$24,351.78",
             council_rates: "$984.40",
             water_rates: "$758.55",            
-            lot_el: 234,
             owners_copr: "$2,277.81",
             total: "$4,020.76",
+            lot_el: 234,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2743,9 +2744,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$42,147.31",
             council_rates: "$1,464.30",
             water_rates: "$915.85",            
-            lot_el: 405,
             owners_copr: "$3,942.36",
             total: "$6,322.51",
+            lot_el: 405,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2778,9 +2779,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$21,541.96",
             council_rates: "$908.90",
             water_rates: "$733.80",            
-            lot_el: 207,
             owners_copr: "$2,014.98",
             total: "$3,657.67",
+            lot_el: 207,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2813,9 +2814,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$26,016.86",
             council_rates: "$1,031.25",
             water_rates: "$773.90",            
-            lot_el: 250,
             owners_copr: "$2,433.56",
             total: "$4,238.71",
+            lot_el: 250,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2848,9 +2849,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$21,021.62",
             council_rates: "$896.31",
             water_rates: "$729.67",            
-            lot_el: 202,
             owners_copr: "$1,966.31",
             total: "$3,592.29",
+            lot_el: 202,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2883,9 +2884,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$25,600.59",
             council_rates: "$1,019.36",
             water_rates: "$770.01",            
-            lot_el: 246,
             owners_copr: "$2,394.62",
             total: "$4,183.99",
+            lot_el: 246,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2918,9 +2919,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$42,147.31",
             council_rates: "$1,464.30",
             water_rates: "$915.85",            
-            lot_el: 405,
             owners_copr: "$3,942.36",
             total: "$6,322.51",
+            lot_el: 405,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2953,9 +2954,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$24,768.05",
             council_rates: "$996.99",
             water_rates: "$762.67",            
-            lot_el: 238,
             owners_copr: "$2,316.75",
             total: "$4,076.41",
+            lot_el: 238,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -2988,9 +2989,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$22,998.90",
             council_rates: "$948.05",
             water_rates: "$746.63",            
-            lot_el: 221,
             owners_copr: "$2,151.26",
             total: "$3,845.94",
+            lot_el: 221,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3023,9 +3024,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$20,709.42",
             council_rates: "$888.62",
             water_rates: "$727.15",            
-            lot_el: 199,
             owners_copr: "$1,937.11",
             total: "$3,552.88",
+            lot_el: 199,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3058,9 +3059,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$21,958.23",
             council_rates: "$921.48",
             water_rates: "$737.92",            
-            lot_el: 211,
             owners_copr: "$2,053.92",
             total: "$3,713.32",
+            lot_el: 211,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3093,9 +3094,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$42,979.85",
             council_rates: "$1,486.11",
             water_rates: "$923.00",            
-            lot_el: 413,
             owners_copr: "$4,020.23",
             total: "$6,429.35",
+            lot_el: 413,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3128,9 +3129,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$24,351.78",
             council_rates: "$948.05",
             water_rates: "$746.63",            
-            lot_el: 234,
             owners_copr: "$2,277.81",
             total: "$3,972.49",
+            lot_el: 234,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3163,9 +3164,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$22,998.90",
             council_rates: "$948.05",
             water_rates: "$746.63",            
-            lot_el: 221,
             owners_copr: "$2,151.26",
             total: "$3,845.94",
+            lot_el: 221,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3198,9 +3199,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$34,030.05",
             council_rates: "$1,246.17",
             water_rates: "$844.35",            
-            lot_el: 327,
             owners_copr: "$3,183.09",
             total: "$5,273.61",
+            lot_el: 327,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3233,9 +3234,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$29,034.81",
             council_rates: "$1,110.25",
             water_rates: "$799.80",            
-            lot_el: 279,
             owners_copr: "$2,715.85",
             total: "$4,625.90",
+            lot_el: 279,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3268,9 +3269,9 @@ const STORAGE_COMPLEX = [
             est_land_value: "$16,546.72",
             council_rates: "$775.36",
             water_rates: "$690.02",            
-            lot_el: 159,
             owners_copr: "$1,547.74",
             total: "$3,013.12",
+            lot_el: 159,
         },
         depreciation_schedule: {
             year_1: "$3,000.00",
@@ -3358,11 +3359,11 @@ const addImageToUnits = (array, unitType) => {
     }
     if (unitType === "complex") {
         imageUrl = "https://viridian-highett.com.au/images/floor-plans/Storage-Units";
-        sitePlanImageUrl = "https://viridian-highett.com.au/images/internal-site-plans/Storage-Units";
+        sitePlanImageUrl = "https://viridian-highett.com.au/images/site-plans/STORAGE-UNITS/storage-siteplan.png";
         pdfUrl = "https://viridian-highett.com.au/pdf/Storage_Units/";
         resultArray = array.map((element, index) => {
             return (
-                { ...element, img: `${imageUrl}/${index+1}-storage-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}/${index+1}-unit-internal-siteplan.png`, pdf: `${pdfUrl}WHITEFOX_Marketing_CVA_Viridian_Floorplan_STORAGE_UNIT_${index + 1}.pdf` }
+                { ...element, img: `${imageUrl}/${index+1}-storage-floorplan.png`, sitePlanImg: `${sitePlanImageUrl}`, pdf: `${pdfUrl}WHITEFOX_Marketing_CVA_Viridian_Floorplan_STORAGE_UNIT_${index + 1}.pdf` }
             )
         })
     }
@@ -3376,42 +3377,49 @@ export const sitePlanData = [
         first_half_title: "Showroom",
         second_half_title: "",
         data: addImageToUnits(SHOWROOM, "showroom"),
+        list: showroomImageList
     },
     {
         type: "strata-office-suites",
         first_half_title: "Strata office",
         second_half_title: "suites",
-        data: addImageToUnits(STRATA_OFFICE_SUITES, "strata"),        
+        data: addImageToUnits(STRATA_OFFICE_SUITES, "strata"),  
+        list: strataImageList
     },
     {
         type: "walk-up-office",
         first_half_title: "Walk-up",
         second_half_title: "office",
-        data: addImageToUnits(WALK_UP_OFFICES, "office"),        
+        data: addImageToUnits(WALK_UP_OFFICES, "office"),     
+        list: walkupImageList
     },
     {
         type: "two-level-hybrid",
         first_half_title: "Two level",
         second_half_title: "hybrid",
-        data: addImageToUnits(TWO_LEVEL_HYBRID, "hybrid"),        
+        data: addImageToUnits(TWO_LEVEL_HYBRID, "hybrid"), 
+        list: hybridImageList
     },
     {
         type: "three-level-hybrid",
         first_half_title: "Three level",
         second_half_title: "hybrid",
-        data: addImageToUnits(TRIPLE_LEVEL_HYBRID, "three"),        
+        data: addImageToUnits(TRIPLE_LEVEL_HYBRID, "three"), 
+        list: threeLevelImageList
     },
     {
         type: "working-storage",
-        first_half_title: "Working",
-        second_half_title: "storage",
-        data: addImageToUnits(WORKING_PLUS_STORAGE, "storage"),        
+        first_half_title: "Three level",
+        second_half_title: "office warehouses",
+        data: addImageToUnits(WORKING_PLUS_STORAGE, "storage"), 
+        list: threeLevelOfficeImageList
     },
     {
         type: "storage-complex",
-        first_half_title: "Storage",
-        second_half_title: "complex",
-        data: addImageToUnits(STORAGE_COMPLEX, "complex"),        
+        first_half_title: "Micro",
+        second_half_title: "warehouse",
+        data: addImageToUnits(STORAGE_COMPLEX, "complex"),
+        list: warehouseImageList
     },
 ];
 

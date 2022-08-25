@@ -42,12 +42,12 @@ const ImageList = [
     },
     {
         original: img6,
-        text: "Working plus storage",
+        text: "Three level office warehouses",
         link: "working-storage",
     },
     {
         original: img7,
-        text: "Storage complex",
+        text: "Micro warehouse",
         link: "storage-complex",
     },
 ];

@@ -12,6 +12,15 @@ import img11 from "../assests/img/sliders/11.jpg";
 import img12 from "../assests/img/sliders/12.jpg";
 import img13 from "../assests/img/sliders/13.jpg";
 import img14 from "../assests/img/sliders/14.jpg";
+import img15 from "../assests/img/sliders/15.jpg";
+import img16 from "../assests/img/sliders/16.jpg";
+import img17 from "../assests/img/sliders/17.jpg";
+import img18 from "../assests/img/sliders/18.jpg";
+import img19 from "../assests/img/sliders/19.jpg";
+import img20 from "../assests/img/sliders/20.jpg";
+import img21 from "../assests/img/sliders/21.jpg";
+
+
 
 import logo1 from '../assests/logo/ikos_group-white.svg';
 import logo2 from '../assests/logo/cva-white.svg';
@@ -62,5 +71,125 @@ export const ImageList = [
         original: img14,
     },
 ];
+
+export const showroomImageList = [
+    {
+        original: img15
+    },
+    {
+        original: img10,
+    },
+    {
+        original: img3
+    },
+    {
+        original: img16,
+    },
+];
+
+export const strataImageList = [
+    {
+        original: img8
+    },
+    {
+        original: img17,
+    },
+    {
+        original: img3
+    },
+    {
+        original: img16,
+    },
+    {
+        original: img18
+    }
+];
+
+export const walkupImageList = [
+    {
+        original: img11
+    },
+    {
+        original: img14,
+    },
+    {
+        original: img19
+    },
+    {
+        original: img16,
+    },
+];
+
+export const hybridImageList = [
+    {
+        original: img5
+    },
+    {
+        original: img19,
+    },
+    {
+        original: img20
+    },
+    {
+        original: img14,
+    },
+    {
+        original: img1
+    },
+    {
+        original: img12
+    }
+]
+
+export const threeLevelImageList = [
+    {
+        original: img4
+    },
+    {
+        original: img19,
+    },
+    {
+        original: img20
+    },
+    {
+        original: img14,
+    },
+];
+
+export const threeLevelOfficeImageList = [
+    {
+        original: img2
+    },
+    {
+        original: img5,
+    },
+    {
+        original: img14
+    },
+    {
+        original: img13,
+    },
+    {
+        original: img21,
+    },
+];
+
+export const warehouseImageList = [
+    {
+        original: img11
+    },
+    {
+        original: img14,
+    },
+    {
+        original: img19
+    },
+    {
+        original: img16,
+    },
+];
+
+
+
 
 export const svgImagePath = [logo1, logo2, logo3, logo4];

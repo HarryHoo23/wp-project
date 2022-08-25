@@ -4,7 +4,7 @@ const areas_type_a = {
         {
             name: "B",
             shape: "poly",
-            coords: [1673, 374, 1649, 374, 1605, 402, 1636, 435,  1684,458, 1756, 460, 1817, 429, 1837, 400, 1731, 400, 1729, 392, 1675, 391],
+            coords: [1673, 374, 1674, 334, 1570, 335, 1570, 401, 1605, 402, 1636, 435, 1684,458, 1756, 460, 1785, 455, 1817, 429, 1837, 398, 1731, 398, 1729, 392, 1675, 391],
             preFillColor: "rgba(0,0,0,0.0)",
             fillColor: "rgba(94, 94, 94, 0.8)",
         }
@@ -234,6 +234,28 @@ const areas_type_two_level_hybrid = {
             preFillColor: "rgba(0,0,0,0.1)",
             fillColor: "rgba(0,0,0,0.8)",
         },
+        {
+            name: "d",
+            shape: "rect",
+            coords: [429, 147, 363, 245],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "d",
+            shape: "rect",
+            coords: [363, 147, 294, 245],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+        {
+            name: "d",
+            shape: "rect",
+            coords: [294, 147, 227, 245],
+            preFillColor: "rgba(0,0,0,0.1)",
+            fillColor: "rgba(0,0,0,0.8)",
+        },
+
     ],
 };
 
@@ -1360,5 +1382,6 @@ export const unit_maps = [
     },
     {
         type: "storage-complex",
+        data: areas_type_storage_complex
     },
 ];
