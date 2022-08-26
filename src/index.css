@@ -3401,6 +3401,7 @@ article {
     text-align: left;
     padding: 10px 15px;
     font-weight: 500;
+    height: 37px;
 }
 
 .image-gallery-container {
@@ -3627,7 +3628,7 @@ Error
 }
 
 .border-container .image-gallery {
-    border-top: 2px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
     border-bottom: 2px solid #e0e0e0;
     padding: 40px 0;
 }

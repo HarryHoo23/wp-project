@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <div className={`${isOpen ? 'nav-wrapper active-nav' : 'nav-wrapper'} ${props.className}`}>
       <div className={`${props.additionClass} nav-bottom-row`}>
         <div className='btn-left-box scroll-down-box'>
-            {props.showLogo && <img src={cva} className="py-2 h-100" alt="logo" />}
+            {props.showLogo && <img src={cva} className="py-3 h-100" alt="logo" />}
           <span id='scroll-down-title' className={props.additionClass}>
           </span>
           <div

@@ -20,10 +20,10 @@ const Sale = (props) => {
                 <h5 className="sale-name">{sale.name}</h5>
                 <p className="sale-job-title">{sale.title}</p>                
                 <ul className="sale-contact">
-                    <li>{sale.phone}</li>
-                    <li>{sale.email}</li>
+                    <li><a href={`tel: ${sale.phone}`}>{sale.phone}</a></li>
+                    <li><a href={`mailto: ${sale.email}`}>{sale.email}</a></li>
                     <li>
-                        {sale.tel}
+                        <a href={`tel: ${sale.tel}`}>{sale.tel}</a>
                     </li>
                 </ul>
             </div>
