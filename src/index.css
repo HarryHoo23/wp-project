@@ -1307,13 +1307,20 @@ a.logo-link {
     margin-bottom: 0;
 }
 
-.financials .tab-content {
-    height: 100%;
-    width: 100%;
-    opacity: 0.9;
-    margin-top: 0;
+.tabs-column {
     position: absolute;
     right: 15px;
+    gap: 20px;
+    z-index: 20;
+}
+
+.financials .tab-content {
+    position: absolute;
+    overflow-y: scroll;
+    bottom: 5rem;
+    left: 0;
+    right: 0;
+    top: 10rem;
 }
 
 .financials {
@@ -1322,14 +1329,6 @@ a.logo-link {
 
 .table td {
     padding: 0.25rem;
-}
-
-.financials .tab-content > .active {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
 }
 
 .table thead th {
@@ -1388,6 +1387,7 @@ a.logo-link {
     font-family: var(--title-font-family);
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 13px;
 }
 
 .owners .final-tr {
@@ -2120,11 +2120,15 @@ button.btn.btn-link[aria-expanded="true"] {
 }
 
 /* Contact us section */
+.contact-container{
+    height: 100%;
+}
+
 .contact-container .contacts {
     margin-top: 100px;
     height: 60vh;
     overflow-y: scroll;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .contact-container .sunday-title {
@@ -3030,7 +3034,7 @@ button.hide-enquiry {
 }
 
 .unit-bar {
-    visibility: hidden;
+    display: none;
 }
 
 /* Unit Page */

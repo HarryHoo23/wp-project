@@ -5,6 +5,7 @@ import logo2 from '../assests/logo/cva-colour.svg';
 import logo3 from '../assests/logo/tag-colour.svg'
 import logo4 from '../assests/logo/species-colour.svg';
 import { walkupImageList, showroomImageList, threeLevelImageList, threeLevelOfficeImageList, warehouseImageList, hybridImageList, strataImageList } from "./ImageList";
+import hybrid from '../assests/img/floorplan/A-siteplan.png';
 
 export const modalData = [
     {
@@ -96,7 +97,7 @@ export const tabContent = [
         subtitle: "Everything you need spread across two levels",
         content: `Designed-for-purpose ground and first floor offices with a glass roller door to facilitate easy loading from vehicles into the warehouse. Under the mezzanine in the office is a 3.5 metre clearance, with an eight-metre atrium-style ceiling.`,
         link: "units/two-level-hybrid",
-        img: "https://viridian-highett.com.au/images/site-plans/A/A-siteplan.png"
+        img: hybrid
     },
     {
         position: "fifth",

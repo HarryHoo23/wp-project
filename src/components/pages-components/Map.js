@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import GoogleMapReact from "google-map-react";
 import { google_map_data } from "../../data/MapData";
-import bookMarker from "../../assests/img/icons/map-center.png";
+import bookMarker from "../../assests/img/icons/icon-marker.png";
 
 
 const AnyReactComponent = ({ src, info, show, click }) => (    

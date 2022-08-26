@@ -19,6 +19,7 @@ import img18 from "../assests/img/sliders/18.jpg";
 import img19 from "../assests/img/sliders/19.jpg";
 import img20 from "../assests/img/sliders/20.jpg";
 import img21 from "../assests/img/sliders/21.jpg";
+import img22 from "../assests/img/sliders/22.jpg";
 
 
 
@@ -118,6 +119,9 @@ export const walkupImageList = [
     {
         original: img16,
     },
+    {
+        original: img22
+    }
 ];
 
 export const hybridImageList = [
@@ -138,6 +142,9 @@ export const hybridImageList = [
     },
     {
         original: img12
+    },
+    {
+        original: img22
     }
 ]
 
@@ -154,6 +161,9 @@ export const threeLevelImageList = [
     {
         original: img14,
     },
+    {
+        original: img22
+    }
 ];
 
 export const threeLevelOfficeImageList = [

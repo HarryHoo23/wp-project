@@ -77,8 +77,7 @@ const DepreScheduleFinancial = (props) => {
                         <th>year 10</th>                
                     </tr>
                 </thead> 
-                {props.showFull ? fullList() : halfList()}
-                
+                {fullList()}
             </Table>
         </>
     );

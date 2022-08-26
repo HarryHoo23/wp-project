@@ -20,6 +20,7 @@ import ContactForm from "./ContactForm/ContactForm";
 import ImageGallery from "../ImageGallary";
 import { sale_contacts } from "../../data/Content";
 import Sale from "./Sale";
+import arrow from "../../assests/img/download-2.png";
 
 const Siteplan = () => {
     const { type } = useParams();
@@ -62,7 +63,18 @@ const Siteplan = () => {
         setComponentNumber(1);
     };
 
+    const changeArrow = () => {
+        let image_gallery_icons =
+            document.getElementsByClassName("image-gallery-icon");
+        for (let i = 0; i < image_gallery_icons.length; i++) {
+            image_gallery_icons[
+                i
+            ].innerHTML = `<img src=${arrow} alt="arrow" />`;
+        }
+    }
+
     useEffect(() => {
+        changeArrow();
         if (!imageRef.current) {
             setWidth(1);
         } else {

@@ -80,7 +80,7 @@ const PriceList = (props) => {
                 {sitePlanData.map((row, index) => {
                     return (
                         <React.Fragment key={index}>
-                            {!props.showFull ? tableReduced(row) : tableFull(row)}
+                            {tableFull(row)}
                         </React.Fragment>
                     )
                 })}

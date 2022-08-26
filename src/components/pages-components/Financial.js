@@ -7,11 +7,13 @@ import OwnersCoorporation from "./FinancialTabs/OwnersCooporation";
 import FinancialModal from "./FinancialModal";
 import DepreScheduleFinancial from "./FinancialTabs/DepreScheduleFinancial";
 import EstimateOutgoingsFinancial from "./FinancialTabs/EstimateOutgoingsFinancial";
+import useWindowDimensions from "../../contexts/useWindowsDimension";
 
 const Financial = () => {
 
     const [showModal, setShowModal] = useState(false);
     const [number, setNumber] = useState(1);
+    const { height } = useWindowDimensions();
 
     const onModalShow = (index) => {
         setShowModal(true);
@@ -112,17 +114,13 @@ const Financial = () => {
         <>
             <Row className="financials">
                 <Tab.Container defaultActiveKey="first">
-                    <Col lg={3} md={6}>
+                    <Col lg={12} md={12}>
                         <Title
                             colorClassName=""
                             firstHalfTitle="Financials"
                             secondHalfTitle=""
                         />
-                        <Nav
-                            variant="pills"
-                            className="flex-column tabs-column"
-                            style={{ marginTop: "2rem" }}
-                        >
+                        <Nav variant="pills" className="tabs-column">
                             {financialContent.map((tab, index) => {
                                 return (
                                     <Nav.Item key={index}>
@@ -136,32 +134,18 @@ const Financial = () => {
                                 );
                             })}
                         </Nav>
-                    </Col>
-                    <Col lg={9} md={6}>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
-                                <PriceList />
-                                <button className="back-button px-5 mt-4 text-center" onClick={() => onModalShow(1)}>
-                                    Show more
-                                </button>
+                                <PriceList />                                
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                                <EstimateOutgoingsFinancial showFull={false} data={getEstimatedOutgoingsData()} />
-                                <button className="back-button mt-4 text-center" onClick={() => onModalShow(2)}>
-                                    Show more
-                                </button>
+                                <EstimateOutgoingsFinancial data={getEstimatedOutgoingsData()} />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
-                                <OwnersCoorporation />
-                                <button className="back-button mt-4 text-center" onClick={() => onModalShow(3)}>
-                                    Show more
-                                </button>
+                                <OwnersCoorporation />                                
                             </Tab.Pane>
                             <Tab.Pane eventKey="forth">
-                                <DepreScheduleFinancial showFull={false} data={getDepreciationData()} />
-                                <button className="back-button mt-4 text-center" onClick={() => onModalShow(4)}>
-                                    Show more
-                                </button>
+                                <DepreScheduleFinancial data={getDepreciationData()} />
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>

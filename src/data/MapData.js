@@ -1,5 +1,5 @@
-import bookMarker from "../assests/img/icons/map-center.png";
-import locationIcon from '../assests/img/icons/iconmonstr-location-1.svg';
+import bookMarker from "../assests/img/icons/icon-marker.png";
+import locationIcon from '../assests/img/icons/marker-2.png';
 
 export const locationAccordion = {
     sunday_morning: [
