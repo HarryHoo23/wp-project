@@ -11,8 +11,8 @@ export const links = [
     },
     {
         id: 3,
-        href: "#intro",
-        text: "Creative partners",
+        href: "#every",
+        text: "About development",
     },
     {
         id: 4,

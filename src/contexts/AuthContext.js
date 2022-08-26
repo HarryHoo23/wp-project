@@ -52,7 +52,6 @@ export function AuthProvider({ children }) {
             setLoading(false);
             analytics.logEvent('login');
         });
-
         return unsubscribe;
     }, []);
 

@@ -17,7 +17,6 @@ import TopNavbar from "./header & footer/TopNavbar";
 import Title from "./pages-components/Title";
 import { svgImagePath } from "../data/ImageList";
 import ImageGallary from "./ImageGallary";
-import HomeVideo from '../video/Viridian-home.mp4';
 import ReactPlayer from 'react-player';
 import LogoContainer from "./pages-components/LogoContainer";
 import LogoModalContent from "./pages-components/LogoModalContent";
@@ -244,6 +243,7 @@ const Fullpage = () => {
                                             A brilliantly designed and cleverly low-maintenance
                                             development is coming to the Bayside. Not only is there an array of units being offered, there’s also versatility embedded within — the interiors have been meticulously designed with high-end materials in mind, focusing on creating offices and warehouses that go against the industrial grain.
                                             <br />
+                                            <br />
                                             The development can be categorised by two halves — offices and warehouse suites above ground that include premium fixtures and versatile floorplans, and a secure complex below ground that offers versatile micro-warehousing and storage options for business or personal use. Customise your investment by versatility embedded materials combining an office suite with a micro-warehouse space to keep the workplace clutter to a minimum.
                                         </p>
                                     </Col>
@@ -252,7 +252,7 @@ const Fullpage = () => {
                                         md={7}
                                         className="sunday-everyday-carousel-box"
                                     >
-                                        <ReactPlayer controls={true} url={HomeVideo} width='calc(100% - 5rem)' height="100%" />
+                                        <ReactPlayer controls={true} url="https://viridian-highett.com.au/video/Viridian-home.mp4" width='calc(100% - 5rem)' height="100%" />
                                     </Col>
                                 </Row>
                             </SectionWrapper>

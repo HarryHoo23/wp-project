@@ -1,30 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Nav, Col, Tab } from "react-bootstrap";
 import { financialContent, sitePlanData } from "../../data/Content";
 import Title from "./Title";
 import PriceList from "./FinancialTabs/PriceList";
 import OwnersCoorporation from "./FinancialTabs/OwnersCooporation";
-import FinancialModal from "./FinancialModal";
 import DepreScheduleFinancial from "./FinancialTabs/DepreScheduleFinancial";
 import EstimateOutgoingsFinancial from "./FinancialTabs/EstimateOutgoingsFinancial";
-import useWindowDimensions from "../../contexts/useWindowsDimension";
 
 const Financial = () => {
-
-    const [showModal, setShowModal] = useState(false);
-    const [number, setNumber] = useState(1);
-    const { height } = useWindowDimensions();
-
-    const onModalShow = (index) => {
-        setShowModal(true);
-        setNumber(index);
-        window.fullpage_api.setAllowScrolling(false);
-    }
-
-    const onModalHide = () => {
-        setShowModal(false);
-        window.fullpage_api.setAllowScrolling(true);
-    }
 
     const getDepreciationData = () => {
         let data = [];
@@ -84,32 +67,6 @@ const Financial = () => {
         return {data, unit};
     }    
 
-    const renderModalContent = () => {
-        if (number === 1) {
-            return (
-                <>
-                    <h2 className="text-center">Price List</h2>
-                    <PriceList showFull={showModal} />
-                </>
-            );
-        }
-        if (number === 2) {
-            return (
-                <EstimateOutgoingsFinancial showFull={showModal} data={getEstimatedOutgoingsData()} />                
-            )
-        }
-        if (number === 3) {
-            return (
-                <OwnersCoorporation showFull={showModal} />
-            )
-        }
-        if (number === 4) {
-            return (
-                <DepreScheduleFinancial showFull={showModal} data={getDepreciationData()} />
-            )
-        }
-    }
-
     return (
         <>
             <Row className="financials">
@@ -151,9 +108,6 @@ const Financial = () => {
                     </Col>
                 </Tab.Container>
             </Row>
-            <FinancialModal onClose={onModalHide} show={showModal}>
-                {renderModalContent()}
-            </FinancialModal>
         </>
     );
 };

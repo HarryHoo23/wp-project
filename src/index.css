@@ -1896,6 +1896,10 @@ a.logo-link {
     padding: 5rem 0;
 }
 
+.doorstep-accordion-box {
+    padding-bottom: 30px;
+}
+
 .doorstep-accordion-box.right {
     padding-top: 20px;
     margin-left: 2rem;

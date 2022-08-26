@@ -14,7 +14,7 @@ const App = () => {
     return (
         <>
             {/* <BrowserRouter basename={'/access'}> */}
-            <BrowserRouter>                
+            <BrowserRouter>
                 <Header />
                 <Switch>
                     <PrivateRoute exact path="/" component={Fullpage} />
