@@ -63,16 +63,22 @@ export const subMenuLink = [
         link: "three-level-hybrid",
     },
     {
-        text: "Three level office warehouses",
+        text: "Three-level office warehouses",
         link: "working-storage",
     },
     {
-        text: "Micro Warehouse",
+        text: "Micro Warehouses",
         link: "storage-complex",
     },
 ];
 
 export const hrefLinks = [
+    {
+        link: "fp-viewing-intro",
+        bgColorClass: "opacity-deep",
+        title: "About Development",
+        topTitle: "Commercial Units",
+    },
     {
         link: "fp-viewing-units",
         bgColorClass: "",
@@ -84,12 +90,6 @@ export const hrefLinks = [
         bgColorClass: "opacity-deep",
         title: "Sunday Intro",
         topTitle: "Units",
-    },
-    {
-        link: "fp-viewing-intro",
-        bgColorClass: "",
-        title: "About Development",
-        topTitle: "Commercial Units",
     },
     {
         link: "fp-viewing-every",

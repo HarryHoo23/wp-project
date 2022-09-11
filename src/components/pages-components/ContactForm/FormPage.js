@@ -10,6 +10,7 @@ const FormPage = () => {
     const nameRef = useRef();
     const phoneRef = useRef();
     const emailRef = useRef();
+    const messageRef = useRef();
     const [assetValue, setAssetValue] = useState("Showroom");
     // const { handleModalClickClose } = useGlobalContext();
 
@@ -26,7 +27,8 @@ const FormPage = () => {
             Name: ${nameRef.current.value}, \n
             Email: ${emailRef.current.value}, \n
             Phone number: ${phoneRef.current.value},\n
-            Interested asset: ${assetValue}
+            Interested asset: ${assetValue}, \n
+            Additional message: ${messageRef.current.value}
         `
 
         var template_params = {
@@ -98,6 +100,10 @@ const FormPage = () => {
                                     )
                                 })}
                             </select>
+                        </Form.Group>
+                        <Form.Group  as={Col} md="12">
+                            <Form.Label>Your Message</Form.Label>
+                            <Form.Control as="textarea" rows={3} ref={messageRef} />
                         </Form.Group>
                     </Row>
                     <Button type="submit" className="w-100 submit-btn">Submit</Button>

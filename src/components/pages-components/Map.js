@@ -46,7 +46,7 @@ const Map = () => {
                                 lat={marker.position.lat}
                                 lng={marker.position.lng}
                                 src={marker.type}
-                                info={google_map_data.locationAddress[index]}
+                                info={google_map_data.locationName[index]}
                                 show={isShow[index].show}
                                 click={() => toggleMarker(index)}
                             />

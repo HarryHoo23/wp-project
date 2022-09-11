@@ -146,9 +146,9 @@ const Fullpage = () => {
                 licenseKey={"zMccI0J!a3"}
                 navigation={false}
                 anchors={[                    
+                    "intro",
                     "units",
                     "commercial-units",
-                    "intro",
                     "every",
                     "partners",
                     "fixtures",
@@ -164,7 +164,7 @@ const Fullpage = () => {
                 ]}
                 autoScrolling={true}
                 scrollBar={true}
-                normalScrollElements=".fixture-list, .contact-form-container, .contact-container, .tab-content"                
+                normalScrollElements=".fixture-list, .contact-form-container, .contact-container, .tab-content, #commercial-welcome-tabs"                
                 touchSensitivity={15}
                 fitToSection={true}
                 responsiveWidth={992}
@@ -193,7 +193,37 @@ const Fullpage = () => {
                             <TopNavbar
                                 heading={navBarTitle.topTitle}
                                 addtionalClass={navBarTitle.bgColorClass}
-                            />                            
+                            />        
+                            
+                            <SectionWrapper
+                                class={"section"}
+                                idName={"sunday-everyday"}
+                            >
+                                <Row className="sd-everyday-row">
+                                    <Col
+                                        xl={4}
+                                        lg={5}
+                                        md={6}
+                                        className="sunday-paragraph"
+                                    >
+                                        <Title
+                                            colorClassName=""
+                                            firstHalfTitle="About"
+                                            secondHalfTitle="development"
+                                        />
+                                        <p style={{ paddingTop: "30px", marginBottom: "30px"}}>
+                                            A brilliantly designed and cleverly low-maintenance
+                                            development is coming to the Bayside. Not only is there an array of units being offered, there’s also versatility embedded within — the interiors have been meticulously designed with high-end materials in mind, focusing on creating offices and warehouses that go against the industrial grain.
+                                            <br />
+                                            <br />
+                                            The development can be categorised by two halves — offices and warehouse suites above ground that include premium fixtures and versatile floorplans, and a secure complex below ground that offers versatile micro-warehousing and storage options for business or personal use. Customise your investment by versatility embedded materials combining an office suite with a micro-warehouse space to keep the workplace clutter to a minimum.
+                                        </p>
+                                    </Col>
+                                    <Col xl={8} lg={7} md={6} className="sunday-everyday-carousel-box">
+                                        <ReactPlayer controls={true} url="https://viridian-highett.com.au/video/Viridian-home.mp4" height="100%" />
+                                    </Col>
+                                </Row>
+                            </SectionWrapper>
 
                             <SectionWrapper
                                 class={"section"}
@@ -222,40 +252,7 @@ const Fullpage = () => {
                                 >
                                     <ImageGallary list={ImageList} />
                                 </div>
-                            </SectionWrapper>
-
-                            <SectionWrapper
-                                class={"section"}
-                                idName={"sunday-everyday"}
-                            >
-                                <Row className="sd-everyday-row">
-                                    <Col
-                                        lg={4}
-                                        md={5}
-                                        className="sunday-paragraph"
-                                    >
-                                        <Title
-                                            colorClassName=""
-                                            firstHalfTitle="About"
-                                            secondHalfTitle="development"
-                                        />
-                                        <p style={{ paddingTop: "30px", marginBottom: "30px"}}>
-                                            A brilliantly designed and cleverly low-maintenance
-                                            development is coming to the Bayside. Not only is there an array of units being offered, there’s also versatility embedded within — the interiors have been meticulously designed with high-end materials in mind, focusing on creating offices and warehouses that go against the industrial grain.
-                                            <br />
-                                            <br />
-                                            The development can be categorised by two halves — offices and warehouse suites above ground that include premium fixtures and versatile floorplans, and a secure complex below ground that offers versatile micro-warehousing and storage options for business or personal use. Customise your investment by versatility embedded materials combining an office suite with a micro-warehouse space to keep the workplace clutter to a minimum.
-                                        </p>
-                                    </Col>
-                                    <Col
-                                        lg={8}
-                                        md={7}
-                                        className="sunday-everyday-carousel-box"
-                                    >
-                                        <ReactPlayer controls={true} url="https://viridian-highett.com.au/video/Viridian-home.mp4" width='calc(100% - 5rem)' height="100%" />
-                                    </Col>
-                                </Row>
-                            </SectionWrapper>
+                            </SectionWrapper>                            
 
                             <SectionWrapper class={"section"} idName={"sunday-partners"} >
                                 <div className="bg-wrapper">

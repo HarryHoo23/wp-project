@@ -36,7 +36,7 @@ const CommercialUnits = () => {
     if (unitData) {
         return (
             <>
-                <Row className="welcome-tabs">
+                <Row className="welcome-tabs" id="commercial-welcome-tabs">
                     <Col lg={3} className="d-flex" style={{flexDirection: 'column'}}>
                         <Title
                             colorClassName="title"
@@ -44,29 +44,41 @@ const CommercialUnits = () => {
                             secondHalfTitle={unitData.second_half_title}
                         />         
                         <CommercialDropdown />
+                        <a href="#" className="view-option btn" onClick={(e) => handleClickViewOptions(e)}>
+                            View Options
+                        </a>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={5}>
                         <div className="tab-contents">
                             <h3 className="color-white mb-3">{unitData.subtitle}</h3>
                             <p>{unitData.content}</p>                        
                         </div>
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={4}>
                         {/* eslint-disable-next-line */}
-                        <a href="#" className="view-option btn" onClick={(e) => handleClickViewOptions(e)}>
-                            View Options
-                        </a>
+                        <div className="tab-contents features-list">
+                            <h3 className="mb-3">Features</h3>
+                            <ul className="p-0 m-0 margin-block-0">
+                                {unitData.list.map((item, key) => {
+                                    return (
+                                        <li key={key}>{item}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    </Col>
+                    <Col lg={12}>
+                        <div className="wh-fp-container">
+                            <ImagePropertyMapper
+                                width={containerWidth}
+                                maps={map}
+                                destination={unitData.link}
+                                isSitePlan={true}
+                                image={unitData.img}
+                            />
+                        </div>
                     </Col>
                 </Row>
-                <div className="wh-fp-container">
-                    <ImagePropertyMapper
-                        width={containerWidth}
-                        maps={map}
-                        destination={unitData.link}
-                        isSitePlan={true}
-                        image={unitData.img}
-                    />
-                </div>
             </>
         );     
     } else {

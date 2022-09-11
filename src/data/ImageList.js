@@ -20,7 +20,14 @@ import img19 from "../assests/img/sliders/19.jpg";
 import img20 from "../assests/img/sliders/20.jpg";
 import img21 from "../assests/img/sliders/21.jpg";
 import img22 from "../assests/img/sliders/22.jpg";
-
+import img23 from "../assests/img/sliders/23.jpg";
+import img24 from "../assests/img/sliders/24.jpg";
+import img25 from "../assests/img/sliders/25.jpg";
+import img26 from "../assests/img/sliders/26.jpg";
+import img27 from "../assests/img/sliders/27.jpg";
+import img28 from "../assests/img/sliders/28.jpg";
+import img29 from "../assests/img/sliders/29.jpg";
+import img30 from "../assests/img/sliders/30.jpg";
 
 
 import logo1 from '../assests/logo/ikos_group-white.svg';
@@ -117,17 +124,11 @@ export const walkupImageList = [
         original: img19
     },
     {
-        original: img16,
-    },
-    {
         original: img22
     }
 ];
 
 export const hybridImageList = [
-    {
-        original: img5
-    },
     {
         original: img19,
     },
@@ -138,13 +139,13 @@ export const hybridImageList = [
         original: img14,
     },
     {
-        original: img1
-    },
-    {
         original: img12
     },
     {
         original: img22
+    },
+    {
+        original: img30
     }
 ]
 
@@ -186,16 +187,25 @@ export const threeLevelOfficeImageList = [
 
 export const warehouseImageList = [
     {
-        original: img11
+        original: img23
     },
     {
-        original: img14,
+        original: img24,
     },
     {
-        original: img19
+        original: img25
     },
     {
-        original: img16,
+        original: img26,
+    },
+    {
+        original: img27,
+    },
+    {
+        original: img28
+    },
+    {
+        original: img29,
     },
 ];
 

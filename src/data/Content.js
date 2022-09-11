@@ -66,6 +66,14 @@ export const tabContent = [
         first_half_title: "Showroom",
         second_half_title: "",
         content: `With complete exposure to Chesterville Road, this exceptional fit out takes full advantage of the front of the complex on the ground floor. Bulky goods can be stored and serviced by the rear roller door.`,
+        list: [
+            'Exposure to Chesterville Road.',
+            'Front of complex position.',
+            'Ground floor advantage.',
+            'Exceptional baseline fit-out.',
+            'Bulky goods storage serviced by rear roller door.',
+            'Ideal for retail users.'            
+        ],
         link: "units/showroom",
         img: "https://viridian-highett.com.au/images/site-plans/showroom-siteplan.png"
     },
@@ -76,6 +84,15 @@ export const tabContent = [
         first_half_title: "Strata office",
         second_half_title: "Suites",
         content: `The first thing you’ll notice is the impressive entry foyer, the second thing is the uninterrupted and raised views over the parkland through the floor-to-ceiling glass. Disability lift access, undercover car parking, and shared staff amenities.`,
+        list: [
+            'Uninterrupted and raised views over the parklands.',
+            'Shared staff amenities.',
+            'Lift access for disability compliance and ease.',
+            'Stunning entry foyer on the ground floor.',
+            'Stunning fit-out with floor-to-ceiling glass.',
+            'Undercover car parking in the basement.'
+
+        ],
         link: "units/strata-office-suites",
         img: "https://viridian-highett.com.au/images/site-plans/MAIN-BUILDING/officeA-siteplan.png",
     },
@@ -86,6 +103,17 @@ export const tabContent = [
         second_half_title: "offices",
         subtitle: "Working across two levels",
         content: `Situated on the ground and first floor, you’ll get the floor-to-ceiling glazed windows with parkland views and private amenities like bathrooms and kitchenettes. Parking at the front and signage showcased on the first-floor. `,
+        list: [
+            'Ground and first-floor office design.',
+            'Walk up buildings with front parking.',
+            'Uninterrupted and raised views over the parklands.',
+            'Private staff amenities.',
+            'Floor-to-ceiling glazing on both ground and first floor.',
+            'Signage positioned on the first floor.',
+            'Buffed concrete ground floor, carpeted first floor.',
+            'Black fixtures and fittings, black ceiling grid.',
+            'Ducted air-conditioning.'
+        ],
         link: "units/walk-up-office",
         img: "https://viridian-highett.com.au/images/site-plans/C/C-siteplan.png"
     },
@@ -95,7 +123,19 @@ export const tabContent = [
         first_half_title: "Two-level",
         second_half_title: "hybrid",
         subtitle: "Everything you need spread across two levels",
-        content: `Designed-for-purpose ground and first floor offices with a glass roller door to facilitate easy loading from vehicles into the warehouse. Under the mezzanine in the office is a 3.5 metre clearance, with an eight-metre atrium-style ceiling.`,
+        content: `Designed for all purposes, these dual-level office and storage hybrids feature a glass Smartech roller door system with a 4.1 m* clearance and an 8 m* atrium-style rear storage area. Enjoy the view of the parklands from your first-floor ancillary office.`,
+        list: [
+            'Ground and first-floor design.',
+            'Walk up buildings with front parking.',
+            'Uninterrupted and raised views over the parklands.',
+            'Private staff amenities.',
+            'Floor-to-ceiling glazing on both ground and first floor',
+            'Signage positioned on the first floor.',
+            'Glasstech remote door systems.',
+            '4.1 m* height under mezzanine out to 8 m* atrium style ceiling.',
+            'First-floor office overlooking the parklands.',
+            'Black fixtures and fittings, black ceiling grid.'
+        ],
         link: "units/two-level-hybrid",
         img: hybrid
     },
@@ -105,28 +145,62 @@ export const tabContent = [
         first_half_title: "Triple-level",
         second_half_title: "hybrid",
         subtitle: "Everything but the kitchen sink (it has that, too)",
-        content: `This three-level design includes ground floor warehousing with two levels of glass-to-ceiling office space above it. The mezzanines also include the 3.5 metre clearance, with an eight-metre atrium-style ceiling and glass roller door for easy loading.`,
+        content: `A floor above the rest, this is a three-level design with premium office and storage space. Featuring a glass Smartech roller door system, it also includes a 4.1 m* clearance and an 8 m* atrium-style rear storage area. Elevate above the treetops with two levels of glass-to-ceiling ancillary office space and amenities to match.`,
+        list: [
+            'Three-level design with ground floor warehousing and two levels of office space above.',
+            'Walk up buildings with front parking.',
+            'Uninterrupted and raised views over the parklands.',
+            'Private staff amenities.',
+            'Floor-to-ceiling glazing on all floors.',
+            'Signage positioned on the first floor.',
+            'Glasstech remote door systems.',
+            '4.1 m* height under mezzanine out to 8 m* atrium style ceiling',
+            'Black fixtures and fittings, black ceiling grid'
+        ],
         link: "units/three-level-hybrid",
         img: "https://viridian-highett.com.au/images/site-plans/B/B-siteplan.png"
     },
     {
         position: "sixth",
-        title: "Three level office warehouses",
-        first_half_title: "Three level",
+        title: "Three-level office warehouses",
+        first_half_title: "Three-level",
         second_half_title: "office warehouses",
         subtitle: "Best of both worlds",
-        content: `Either convenient ground floor option or tranquil first-floor environment. Eight metres of warehousing included in the floorplan, floor-to-ceiling glazing, individual staff amenities and front parking.`,
+        content: `Adding to the triple-level hybrid asset, you’ll also enjoy a container height roller door and a uniquely consistent 6.8 m* internal height throughout the ground floor warehouse area. Two-level offices with stylistic varying ceiling heights, unrivalled parkland views from the front and rear of the property, floor-to-ceiling glazing, individual staff amenities and front-of-house parking are also included.`,
+        list: [
+            'Triple level design.',
+            'Walk up buildings with front parking.',
+            'First-floor & second floor offices overlooking the rear parklands.',
+            'Private staff amenities.',
+            'Floor-to-ceiling glazing',
+            'Excellent Signage position',
+            'Container height roller door facilitating excellent loading.',
+            '6.8 m* warehouse height front warehouse area.',
+            'Black fixtures and fittings, black ceiling grid.'
+        ],
         link: "units/working-storage",
         img: "https://viridian-highett.com.au/images/site-plans/E/E-siteplan.png"
     },
     {
         position: "seventh",
-        title: "Micro warehouse",
+        title: "Micro warehouses",
         first_half_title: "Micro",
         second_half_title: "warehouse",
         subtitle: "Underground micro-warehousing",
-        content: ` Please edit to the below: Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives flexibility, the 24-hour security keeps watch, and there’s automatic motion sensor lighting. Pair it with an office suite.`,
+        content: `Perfect for business or pleasure and sitting securely in the basement, the 4.5 m* internal height gives flexibility for storage with the ability to add car hoists and mezzanine areas. The 24-hour security keeps watch, there are automatic motion sensors for lighting, and users can book the communal meeting room. Occupiers also have access to the kitchen and bathroom amenities, providing the perfect addition for a unit above ground.`,
         link: "units/storage-complex",
+        list: [
+            'Ideal for personal or business use.',
+            'Communal modern meeting room.',
+            'Shared pristine bathrooms and kitchen.',
+            'Roller door access to each unit.',
+            '4.5 m* internal height.',
+            'Mobile phone reception booster network.',
+            'Communal WI-FI.',
+            'Ability to fit mezzanines and car hoists into your unit.',
+            'Automatic motion sensor lighting in common driveways and inside units.',
+            '24-hour CCTV and security system.'
+        ],
         img: "https://viridian-highett.com.au/images/site-plans/STORAGE-UNITS/storage-siteplan.png"
     },
 ];
@@ -3403,14 +3477,14 @@ export const sitePlanData = [
     },
     {
         type: "three-level-hybrid",
-        first_half_title: "Three level",
+        first_half_title: "Three-level",
         second_half_title: "hybrid",
         data: addImageToUnits(TRIPLE_LEVEL_HYBRID, "three"), 
         list: threeLevelImageList
     },
     {
         type: "working-storage",
-        first_half_title: "Three level",
+        first_half_title: "Three-level",
         second_half_title: "office warehouses",
         data: addImageToUnits(WORKING_PLUS_STORAGE, "storage"), 
         list: threeLevelOfficeImageList

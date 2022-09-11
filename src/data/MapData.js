@@ -174,7 +174,7 @@ const loactions_coordinates = [
 ];
 
 const locationName = [
-    "Viridian",
+    "Viridian - 119 Chesterville Road, Cheltenham, Melbourne VIC 3190",
     "Abbiocco",
     "Mid Valleys",
     "Aromi",
