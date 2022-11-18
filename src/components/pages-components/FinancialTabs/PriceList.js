@@ -10,7 +10,7 @@ const PriceList = (props) => {
                 {row.data.map((item, index) => {
                     return (
                         <tr key={index}>                                        
-                            <td>{item.unit_number}</td>
+                            <td>{item.unit_number}{item.sold ? ' (Sold)' : ''}</td>
                             <td>{item.ground_level > 0 && item.ground_level}</td>
                             <td>{item.first_level > 0 && item.first_level}</td>
                             <td>{item.upper_floor > 0 && item.upper_floor}</td>

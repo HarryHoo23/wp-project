@@ -161,7 +161,7 @@ const Siteplan = () => {
                                 />
                                 <br />
                                 <div className="siteplan_Info mt-4">
-                                    <h5>{sitePlan[unitMapIndex].unit_number}</h5>
+                                    <h5>{sitePlan[unitMapIndex].unit_number}{sitePlan[unitMapIndex].sold ? ' (Sold)' : ''}</h5>
                                     {sitePlan[unitMapIndex].ground_level > 0 && (
                                         <p>
                                             <strong>Ground Level:</strong>{" "}

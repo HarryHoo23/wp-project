@@ -27,7 +27,11 @@ const Financial = () => {
             return (
                 item.data.map((item) => {
                     if (item.unit_id !== "showroom") {
-                        return item.unit_number;                        
+                        if (item.sold) {
+                            return item.unit_number + " (Sold)"
+                        } else {
+                            return item.unit_number;
+                        }                                          
                     } else {
                         return null;
                     }
@@ -55,8 +59,12 @@ const Financial = () => {
         unit = sitePlanData.map((item) => {
             return (
                 item.data.map((item) => {
-                    if (item.unit_id !== "showroom") {
-                        return item.unit_number;                        
+                    if (item.unit_id !== "showroom") {                        
+                        if (item.sold) {
+                            return item.unit_number + " (Sold)"
+                        } else {
+                            return item.unit_number;
+                        }
                     } else {
                         return null;
                     }

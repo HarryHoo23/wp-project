@@ -2,11 +2,11 @@ import React from "react";
 import { Table } from "react-bootstrap";
 
 const EstimateOutgoingsFinancial = (props) => {   
-
+    
     const fullList = () => {
         return (
             <tbody>                   
-                {props.data.data.map((item, index) => {
+                {props.data.data.map((item, index) => {                    
                     if (item) {
                         return (
                             <tr key={index}>

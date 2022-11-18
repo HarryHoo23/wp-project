@@ -58,7 +58,7 @@ const CommercialUnits = () => {
                         {/* eslint-disable-next-line */}
                         <div className="tab-contents features-list">
                             <h3 className="mb-3">Features</h3>
-                            <ul className="p-0 m-0 margin-block-0">
+                            <ul className="pl-3 m-0 margin-block-0">
                                 {unitData.list.map((item, key) => {
                                     return (
                                         <li key={key}>{item}</li>

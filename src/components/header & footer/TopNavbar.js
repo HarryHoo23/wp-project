@@ -18,7 +18,7 @@ const TopNavbar = (props) => {
             <div className={`nav-top-row ${props.addtionalClass} `}>
                 <div className="btn-left-box scroll-up">
                     <span id="scroll-up" className={props.addtionalClass}>
-                        {props.showLogo && <img src={Logo} alt="logo" />}
+                        {props.showLogo && <img src={Logo} alt="logo" onClick={clickToGoBack} />}
                     </span>
                     <div
                         id="menu-arrow-down-box"

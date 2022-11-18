@@ -13,8 +13,8 @@ import Error from "./pages-components/Error";
 const App = () => {    
     return (
         <>
-            {/* <BrowserRouter basename={'/access'}> */}
-            <BrowserRouter>
+            <BrowserRouter basename={'/access'}>
+            {/* <BrowserRouter> */}
                 <Header />
                 <Switch>
                     <PrivateRoute exact path="/" component={Fullpage} />
