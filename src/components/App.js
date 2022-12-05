@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Siteplan from "./pages-components/Siteplan";
 import Error from "./pages-components/Error";
 
-const App = () => {    
+const App = () => {
     return (
         <>
             <BrowserRouter basename={'/access'}>

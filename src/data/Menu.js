@@ -63,7 +63,7 @@ export const subMenuLink = [
         link: "three-level-hybrid",
     },
     {
-        text: "Three-level office warehouses",
+        text: "Two-level office warehouses",
         link: "working-storage",
     },
     {

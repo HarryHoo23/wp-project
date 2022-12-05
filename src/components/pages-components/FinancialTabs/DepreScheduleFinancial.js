@@ -7,7 +7,7 @@ const DepreScheduleFinancial = (props) => {
         return (
             <tbody>                   
                 {props.data.data.map((item, index) => {                    
-                    if (item.length > 0) {
+                    if (item) {
                         return (
                             <tr key={index}>
                                 <td>{props.data.unit[index]}</td>

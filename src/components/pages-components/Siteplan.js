@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, useHistory, useRouteMatch } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
-import { sitePlanData } from "../../data/Content";
 import {
     unit_maps,
 } from "../../data/Coordinates";
@@ -25,7 +24,7 @@ import arrow from "../../assests/img/download-2.png";
 const Siteplan = () => {
     const { type } = useParams();
     let { url } = useRouteMatch();
-    const { unitMapIndex, setIsLoading, handleFormModalClickOpen, singleFixtureModalContent } =
+    const { unitMapIndex, setIsLoading, handleFormModalClickOpen, singleFixtureModalContent, sitePlanData } =
         useGlobalContext();
     const [title, setTitle] = useState({
         first: "",
@@ -91,7 +90,7 @@ const Siteplan = () => {
 
     useEffect(() => {
         if (type) {
-            const unitType = sitePlanData.find((element) => element.type === type);
+            const unitType = sitePlanData.find((element) => element.type === type);            
             const unitMapData = unit_maps.find((element) => element.type === type);
             let pageTitle = {
                 first: unitType.first_half_title,
@@ -131,7 +130,14 @@ const Siteplan = () => {
 
     //depreciation_schedule is estimate depreciation.
     if (sitePlan) {
-        data.unit = sitePlan.map((item) => item.unit_number);
+        data.unit = sitePlan.map((item) => {
+            if (item.sold) {
+                return item.unit_number + ' (Sold)'
+            } else {
+                return item.unit_number
+            }
+            
+        })        
         if (data.depreciationScheduleData) {
             data.depreciationScheduleData = sitePlan.map((item) =>
                 Object.values(item.depreciation_schedule)

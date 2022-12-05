@@ -42,7 +42,7 @@ const ImageList = [
     },
     {
         original: img6,
-        text: "Three-level office warehouses",
+        text: "Two-level office warehouses",
         link: "working-storage",
     },
     {

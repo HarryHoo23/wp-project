@@ -1,8 +1,10 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { sitePlanData } from "../../../data/Content";
+import { useGlobalContext } from "../../../contexts/GlobalContext";
 
 const PriceList = (props) => {
+
+    const {sitePlanData} = useGlobalContext()
 
     const tableFull = (row) => {
         return (             
